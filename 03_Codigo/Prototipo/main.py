@@ -1,4 +1,4 @@
-"""Hand Sing Kids — punto de entrada.
+"""Hand Sing Music — punto de entrada.
 
 Este archivo ya refleja la ARQUITECTURA OBJETIVO (§41), pero cada componente es
 todavía un esqueleto. La regla del proyecto (§42):
@@ -34,9 +34,16 @@ if __package__ in (None, ""):
     __package__ = "Prototipo"
 
 from . import __version__, config
+from .auth import AuthService
 from .calibration import Calibrator
+from .composer import Editor
+from .diagnostics import Diagnosticador
 from .game import MusicGame
-from .vision import HandVision
+from .levels import GestorNiveles
+from .persistence import JsonStore
+from .screens import App
+from .vision import HandVision, VisionUnavailable
+from .adaptive.adapter import Adaptador
 from .adaptive.profile import ChildProfile
 from .adaptive.predictor import Predictor
 from .adaptive.optimizer import ActivityOptimizer
@@ -44,21 +51,77 @@ from .adaptive.agent import AdaptiveAgent
 from .digital_twin.twin import DigitalTwin
 
 
-STAGES = ("vision", "calibration", "profile", "adaptive", "full")
+STAGES = ("vision", "calibration", "profile", "adaptive", "app", "full")
 
 
 def build_components(user_id: str, edad: int):
     """Instancia todos los módulos (barato: los constructores no abren recursos)."""
+    store = JsonStore()
+    predictor = Predictor()
+    optimizer = ActivityOptimizer()
+    agent = AdaptiveAgent()
+    twin = DigitalTwin()
+    diagnosticador = Diagnosticador(store)
     return {
+        "store": store,
+        "auth": AuthService(store),
         "vision": HandVision(),
         "calibrator": Calibrator(user_id=user_id),
+        "diagnosticador": diagnosticador,
+        "gestor_niveles": GestorNiveles(store, diagnosticador),
         "game": MusicGame(),
         "profile": ChildProfile(user_id=user_id, edad=edad),
-        "predictor": Predictor(),
-        "optimizer": ActivityOptimizer(),
-        "agent": AdaptiveAgent(),
-        "twin": DigitalTwin(),
+        "predictor": predictor,
+        "optimizer": optimizer,
+        "agent": agent,
+        "twin": twin,
+        "adaptador": Adaptador(predictor, optimizer, agent, twin),
+        "editor_factory": lambda **kw: Editor(store, user_id=user_id, **kw),
     }
+
+
+def run_app(c: dict) -> int:
+    """Flujo completo de la app por pantallas (screens.App). §12."""
+    return App(c).run()
+
+
+def run_vision(c: dict) -> int:
+    """Fases 2–3: abre la cámara real, reconoce señas y las imprime.
+    Sirve para verificar visión + calibración sin la UED del juego."""
+    vision, calibrator = c["vision"], c["calibrator"]
+    calibrator.load()                     # usa la calibración del niño o la de referencia
+    n_templates = len(calibrator.templates())
+    print(f"Plantillas cargadas: {n_templates}/{len(config.NOTAS)} "
+          f"({'calibración del niño' if calibrator.path().exists() else 'referencia'})")
+    print("Haz señas frente a la cámara (las DOS manos). Ctrl+C para salir.")
+    ultima = None
+    with vision:
+        while True:
+            hands_data, _ = vision.read()
+            nota = vision.recognize(hands_data, calibrator)
+            if nota and nota != ultima:
+                print(f"  ♪ {nota}")
+            ultima = nota
+    return 0
+
+
+def run_calibration(c: dict) -> int:
+    """Fase 4: calibración guiada por consola (captura con ENTER)."""
+    vision, calibrator = c["vision"], c["calibrator"]
+    calibrator.iniciar()
+    print("Calibración: coloca la seña con AMBAS manos y pulsa ENTER para capturar.")
+    with vision:
+        while not calibrator.completa():
+            nota = calibrator.siguiente_nota()
+            input(f"  Seña para {nota} → ENTER...")
+            hands_data, _ = vision.read()
+            if calibrator.capturar(nota, hands_data):
+                print(f"  ✓ {nota} capturada")
+            else:
+                print("  ✗ no se vieron dos manos, reintenta")
+    calibrator.save()
+    print(f"Calibración guardada en {calibrator.path()}")
+    return 0
 
 
 def run_full(c: dict) -> None:
@@ -72,11 +135,10 @@ def run_full(c: dict) -> None:
     with vision:
         while game.running:
             game.handle_events()
-            frame = vision.capture()
-            hand = vision.detect(frame)
+            hands_data, frame = vision.read()
 
-            if hand:
-                gesture = vision.recognize(hand, calibrator)
+            if hands_data:
+                gesture = vision.recognize(hands_data, calibrator)
                 result = game.evaluate(gesture)
 
                 if result is not None:
@@ -87,13 +149,13 @@ def run_full(c: dict) -> None:
                     twin.simulate(profile, activity, action)
                     game.next_activity(activity)
 
-            game.render(frame, hand)
+            game.render(frame, hands_data)
             game.tick()
     game.stop()
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="hand-sing-kids", description=__doc__)
+    parser = argparse.ArgumentParser(prog="hand-sing-music", description=__doc__)
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("--stage", choices=STAGES, default="vision",
                         help="etapa a ejecutar (default: vision)")
@@ -102,15 +164,21 @@ def main(argv: list[str] | None = None) -> int:
                         help=f"edad ({config.EDAD_MIN}-{config.EDAD_MAX})")
     args = parser.parse_args(argv)
 
-    for d in (config.USERS_DIR, config.SESSIONS_DIR, config.CALIBRATION_DIR):
+    for d in config.DATA_SUBDIRS:
         d.mkdir(parents=True, exist_ok=True)
 
     components = build_components(args.user, args.edad)
 
-    print(f"Hand Sing Kids {__version__}  ·  etapa = {args.stage}")
+    print(f"Hand Sing Music {__version__}  ·  etapa = {args.stage}")
     try:
         if args.stage == "full":
             run_full(components)
+        elif args.stage == "app":
+            return run_app(components)
+        elif args.stage == "vision":
+            return run_vision(components)
+        elif args.stage == "calibration":
+            return run_calibration(components)
         else:
             # Cada etapa parcial se implementará en su propio runner.
             raise NotImplementedError(
@@ -120,6 +188,9 @@ def main(argv: list[str] | None = None) -> int:
     except NotImplementedError as e:
         print(f"[pendiente] {e}")
         return 1
+    except VisionUnavailable as e:
+        print(f"[cámara] {e}")
+        return 2
     except KeyboardInterrupt:
         print("\nInterrumpido.")
         return 130

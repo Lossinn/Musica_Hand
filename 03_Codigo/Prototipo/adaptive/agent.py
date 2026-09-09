@@ -11,7 +11,7 @@ conjunto de `environment.ACTIONS`.
 from __future__ import annotations
 
 from .. import config
-from .environment import ACTIONS, HandSingKidsEnv
+from .environment import ACTIONS, HandSingMusicEnv
 
 
 class AdaptiveAgent:
@@ -21,7 +21,7 @@ class AdaptiveAgent:
         self.model_path = model_path or (config.MODELS_DIR / "dqn_hsk.zip")
         self._model = None            # stable_baselines3.DQN
 
-    def train(self, env: HandSingKidsEnv, timesteps: int = 100_000):
+    def train(self, env: HandSingMusicEnv, timesteps: int = 100_000):
         """Entrena el DQN en el entorno (típicamente con el gemelo digital)."""
         raise NotImplementedError("Fase 11: DQN.learn()")
 

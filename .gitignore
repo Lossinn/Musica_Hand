@@ -27,7 +27,13 @@ Thumbs.db
 03_Codigo/Prototipo/data/users/*
 03_Codigo/Prototipo/data/sessions/*
 03_Codigo/Prototipo/data/calibration/*
+03_Codigo/Prototipo/data/progress/*
+03_Codigo/Prototipo/data/diagnostics/*
+03_Codigo/Prototipo/data/songs/*
 !03_Codigo/Prototipo/data/**/.gitkeep
+
+# ─── Proyecto preliminar anexado (referencia, no se desarrolla aquí) ──
+03_Codigo/Prototipo/Codigo_prot/
 
 # ─── Modelos entrenados (pesados/binarios) ────────────────
 03_Codigo/Prototipo/models/gesture/*

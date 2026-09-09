@@ -1,0 +1,620 @@
+<title>El campo en 189 papers</title>
+<meta name="description" content="Análisis bibliométrico del corpus de 189 documentos sobre inteligencia artificial y educación musical reunido para el proyecto Hand Sing Kids.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,600;0,8..30,800;1,8..30,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --paper:#f4f5f2;
+    --surface:#fbfbf9;
+    --surface-2:#eeefe9;
+    --ink:#1b1d24;
+    --ink-soft:#565b66;
+    --ink-faint:#8a8f99;
+    --rule:#d7d8d1;
+    --rule-soft:#e6e7e0;
+    --brass:#8f5d18;
+    --brass-bright:#a5661f;
+    --data:#256abf;
+    --data-soft:#e3ecf8;
+    --tierA:#0d366b;
+    --tierB:#256abf;
+    --tierC:#5f9be9;
+    --tierD:#a9c8ee;
+    --good:#0f7a52;
+    --warn:#9a641d;
+    --maxw:70rem;
+    --measure:64ch;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme: dark;
+      --paper:#131519;
+      --surface:#1a1d23;
+      --surface-2:#20242c;
+      --ink:#e9eaec;
+      --ink-soft:#a4a8b2;
+      --ink-faint:#767b85;
+      --rule:#2c2f38;
+      --rule-soft:#23262e;
+      --brass:#d69a4e;
+      --brass-bright:#e2ac66;
+      --data:#3987e5;
+      --data-soft:#1e2b3d;
+      --tierA:#1f5fae;
+      --tierB:#3987e5;
+      --tierC:#7db0ec;
+      --tierD:#bcd6f5;
+      --good:#3fae83;
+      --warn:#d69a4e;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --paper:#131519;
+    --surface:#1a1d23;
+    --surface-2:#20242c;
+    --ink:#e9eaec;
+    --ink-soft:#a4a8b2;
+    --ink-faint:#767b85;
+    --rule:#2c2f38;
+    --rule-soft:#23262e;
+    --brass:#d69a4e;
+    --brass-bright:#e2ac66;
+    --data:#3987e5;
+    --data-soft:#1e2b3d;
+    --tierA:#1f5fae;
+    --tierB:#3987e5;
+    --tierC:#7db0ec;
+    --tierD:#bcd6f5;
+    --good:#3fae83;
+    --warn:#d69a4e;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:1.02rem;
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,3.5rem)}
+
+  /* ---------- typography ---------- */
+  h1,h2,h3{font-family:"Piazzolla",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.12;text-wrap:balance;margin:0}
+  h1{font-weight:800;font-size:clamp(2.5rem,6.5vw,4.6rem);letter-spacing:-.015em}
+  h2{font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-.01em}
+  h3{font-size:1.2rem;font-weight:600;letter-spacing:-.005em}
+  p{margin:0 0 1.05em;max-width:var(--measure)}
+  strong{font-weight:600}
+  a{color:inherit;text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:3px;text-decoration-thickness:1.5px}
+  a:hover{text-decoration-color:var(--ink)}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-bright)}
+  .lead{font-family:"Piazzolla",Georgia,serif;font-size:clamp(1.15rem,2.3vw,1.5rem);line-height:1.5;color:var(--ink);max-width:38ch}
+  .drop{max-width:52ch;color:var(--ink-soft)}
+  :focus-visible{outline:2px solid var(--data);outline-offset:3px;border-radius:2px}
+
+  /* ---------- staff rule ---------- */
+  .staff{height:11px;margin:clamp(3.5rem,7vw,6rem) 0 clamp(2rem,4vw,3rem);
+    background:repeating-linear-gradient(var(--rule) 0 1px,transparent 1px 4px);opacity:.9}
+
+  /* ---------- masthead ---------- */
+  header.mast{padding-top:clamp(2.4rem,6vw,4.5rem)}
+  .mast h1{margin:.5rem 0 .1rem}
+  .mast .sub{font-family:"Piazzolla",serif;font-style:italic;font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--ink-soft);max-width:34ch;margin:.9rem 0 0}
+  .ficha{margin-top:clamp(2rem,4vw,2.8rem);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--rule);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:0}
+  .ficha div{padding:.85rem 1rem .9rem 0;border-right:1px solid var(--rule-soft)}
+  .ficha div:last-child{border-right:0}
+  .ficha dt{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
+  .ficha dd{margin:0;font-size:.92rem;color:var(--ink)}
+
+  /* ---------- hero figures ---------- */
+  .figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin:clamp(2.5rem,5vw,3.5rem) 0}
+  .fig{background:var(--surface);padding:1.4rem 1.3rem 1.5rem}
+  .fig .n{font-family:"Piazzolla",serif;font-weight:800;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums}
+  .fig .n small{font-size:.42em;font-weight:600;color:var(--ink-soft)}
+  .fig .k{margin-top:.5rem;font-size:.86rem;color:var(--ink-soft);line-height:1.4}
+
+  /* ---------- sections ---------- */
+  section{margin:clamp(3rem,6vw,5rem) 0}
+  .sec-head{display:flex;gap:1rem;align-items:baseline;margin-bottom:1.6rem}
+  .sec-head .no{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500;color:var(--brass-bright);padding-top:.35rem;white-space:nowrap}
+  .sec-head h2{flex:1}
+
+  /* ---------- callout ---------- */
+  .callout{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--brass);
+    padding:1.3rem 1.4rem;margin:1.8rem 0;border-radius:2px}
+  .callout p{max-width:58ch}
+  .callout p:last-child{margin-bottom:0}
+  .callout .tag{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);display:block;margin-bottom:.5rem}
+
+  /* ---------- figure block ---------- */
+  figure{margin:2rem 0;background:var(--surface);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+  figure .cap{padding:1rem 1.3rem .4rem;font-family:"Piazzolla",serif;font-weight:600;font-size:1.05rem}
+  figure .sub{padding:0 1.3rem 1rem;font-size:.85rem;color:var(--ink-soft);max-width:56ch}
+  .chart{padding:.3rem 1.1rem 1.4rem}
+  .chart svg{display:block;width:100%;height:auto;overflow:visible}
+  .src{padding:.7rem 1.3rem;border-top:1px solid var(--rule-soft);font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--ink-faint)}
+  .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;padding:.2rem 1.3rem 1rem;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-soft)}
+  .legend span{display:inline-flex;align-items:center;gap:.4rem}
+  .legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+
+  /* bar chart text */
+  .bl{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-soft)}
+  .bv{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink);font-weight:500}
+  .bl.hi{fill:var(--brass-bright);font-weight:500}
+  .grid line{stroke:var(--rule-soft)}
+  .axis{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--ink-faint)}
+
+  /* ---------- tables ---------- */
+  .tbl-wrap{overflow-x:auto;margin:1.8rem 0;border:1px solid var(--rule);border-radius:3px}
+  table{border-collapse:collapse;width:100%;font-size:.88rem}
+  caption{text-align:left;font-family:"Piazzolla",serif;font-weight:600;font-size:1.05rem;padding:1rem 1.1rem .8rem}
+  th,td{text-align:left;padding:.55rem .9rem;border-top:1px solid var(--rule-soft);vertical-align:top}
+  thead th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);border-top:1px solid var(--rule)}
+  tbody tr:hover{background:var(--surface-2)}
+  td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink)}
+  .pill{font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:500;padding:.1rem .4rem;border-radius:3px;border:1px solid currentColor}
+  .pA{color:var(--tierA)} .pB{color:var(--data)} .pC{color:var(--ink-soft)} .pD{color:var(--ink-faint)}
+
+  /* ---------- findings ---------- */
+  ol.find{list-style:none;counter-reset:f;padding:0;margin:1.5rem 0;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+  ol.find li{counter-increment:f;background:var(--surface);padding:1.1rem 1.3rem 1.15rem 3.3rem;position:relative;max-width:none}
+  ol.find li::before{content:counter(f,decimal-leading-zero);position:absolute;left:1.2rem;top:1.15rem;
+    font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--brass-bright)}
+  ol.find li p{margin:0;max-width:62ch;font-size:.96rem}
+  ol.find b{font-weight:600}
+
+  .kw{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0;max-width:var(--measure)}
+  .kw span{font-family:"IBM Plex Mono",monospace;font-size:.8rem;padding:.28rem .6rem;background:var(--surface);border:1px solid var(--rule);border-radius:999px;color:var(--ink-soft)}
+  .kw span b{color:var(--ink);font-weight:600;margin-left:.35rem}
+
+  footer{margin:5rem 0 4rem;padding-top:1.6rem;border-top:1.5px solid var(--ink);font-size:.82rem;color:var(--ink-soft)}
+  footer p{max-width:60ch}
+  footer code{font-family:"IBM Plex Mono",monospace;background:var(--surface-2);padding:.06rem .3rem;border-radius:3px;font-size:.92em}
+
+  .toggle{position:fixed;top:.9rem;right:.9rem;z-index:10;font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface);color:var(--ink-soft);
+    border:1px solid var(--rule);border-radius:999px;padding:.4rem .7rem;cursor:pointer}
+  .toggle:hover{color:var(--ink);border-color:var(--ink-faint)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .chart rect,.chart path.bar{transition:opacity .15s}
+  }
+  @media (max-width:640px){
+    .ficha div{border-right:0;border-bottom:1px solid var(--rule-soft)}
+    .sec-head{flex-direction:column;gap:.2rem}
+  }
+</style>
+
+<button class="toggle" id="themeToggle" aria-label="Cambiar tema">tema</button>
+
+<div class="wrap">
+
+  <header class="mast">
+    <span class="eyebrow">Proyecto Hand Sing Kids · Base de investigación · Cap. 2</span>
+    <h1>El campo en 189&nbsp;papers</h1>
+    <p class="sub">Radiografía bibliométrica del corpus reunido sobre inteligencia artificial y educación musical.</p>
+
+    <dl class="ficha">
+      <div><dt>Fecha de análisis</dt><dd>9 sep 2026</dd></div>
+      <div><dt>Corpus</dt><dd>189 documentos únicos<br><span class="mono" style="font-size:.8rem;color:var(--ink-faint)">de 226 archivos · 37 duplicados</span></dd></div>
+      <div><dt>Origen</dt><dd>2 ecuaciones Scopus + refs. de método</dd></div>
+      <div><dt>Metadatos</dt><dd>Crossref + OpenAlex<br><span class="mono" style="font-size:.8rem;color:var(--ink-faint)">167/189 resueltos</span></dd></div>
+      <div><dt>Rango</dt><dd>2017 – 2026</dd></div>
+    </dl>
+  </header>
+
+  <div class="figs">
+    <div class="fig"><div class="n">189</div><div class="k">documentos únicos con texto completo, catalogados y clasificados</div></div>
+    <div class="fig"><div class="n">59<small>&thinsp;%</small></div><div class="k">publicado en 2026 — el campo está emergiendo ahora mismo</div></div>
+    <div class="fig"><div class="n">128<small>&thinsp;/&thinsp;189</small></div><div class="k">sin ninguna cita todavía: literatura demasiado nueva</div></div>
+    <div class="fig"><div class="n">22</div><div class="k">forman el núcleo directamente aprovechable para el proyecto</div></div>
+  </div>
+
+  <p class="drop">Este informe describe <strong>la colección de textos completos</strong> descargada para el marco teórico del proyecto. Sirve para catalogar las fuentes, ver de qué trata el campo y detectar los huecos que Hand Sing Kids pretende ocupar. No sustituye a la bibliometría formal de la búsqueda completa &mdash; ver <a href="#falta">§&thinsp;IX</a>.</p>
+
+  <div class="staff" role="presentation"></div>
+
+  <!-- I -->
+  <section id="que">
+    <div class="sec-head"><span class="no">§&thinsp;I</span><h2>Qué es este corpus</h2></div>
+    <p>Se ejecutaron las dos ecuaciones booleanas del proyecto en Scopus &mdash; <em>educación musical&nbsp;+&nbsp;IA/tecnología</em> y <em>gesto&nbsp;/&nbsp;visión por computador&nbsp;+&nbsp;música</em> &mdash; y se descargaron a mano los textos completos accesibles, más un conjunto de artículos de método (revisiones sistemáticas y estudios bibliométricos de temas contiguos). Tras deduplicar por hash de contenido quedaron <strong>189 documentos únicos</strong>; 37 archivos eran copias byte&nbsp;a&nbsp;byte.</p>
+    <p>De cada PDF se extrajo el texto, se catalogó (año, autor, país, tipo, tecnología, dominio, población) y se recuperaron los metadatos por DOI desde Crossref y OpenAlex.</p>
+    <div class="callout">
+      <span class="tag">Nota metodológica</span>
+      <p>Los 189 son una <strong>muestra de conveniencia</strong>: lo que se pudo descargar, sesgado hacia lo más reciente y hacia el acceso abierto. Los indicadores de aquí describen <strong>esta colección</strong>, no la producción real del campo. Bradford completo, redes de coautoría del área y mapas VOSviewer requieren el export CSV íntegro de Scopus (<a href="#falta">§&thinsp;IX</a>).</p>
+    </div>
+  </section>
+
+  <!-- II -->
+  <section id="volumen">
+    <div class="sec-head"><span class="no">§&thinsp;II</span><h2>Volumen y cronología</h2></div>
+    <p>El 85&nbsp;% del corpus es de 2025&ndash;2026 y muchos artículos de 2026 están <em>in press</em>. Refleja a la vez la juventud del tema y el sesgo de recolección hacia lo último publicado.</p>
+
+    <figure>
+      <div class="cap">Producción por año</div>
+      <div class="sub">Número de documentos del corpus por año de publicación (n&nbsp;=&nbsp;189).</div>
+      <div class="chart" id="c-anio"></div>
+      <div class="src">fuente · matriz_bibliografica.csv · 04_Datos/bibliometria/resultados/01</div>
+    </figure>
+
+    <figure>
+      <div class="cap">Año × relación con el proyecto</div>
+      <div class="sub">Cada barra descompuesta según el cribado A / B / C / D (ver §&thinsp;V). Los 22 documentos del núcleo son casi todos de 2026.</div>
+      <div class="legend" id="l-tier"></div>
+      <div class="chart" id="c-anio-rel"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/10_anio_x_relacion.csv</div>
+    </figure>
+  </section>
+
+  <!-- III -->
+  <section id="anatomia">
+    <div class="sec-head"><span class="no">§&thinsp;III</span><h2>Anatomía del corpus</h2></div>
+    <p>Casi la mitad del corpus son <strong>revisiones</strong> (sistemáticas, <em>scoping</em> y bibliométricas). Es un buen estado del arte de segundo orden, pero hay poca evidencia experimental primaria &mdash; y menos aún con niños.</p>
+
+    <figure>
+      <div class="cap">Tipo de documento</div>
+      <div class="chart" id="c-tipo"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/02_tipo_documento.csv</div>
+    </figure>
+
+    <p>China y el Sudeste Asiático concentran cerca del 60&nbsp;% de la producción. La investigación iberoamericana (España, Perú, Colombia, Ecuador, México) suma otro ~20&nbsp;% y aporta la mayor parte de los estudios empíricos escolares y en español. 39 documentos tienen coautoría internacional.</p>
+
+    <figure>
+      <div class="cap">País de afiliación del primer autor</div>
+      <div class="sub">Doce países más frecuentes. Recuento por documento.</div>
+      <div class="chart" id="c-pais"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/04_pais.csv</div>
+    </figure>
+  </section>
+
+  <!-- IV -->
+  <section id="temas">
+    <div class="sec-head"><span class="no">§&thinsp;IV</span><h2>De qué trata</h2></div>
+    <p>Los dos pilares tecnológicos del proyecto <strong>tienen literatura propia y reciente</strong>: 14 documentos aplican visión por computador, estimación de pose o reconocimiento de gesto a la música, y 8 usan aprendizaje por refuerzo para educación musical. Casi todos de 2026.</p>
+
+    <figure>
+      <div class="cap">Categoría tecnológica dominante</div>
+      <div class="sub">Cada documento asignado a su tecnología o método principal. En ámbar, los dos pilares de Hand Sing Kids.</div>
+      <div class="chart" id="c-tech"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/05_tecnologia.csv</div>
+    </figure>
+
+    <figure>
+      <div class="cap">Dominio / área</div>
+      <div class="sub">Solo 8 documentos (4&nbsp;%) tratan educación musical infantil o preescolar &mdash; en ámbar.</div>
+      <div class="chart" id="c-dom"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/06_dominio.csv</div>
+    </figure>
+
+    <h3 style="margin:2.4rem 0 .3rem">Palabras clave de autor</h3>
+    <p class="drop">Las más frecuentes entre las declaradas en los propios artículos.</p>
+    <div class="kw" id="kw"></div>
+  </section>
+
+  <!-- V -->
+  <section id="cribado">
+    <div class="sec-head"><span class="no">§&thinsp;V</span><h2>Relación con el proyecto</h2></div>
+    <p>Cada documento se etiquetó según su utilidad para Hand Sing Kids. <strong>87 documentos (A&thinsp;+&thinsp;B) son directamente aprovechables</strong>; los 41 marginales entraron por la amplitud de las ecuaciones y pueden archivarse.</p>
+
+    <figure>
+      <div class="cap">Cribado A / B / C / D</div>
+      <div class="chart" id="c-rel"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/03_relacion_proyecto.csv</div>
+    </figure>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Los cuatro niveles</caption>
+        <thead><tr><th>Nivel</th><th>Definición</th><th class="num">n</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pill pA">A · Núcleo</span></td><td>Visión / gesto / manos + música · aprendizaje musical adaptativo con RL, tutoría inteligente o gemelo digital · feedback en tiempo real de la práctica · música infantil + tecnología</td><td class="num">22</td></tr>
+          <tr><td><span class="pill pB">B · Relevante</span></td><td>IA y tecnología en educación musical en general: feedback, evaluación, personalización, recomendación, apps, RA/RV musical</td><td class="num">65</td></tr>
+          <tr><td><span class="pill pC">C · Método / contexto</span></td><td>Revisiones y bibliometrías de IA en educación no musical, método bibliométrico, RV/RA/gamificación en educación general, neurociencia educativa</td><td class="num">61</td></tr>
+          <tr><td><span class="pill pD">D · Marginal</span></td><td>Temas alejados: música y bienestar animal, biomecánica del tango, consultoría, TikTok, breakdance…</td><td class="num">41</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- VI -->
+  <section id="impacto">
+    <div class="sec-head"><span class="no">§&thinsp;VI</span><h2>Impacto y fuentes</h2></div>
+    <p>El corpus acumula <strong>1&thinsp;245 citas</strong> (OpenAlex), pero <strong>128 de 189 documentos tienen cero</strong>: media 6,6 y mediana 0. Las citas se concentran en documentos viejos y periféricos; el núcleo, todo de 2026, aún no ha tenido tiempo de ser citado.</p>
+
+    <figure>
+      <div class="cap">Citas por nivel de relación</div>
+      <div class="sub">Total de citas y media por documento en cada nivel. El núcleo (A) es literatura sin recorrido citacional todavía; el nivel D arrastra un <em>outlier</em> muy citado de 2017.</div>
+      <div class="chart" id="c-citas"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/12_citas_por_tier.csv</div>
+    </figure>
+
+    <p>Hay concentración en <strong>mega-revistas y vías rápidas</strong> &mdash; <em>Scientific Reports</em>, <em>Discover Artificial Intelligence</em>, <em>IJCISIM</em>, <em>Cerebration Science Publishing</em>: cerca de 30 documentos. Conviene filtrar por calidad de fuente (cuartil, indexación) antes de citar.</p>
+
+    <figure>
+      <div class="cap">Revistas y fuentes del corpus</div>
+      <div class="sub">Doce fuentes con más documentos.</div>
+      <div class="chart" id="c-rev"></div>
+      <div class="src">fuente · 04_Datos/bibliometria/resultados/11_revistas.csv</div>
+    </figure>
+  </section>
+
+  <!-- VII -->
+  <section id="base">
+    <div class="sec-head"><span class="no">§&thinsp;VII</span><h2>Sobre qué se apoya</h2></div>
+    <p>43 obras están citadas por tres o más documentos del corpus. Se dividen en dos familias: el <strong>andamiaje metodológico</strong> (PRISMA, <em>scoping</em>, guías de bibliometría) y un <strong>núcleo temático</strong> de revisiones-paraguas de IA en educación musical publicadas en 2023&ndash;2024. Estas últimas son lectura obligada para el marco teórico y no todas están entre los 189.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Base intelectual — obras co-citadas por ≥ 3 documentos del corpus</caption>
+        <thead><tr><th class="num">Co-citas</th><th>Año</th><th>Obra</th><th>Fuente</th></tr></thead>
+        <tbody id="cocit"></tbody>
+      </table>
+    </div>
+
+    <p>El <strong>acoplamiento bibliográfico</strong> (documentos que comparten referencias) revela dos frentes que el proyecto debe dominar: un grupo de <em>DRL y rutas de aprendizaje musical</em> (077&thinsp;·&thinsp;164&thinsp;·&thinsp;055&thinsp;·&thinsp;129) y otro de <em>IA aplicada al piano</em> (180&thinsp;·&thinsp;226&thinsp;·&thinsp;057). 72 pares de documentos comparten dos o más referencias.</p>
+  </section>
+
+  <!-- VIII -->
+  <section id="dice">
+    <div class="sec-head"><span class="no">§&thinsp;VIII</span><h2>Lo que el corpus le dice al proyecto</h2></div>
+    <ol class="find">
+      <li><p><b>El tema está caliente y es nuevo.</b> Casi toda la literatura del núcleo es de 2026; Hand Sing Kids llega a tiempo y hay margen para publicar.</p></li>
+      <li><p><b>Los dos pilares técnicos existen por separado</b> &mdash; visión/gesto en música (14 docs) y RL en educación musical (8) &mdash; pero <b>casi nadie los integra en un sistema completo para niños</b>. Ese es el hueco.</p></li>
+      <li><p><b>El feedback en tiempo real de la práctica instrumental con visión</b> ya está validado en piano y en guzheng, con MediaPipe como capa de análisis. Hay base metodológica y de comparación.</p></li>
+      <li><p><b>El RL para seleccionar actividad y evaluar de forma adaptativa</b> en música tiene ya cinco referencias directas para las fases de modelo matemático y DQN del proyecto.</p></li>
+      <li><p><b>La población infantil apenas se ha explorado</b>: 8 documentos, y solo cuatro combinan niños con tecnología de interacción. Contribución diferencial clara.</p></li>
+      <li><p><b>La optimización matemática de la secuencia didáctica (MILP) está ausente</b> del corpus. Usar programación entera mixta sería aportación original; conviene ampliar la búsqueda con términos de investigación operativa.</p></li>
+      <li><p><b>El gemelo digital del alumno no aparece.</b> Solo hay gemelos digitales de ergonomía y biomecánica instrumental, nunca del proceso de aprendizaje del estudiante.</p></li>
+    </ol>
+  </section>
+
+  <!-- IX -->
+  <section id="falta">
+    <div class="sec-head"><span class="no">§&thinsp;IX</span><h2>Qué falta</h2></div>
+    <p>Para la bibliometría formal del <strong>universo completo</strong> de la búsqueda &mdash; producción real del campo, ley de Bradford, redes de coautoría, mapas de co-ocurrencia y co-citación en VOSviewer o Biblioshiny &mdash; hace falta un paso que solo se puede dar desde Scopus:</p>
+    <div class="callout">
+      <span class="tag">Acción pendiente</span>
+      <p>Por cada ecuación, en Scopus: <strong>Export → CSV con «All available information» + BibTeX</strong>, y depositarlo en <code class="mono">04_Datos/bibliometria/raw/</code>. Con eso se corre la bibliometría completa con el mismo estilo de figuras de este informe.</p>
+    </div>
+    <p>Además: conseguir las tres o cuatro revisiones-paraguas de la base intelectual (§&thinsp;VII) que no están entre los 189, y añadir una tercera ecuación que cruce <em>reinforcement learning / mixed-integer / digital twin / intelligent tutoring</em> con <em>music education</em> y <em>child*</em> para el subconjunto infantil.</p>
+  </section>
+
+  <footer>
+    <p><strong>Reproducibilidad.</strong> Catálogo en <code>02_Base_de_investigacion/Matriz_bibliografica/matriz_bibliografica.csv</code> (189 filas). Análisis en <code>04_Datos/bibliometria/analisis_corpus.py</code> y <code>analisis_citas.py</code> (ejecutar con <code>.venv/Scripts/python.exe</code>). Metadatos, BibTeX y referencias en <code>04_Datos/bibliometria/processed/</code>. Fichas de lectura del núcleo en <code>02_Base_de_investigacion/Resumenes/</code>. Metadatos vía Crossref y OpenAlex, 9 sep 2026.</p>
+    <p style="margin-top:1rem;color:var(--ink-faint)">Hand Sing Kids · plataforma de aprendizaje musical adaptativo para niños de 3 a 12 años · Ingeniería Industrial.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // ---------- theme toggle ----------
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  try{var s=localStorage.getItem('hsk-theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var mq=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next=(cur? cur==='dark':mq)?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('hsk-theme',next);}catch(e){}
+    draw();
+  });
+
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a){var n=document.createElementNS(NS,t);for(var k in a)n.setAttribute(k,a[k]);return n;}
+  function cssv(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+  function rrect(x,y,w,h,r){ // rounded right end only
+    r=Math.min(r,h/2,Math.max(w,0));
+    if(w<=0.5) return "M"+x+" "+y+"h"+w+"v"+h+"h"+(-w)+"z";
+    return "M"+x+" "+y+"h"+(w-r)+"a"+r+" "+r+" 0 0 1 "+r+" "+r+"v"+(h-2*r)+"a"+r+" "+r+" 0 0 1 "+(-r)+" "+r+"h"+(-(w-r))+"z";
+  }
+  function tip(node,text){var t=el("title",{});t.textContent=text;node.appendChild(t);}
+
+  // ---------- data ----------
+  var D={
+    anio:[["2017",1],["2021",2],["2022",2],["2023",6],["2024",17],["2025",49],["2026",112]],
+    anioRel:[ // year, A,B,C,D
+      ["2021",0,0,2,0],["2022",0,0,1,1],["2023",0,2,2,2],
+      ["2024",1,4,10,2],["2025",1,11,17,20],["2026",20,48,29,15]],
+    tipo:[["Revisión sistemática",51],["Propuesta técnica / modelo",44],["Empírico / experimental",37],
+      ["Análisis bibliométrico",33],["Scoping review",14],["Conceptual / ensayo",4],
+      ["Actas / proceedings",3],["Ponencia",2],["Editorial",1]],
+    pais:[["China",61],["Malasia",23],["Indonesia",19],["España",11],["Perú",8],["Tailandia",6],
+      ["Corea del Sur",6],["Turquía",5],["Colombia",4],["Italia",4],["EE. UU.",3],["Ecuador",3]],
+    tech:[["Sin tecnología específica",52,0],["Método bibliométrico",27,0],["IA generativa / LLM",18,0],
+      ["Apps móviles / plataformas / TIC",17,0],["Deep learning (CNN/RNN/Transformer)",17,0],
+      ["Visión por computador / pose / gesto",14,1],["Realidad virtual / aumentada / XR",11,0],
+      ["Aprendizaje por refuerzo (RL/DRL)",8,1],["Multimodal / afectivo",6,0],
+      ["Recomendación / rutas / ITS",6,0],["Audio / MIR / señal",5,0],["Wearables / sensores",4,0],
+      ["Gamificación / juegos serios",4,0]],
+    dom:[["Educación musical (general / superior)",45,0],["Educación general (no musical)",42,0],
+      ["Otro",38,0],["Música tradicional / patrimonio",15,0],["Piano / teclado",11,0],
+      ["Canto / educación vocal / coral",10,0],["Música y bienestar / cognición",10,0],
+      ["Educación musical infantil / preescolar",8,1],["Generación / transcripción / MIR",7,0],
+      ["Instrumento de cuerda / arco",3,0]],
+    rel:[["A · Núcleo",22,"--tierA"],["B · Relevante",65,"--tierB"],
+      ["C · Método / contexto",61,"--tierC"],["D · Marginal",41,"--tierD"]],
+    rev:[["Scientific Reports",10],["IJCISIM",8],
+      ["Discover Artificial Intelligence",8],["Acta Psychologica",5],["Música Hodie",4],
+      ["Int. J. Information & Comm. Technology",4],["Applied Sciences",4],["SAGE Open",4],
+      ["Frontiers in Psychology",4],["Discover Education",3],["Frontiers in Education",3],
+      ["Multimedia Tools and Applications",2]],
+    citas:[ // tier, n, total, media
+      ["A",22,86,3.9],["B",65,67,1.0],["C",61,279,4.6],["D",41,813,19.8]],
+    kw:[["music education",26],["artificial intelligence",19],["bibliometric analysis",10],
+      ["scoping review",8],["systematic review",7],["bibliometrics",7],["higher education",6],
+      ["machine learning",5],["deep learning",5],["systematic literature review",5],
+      ["augmented reality",4],["creativity",3],["educational technology",3],["AI literacy",2]],
+    cocit:[
+      [14,"2021","The PRISMA 2020 statement: an updated guideline for reporting systematic reviews","BMJ"],
+      [8,"2005","Scoping studies: towards a methodological framework","Int. J. Social Research Methodology"],
+      [7,"2023","Developments and Applications of Artificial Intelligence in Music Education","Technologies"],
+      [5,"2024","AI-Assisted Music Education: A Critical Synthesis of Challenges and Opportunities","Education Sciences"],
+      [5,"2024","The Usage of AI Technology in Music Education System Under Deep Learning","IEEE Access"],
+      [5,"2015","The journal coverage of Web of Science and Scopus: a comparative analysis","Scientometrics"],
+      [4,"2019","Systematic review of research on AI applications in higher education — where are the educators?","Int. J. Educ. Technology in Higher Education"],
+      [4,"2021","How to conduct a bibliometric analysis: an overview and guidelines","Journal of Business Research"],
+      [4,"2023","Innovations of music and aesthetic education courses using intelligent technologies","Education and Information Technologies"],
+      [4,"2024","Audio-visual aesthetic teaching methods in college vocal music teaching by deep learning","Scientific Reports"],
+      [4,"2025","Exploring a digital music teaching model integrated with RNN under AI","Scientific Reports"],
+      [4,"2020","Scopus as a curated, high-quality bibliometric data source","Quantitative Science Studies"]]
+  };
+
+  function draw(){
+    var ink=cssv('--ink'), inkSoft=cssv('--ink-soft'), inkFaint=cssv('--ink-faint'),
+        data=cssv('--data'), brass=cssv('--brass-bright'), ruleSoft=cssv('--rule-soft'),
+        tiers=[cssv('--tierA'),cssv('--tierB'),cssv('--tierC'),cssv('--tierD')];
+
+    // ----- vertical columns: producción por año -----
+    (function(){
+      var box=document.getElementById('c-anio'); box.textContent='';
+      var W=680,H=260,mT=14,mB=34,mL=6,mR=6,n=D.anio.length;
+      var max=120, gap=14, bw=(W-mL-mR-gap*(n-1))/n;
+      var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Producción por año"});
+      var g=el("g",{class:"grid"});
+      [0,30,60,90,120].forEach(function(t){
+        var y=mT+(H-mT-mB)*(1-t/max);
+        g.appendChild(el("line",{x1:mL,x2:W-mR,y1:y,y2:y}));
+      });
+      svg.appendChild(g);
+      D.anio.forEach(function(d,i){
+        var x=mL+i*(bw+gap), h=(H-mT-mB)*(d[1]/max), y=H-mB-h;
+        var emph=d[0]==="2026";
+        var r=el("path",{d:rrect(x,y,bw,h,4),fill:data,opacity:emph?1:.62});
+        tip(r,d[0]+": "+d[1]+" documentos"); svg.appendChild(r);
+        var v=el("text",{x:x+bw/2,y:y-6,class:"bv","text-anchor":"middle"}); v.textContent=d[1]; svg.appendChild(v);
+        var lx=el("text",{x:x+bw/2,y:H-mB+16,class:"bl","text-anchor":"middle"}); lx.textContent=d[0]; svg.appendChild(lx);
+      });
+      box.appendChild(svg);
+    })();
+
+    // ----- stacked columns: año x relación -----
+    (function(){
+      var box=document.getElementById('c-anio-rel'); box.textContent='';
+      var leg=document.getElementById('l-tier'); leg.textContent='';
+      ["A · Núcleo","B · Relevante","C · Método/contexto","D · Marginal"].forEach(function(t,i){
+        var s=document.createElement('span'); var ic=document.createElement('i');
+        ic.style.background=tiers[i]; s.appendChild(ic); s.appendChild(document.createTextNode(t)); leg.appendChild(s);
+      });
+      var rows=D.anioRel, n=rows.length;
+      var W=680,H=280,mT=12,mB=32,mL=6,mR=6;
+      var totals=rows.map(function(r){return r[1]+r[2]+r[3]+r[4];});
+      var max=120, gap=20, bw=(W-mL-mR-gap*(n-1))/n;
+      var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Año por relación con el proyecto"});
+      var g=el("g",{class:"grid"});
+      [0,30,60,90,120].forEach(function(t){
+        var y=mT+(H-mT-mB)*(1-t/max);
+        g.appendChild(el("line",{x1:mL,x2:W-mR,y1:y,y2:y}));
+      });
+      svg.appendChild(g);
+      rows.forEach(function(r,i){
+        var x=mL+i*(bw+gap), yBase=H-mB, names=["A","B","C","D"];
+        for(var k=0;k<4;k++){
+          var val=r[k+1]; if(val<=0) continue;
+          var h=(H-mT-mB)*(val/max);
+          yBase-=h;
+          var rect=el("rect",{x:x,y:yBase,width:bw,height:Math.max(h-2,0.5),fill:tiers[k],rx:2});
+          tip(rect,r[0]+" · nivel "+names[k]+": "+val); svg.appendChild(rect);
+          yBase-=2;
+        }
+        var v=el("text",{x:x+bw/2,y:(H-mB)-(H-mT-mB)*(totals[i]/max)-8,class:"bv","text-anchor":"middle"});
+        v.textContent=totals[i]; svg.appendChild(v);
+        var lx=el("text",{x:x+bw/2,y:H-mB+16,class:"bl","text-anchor":"middle"}); lx.textContent=r[0]; svg.appendChild(lx);
+      });
+      box.appendChild(svg);
+    })();
+
+    // ----- generic horizontal bars -----
+    function hbar(id,rows,opt){
+      opt=opt||{};
+      var box=document.getElementById(id); box.textContent='';
+      var labelW=opt.labelW||210, n=rows.length, rowH=opt.rowH||30, pad=8;
+      var W=680, H=n*rowH+pad*2, trackX=labelW+8, trackW=W-trackX-46;
+      var max=opt.max||Math.max.apply(null,rows.map(function(r){return r[1];}));
+      var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":opt.aria||id});
+      // faint gridlines
+      var g=el("g",{class:"grid"});
+      var ticks=opt.ticks||4;
+      for(var t=1;t<=ticks;t++){var gx=trackX+trackW*(t/ticks);
+        g.appendChild(el("line",{x1:gx,x2:gx,y1:pad,y2:H-pad}));}
+      svg.appendChild(g);
+      rows.forEach(function(r,i){
+        var y=pad+i*rowH, bh=rowH-12, by=y+(rowH-bh)/2-1;
+        var hi=r[2]===1;
+        var lab=el("text",{x:labelW,y:y+rowH/2+4,class:"bl"+(hi?" hi":""),"text-anchor":"end"});
+        lab.textContent=r[0]; svg.appendChild(lab);
+        var w=Math.max(trackW*(r[1]/max),1.5);
+        var col=r[3]?cssv(r[3]):(hi?brass:data);
+        var bar=el("path",{class:"bar",d:rrect(trackX,by,w,bh,4),fill:col,opacity:(hi||r[3])?1:.82});
+        tip(bar,r[0]+": "+r[1]); svg.appendChild(bar);
+        var v=el("text",{x:trackX+w+7,y:y+rowH/2+4,class:"bv"}); v.textContent=(opt.fmt?opt.fmt(r[1]):r[1]); svg.appendChild(v);
+      });
+      box.appendChild(svg);
+    }
+    hbar('c-tipo',D.tipo,{labelW:200,max:55,aria:"Tipo de documento"});
+    hbar('c-pais',D.pais,{labelW:120,max:65,aria:"País del primer autor"});
+    hbar('c-tech',D.tech,{labelW:268,max:55,aria:"Categoría tecnológica"});
+    hbar('c-dom',D.dom,{labelW:272,max:48,aria:"Dominio"});
+    hbar('c-rev',D.rev,{labelW:250,rowH:32,max:11,ticks:0,aria:"Revistas"});
+    hbar('c-rel',[["A · Núcleo",22,0,"--tierA"],["B · Relevante",65,0,"--tierB"],["C · Método / contexto",61,0,"--tierC"],["D · Marginal",41,0,"--tierD"]],{labelW:180,max:70,aria:"Cribado"});
+
+    // ----- citas por tier : bars of media + annotation -----
+    (function(){
+      var box=document.getElementById('c-citas'); box.textContent='';
+      var rows=D.citas, n=rows.length, W=680, rowH=52, H=n*rowH+16, labelW=64, trackX=210, trackW=W-trackX-96;
+      var max=21;
+      var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Citas por nivel"});
+      rows.forEach(function(r,i){
+        var y=8+i*rowH;
+        var tl=el("text",{x:0,y:y+rowH/2,class:"bv"}); tl.textContent="Nivel "+r[0]; svg.appendChild(tl);
+        var meta=el("text",{x:labelW+4,y:y+rowH/2,class:"bl"});
+        meta.textContent=r[1]+" docs · "+r[2]+" citas"; svg.appendChild(meta);
+        var bh=16, by=y+(rowH-bh)/2;
+        var w=Math.max(trackW*(r[3]/max),1.5);
+        var tier=tiers[i];
+        var bar=el("path",{d:rrect(trackX,by,w,bh,4),fill:tier});
+        tip(bar,"Nivel "+r[0]+": media "+r[3]+" citas/doc"); svg.appendChild(bar);
+        var v=el("text",{x:trackX+w+7,y:y+rowH/2+4,class:"bv"}); v.textContent=r[3].toFixed(1)+" media"; svg.appendChild(v);
+        if(i<n-1) svg.appendChild(el("line",{x1:0,x2:W,y1:y+rowH,y2:y+rowH,stroke:ruleSoft}));
+      });
+      box.appendChild(svg);
+    })();
+
+    // ----- keywords -----
+    (function(){
+      var box=document.getElementById('kw'); box.textContent='';
+      D.kw.forEach(function(k){
+        var s=document.createElement('span'); s.textContent=k[0];
+        var b=document.createElement('b'); b.textContent=k[1]; s.appendChild(b); box.appendChild(s);
+      });
+    })();
+
+    // ----- co-citation table -----
+    (function(){
+      var tb=document.getElementById('cocit'); tb.textContent='';
+      D.cocit.forEach(function(r){
+        var tr=document.createElement('tr');
+        tr.innerHTML='<td class="num">'+r[0]+'</td><td class="num">'+r[1]+'</td><td>'+r[2]+'</td><td style="color:var(--ink-soft)">'+r[3]+'</td>';
+        tb.appendChild(tr);
+      });
+    })();
+  }
+
+  draw();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){
+    if(!root.getAttribute('data-theme')) draw();
+  });
+})();
+</script>

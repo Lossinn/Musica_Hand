@@ -1,12 +1,19 @@
-# Hand Sing Kids — stack MÍNIMO (Fases 1–4)
-# Visión computacional + juego. Instalar con:  pip install -r requirements.txt
+# Hand Sing Music — stack MÍNIMO (Fases 1–4: visión + calibración + juego)
+# Instalar con:  pip install -r requirements.txt
 #
-# Python objetivo: 3.12 (Windows)
+# Python objetivo: 3.12 (Windows) — el prototipo previo (MusicaManos) usó 3.11
 
 numpy>=1.26,<2.0          # mediapipe aún no soporta numpy 2.x de forma estable
-opencv-python>=4.9        # cámara y procesamiento de imagen
-mediapipe>=0.10.14        # detección de manos (21 landmarks)
+opencv-python>=4.9        # cámara real y procesamiento de imagen
 pygame>=2.5              # interfaz y dinámica del juego
 
-# Utilidades de desarrollo (opcional)
+# MediaPipe: la API clásica `mp.solutions.hands` (0.10.x) es la que usa el
+# código heredado y la ruta recomendada.
+mediapipe>=0.10.14,<0.11
+#
+# Si tu entorno ya tiene mediapipe >= 1.0 (solo API Tasks), vision.py también la
+# soporta, pero necesita el modelo:
+#   python -m Prototipo.tools.descargar_modelo
+
+# Utilidades de desarrollo
 pytest>=8.0

@@ -1,0 +1,23 @@
+1.  Nombre del archivo: DO3.png
+    Prompt: "Un círculo rojo brillante con la palabra 'DO' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+2.  Nombre del archivo: RE3.png
+    Prompt: "Un círculo naranja brillante con la palabra 'RE' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+3.  Nombre del archivo: MI3.png
+    Prompt: "Un círculo amarillo brillante con la palabra 'MI' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+4.  Nombre del archivo: FA3.png
+    Prompt: "Un círculo verde limón brillante con la palabra 'FA' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+5.  Nombre del archivo: SOL3.png
+    Prompt: "Un círculo verde oscuro brillante con la palabra 'SOL' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+6.  Nombre del archivo: LA3.png
+    Prompt: "Un círculo morado brillante con la palabra 'LA' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+7.  Nombre del archivo: SI3.png
+    Prompt: "Un círculo rosado brillante con la palabra 'SI' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."
+
+8.  Nombre del archivo: DO4.png
+    Prompt: "Un círculo rojo brillante, ligeramente más pequeño que los demás, con la palabra 'DO' en el centro. Letras blancas, grandes y claras. Estilo de icono de videojuego rítmico, simple y limpio. Fondo transparente."

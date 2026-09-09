@@ -1,0 +1,11 @@
+1.  Nombre del archivo: welcome_background.png
+    Prompt: "Un fondo para una pantalla de bienvenida de una aplicación de música. Colores pastel suaves, con notas musicales flotando sutilmente y un contorno de manos estilizadas en el centro. Acogedor y minimalista. Relación de aspecto 16:9."
+
+2.  Nombre del archivo: menu_background.png
+    Prompt: "Un fondo para un menú de juego musical. Un pentagrama elegante que cruza horizontalmente la pantalla sobre un fondo de color azul oscuro. Haces de luz suaves iluminan el pentagrama. Estilo moderno y limpio. Relación de aspecto 16:9."
+
+3.  Nombre del archivo: game_background.png
+    Prompt: "Fondo para un juego de música rítmico. Un pentagrama vacío que se extiende de derecha a izquierda sobre un fondo cósmico con nebulosas de colores suaves. En el lado izquierdo, una barra vertical brillante que actúa como zona de acierto. Relación de aspecto 16:9."
+
+4.  Nombre del archivo: nota_musical.png
+    Prompt: "Sprite de una nota musical (corchea), de color dorado brillante, con un ligero resplandor. Estilo de icono de videojuego, simple y claro. Fondo transparente."

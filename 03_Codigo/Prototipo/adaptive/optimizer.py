@@ -19,12 +19,16 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from .. import config
+from .. import config, curriculum
 
 
 @dataclass
 class SessionConstraints:
-    """Restricciones de la sesión actual."""
+    """Restricciones de la sesión actual.
+
+    Se construye desde un `adapter.MargenAccion`: el MILP nunca elige notas,
+    figuras o dificultades fuera de lo que el currículo y el progreso permiten.
+    """
 
     t_max_s: float = 300.0
     periodos: int = 6
@@ -32,6 +36,15 @@ class SessionConstraints:
     max_repeticiones_nota: int = 3
     min_variedad_dinamicas: int = 2
     notas_disponibles: tuple[str, ...] = config.NOTAS
+    figuras_disponibles: tuple[str, ...] = ()
+    dinamicas_disponibles: tuple[str, ...] = config.DINAMICAS
+    max_notas_nuevas: int = 1
+    notas_a_reforzar: tuple[str, ...] = ()
+
+    @classmethod
+    def desde_margen(cls, margen, t_max_s: float = 300.0, periodos: int = 6) -> "SessionConstraints":
+        """Traduce `adapter.MargenAccion` -> restricciones del MILP."""
+        raise NotImplementedError("Fase 7: MargenAccion -> SessionConstraints")
 
 
 class ActivityOptimizer:

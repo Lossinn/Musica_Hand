@@ -19,8 +19,10 @@ FEATURES: tuple[str, ...] = (
     "precision",
     "errores",
     "tiempo_respuesta",
-    "nivel",
-    "nota_idx",
+    "etapa",             # curriculum.Etapa.id (0..N_ETAPAS-1)
+    "nota_idx",          # índice en curriculum.ORDEN_NOTAS
+    "figura_idx",        # índice de la figura rítmica en curriculum.TODAS_LAS_FIGURAS
+    "timing_ok_rate",    # tasa de acierto rítmico reciente
     "repeticiones",
     "progreso",
 )

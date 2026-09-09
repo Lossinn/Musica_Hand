@@ -1,0 +1,79 @@
+{
+    "rhythm_1": {
+        "name": "Patrón 1",
+        "difficulty": 1,
+        "pattern": [
+            "TA",
+            "TA",
+            "TA",
+            "TA"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_2": {
+        "name": "Patrón 2",
+        "difficulty": 2,
+        "pattern": [
+            "TA",
+            "TA",
+            "TITI",
+            "TA"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_3": {
+        "name": "Patrón 3",
+        "difficulty": 3,
+        "pattern": [
+            "TITI",
+            "TA",
+            "TITI",
+            "TA"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_4": {
+        "name": "Patrón 4",
+        "difficulty": 4,
+        "pattern": [
+            "TITI",
+            "TITI",
+            "TITI",
+            "TA"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_5": {
+        "name": "Patrón 5",
+        "difficulty": 5,
+        "pattern": [
+            "TITI",
+            "TA",
+            "TITI",
+            "TITI"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_6": {
+        "name": "Patrón 6",
+        "difficulty": 6,
+        "pattern": [
+            "TA",
+            "TA",
+            "TITI",
+            "TITI"
+        ],
+        "repetitions": 4
+    },
+    "rhythm_7": {
+        "name": "Patrón 7",
+        "difficulty": 7,
+        "pattern": [
+            "TITI",
+            "TITI",
+            "TA",
+            "TA"
+        ],
+        "repetitions": 4
+    }
+}

@@ -53,7 +53,8 @@ class ChildProfile:
         # métricas derivadas (§10)
         self.nota_dominada: str | None = None
         self.nota_dificil: str | None = None
-        self.nivel: int = 1
+        self.nivel: int = 1                    # compatibilidad
+        self.etapa_id: int = 0                 # etapa de curriculum en curso
         self.tendencia: str = "estable"        # "mejorando" | "estable" | "empeorando"
 
     # ── actualización:  S_(t+1) = F(S_t, A_t, O_t) ──────────────────────
@@ -71,6 +72,30 @@ class ChildProfile:
 
     def error_rate(self) -> float:
         raise NotImplementedError
+
+    def timing_ok_rate(self) -> float:
+        """Proporción de resultados con `timing_ok` (aciertos de ritmo)."""
+        raise NotImplementedError("Fase 6: tasa de acierto rítmico")
+
+    # ── ventanas e insumos para el diagnóstico (diagnostics.py) ─────────
+    def ventana(self, n: int) -> list[dict]:
+        """Los últimos `n` resultados del historial."""
+        return self.history[-n:]
+
+    def por_nota(self) -> dict[str, dict]:
+        """{nota: {intentos, aciertos, precision, latencia_media_s}} sobre todo
+        el historial. Insumo de `diagnostics.DominioNota`."""
+        raise NotImplementedError("Fase 6: agregación por nota")
+
+    def por_ritmo(self) -> dict[str, dict]:
+        """{figura: {intentos, aciertos_timing, precision_timing, desfase_medio_ms}}."""
+        raise NotImplementedError("Fase 6: agregación por figura rítmica")
+
+    def resumen(self, ventana: int | None = None) -> dict:
+        """Diccionario compacto (precision, error_rate, timing_ok_rate,
+        tendencia, mean_response_time) — formato que consumen
+        `curriculum.puede_avanzar` y `diagnostics`."""
+        raise NotImplementedError("Fase 6: resumen agregado del perfil")
 
     # ── persistencia ───────────────────────────────────────────────────
     def path(self) -> Path:

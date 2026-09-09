@@ -1,4 +1,4 @@
-# Hand Sing Kids
+# Hand Sing Music
 
 Plataforma inteligente de **aprendizaje musical adaptativo** para niños de 3 a 12 años.
 Usa **visión computacional** para reconocer la interacción gestual del estudiante, registra y

@@ -1,4 +1,4 @@
-"""Sistema adaptativo de Hand Sing Kids.
+"""Sistema adaptativo de Hand Sing Music.
 
     profile.py    -> ¿Cómo le fue al niño?           (estado / perfil)
     predictor.py  -> ¿Cómo probablemente responderá? (ML, TensorFlow/Keras)

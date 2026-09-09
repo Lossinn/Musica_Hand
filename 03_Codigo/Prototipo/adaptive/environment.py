@@ -38,7 +38,7 @@ ACTIONS = {
 }
 
 
-class HandSingKidsEnv(_Base):
+class HandSingMusicEnv(_Base):
     """Entorno RL. `student` responde actividades (niño real o DigitalTwin)."""
 
     metadata = {"render_modes": []}
