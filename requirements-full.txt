@@ -1,0 +1,35 @@
+# Hand Sing Kids — stack COMPLETO por fases.
+# NO instalar todo de golpe. Añadir cada bloque cuando la fase lo requiera.
+#
+# Python objetivo: 3.12 (Windows)
+# Nota: mediapipe + tensorflow pueden entrar en conflicto de versiones de
+# numpy/protobuf. Si ocurre, usar entornos separados o fijar versiones.
+
+# ─── Fases 1–4: visión + juego ───────────────────────────
+numpy>=1.26,<2.0
+opencv-python>=4.9
+mediapipe>=0.10.14
+pygame>=2.5
+
+# ─── Fases 5–6: datos + perfil ───────────────────────────
+pandas>=2.2
+
+# ─── Fase 7: optimización MILP ───────────────────────────
+pulp>=2.8
+
+# ─── Fase 8: modelo predictivo ───────────────────────────
+tensorflow>=2.16          # incluye keras 3
+scikit-learn>=1.4         # preprocesamiento / métricas
+
+# ─── Fases 10–11: aprendizaje por refuerzo ───────────────
+gymnasium>=0.29
+stable-baselines3>=2.3
+torch>=2.2                # backend de SB3
+
+# ─── Fase 13: dashboard ──────────────────────────────────
+streamlit>=1.33
+plotly>=5.20
+
+# ─── Desarrollo ──────────────────────────────────────────
+pytest>=8.0
+ruff>=0.4

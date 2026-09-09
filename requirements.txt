@@ -1,0 +1,12 @@
+# Hand Sing Kids — stack MÍNIMO (Fases 1–4)
+# Visión computacional + juego. Instalar con:  pip install -r requirements.txt
+#
+# Python objetivo: 3.12 (Windows)
+
+numpy>=1.26,<2.0          # mediapipe aún no soporta numpy 2.x de forma estable
+opencv-python>=4.9        # cámara y procesamiento de imagen
+mediapipe>=0.10.14        # detección de manos (21 landmarks)
+pygame>=2.5              # interfaz y dinámica del juego
+
+# Utilidades de desarrollo (opcional)
+pytest>=8.0

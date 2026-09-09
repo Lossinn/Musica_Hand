@@ -1,0 +1,53 @@
+# ─── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Entornos virtuales ───────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── IDE / editor ─────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ─── Datos generados en runtime (NO versionar) ────────────
+03_Codigo/Prototipo/data/users/*
+03_Codigo/Prototipo/data/sessions/*
+03_Codigo/Prototipo/data/calibration/*
+!03_Codigo/Prototipo/data/**/.gitkeep
+
+# ─── Modelos entrenados (pesados/binarios) ────────────────
+03_Codigo/Prototipo/models/gesture/*
+03_Codigo/Prototipo/models/predictive/*
+!03_Codigo/Prototipo/models/**/.gitkeep
+*.h5
+*.keras
+*.pt
+*.pth
+*.zip
+*.pkl
+*.joblib
+
+# ─── Assets binarios grandes (opcional, descomentar) ──────
+# 03_Codigo/Prototipo/assets/sounds/*
+# 03_Codigo/Prototipo/assets/music/*
+
+# ─── Investigación: PDFs pesados (opcional) ───────────────
+# 02_Base_de_investigacion/70_documentos/*.pdf
+
+# ─── Logs ─────────────────────────────────────────────────
+*.log
+logs/
