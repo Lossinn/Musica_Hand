@@ -19,6 +19,13 @@ from __future__ import annotations
 import argparse
 import sys
 
+# La consola de Windows no siempre usa UTF-8; evita mojibake en los acentos.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8")
+    except (AttributeError, ValueError):
+        pass
+
 # Ejecutable tanto como módulo (-m Prototipo.main) como script suelto.
 if __package__ in (None, ""):
     from pathlib import Path
