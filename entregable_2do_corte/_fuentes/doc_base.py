@@ -28,6 +28,26 @@ def svg_inline(nombre: str) -> str:
     return s.replace(' width="', ' data-w="', 1).replace("<svg ", '<svg style="width:100%;height:auto" ', 1)
 
 
+_MINUS = set(("a al ante bajo con contra de del desde durante e el en entre frente hacia hasta la las lo los "
+               "mediante ni o para por que se según sin sobre su sus tras u un una unos unas y").split())
+
+
+def tc(t: str) -> str:
+    """Mayúsculas y minúsculas de título (APA 7): palabras principales con inicial mayúscula;
+    artículos, preposiciones y conjunciones en minúscula salvo al inicio o tras dos puntos.
+    Las palabras que ya contienen mayúsculas o dígitos (siglas, nombres) no se tocan."""
+    out, inicio = [], True
+    for w in t.split(" "):
+        core = w.lstrip("(¿¡«\"'")
+        pre = w[: len(w) - len(core)]
+        base = core.strip(".,;:)»?!")
+        if base and base.isalpha() and base == base.lower() and (inicio or base not in _MINUS):
+            core = core[0].upper() + core[1:]
+        out.append(pre + core)
+        inicio = w.endswith(":")
+    return " ".join(out)
+
+
 def figura(titulo: str, cuerpo: str, nota: str = "", *, ancha: bool = False, ref: str | None = None) -> str:
     NUM.fig += 1
     n = NUM.fig
@@ -36,7 +56,7 @@ def figura(titulo: str, cuerpo: str, nota: str = "", *, ancha: bool = False, ref
     cls = "figura ancha" if ancha else "figura"
     idd = f' id="{ref}"' if ref else ""
     nt = f'<p class="nota"><em>Nota.</em> {nota}</p>' if nota else ""
-    return (f'<figure class="{cls}"{idd}><p class="cap-num">Figura {n}</p><p class="cap-tit"><em>{titulo}</em></p>'
+    return (f'<figure class="{cls}"{idd}><p class="cap-num">Figura {n}</p><p class="cap-tit"><em>{tc(titulo)}</em></p>'
             f'<div class="fig-cuerpo">{cuerpo}</div>{nt}</figure>')
 
 
@@ -58,7 +78,7 @@ def tabla(titulo: str, cabeceras: list[str], filas: list[list[str]], nota: str =
     tr = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in f) + "</tr>" for f in filas)
     nt = f'<p class="nota"><em>Nota.</em> {nota}</p>' if nota else ""
     idd = f' id="{ref}"' if ref else ""
-    return (f'<div class="tabla {clase}"{idd}><p class="cap-num">Tabla {n}</p><p class="cap-tit"><em>{titulo}</em></p>'
+    return (f'<div class="tabla {clase}"{idd}><p class="cap-num">Tabla {n}</p><p class="cap-tit"><em>{tc(titulo)}</em></p>'
             f'<table class="apa">{cols}<thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table>{nt}</div>')
 
 
@@ -79,15 +99,15 @@ def ecuacion(expr: str) -> str:
 
 
 def H1(t: str, *, salto: bool = False) -> str:
-    return f'<h1{" class=salto" if salto else ""}>{t}</h1>'
+    return f'<h1{" class=salto" if salto else ""}>{tc(t)}</h1>'
 
 
 def H2(t: str) -> str:
-    return f"<h2>{t}</h2>"
+    return f"<h2>{tc(t)}</h2>"
 
 
 def H3(t: str) -> str:
-    return f"<h3>{t}</h3>"
+    return f"<h3>{tc(t)}</h3>"
 
 
 def P(t: str) -> str:
@@ -104,25 +124,26 @@ FONT_FACE = f"""
 """
 
 CSS = FONT_FACE + """
+/* APA 7, trabajo de estudiante: carta, márgenes de 2,54 cm en todas las páginas (también las apaisadas),
+   número de página arriba a la derecha, Times New Roman 12 a doble espacio, sangría de 1,27 cm. */
 @page { size: Letter; margin: 2.54cm; @top-right { content: counter(page); font: 12pt 'Times New Roman', serif; } }
-@page wide { size: Letter landscape; margin: 1.8cm 1.6cm; @top-right { content: counter(page); font: 12pt 'Times New Roman', serif; } }
+@page wide { size: Letter landscape; margin: 2.54cm; @top-right { content: counter(page); font: 12pt 'Times New Roman', serif; } }
 * { box-sizing: border-box; }
 html { font-family: 'Times New Roman', Times, serif; font-size: 12pt; color: #000; }
 body { margin: 0; line-height: 2; }
 p { margin: 0; text-indent: 1.27cm; text-align: left; orphans: 2; widows: 2; }
 em { font-style: italic; }
-a { color: #000; text-decoration: none; word-break: break-all; }
+a { color: #1a4fa0; text-decoration: underline; word-break: break-all; }
+.titulo-texto { font-weight: bold; text-align: center; text-indent: 0; }
 h1 { font-size: 12pt; font-weight: bold; text-align: center; margin: 0; line-height: 2; break-after: avoid; }
 h1.salto { break-before: page; }
 h2 { font-size: 12pt; font-weight: bold; text-align: left; margin: 0; line-height: 2; break-after: avoid; }
 h3 { font-size: 12pt; font-weight: bold; font-style: italic; text-align: left; margin: 0; line-height: 2; break-after: avoid; }
 ul { margin: 0 0 0 1.9cm; padding: 0; line-height: 2; }
 li { margin: 0; }
-.portada { text-align: center; page-break-after: always; padding-top: 3.2cm; }
+.portada { text-align: center; page-break-after: always; padding-top: 2.4cm; }
 .portada p { text-indent: 0; text-align: center; }
-.portada .titulo { font-weight: bold; line-height: 1.5; margin: 0 0 1.2cm 0; }
-.portada .logos { display: flex; justify-content: center; align-items: center; gap: 1cm; margin: 0 0 1.4cm 0; }
-.portada .logos img { height: 2.3cm; width: auto; }
+.portada .titulo { font-weight: bold; margin: 0 0 1lh 0; }
 .resumen p { text-indent: 0; }
 .palabras { text-indent: 1.27cm; }
 .ref p { text-indent: -1.27cm; padding-left: 1.27cm; margin: 0; }
@@ -133,14 +154,15 @@ figure { margin: 0; }
 .fig-cuerpo { text-align: center; }
 .fig-cuerpo img, .fig-cuerpo svg { max-width: 100%; }
 .nota { text-indent: 0; font-size: 10pt; margin: 0.12cm 0 0 0; line-height: 1.25; }
-.ancha { page: wide; break-before: page; break-after: page; }
+.ancha { page: wide; break-before: page; break-after: page; margin: 0; }
 .ancha .fig-cuerpo svg { width: 100%; height: auto; }
-table.apa { border-collapse: collapse; width: 100%; font-size: 9.5pt; line-height: 1.22; border-top: 1.2pt solid #000; border-bottom: 1.2pt solid #000; }
+table.apa { border-collapse: collapse; width: 100%; font-size: 10pt; line-height: 1.2; border-top: 1.2pt solid #000; border-bottom: 1.2pt solid #000; }
 table.apa th { text-align: left; font-weight: normal; border-bottom: 0.8pt solid #000; padding: 3pt 5pt; vertical-align: bottom; }
 table.apa td { padding: 2.5pt 5pt; vertical-align: top; text-align: left; }
 table.apa tr { break-inside: avoid; }
 .tabla.larga { break-inside: auto; }
 .tabla.chica table.apa { font-size: 9pt; }
+.tabla thead { display: table-header-group; }
 .ecuacion { display: flex; justify-content: space-between; align-items: center; margin: 0.15cm 0; line-height: 1.5; text-indent: 0; break-inside: avoid; }
 .ecuacion .eq { flex: 1; text-align: center; font-style: italic; }
 .ecuacion .eqn { width: 1.6cm; text-align: right; }

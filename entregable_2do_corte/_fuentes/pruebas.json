@@ -6,7 +6,7 @@
    "pasa": true,
    "verificaciones_ok": 0,
    "cierre_anomalo": false,
-   "segundos": 9.9,
+   "segundos": 7.6,
    "cola": "A. SEÑAS VÁLIDAS con variación de tamaño, giro por mano y ruido\n   ruido   método nuevo   método v1\n    0.00         100.0%      100.0%\n    0.03         100.0%      100.0%\n    0.06          96.9%      100.0%\n    0.09          86.0%      100.0%\n\nB. POSTURAS QUE NO SON NINGUNA SEÑA (transiciones y manos cruzadas)\n   n = 640   notas disparadas por error:\n   método nuevo: 8.0%     método v1: 100.0%\n\nTodas las pruebas pasaron.\n"
   },
   "test_stabilizer.py": {
@@ -15,7 +15,7 @@
    "pasa": true,
    "verificaciones_ok": 8,
    "cierre_anomalo": false,
-   "segundos": 0.3,
+   "segundos": 0.2,
    "cola": "  ok   test_confirma_de_inmediato_con_ventana_de_un_fotograma\n  ok   test_confirma_una_sena_sostenida\n  ok   test_el_voto_recupera_lecturas_perdidas\n  ok   test_mano_quieta_no_dispara_rafaga\n  ok   test_no_confirma_lecturas_sueltas\n  ok   test_parpadeo_breve_no_duplica_la_nota_sostenida\n  ok   test_permite_repetir_la_misma_nota_tras_soltar\n  ok   test_transicion_no_dispara_las_notas_del_camino\n\nTodas las pruebas pasaron.\n"
   },
   "test_mastery.py": {
@@ -33,8 +33,8 @@
    "pasa": true,
    "verificaciones_ok": 8,
    "cierre_anomalo": false,
-   "segundos": 2.2,
-   "cola": "\n  ok   test_es_rapido\n  ok   test_incluye_una_actividad_ludica\n  ok   test_la_seleccion_cambia_con_el_perfil\n  ok   test_milp_y_enumeracion_coinciden\n  ok   test_no_insiste_mas_de_dos_veces_en_la_misma_habilidad\n  ok   test_prefiere_lo_que_el_nino_tiene_flojo\n  ok   test_respeta_el_tamano_y_el_tiempo\n\nSesión elegida (milp, 100 ms, objetivo 2.9524):\n   🫧 Burbujas Musicales             dif=0.34  juego\n   👋 Conoce a Sol                   dif=0.17  ejercicio\n   🎠 Fa y Sol se columpian          dif=0.24  ejercicio\n   ⚡ Zigzag musical                 dif=0.43  ejercicio\n\nTodas las pruebas pasaron.\n"
+   "segundos": 1.9,
+   "cola": "a\n  ok   test_es_rapido\n  ok   test_incluye_una_actividad_ludica\n  ok   test_la_seleccion_cambia_con_el_perfil\n  ok   test_milp_y_enumeracion_coinciden\n  ok   test_no_insiste_mas_de_dos_veces_en_la_misma_habilidad\n  ok   test_prefiere_lo_que_el_nino_tiene_flojo\n  ok   test_respeta_el_tamano_y_el_tiempo\n\nSesión elegida (milp, 78 ms, objetivo 2.9524):\n   🫧 Burbujas Musicales             dif=0.34  juego\n   👋 Conoce a Sol                   dif=0.17  ejercicio\n   🎠 Fa y Sol se columpian          dif=0.24  ejercicio\n   ⚡ Zigzag musical                 dif=0.43  ejercicio\n\nTodas las pruebas pasaron.\n"
   },
   "test_predictor.py": {
    "comprueba": "Ajuste logístico mejor que el azar, monotonía, serialización y generador procedural",
@@ -42,8 +42,8 @@
    "pasa": true,
    "verificaciones_ok": 27,
    "cierre_anomalo": false,
-   "segundos": 0.8,
-   "cola": "  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   código con el prefijo esperado (proc_ee2cda3d82)\n  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   código con el prefijo esperado (proc_177d4eec0b)\n  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   sin al menos dos notas abiertas, no se genera nada\n\nEl predictor entrenable y el generador procedural funcionan como se esperaba.\n"
+   "segundos": 0.7,
+   "cola": "  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   código con el prefijo esperado (proc_2f03aae0f2)\n  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   código con el prefijo esperado (proc_b83e9cd811)\n  ok   la secuencia generada no está vacía\n  ok   todas las habilidades de la actividad existen en los estados dados\n  ok   sin al menos dos notas abiertas, no se genera nada\n\nEl predictor entrenable y el generador procedural funcionan como se esperaba.\n"
   },
   "test_rhythm.py": {
    "comprueba": "Planificación de tiempos y ventanas del módulo de ritmo",
@@ -51,8 +51,8 @@
    "pasa": true,
    "verificaciones_ok": 28,
    "cierre_anomalo": true,
-   "segundos": 24.8,
-   "cola": "seña correcta sí suena (['DO3', 'DO3'])\n\nEl motor de nota viajera funciona como se esperaba.\nINFO: Created TensorFlow Lite XNNPACK delegate for CPU.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nW0000 00:00:1790800768.644583   17772 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.\nW0000 00:00:1790800768.686821   17772 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.\n"
+   "segundos": 24.9,
+   "cola": "a\n  ok   una seña hecha antes de que cualquier nota entre a la ventana de acierto tampoco suena\n  ok   la nota 0 llegó a su ventana de acierto\n  ok   una seña que no es la pedida no suena nada (pedía DO3, se hizo RE3)\n  ok   la seña equivocada no falla la nota: sigue pendiente para un próximo intento, como en 'Notas Rítmicas'\n  ok   un reintento con la seña correcta sí suena (['DO3'])\n  ok   el reintento correcto sí resuelve la nota como acierto\n  ok   la nota 1 llegó a su ventana de acierto\n  ok   la seña correcta sí suena (['DO3', 'DO3'])\n\nEl motor de nota viajera funciona como se esperaba.\n"
   },
   "test_audio.py": {
    "comprueba": "Capas de sonido (personalizado, incluido, sintetizado) y música de fondo",
@@ -60,21 +60,21 @@
    "pasa": true,
    "verificaciones_ok": 36,
    "cierre_anomalo": false,
-   "segundos": 2.1,
+   "segundos": 2.5,
    "cola": "o\n  ok   'settings' es una pantalla principal: sí lleva música de fondo\n  ok   'results' es una pantalla principal: sí lleva música de fondo\n  ok   'profiles' es una pantalla principal: sí lleva música de fondo\n  ok   'create_profile' es una pantalla principal: sí lleva música de fondo\n  ok   la pantalla de bienvenida administra su propia música: no se toca aquí\n  ok   prende en pantallas principales, apaga al entrar a jugar, vuelve a prender al salir (['play:musica_fondo', 'stop', 'play:musica_fondo'])\n\nLas tres capas de sonido y la música de fondo fuera del juego funcionan como se esperaba.\n"
   },
   "test_integracion.py": {
    "comprueba": "Flujo completo de una sesión con la aplicación real sin ventana visible",
-   "resultado": "Pasó (15 verificaciones «ok»)",
-   "pasa": true,
-   "verificaciones_ok": 15,
+   "resultado": "Pasó en ejecución individual (8,7 s); en la ejecución en lote se agotó el límite de 600 s",
+   "pasa": false,
+   "verificaciones_ok": 0,
    "cierre_anomalo": false,
-   "segundos": 7.4,
-   "cola": "valores de dominio están en rango\n  ok   se programó el próximo repaso de cada nota\n  ok   el perfil ganó estrellas (3)\n  ok   se desbloqueó algún logro (['primer_gesto', 'tres_estrellas'])\n\n4. Decisión de la siguiente actividad\n  ok   el motor adaptativo decidió: subir — Vamos por algo un poco más difícil\n  ok   el optimizador armó una ruta (milp, 4 actividades)\n\n5. Aislamiento de los datos\n  ok   la base de datos se creó en la carpeta de datos\n  ok   las plantillas se guardaron por perfil\n  ok   los sonidos se generaron en el primer arranque\n\nEl ciclo completo funciona de extremo a extremo.\n"
+   "segundos": 600.0,
+   "cola": "timeout"
   }
  },
- "nota": "Ejecución del 30 de septiembre de 2026 en Windows 11; Python, NumPy, PySide6, PuLP, OpenCV y MediaPipe en las versiones 3.12.10 1.26.4 6.11.2 2.9.0 4.11.0 0.10.21.",
+ "nota": "Ejecución del 1 de octubre de 2026 en Windows 11 (Python 3.12.10, NumPy 1.26.4, PySide6 6.11.2, PuLP 2.9.0, OpenCV 4.11.0, MediaPipe 0.10.21), con la interfaz gráfica en modo offscreen.",
  "versiones": "3.12.10 1.26.4 6.11.2 2.9.0 4.11.0 0.10.21",
  "total": 8,
- "pasan": 8
+ "pasan": 7
 }

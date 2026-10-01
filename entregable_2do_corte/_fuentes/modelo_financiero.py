@@ -250,9 +250,11 @@ def escribir_xlsx(res: dict, path: Path) -> None:
 
 def figura_flujo(res: dict) -> str:
     from svglib import SVG, INK, GRAY_D, TEAL, RED
-    W, H = 1100, 640
+    # lienzo de 720 para página vertical (6,5 in): 13,5 unidades ≈ 8,8 pt
+    W, H = 720, 520
+    FS = 13.5
     s = SVG(W, H, "Flujo de caja acumulado por escenario")
-    L, Rr, T_, B_ = 110, 1050, 40, 460
+    L, Rr, T_, B_ = 70, 705, 14, 330
     esc = res["escenarios"]
     meses = 60
     pos = lambda e, m: -e["capex"] + m * e["beneficio_neto_mensual"]
@@ -265,15 +267,15 @@ def figura_flujo(res: dict) -> str:
     while v <= hi:
         y = Y(v)
         s.line(L, y, Rr, y, stroke="#E3E3E3" if v else "#888", sw=1 if v else 1.6)
-        s.text(L - 10, y, f"{v / 1e6:.0f}", size=12, anchor="end", weight=500, fill=GRAY_D)
+        s.text(L - 8, y, f"{v / 1e6:.0f}", size=FS, anchor="end", weight=500, fill=GRAY_D)
         v += step
     for m in range(0, meses + 1, 12):
         s.line(X(m), B_, X(m), B_ + 6, sw=1.2)
-        s.text(X(m), B_ + 22, str(m), size=12, weight=500, fill=GRAY_D)
-    s.text((L + Rr) / 2, B_ + 48, "Meses desde la puesta en marcha", size=13, weight=600)
-    s.text(40, (T_ + B_) / 2, "Posición acumulada (millones de COP)", size=13, weight=600, rotate=-90)
+        s.text(X(m), B_ + 20, str(m), size=FS, weight=500, fill=GRAY_D)
+    s.text((L + Rr) / 2, B_ + 44, "Meses desde la puesta en marcha", size=FS, weight=600)
+    s.text(16, (T_ + B_) / 2, "Posición acumulada (millones de COP)", size=FS, weight=600, rotate=-90)
     s.line(X(12), T_, X(12), B_, stroke=RED, sw=1.4, dash="6 4")
-    s.text(X(12) + 6, T_ + 10, "Límite de la guía: 12 meses", size=11.5, anchor="start", weight=600, fill=RED)
+    s.text(X(12) + 6, T_ + 10, "Límite de la guía: 12 meses", size=FS, anchor="start", weight=600, fill=RED)
     estilos = {ESC_CONS: (GRAY_D, "7 4"), ESC_BASE: (INK, None), ESC_OPT: ("#B58900", "3 3"), ESC_ESCALA: (TEAL, None), ESC_MAX: ("#0B6B61", "10 4"), ESC_INST: ("#7A3E9D", None)}
     for nm, e in esc.items():
         col, da = estilos[nm]
@@ -281,16 +283,16 @@ def figura_flujo(res: dict) -> str:
         pb = e["payback_meses"]
         if pb and pb <= meses:
             s.add(f'<circle cx="{X(pb):.1f}" cy="{Y(0):.1f}" r="6" fill="{col}" stroke="#fff" stroke-width="2"/>')
-    ly = B_ + 82
+    ly = B_ + 78
     for i, (nm, e) in enumerate(esc.items()):
         col, da = estilos[nm]
-        x = 40 + (i % 3) * 350
-        y = ly + (i // 3) * 46
+        x = 10 + (i % 2) * 360
+        y = ly + (i // 2) * 40
         d = f' stroke-dasharray="{da}"' if da else ""
         s.add(f'<line x1="{x}" y1="{y}" x2="{x + 34}" y2="{y}" stroke="{col}" stroke-width="3"{d}/>')
-        s.text(x + 42, y - 8, nm.split(" (")[0], size=12, anchor="start", weight=700)
+        s.text(x + 42, y - 8, nm.split(" (")[0], size=FS, anchor="start", weight=700)
         pb = f'{e["payback_meses"]:.1f}'.replace(".", ",")
-        s.text(x + 42, y + 10, f'ROI {e["roi_pct"]:.1f} %'.replace(".", ",") + f" · payback {pb} meses", size=11.5, anchor="start", weight=500, fill=GRAY_D)
+        s.text(x + 42, y + 9, f'ROI {e["roi_pct"]:.1f} %'.replace(".", ",") + f"; payback {pb} meses", size=FS, anchor="start", weight=500, fill=GRAY_D)
     return s.svg()
 
 

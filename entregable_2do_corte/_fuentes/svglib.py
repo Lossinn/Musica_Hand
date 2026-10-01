@@ -95,25 +95,26 @@ class SVG:
                  f'stroke-linejoin="round"/>')
 
     # ------------------------------------------------------------- BPMN
-    def pool(self, x, y, w, h, title, lanes=None, *, band=30, fill="#fff") -> None:
+    def pool(self, x, y, w, h, title, lanes=None, *, band=30, fill="#fff", fs=13, lfs=11, lband=24) -> None:
         """Pool con banda de título vertical; `lanes` = [(nombre, alto), ...]."""
         self.rect(x, y, w, h, fill=fill, sw=1.8)
         self.rect(x, y, band, h, fill=GRAY_L, sw=1.8)
-        self.text(x + band / 2, y + h / 2, title, size=13, weight=700, rotate=-90, width=max(10, int(h / 7.5)))
+        self.text(x + band / 2, y + h / 2, title, size=fs, weight=700, rotate=-90,
+                  width=max(10, int(h / (fs * 0.58))))
         if lanes:
             ly = y
             for i, (name, lh) in enumerate(lanes):
                 if i:
                     self.line(x + band, ly, x + w, ly, sw=1.2)
-                self.rect(x + band, ly, 24, lh, fill="#fff", sw=1.2)
-                self.text(x + band + 12, ly + lh / 2, name, size=11, weight=600, rotate=-90,
-                          width=max(8, int(lh / 6.6)))
+                self.rect(x + band, ly, lband, lh, fill="#fff", sw=1.2)
+                self.text(x + band + lband / 2, ly + lh / 2, name, size=lfs, weight=600, rotate=-90,
+                          width=max(8, int(lh / (lfs * 0.6))))
                 ly += lh
 
     def task(self, cx, cy, w, h, label, *, fill="#fff", size=11.5, chars=None, icon=None, stroke=INK, sw=1.6) -> None:
         self.rect(cx - w / 2, cy - h / 2, w, h, fill=fill, stroke=stroke, sw=sw, rx=9)
         ch = chars or max(8, int((w - (14 if icon else 6)) / (size * 0.56)))
-        self.text(cx, cy + (3 if icon else 0), label, size=size, width=ch, weight=500)
+        self.text(cx + (4 if icon else 0), cy + (4 if icon else 0), label, size=size, width=ch, weight=500)
         if icon == "user":   # tarea manual / usuario
             self.add(f'<circle cx="{cx - w/2 + 11}" cy="{cy - h/2 + 9}" r="3.2" fill="none" stroke="{INK}" stroke-width="1.1"/>'
                      f'<path d="M{cx - w/2 + 5},{cy - h/2 + 18} q6,-7 12,0" fill="none" stroke="{INK}" stroke-width="1.1"/>')
@@ -124,8 +125,12 @@ class SVG:
     def event(self, cx, cy, kind="start", label=None, *, r=15, lpos="below", lw=16, size=11) -> None:
         sw = 4 if kind.startswith("end") else 1.6
         self.add(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="{INK}" stroke-width="{sw}"/>')
-        if kind in ("timer", "msg-catch"):
+        if kind in ("timer", "msg-catch", "msg-throw"):
             self.add(f'<circle cx="{cx}" cy="{cy}" r="{r - 3.5}" fill="none" stroke="{INK}" stroke-width="1.2"/>')
+        if kind in ("msg-throw", "end-msg"):   # sobre relleno: evento que envía un mensaje
+            a = r * 0.5
+            self.add(f'<rect x="{cx - a}" y="{cy - a * 0.72}" width="{2 * a}" height="{1.44 * a}" fill="{INK}" stroke="{INK}" stroke-width="1.1"/>'
+                     f'<path d="M{cx - a},{cy - a * 0.72} L{cx},{cy + 0.05 * a} L{cx + a},{cy - a * 0.72}" fill="none" stroke="#fff" stroke-width="1.1"/>')
         if kind == "timer":
             self.add(f'<circle cx="{cx}" cy="{cy}" r="{r - 7}" fill="none" stroke="{INK}" stroke-width="1.1"/>'
                      f'<path d="M{cx},{cy - r + 8.5} L{cx},{cy} L{cx + 3.6},{cy + 2.4}" fill="none" stroke="{INK}" stroke-width="1.1"/>')
@@ -135,11 +140,13 @@ class SVG:
                      f'<path d="M{cx - a},{cy - a * 0.72} L{cx},{cy + 0.05 * a} L{cx + a},{cy - a * 0.72}" fill="none" stroke="{INK}" stroke-width="1.1"/>')
         if label:
             if lpos == "below":
-                self.text(cx, cy + r + 10 + (0), label, size=size, width=lw, weight=500, valign="top")
+                self.text(cx, cy + r + 4, label, size=size, width=lw, weight=500, valign="top")
             elif lpos == "above":
-                self.text(cx, cy - r - 10, label, size=size, width=lw, weight=500, valign="bottom")
+                self.text(cx, cy - r - 5, label, size=size, width=lw, weight=500, valign="bottom")
             elif lpos == "right":
                 self.text(cx + r + 6, cy, label, size=size, anchor="start", width=lw, weight=500)
+            elif lpos == "left":
+                self.text(cx - r - 6, cy, label, size=size, anchor="end", width=lw, weight=500)
 
     def gateway(self, cx, cy, kind="xor", label=None, *, s=26, lpos="above", lw=22, size=11) -> None:
         self.add(f'<polygon points="{cx},{cy - s} {cx + s},{cy} {cx},{cy + s} {cx - s},{cy}" fill="#fff" '
@@ -169,9 +176,9 @@ class SVG:
             x, y = (lx, ly) if lx is not None else (pts[0][0] + 5, (pts[0][1] + pts[-1][1]) / 2)
             self.text(x, y, label, size=size, weight=500, anchor=anchor, italic=True, fill=GRAY_D)
 
-    def badge(self, cx, cy, n) -> None:
-        self.add(f'<circle cx="{cx}" cy="{cy}" r="10.5" fill="{RED}"/>')
-        self.text(cx, cy + 0.5, str(n), size=11.5, weight=700, fill="#fff")
+    def badge(self, cx, cy, n, *, r=10.5, size=11.5) -> None:
+        self.add(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{RED}"/>')
+        self.text(cx, cy + 0.5, str(n), size=size, weight=700, fill="#fff")
 
     # -------------------------------------------------------------- DFD
     def process(self, cx, cy, r, num, label, *, size=11.5, fill="#fff", chars=None) -> None:
@@ -184,11 +191,13 @@ class SVG:
         self.rect(cx - w / 2, cy - h / 2, w, h, fill=fill, sw=1.9)
         self.text(cx, cy, label, size=size, width=max(8, int(w / (size * 0.56))), weight=600)
 
-    def store(self, cx, cy, w, h, code, label, *, size=11) -> None:
+    def store(self, cx, cy, w, h, code, label, *, size=11, dup=False) -> None:
         x0, y0 = cx - w / 2, cy - h / 2
         self.add(f'<rect x="{x0}" y="{y0}" width="{w}" height="{h}" fill="{YELLOW_SOFT}" stroke="none"/>')
         self.line(x0, y0, x0 + w, y0, sw=1.9); self.line(x0, y0 + h, x0 + w, y0 + h, sw=1.9)
         self.line(x0 + 40, y0, x0 + 40, y0 + h, sw=1.2)
+        if dup:   # almacén repetido en el mismo diagrama (convención de DeMarco: línea vertical adicional)
+            self.line(x0 + 6, y0, x0 + 6, y0 + h, sw=1.2)
         self.text(x0 + 20, cy, code, size=size, weight=700)
         self.text(x0 + 46 + (w - 46) / 2, cy, label, size=size, width=max(8, int((w - 50) / (size * 0.56))), weight=500)
 

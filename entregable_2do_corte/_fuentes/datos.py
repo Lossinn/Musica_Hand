@@ -37,11 +37,16 @@ CONS = ESC["Conservador (beneficios -25 %)"]
 ESCALA = [v for k, v in ESC.items() if k.startswith("Escala (")][0]
 TOT = FIN["totales"]
 
-# Indicadores verificados (DANE ENTIC Hogares 2024, boletín técnico del 1 de agosto de 2025)
+# Indicadores verificados (DANE ENTIC Hogares 2024, boletín técnico del 1 de agosto de 2025).
+# Los de Córdoba se leyeron de los gráficos 6, 13 y 15 (posición de la etiqueta y del valor en el PDF).
+# Población: archivo oficial del DANE de proyecciones municipales por edad simple, actualización
+# post COVID-19, fila 23001 Montería, año 2026, área Total (dane_monteria_2026.json, 1 oct. 2026).
+_POB = json.loads((F / "dane_monteria_2026.json").read_text(encoding="utf-8"))
 DANE = dict(
     hog_internet_cor=47.2, hog_internet_nal=65.6, hog_internet_cab=72.5, hog_internet_rur=41.9,
     pers_comp_cor=25.2, pers_comp_nal=35.1, pers_int_cor=71.9, pers_int_nal=79.3, hog_comp_nal=35.7,
-    mon_total=585_029, mon_5_9=46_871, mon_10_14=46_290, mon_0_4=48_357,
+    mon_total=_POB["total"], mon_3_12=_POB["edad_3_12"],
+    mon_3_5=_POB["edad_3_5"], mon_6_8=_POB["edad_6_8"], mon_9_12=_POB["edad_9_12"],
 )
 
 # Orden y metadatos de las referencias (id de la matriz bibliográfica)
@@ -109,8 +114,9 @@ def referencia_html(rid: str) -> str:
         det += f", <em>{vol}</em>"
         if num:
             det += f"({num})"
-    if pag:
-        det += f", {pag}"
+    if pag:   # APA 7: intervalo de páginas con raya corta; si no, número de artículo (e-locator)
+        import re
+        det += f", {pag.replace('-', '–')}" if re.fullmatch(r"\d+-\d+", pag) else f", Artículo {pag}"
     url = f"https://doi.org/{r['doi']}"
     return (f"{html.escape(_autores_apa(r['autores']))} ({r['anio']}). {html.escape(TITULO_APA[rid])}. {det}. "
             f'<a href="{url}">{url}</a>')
@@ -120,24 +126,26 @@ REF_EXTRA = [
     ("Equipo 13", "",
      "Equipo 13. (2026). <em>Documento técnico de ingeniería y arquitectura de proyecto: Desarrollo de un sistema inteligente adaptativo mediante "
      "visión computacional, gamificación e inteligencia artificial para el aprendizaje de teoría musical infantil en el Departamento de Córdoba 2026</em> "
-     "[Documento de la asignatura Proyecto Integrador II, 8830 0059 0]. Universidad Pontificia Bolivariana, Seccional Montería."),
+     "[Manuscrito no publicado, Proyecto Integrador II]. Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería."),
     ("Zhang", '<a href="https://doi.org/10.48550/arXiv.2006.10214">https://doi.org/10.48550/arXiv.2006.10214</a>',
      "Zhang, F., Bazarevsky, V., Vakunov, A., Tkachenka, A., Sung, G., Chang, C.-L., y Grundmann, M. (2020). "
-     "MediaPipe Hands: On-device real-time hand tracking. <em>arXiv</em>. "),
-    ("DANE", '<a href="https://www.dane.gov.co/files/operaciones/ENTIC/bol-ENTICHogares-2024.pdf">'
+     "<em>MediaPipe Hands: On-device real-time hand tracking</em> (arXiv:2006.10214). arXiv. "),
+    ("Departamento Administrativo Nacional de Estadistica 2", '<a href="https://www.dane.gov.co/files/operaciones/ENTIC/bol-ENTICHogares-2024.pdf">'
      'https://www.dane.gov.co/files/operaciones/ENTIC/bol-ENTICHogares-2024.pdf</a>',
      "Departamento Administrativo Nacional de Estadística. (2025, 1 de agosto). <em>Encuesta de Tecnologías de la "
      "Información y las Comunicaciones en Hogares (ENTIC Hogares) 2024: Boletín técnico</em>. "),
-    ("DANEp", '<a href="https://telencuestas.com/censos-de-poblacion/colombia/2026/cordoba/monteria">'
-     'https://telencuestas.com/censos-de-poblacion/colombia/2026/cordoba/monteria</a>',
-     "Departamento Administrativo Nacional de Estadística. (s. f.). <em>Proyecciones de población con base en el "
-     "Censo Nacional de Población y Vivienda 2018</em> [Consultado mediante Telencuestas, 2026]. "),
-    ("DAMA", "",
+    ("Departamento Administrativo Nacional de Estadistica 1", '<a href="https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/'
+     'DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx">https://www.dane.gov.co/files/censo2018/'
+     'proyecciones-de-poblacion/Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx</a>',
+     "Departamento Administrativo Nacional de Estadística. (s. f.). <em>Proyecciones de población municipal por área, "
+     "sexo y edad, periodo 2020-2035: Actualización post COVID-19</em> [Conjunto de datos]. Recuperado el 1 de octubre "
+     "de 2026, de "),
+    ("DAMA International", "",
      "DAMA International. (2017). <em>DAMA-DMBOK: Data management body of knowledge</em> (2.ª ed.). Technics Publications."),
-    ("Ley1581", '<a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">'
+    ("Congreso de la Republica de Colombia", '<a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">'
      'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981</a>',
-     "Congreso de la República de Colombia. (2012). <em>Ley Estatutaria 1581 de 2012, por la cual se dictan "
-     "disposiciones generales para la protección de datos personales</em>. "),
+     "Congreso de la República de Colombia. (2012, 17 de octubre). <em>Ley Estatutaria 1581 de 2012, por la cual se dictan "
+     "disposiciones generales para la protección de datos personales</em>. Función Pública. "),
 ]
 
 
