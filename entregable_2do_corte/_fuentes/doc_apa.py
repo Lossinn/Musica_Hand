@@ -360,23 +360,23 @@ def dfd() -> str:
         "rectángulos abiertos para almacenes de datos y flechas rotuladas para los flujos. El nivel 0 ([[F:dfd0]]) delimita el "
         "sistema; el nivel 1 ([[F:dfd1]]) lo descompone en siete procesos; y el nivel 2 ([[F:dfd2]]) detalla el proceso crítico, "
         "la planificación adaptativa, que concentra el procesamiento algorítmico y la mayoría de lecturas de almacenes. Los almacenes D1 a D6 son tablas o archivos reales (véase Gobernanza de Datos)."))
-    h.append(figura("DFD nivel 0: diagrama de contexto", svg_inline("dfd_nivel0"),
+    h.append(figura("DFD nivel 0: diagrama de contexto", '<div style="width:80%;margin:0 auto">' + svg_inline("dfd_nivel0") + "</div>",
                     "Sin entidades externas en la nube.", ref="dfd0"))
     h.append(P(
         "El <em>balanceo</em> exige que los flujos que cruzan la frontera de un proceso reaparezcan en su descomposición. "
-        "La [[T:balance]], a continuación de los diagramas, lo comprueba: los cinco flujos del nivel 0 se reparten sin pérdida ni adición en el nivel 1, y los "
+        "La [[T:balance]] lo comprueba: los cinco flujos del nivel 0 se reparten sin pérdida ni adición en el nivel 1, y los "
         "siete flujos de la frontera del proceso 5.0 reaparecen con el mismo nombre en el nivel 2."))
-    h.append(figura("DFD nivel 1: descomposición en siete procesos", svg_inline("dfd_nivel1"),
-                    "D4 aparece dos veces por legibilidad; la línea vertical adicional marca la copia.", ancha=True, ref="dfd1"))
-    h.append(figura("DFD nivel 2: explosión del proceso 5.0, planificar la sesión adaptativa", svg_inline("dfd_nivel2"),
-                    "En gris, los procesos y almacenes vecinos del nivel 1; el proceso 6.0 se dibuja a ambos lados por legibilidad.",
-                    ancha=True, ref="dfd2"))
     filas = []
     for nv, d in BALANCE.items():
         filas.append([f"<em>{nv}</em>", ""])
         filas += [[p, "; ".join(hh)] for p, hh in d.items()]
     h.append(tabla("Comprobación del balanceo entre niveles", ["Flujo en el nivel padre", "Flujos en el nivel hijo"],
                    filas, anchos=["48%", "52%"], clase="chica larga", ref="balance"))
+    h.append(figura("DFD nivel 1: descomposición en siete procesos", svg_inline("dfd_nivel1"),
+                    "D4 aparece dos veces por legibilidad; la línea vertical adicional marca la copia.", ancha=True, ref="dfd1"))
+    h.append(figura("DFD nivel 2: explosión del proceso 5.0, planificar la sesión adaptativa", svg_inline("dfd_nivel2"),
+                    "En gris, los procesos y almacenes vecinos del nivel 1; el proceso 6.0 se dibuja a ambos lados por legibilidad.",
+                    ancha=True, ref="dfd2"))
     return "".join(h)
 
 
@@ -553,17 +553,15 @@ def finanzas() -> str:
     esc_f = [[k, cop(e["capex"]), cop(e["beneficio_neto"]), pct(e["roi_pct"]), n(e["payback_meses"], 1),
               "Sí" if e["roi_pct"] >= 30 else "No", "Sí" if e["payback_meses"] <= 12 else "No"] for k, e in ESC.items()]
     h.append(P(
-        f"La [[T:escen]] y la [[F:caja]] presentan seis escenarios. Una institución que adopta el sistema en cuatro aulas, con "
+        f"La [[T:escen]] presenta seis escenarios. Una institución que adopta el sistema en cuatro aulas, con "
         f"beneficios por aula y un desarrollo que se paga una vez, alcanza un ROI de {pct(INST['roi_pct'])} y recupera la "
         f"inversión en {n(INST['payback_meses'], 1)} meses: cumple el criterio de ROI y se acerca al de 12 meses sin cumplirlo. "
         "La rentabilidad del proyecto proviene, por tanto, de la adopción en varias aulas o instituciones."))
     h.append(tabla("Escenarios frente a los criterios de la guía",
                    ["Escenario", "CAPEX", "Beneficio neto", "ROI año 1", "Payback (meses)", "ROI ≥ 30 %", "Payback ≤ 12"], esc_f,
-                   "Conservador: beneficios 25 % menores. Optimista: suma el instrumental evitado. Institución: cuatro aulas "
+                   "Conservador: beneficios 25 % menores. Optimista: suma el instrumental que deja de comprarse ($ 1.000.000; PINT2). Institución: cuatro aulas "
                    "(supuesto). Escala: el desarrollo se reparte entre tres instituciones de un aula.",
                    anchos=["30%", "12%", "13%", "10%", "11%", "12%", "12%"], clase="chica", ref="escen"))
-    h.append(figura("Posición acumulada de caja por escenario", svg_inline("flujo_caja_acumulado"),
-                    "Posición = −CAPEX + mes × beneficio neto mensual. Los puntos marcan el mes de recuperación.", ref="caja"))
     s = _sens()
     txt = "; ".join(f"{nm}, de {pct(lo)} a {pct(hi)}" for nm, lo, hi in s)
     h.append(P(

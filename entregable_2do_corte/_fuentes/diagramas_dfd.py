@@ -102,16 +102,16 @@ class Canvas:
 def dfd0() -> SVG:
     """Página vertical: lienzo de 720."""
     c = Canvas(720, 340, "DFD nivel 0: diagrama de contexto")
-    c.process("0", 380, 170, 88, "0", "Sistema Hand Sing Kids (aplicación local)", size=15)
-    c.entity("nino", 92, 50, 150, 56, "Niño o niña", size=15)
-    c.entity("cam", 92, 290, 150, 56, "Cámara web", size=15)
-    c.entity("adulto", 630, 170, 150, 76, "Acudiente o docente", size=15)
-    c.link("nino", "0", "Selección de perfil\ny de actividad", off=-13, lpos=(268, 40))
-    c.link("0", "nino", "Actividad, nota\nsonora y resultado", off=-13, lpos=(160, 125), anchor="start")
-    c.link("cam", "0", "Fotogramas RGB", lpos=(205, 262), anchor="start")
+    c.process("0", 380, 170, 88, "0", "Sistema Hand Sing Kids (aplicación local)", size=16)
+    c.entity("nino", 92, 50, 150, 56, "Niño o niña", size=16)
+    c.entity("cam", 92, 290, 150, 56, "Cámara web", size=16)
+    c.entity("adulto", 630, 170, 150, 76, "Acudiente o docente", size=16)
+    c.link("nino", "0", "Selección de perfil\ny de actividad", off=-13, size=16, lpos=(268, 40))
+    c.link("0", "nino", "Actividad, nota\nsonora y resultado", off=-13, size=16, lpos=(160, 125), anchor="start")
+    c.link("cam", "0", "Fotogramas RGB", size=16, lpos=(205, 262), anchor="start")
     # con off < 0, el flujo adulto→0 queda debajo y el 0→adulto encima
-    c.link("adulto", "0", "Perfil, ajustes y\nsolicitud de informe", off=-16, lpos=(552, 238))
-    c.link("0", "adulto", "Informe de\nprogreso", off=-16, lpos=(552, 102))
+    c.link("adulto", "0", "Perfil, ajustes y\nsolicitud de informe", off=-16, size=16, lpos=(552, 238))
+    c.link("0", "adulto", "Informe de\nprogreso", off=-16, size=16, lpos=(552, 102))
     return c.s
 
 
