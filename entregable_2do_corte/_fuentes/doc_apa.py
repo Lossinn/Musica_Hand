@@ -415,10 +415,9 @@ def gobernanza() -> str:
     h = [H1("Gobernanza de datos")]
     h.append(P(
         "El marco toma como referencia el cuerpo de conocimiento DAMA-DMBOK (DAMA International, 2017) en sus áreas de "
-        "modelado, calidad, metadatos y seguridad. En todo el apartado se distingue lo que el código <em>impone hoy</em> de lo "
-        "que es <em>política objetivo</em> aún no implementada. Los principios son tres: privacidad por diseño, porque ningún "
-        "fotograma se escribe en disco y el paquete no importa módulos de red; soberanía de los datos, porque no hay cuentas "
-        "ni nube; y calidad medible, porque cada dimensión tiene un procedimiento de comprobación."))
+        "modelado, calidad, metadatos y seguridad, y distingue lo que el código <em>impone hoy</em> de la <em>política "
+        "objetivo</em>. Sus principios son privacidad por diseño (ningún fotograma se escribe en disco y no hay módulos de "
+        "red), soberanía de los datos (sin cuentas ni nube) y calidad medible."))
     h.append(H2("Catálogo y diccionario de datos"))
     h.append(P(
         f"El repositorio es SQLite, con {res['tablas']} tablas y {res['columnas']} campos, registro anticipado de escritura "
@@ -561,7 +560,7 @@ def finanzas() -> str:
                    ["Escenario", "CAPEX", "Beneficio neto", "ROI año 1", "Payback (meses)", "ROI ≥ 30 %", "Payback ≤ 12"], esc_f,
                    "Conservador: beneficios 25 % menores. Optimista: suma el instrumental que deja de comprarse ($ 1.000.000; PINT2). Institución: cuatro aulas "
                    "(supuesto). Escala: el desarrollo se reparte entre tres instituciones de un aula.",
-                   anchos=["30%", "12%", "13%", "10%", "11%", "12%", "12%"], clase="chica", ref="escen"))
+                   anchos=["30%", "12%", "13%", "10%", "11%", "12%", "12%"], clase="chica larga", ref="escen"))
     s = _sens()
     txt = "; ".join(f"{nm}, de {pct(lo)} a {pct(hi)}" for nm, lo, hi in s)
     h.append(P(
@@ -579,9 +578,8 @@ def discusion() -> str:
         "que no son seña y conserva un acierto del 96,9 % con ruido moderado. Frente a la literatura revisada, que adapta la "
         "enseñanza con refuerzo profundo, HSK usa reglas explícitas y un MILP que pueden explicarse a un docente y funcionan "
         "con pocos datos por niño, a costa de que sus constantes sean decisiones de diseño. La gobernanza cumple la privacidad "
-        "por diseño, pero el PIN de adulto, los respaldos, la retención y el borrado completo siguen pendientes. Las "
-        "limitaciones son una sola calibración de una persona, la ausencia de pruebas con niños, el efecto pedagógico sin "
-        "medir, beneficios financieros basados en cifras de campo secundarias y una revisión hecha sobre resúmenes."))
+        "por diseño, pero el PIN de adulto, los respaldos y el borrado completo siguen pendientes. Limitaciones: una sola "
+        "calibración, sin pruebas con niños ni medición del efecto pedagógico, y beneficios basados en cifras secundarias."))
     h.append(P(
         "Se concluye que el prototipo reconoce las ocho señas con un descriptor de 120 componentes en "
         f"{n(BENCH['total_ms']['media'], 1)} ms de cómputo por fotograma y adapta la práctica con un gemelo digital y una "
