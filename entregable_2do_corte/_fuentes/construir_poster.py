@@ -80,11 +80,11 @@ h1.titulo { margin-top: 9mm; color: #FFCC00; font-weight: 800; text-transform: u
 .equipo { margin-top: 3mm; font-size: 21pt; color: #CFCFCF; font-weight: 500; line-height: 1.3; }
 .franja { height: 10mm; border-radius: 2mm; background: repeating-linear-gradient(135deg, #FFCC00 0 9mm, #141414 9mm 18mm); flex: none; }
 /* ---------------------------------------------------------------- cuerpo */
-.cuerpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 12mm; }
+.cuerpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12mm; }
 .col { display: flex; flex-direction: column; gap: 10mm; min-width: 0; }
 .col > .card:last-child { flex: 1; }
 .card { background: rgba(255,255,255,.97); border-radius: 4mm; padding: 0 9mm 8mm; box-shadow: 0 2mm 4mm rgba(60,35,5,.3);
-  border-bottom: 3mm solid #141414; display: flex; flex-direction: column; }
+  border-bottom: 3mm solid #141414; display: flex; flex-direction: column; padding-bottom: 7mm; }
 .card.oscura { background: #1c1c1c; color: #fff; }
 .card h2 { margin: 0 -9mm 6mm; padding: 3.5mm 9mm; background: #141414; color: #FFCC00; border-radius: 4mm 4mm 0 0;
   font-size: 32pt; font-weight: 800; text-transform: uppercase; line-height: 1.1; display: flex; align-items: center; gap: 4mm; }
@@ -109,9 +109,9 @@ li::before { content: ''; position: absolute; left: 0; top: 4.2mm; width: 4.4mm;
 .card.oscura .kpi b { color: #141414; font-size: 38pt; }
 .arbol { display: grid; gap: 3mm; }
 .fila { display: grid; gap: 3mm; grid-template-columns: 1fr 1fr; }
-.caja { border: .9mm solid #141414; border-radius: 3mm; padding: 2.5mm 3mm; font-size: 19pt; line-height: 1.15; text-align: center; font-weight: 600; }
+.caja { border: .9mm solid #141414; border-radius: 3mm; padding: 3mm 3mm; font-size: 21pt; line-height: 1.15; text-align: center; font-weight: 600; }
 .caja.e { background: #F5F5F5; } .caja.c { background: #fff; }
-.caja.p { background: #FFCC00; font-size: 21pt; font-weight: 800; }
+.caja.p { background: #FFCC00; font-size: 23pt; font-weight: 800; }
 .rot { font-size: 16pt; font-weight: 800; letter-spacing: 1pt; color: #707070; text-align: center; }
 .ods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-top: 5mm; }
 .od { background: #141414; color: #fff; border-radius: 3mm; padding: 2.5mm 2mm; text-align: center; }
@@ -210,6 +210,8 @@ def columna1() -> str:
   </div>
   <div class="brecha"><p>Brecha: ningún estudio combina señas manuales, niños de 3 a 12 años, procesamiento local y
     adaptación interpretable.</p></div>
+  <p style="margin-top:5mm;font-weight:700">Decisiones tomadas de la literatura:</p>
+  <ul><li>Actividades breves</li><li>Dificultad objetivo intermedia</li><li>Planificación explícita en lugar de refuerzo profundo</li></ul>
   <p class="fuente">Predominan el refuerzo profundo, los universitarios y el piano ({cita('075')}; {cita('038')}).</p>
 </div>"""
 
@@ -224,7 +226,7 @@ def columna2() -> str:
   <p class="cap">To-Be: reconocimiento en cada fotograma, registro automático y repaso programado</p>
 </div>
 <div class="card"><h2><span class="n">6</span>Flujo de datos (DFD)</h2>
-  <div class="dia">{svg('poster_dfd0')}</div>
+  <div class="dia"><div style="width:84%;margin:0 auto">{svg('poster_dfd0')}</div></div>
   <p class="cap">Nivel 0: sin entidades en la nube</p>
   <div class="dia" style="margin-top:3mm">{svg('poster_dfd1')}</div>
   <p class="cap">Nivel 1 simplificado (los niveles 1 y 2 completos están en el documento)</p>
@@ -247,6 +249,9 @@ def columna3() -> str:
 <div class="card oscura"><h2><span class="n">8</span>Prototipo funcional</h2>
   <div class="shot"><img src="{uri(A / 'capturas' / '05_aventura.png')}" alt="Mapa de aventura"></div>
   <div class="shot"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio guiado"></div>
+  <ul style="margin-bottom:5mm"><li>OE2: reconoce las 8 señas (DO3 a DO4) con las dos manos</li>
+      <li>OE2: adapta cada sesión con gemelo digital y MILP</li>
+      <li>OE3: registra cada intento para medir el dominio</li></ul>
   <div class="kpis k4">
     <div class="kpi"><b>14</b><span>pantallas</span></div>
     <div class="kpi"><b>63</b><span>actividades</span></div>
