@@ -4,6 +4,18 @@ Documento interno del equipo. No se incluye en el `.zip` de entrega. Estado al 1
 
 Leyenda: **[Equipo]** solo el equipo puede resolverlo · **[Corroborar]** dato que debe verificarse con una fuente · **[Ajustar]** decisión o cambio pendiente.
 
+## 0. Cambios de la revisión del 1 de octubre (prevalecen sobre lo que diga más abajo)
+
+- Documento reducido de 59 a 31 páginas (3 preliminares + 25 de cuerpo + 3 de referencias). Se quitaron los anexos A a E, la comparación con el Equipo 13 y la figura de flujo de caja; el detalle sigue en `_fuentes/`.
+- APA 7: márgenes de 2,54 cm también en páginas apaisadas; encabezados sin numerar y en mayúsculas y minúsculas; título repetido en la primera página del texto; portada de estudiante **sin logos** (APA no los contempla); figuras y tablas numeradas en orden de mención y todas citadas; texto de figuras ≥ 8 pt.
+- Título canónico nuevo (acción + efecto + población + Montería/Córdoba + 2026), igual en documento y póster.
+- **Población corregida** con el archivo oficial del DANE (proyecciones municipales post COVID-19): Montería 2026 = 535.052 hab.; 3 a 12 años = 80.254. La cifra anterior (585.029; 93.161) venía de Telencuestas y no coincide con el DANE. Punto 2.5 de abajo: resuelto.
+- Córdoba 47,2 % / 25,2 % / 71,9 %: confirmados en el PDF del boletín (posición de etiqueta y valor). Punto 2.4: resuelto.
+- BPMN To-Be corregido (faltaban evento de inicio del pool del sistema, flujo entre «Hace la seña» y «Oye la nota», y un mensaje llegaba a un evento de fin). DFD 0: rótulos de los flujos con el acudiente estaban invertidos; corregido. As-Is con nivelación manual y 6 marcas (sobrecosto, cuello de botella, reproceso, registro manual, redundancia, tiempo muerto).
+- Pruebas (1 oct.): 7 suites pasan en lote; `test_integracion.py` agotó 600 s en lote y pasa sola en 8,7 s. Así se informa en la Tabla 5. Revisar por qué se cuelga tras el cierre anómalo de `test_rhythm.py` (0xc0000409).
+- El `.zip` ahora contiene solo los 3 archivos exigidos (01, 03, 04).
+- Sigue pendiente: número de equipo, nombres, fecha real de entrega (`FECHA` en `construir_documento.py`), y borrar el `.xlsx` duplicado de la raíz (bloqueado por Excel).
+
 ## 1. Antes de subir a Teams (bloqueantes)
 
 | # | Tipo | Pendiente | Dónde se ve | Cómo cerrarlo |
