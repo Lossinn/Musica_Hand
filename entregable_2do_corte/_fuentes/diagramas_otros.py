@@ -8,7 +8,7 @@ FS = 13.5
 
 
 def linaje() -> SVG:
-    s = SVG(720, 516, "Linaje del dato: de la cámara al informe para adultos")
+    s = SVG(720, 452, "Linaje del dato: de la cámara al informe para adultos")
     W, H = 162, 112
     xs = [8 + i * (W + 20) for i in range(4)]
     estilo = {"eph": ("#fff", "6 4", GRAY_D), "ses": (YELLOW_SOFT, None, INK), "per": (YELLOW, None, INK)}
@@ -59,15 +59,6 @@ def linaje() -> SVG:
     s.text(xs[3] + W / 2, y2 + 87, "Zona de Padres\n(bajo demanda)", size=FS, weight=700)
     s.path([(xs[2] + W + 2, y2 + 25), (xs[3] - 3, y2 + 25)], sw=2)
     s.path([(xs[2] + W + 10, y2 + 25), (xs[2] + W + 10, y2 + 87), (xs[3] - 3, y2 + 87)], sw=2)
-    # leyenda
-    ly = 462
-    for lx, lab, k in ((8, "Efímero: solo en RAM", "eph"), (236, "De sesión: en memoria", "ses"),
-                       (472, "Persistente: disco local", "per")):
-        fill, dash, st = estilo[k]
-        s.rect(lx, ly, 26, 18, fill=fill, stroke=st, sw=1.6, rx=4, dash=dash)
-        s.text(lx + 34, ly + 9, lab, size=FS, anchor="start", weight=600)
-    s.text(360, 502, "Ningún fotograma se escribe en disco: solo coordenadas de 21 puntos por mano.",
-           size=FS, weight=600, fill=GRAY_D, italic=True)
     return s
 
 

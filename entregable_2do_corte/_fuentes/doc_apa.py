@@ -445,7 +445,8 @@ def gobernanza() -> str:
         "persistente. El planificador y la Zona de Padres, donde el acudiente o el docente decide qué reforzar, consumen el "
         "estado persistente."))
     h.append(figura("Linaje del dato, de la cámara a la toma de decisiones", svg_inline("linaje_dato"),
-                    "Elaboración propia a partir de los módulos <em>vision</em>, <em>learning.session_flow</em> y <em>data</em>.",
+                    "Borde punteado: dato efímero, solo en RAM; amarillo claro: dato de sesión; amarillo: dato persistente en el disco "
+                    "local. Ningún fotograma se escribe en disco. Elaboración propia a partir del código.",
                     ref="linaje"))
     h.append(H2("Dimensiones de calidad"))
     calidad = [
@@ -513,7 +514,7 @@ def finanzas() -> str:
     cap = FIN["capex"]; ox = FIN["opex"]; bn = FIN["beneficios"]
     det_c = {
         "Horas de ingeniería y desarrollo": (f"{PAR['horas_dev_pint2']} h (PINT2) + {PAR['horas_dev_corte2']} h de este corte (supuesto) × {cop(PAR['tarifa_ing'])}", "PINT2, supuesto"),
-        "Cámara web, periféricos y soportes": ("Cámara 720p y periféricos; soportes", "PINT2"),
+        "Cámara web, periféricos y soportes": ("Cámara 720p, periféricos y soportes", "PINT2"),
         "Licenciamiento y configuración inicial": ("Software de código abierto; puesta a punto", "PINT2"),
         "Capacitación a docentes": (f"{PAR['horas_capac']} h × {cop(PAR['tarifa_docente'])}", "PINT2"),
         "Consulta jurídica de protección de datos": ("Ley 1581 de 2012, datos de menores", "Supuesto"),
@@ -532,8 +533,7 @@ def finanzas() -> str:
         filas.append(["", f"Total {grupo}", "", "", cop(tot)])
     h.append(tabla("CAPEX, OPEX y beneficios de un aula, con detalle y procedencia",
                    ["Rubro", "Concepto", "Detalle", "Procedencia", "Valor (COP)"], filas,
-                   "PINT2 = estudio del Equipo 13 (2026). API = interfaz de programación de aplicaciones. El instrumental "
-                   "que deja de comprarse ($ 1.000.000 según PINT2) solo se suma en el escenario optimista.",
+                   "PINT2 = Equipo 13 (2026). API = interfaz de programación de aplicaciones.",
                    anchos=["14%", "26%", "34%", "12%", "14%"], clase="chica larga", ref="costos"))
     plant = [
         ["Inversión inicial (CAPEX)", "Desarrollo, hardware, configuración, capacitación y consulta jurídica", cop(TOT["capex"])],
