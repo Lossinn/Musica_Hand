@@ -80,7 +80,6 @@ def bpmn_to_be() -> SVG:
     s.flow([(246, yT), (150, yT), (150, yV + 19)])
     # evaluación
     s.flow([(445, yV + 21), (445, yV + 58), (110, yV + 58), (110, yE - 27)])
-    s.task(110, yE, 130, 54, "Evaluar y guardar el intento", size=FS, fill=Y, icon="svc", chars=12) if False else None
     s.task(130, yE, 136, 54, "Evaluar y guardar intento", size=FS, fill=Y, icon="svc", chars=13)
     s.gateway(245, yE, "inc", None, s=21)
     s.task(380, yE - 30, 170, 44, "Dominio y repaso", size=FS, fill=Y, icon="svc", chars=17)
@@ -90,8 +89,6 @@ def bpmn_to_be() -> SVG:
     s.flow([(245, yE - 21), (245, yE - 30), (295, yE - 30)]); s.flow([(245, yE + 21), (245, yE + 30), (295, yE + 30)])
     s.flow([(465, yE - 30), (510, yE - 30), (510, yE - 21)]); s.flow([(465, yE + 30), (510, yE + 30), (510, yE + 21)])
     # planificación
-    s.flow([(510, yE + 21), (510, yE + 21)], None) if False else None
-    s.flow([(531, yE), (560, yE), (560, yP - 26), (440, yP - 26), (440, yP - 25)]) if False else None
     s.task(400, yP, 190, 52, "Planificar la sesión (MILP)", size=FS, fill=Y, icon="svc", chars=18)
     s.event(560, yP, "end", None, r=12)
     s.flow([(531, yE), (545, yE), (545, yP - 36), (400, yP - 36), (400, yP - 26)])
@@ -107,7 +104,6 @@ def bpmn_to_be() -> SVG:
     # mensajes
     s.msg([(150, yA + 28), (150, top - 5), (98, top - 5), (98, yV - 13)])
     s.msg([(600, yV - 28), (600, yA + 28)])
-    s.msg([(465, yE - 30), (600, yE - 30), (600, yC - 13)]) if False else None
     s.msg([(465, yE - 22), (620, yE - 22), (620, yC - 30), (600, yC - 30), (600, yC - 13)])
     return s
 
@@ -136,12 +132,10 @@ def dfd1() -> SVG:
     c.process("p6", 225, 60, R, "6.0", "Interfaz", size=15)
     c.process("p5", 470, 60, R, "5.0", "Planificar", size=15)
     c.process("p2", 225, 330, R, "2.0", "Reconocer", size=15)
-    c.process("p3", 225, 195, R, "3.0", "Evaluar", size=15) if False else None
     c.process("p3", 350, 195, R, "3.0", "Evaluar", size=15)
     c.process("p4", 560, 195, R, "4.0", "Gemelo", size=15)
     c.process("p7", 470, 330, R, "7.0", "Informe", size=15)
     c.store("d3", 350, 290, 150, 32, "D3", "Intentos", size=15)
-    c.store("d4", 640, 290, 120, 32, "D4", "Habilidad", size=15) if False else None
     c.store("d4", 640, 112, 112, 40, "D4", "Habilidad", size=15)
     L = dict(size=15)
     c.link("nino", "p6", "Actividad", off=-9, lpos=(140, 34), **L)
@@ -153,7 +147,6 @@ def dfd1() -> SVG:
     c.link("p5", "p3", "Secuencia", lpos=(430, 128), anchor="start", **L)
     c.link("p3", "p4", "Resultado", lpos=(456, 182), **L)
     c.link("p3", "d3", "Intento", lpos=(360, 250), anchor="start", **L)
-    c.link("d3", "p7", "Historial", lpos=(440, 285), anchor="start", **L) if False else None
     c.link("d3", "p7", "Historial", lpos=(408, 316), anchor="end", **L)
     c.link("p4", "d4", "Dominio", both=True, lpos=(612, 156), anchor="start", **L)
     c.link("d4", "p5", "Estado", lpos=(560, 76), **L)
