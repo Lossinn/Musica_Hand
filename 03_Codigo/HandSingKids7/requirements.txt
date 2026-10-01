@@ -1,0 +1,15 @@
+# Hand Sing Kids — dependencias
+#
+# Las versiones están fijadas porque hay un conflicto real entre ellas:
+# MediaPipe 0.10.x exige numpy<2, mientras que OpenCV 4.13 y posteriores exigen
+# numpy>=2. Si se dejan sueltas, pip instala una combinación que no arranca.
+#
+# MediaPipe 0.10.21 es además la última versión con ruedas para macOS Intel;
+# desde 0.10.31 solo publica para Apple Silicon. Con 0.10.21 la aplicación
+# funciona en ambos.
+
+numpy>=1.24,<2
+mediapipe==0.10.21
+opencv-python==4.11.0.86
+PySide6>=6.6,<7
+pulp>=2.8

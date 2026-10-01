@@ -6,6 +6,7 @@ Código fuente del proyecto.
 |-------------------------|----------------------------------------------------------------------|
 | `Prototipo/`            | **Aplicación principal.** Arquitectura modular (ver abajo).           |
 | `Reconocimiento_manos/` | Experimentos aislados de MediaPipe/OpenCV antes de integrarlos.       |
+| `HandSingKids7/`        | Versión más reciente (export de macOS, 2026-09-30). Pendiente decidir fusión con `Prototipo/`. |
 | `Musica/`               | Experimentos de audio, mapeo gesto→nota, teoría musical.             |
 
 ## Prototipo/ — arquitectura

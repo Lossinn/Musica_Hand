@@ -1,0 +1,5 @@
+{
+ "test_integracion.py": "pasó",
+ "test_mastery.py": "terminó sin excepción",
+ "test_predictor.py": "pasó"
+}

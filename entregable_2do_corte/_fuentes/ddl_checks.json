@@ -1,0 +1,61 @@
+{
+ "reglas": 16,
+ "resultados": [
+  {
+   "caso": "perfil válido (edad 7)",
+   "esperado": "acepta",
+   "obtenido": "acepta",
+   "correcto": true
+  },
+  {
+   "caso": "edad 99",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "edad 2",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "confianza 5,0",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "correct = 7",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "intento válido",
+   "esperado": "acepta",
+   "obtenido": "acepta",
+   "correcto": true
+  },
+  {
+   "caso": "mastery -3",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "estado 'practicando' (valor que usaba el documento previo)",
+   "esperado": "rechaza",
+   "obtenido": "rechaza",
+   "correcto": true
+  },
+  {
+   "caso": "estado 'en_practica' (valor real)",
+   "esperado": "acepta",
+   "obtenido": "acepta",
+   "correcto": true
+  }
+ ],
+ "todos_correctos": true,
+ "semilla_ok": true
+}

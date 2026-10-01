@@ -1,0 +1,62 @@
+{
+ "resultados": [
+  {
+   "id": "Q1",
+   "regla": "Modo de registro WAL",
+   "esperado": "wal",
+   "cumple": true,
+   "detalle": "journal_mode = wal"
+  },
+  {
+   "id": "Q2",
+   "regla": "Llaves foráneas activas (intento con perfil inexistente)",
+   "esperado": "rechaza",
+   "cumple": true,
+   "detalle": "IntegrityError: FOREIGN KEY constraint failed"
+  },
+  {
+   "id": "Q3",
+   "regla": "NOT NULL en profiles.name",
+   "esperado": "rechaza",
+   "cumple": true,
+   "detalle": "IntegrityError: NOT NULL constraint failed: profiles.name"
+  },
+  {
+   "id": "Q4",
+   "regla": "Rango de edad 3-12 en la base (age = 99)",
+   "esperado": "rechaza",
+   "cumple": false,
+   "detalle": "la base acepta age = 99 (no hay CHECK)"
+  },
+  {
+   "id": "Q5",
+   "regla": "Rango de attempts.confidence en [0,1] (valor 5.0) y correct en {0,1} (valor 7)",
+   "esperado": "rechaza",
+   "cumple": false,
+   "detalle": "la base acepta confidence = 5.0 y correct = 7 (no hay CHECK)"
+  },
+  {
+   "id": "Q6",
+   "regla": "skill_state.mastery en [0,1] (valor -3)",
+   "esperado": "rechaza",
+   "cumple": false,
+   "detalle": "la base acepta mastery = -3 (no hay CHECK)"
+  },
+  {
+   "id": "Q7",
+   "regla": "Borrado en cascada de los datos del perfil en la base",
+   "esperado": "cumple",
+   "cumple": true,
+   "detalle": "antes {'skill_state': 1, 'attempts': 1, 'activity_results': 1, 'sessions': 1} → después {'skill_state': 0, 'attempts': 0, 'activity_results'"
+  },
+  {
+   "id": "Q8",
+   "regla": "El borrado de un perfil elimina también gestos/perfil_<id>.json y melodias/*.json",
+   "esperado": "cumple",
+   "cumple": false,
+   "detalle": "ProfileRepository.delete solo ejecuta DELETE FROM profiles; no elimina archivos"
+  }
+ ],
+ "cumplen": 4,
+ "total": 8
+}

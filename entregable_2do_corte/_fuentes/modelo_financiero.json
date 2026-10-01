@@ -1,0 +1,105 @@
+{
+ "parametros": {
+  "tarifa_ing": 30000,
+  "horas_dev_pint2": 120,
+  "horas_dev_corte2": 80,
+  "hardware_kit": 300000,
+  "prototipado": 150000,
+  "configuracion": 200000,
+  "licencias": 0,
+  "horas_capac": 4,
+  "tarifa_docente": 30000,
+  "consulta_juridica": 600000,
+  "mantenimiento": 300000,
+  "pct_reposicion": 0.1,
+  "energia": 60000,
+  "nube": 0,
+  "api_ia": 0,
+  "conectividad": 0,
+  "horas_nivelacion_sem": 1.0,
+  "semanas": 40,
+  "papeleria_anual": 600000,
+  "instrumental_evitado": 1000000,
+  "aulas_institucion": 4
+ },
+ "capex": {
+  "Horas de ingeniería y desarrollo": 6000000,
+  "Cámara web, periféricos y soportes": 450000,
+  "Licenciamiento y configuración inicial": 200000,
+  "Capacitación a docentes": 120000,
+  "Consulta jurídica de protección de datos": 600000
+ },
+ "opex": {
+  "Mantenimiento y soporte técnico": 300000,
+  "Reposición de hardware": 45000.0,
+  "Energía eléctrica": 60000,
+  "Nube, API de IA y conectividad": 0
+ },
+ "beneficios": {
+  "Ahorro de tiempo docente en nivelación individual": 1200000.0,
+  "Reducción del gasto en papelería didáctica": 600000
+ },
+ "instrumental": 1000000,
+ "horas_dev": 200,
+ "escenarios": {
+  "Conservador (beneficios -25 %)": {
+   "capex": 7370000,
+   "opex": 405000.0,
+   "beneficio_bruto": 1350000.0,
+   "beneficio_neto": 945000.0,
+   "roi_pct": 12.82225237449118,
+   "payback_meses": 93.58730158730158,
+   "beneficio_neto_mensual": 78750.0
+  },
+  "Base (1 aula)": {
+   "capex": 7370000,
+   "opex": 405000.0,
+   "beneficio_bruto": 1800000.0,
+   "beneficio_neto": 1395000.0,
+   "roi_pct": 18.9280868385346,
+   "payback_meses": 63.39784946236559,
+   "beneficio_neto_mensual": 116250.0
+  },
+  "Optimista (con instrumental evitado)": {
+   "capex": 7370000,
+   "opex": 405000.0,
+   "beneficio_bruto": 2800000.0,
+   "beneficio_neto": 2395000.0,
+   "roi_pct": 32.4966078697422,
+   "payback_meses": 36.92693110647181,
+   "beneficio_neto_mensual": 199583.33333333334
+  },
+  "Institución con 4 aulas": {
+   "capex": 9080000,
+   "opex": 720000.0,
+   "beneficio_bruto": 7200000.0,
+   "beneficio_neto": 6480000.0,
+   "roi_pct": 71.36563876651982,
+   "payback_meses": 16.814814814814813,
+   "beneficio_neto_mensual": 540000.0
+  },
+  "Escala (3 instituciones comparten el desarrollo)": {
+   "capex": 3370000.0,
+   "opex": 405000.0,
+   "beneficio_bruto": 1800000.0,
+   "beneficio_neto": 1395000.0,
+   "roi_pct": 41.3946587537092,
+   "payback_meses": 28.989247311827956,
+   "beneficio_neto_mensual": 116250.0
+  },
+  "Escala y optimista": {
+   "capex": 3370000.0,
+   "opex": 405000.0,
+   "beneficio_bruto": 2800000.0,
+   "beneficio_neto": 2395000.0,
+   "roi_pct": 71.06824925816024,
+   "payback_meses": 16.88517745302714,
+   "beneficio_neto_mensual": 199583.33333333334
+  }
+ },
+ "totales": {
+  "capex": 7370000,
+  "opex": 405000.0,
+  "beneficios": 1800000.0
+ }
+}

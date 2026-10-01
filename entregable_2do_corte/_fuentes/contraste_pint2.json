@@ -1,0 +1,42 @@
+{
+ "codigo_menciona_gemini": false,
+ "requirements_gemini": false,
+ "codigo_menciona_simpy": false,
+ "requirements_simpy": false,
+ "codigo_menciona_scipy": false,
+ "requirements_scipy": false,
+ "codigo_menciona_streamlit": false,
+ "requirements_streamlit": false,
+ "codigo_menciona_gradio": false,
+ "requirements_gradio": false,
+ "codigo_menciona_google.generativeai": false,
+ "requirements_google.generativeai": false,
+ "codigo_menciona_pyside6": true,
+ "requirements_pyside6": true,
+ "codigo_menciona_mediapipe": true,
+ "requirements_mediapipe": true,
+ "codigo_menciona_pulp": true,
+ "requirements_pulp": true,
+ "solver_milp_cbc_ms": {
+  "metodo": "milp",
+  "media": 629.0,
+  "min": 148.5,
+  "max": 1801.4,
+  "candidatas": 24
+ },
+ "solver_enumeracion_exacta_ms": {
+  "metodo": "exacto",
+  "media": 677.3,
+  "min": 133.9,
+  "max": 1656.0,
+  "candidatas": 24
+ },
+ "target_fps_defecto": 24,
+ "estados_habilidad": [
+  "bloqueada",
+  "introducida",
+  "en_practica",
+  "dominada",
+  "consolidada"
+ ]
+}

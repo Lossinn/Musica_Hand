@@ -1,0 +1,3552 @@
+ 
+ 
+ 
+ 
+ 
+ 
+Boletín técnico 
+ 
+ 
+Bogotá D.C., agosto 1 de 2025 
+ 
+COM-070-PDT-001-f-002 V18 
+ 
+  
+Encuesta de Tecnologías de la Información y 
+las Comunicaciones en Hogares 
+(ENTIC Hogares) – 2024 
+ 
+Gráfico 1. Porcentaje de personas de 5 y más años que usaron herramientas de Inteligencia Artificial 
+a través de Internet, según sexo 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+18,0
+19,7
+16,5
+20,4
+22,5
+18,5
+8,1 8,4 7,7
+0
+5
+10
+15
+20
+25
+Total Hombres Mujeres Total Hombres Mujeres Total Hombres Mujeres
+Total nacional Cabecera Centros poblados y rural disperso
+P orcentaje
+ 
+ 
+Fuente: DANE - ENTIC 
+ 
+Resultados ENTIC Hogares 
+• Introducción 
+• Indicadores de tenencia de bienes TIC en 
+hogares.  
+• Indicadores de tenencia y uso de bienes TIC 
+en personas  
+• Métricas de calidad 
+• Ficha metodológica 
+• Glosario 
+ 
+
+ 
+ 
+ 
+ 
+ 2 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+ 
+INTRODUCCIÓN 
+La Encuesta de Tecnologías de la Información y la Comunicación en hogares (ENTIC Hogares) 
+surge de la necesidad de medir indicadores especializados de acceso y uso de las TIC en hogares 
+y personas del país , monitorear las tendencias asociadas a la transformación digital que se 
+extiende a todos los sectores y aspectos de la sociedad, y servir de insumo para la formulación y 
+evaluación de políticas públicas y público -privadas, los planes y programas de estímulo y 
+masificación social de las TIC para Colombia con una mejor ar ticulación técnica y mayor 
+congruencia conceptual. Dicha medición ha ido evolucionando y se ha especializado dentro del 
+sistema de estadísticas nacional adoptando estándares internacionales.  
+En un contexto internacional, en el año 2003 se creó el Observatorio para la Sociedad de la 
+Información en Latinoamérica y el Caribe (OSILAC) como una estrategia de la CEPAL y el Instituto 
+para la Conectividad en las Américas (ICA), del Centro Internaciona l de Investigación para el 
+Desarrollo (CIID -IDRC) con el objetivo de promover la armonización estadística con el fin de 
+fortalecer el monitoreo de las políticas y proyectos TIC en América Latina y el Caribe, y apoyar a 
+los países en la recopilación y análisis de datos estadísticos. Para el año 2004, la OSILAC presenta 
+un análisis de las estadísticas sobre Sociedad de la Información en los Institutos Nacionales de 
+Estadística de América Latina y el Caribe. En este sentido, a través de la OSILAC, Colombia y la 
+región participaron en las siguientes iniciativas: 
+1. Partnership sobre medición de las TIC para el desarrollo  de la Unión Internacional de 
+Telecomunicaciones (UIT), el cual trabaja en definir un conjunto común de indicadores de TIC y en 
+ayudar a los países en desarrollo en sus esfuerzos para producir estadísticas armonizadas en esta 
+área, contribuyendo en cerrar la brecha de información que existe entre los países desarrollados y 
+los no desarrollados (OSILAC, 2004). 
+2. Cumbre Mundial para la Sociedad de la Información (CMSI) , con su primera celebración en 
+diciembre de 2003. En este contexto los jefes de estado y gobierno aprobaron un plan de acción 
+para promover el estado de la Sociedad de la Información en cada país, así se realizan sugerencias 
+al desarrollo de indicadores que permitan evaluar el estado de las TIC y su avance, y permitir un 
+monitoreo (benchmarking) a la implementación de dicho plan. 
+Para el caso de Colombia, a partir de 2007 el DANE calcula para Colombia indicadores básicos de 
+tenencia y uso de las Tecnologías de la Información y las Comunicaciones (TIC) en hogares y 
+personas, por medio de módulos insertados en la Gran Encuesta Integrada de Hogares (GEIH) 
+ 
+ 
+ 
+ 
+ 3 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+hasta 2011, y en la Encuesta de Calidad de Vida (ECV) a partir del 2012. Estos indicadores básicos 
+forman parte del programa internacional de medición de la Sociedad de la Información, entendida 
+como el estado del desarrollo económico y social en el cual los individuos y agrupaciones acceden, 
+se apropian, usan y adaptan las TIC de forma frecuente, intensiva, diversificada y significativa para 
+sus vidas. Es de anotar que los indicadores básicos que se indagan  siguen las normativas 
+internacionales de la Conferencia de las Naciones Unidas sobre Comercio y Desarrollo 
+(UNCTAD/UN), la CEPAL -OSILAC y el partnership de la UIT, con algunas adaptaciones para 
+Colombia. 
+En 2018, Colombia inició el proceso de ingreso a la Organización para la Cooperación y el 
+Desarrollo Económicos (OCDE) y definió un marco de trabajo para medir la transformación digital. 
+Así mismo, el Plan Nacional de Desarrollo (PND) 2018 -2022 del Gobierno nacional, a través del 
+“Pacto por la Transformación Digital de Colombia: Gobierno, empresas y hogares conectados con la 
+era del conocimiento” estableció que las TIC generan nuevos negocios y son la puerta de entrada 
+a la industria 4.0. En este sentido,  y con la necesidad de medir información especializada con 
+componentes clave de la economía digital y sus habilitadores , se estableció el CONPES 3975 de 
+2019 “Política nacional para la transformación digital e inteligencia artificial”. 
+De lo anterior, durante 2019 se realizaron mesas de trabajo con personal técnico del Ministerio de 
+Tecnologías de la Información y las Comunicaciones (MinTIC) con el objeto de diseñar una gran 
+encuesta que permitiera atender nuevos requerimientos internacionales y producir indicadores 
+especializados sobre el acceso y uso de TIC que sirvan de insumo para el diseño de políticas 
+públicas en la promoción del proceso de transformación digital en Colombia. Fruto de esas mesas 
+de trabajo, en 2019 y 2021 se suscribieron dos convenios interadministrativos entre el DANE y 
+MinTIC, lo cual permitió la realización de la ENTIC Hogares para los periodos de referencia 2020 y 
+2021 respectivamente.  
+Finalmente, en 2024 se suscribió un nuevo convenio entre el DANE y MinTIC para realizar la 
+presente versión de la ENTIC Hogares para el periodo de referencia 2024, en donde se realizó una 
+nueva revisión del formulario en aras de incorporar nuevas necesidades de información 
+especializada sobre el acceso y uso de TIC en los hogares del país. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 4 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+1. INDICADORES DE TENENCIA DE BIENES TIC EN HOGARES 
+  
+En 2024, el porcentaje de hogares que poseían computador de escritorio, portátil o tableta fue de 
+35,7% a nivel nacional, presentándose en las cabeceras una proporción más alta con el 4 3,2%, 
+mientras que en los centros poblados y rural disperso la proporción fue de  9,6%. Por tipo de 
+dispositivo, prevalece la tenencia de computador portátil tanto a nivel nacional ( 28,3%) como en 
+las cabeceras (34,3%) y centros poblados y rural disperso ( 7,5%) por encima del computador de 
+escritorio y la tableta (Anexo C.1).  
+ 
+Gráfico 2. Proporción de hogares con tenencia de computador y por tipo de dispositivo (de 
+escritorio, portátil o tableta) 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+35,7 
+12,8 
+28,3 
+5,3 
+43,2 
+15,8 
+34,3 
+6,6 
+9,6 
+2,5 
+7,5 
+0,9 
+0
+10
+20
+30
+40
+50
+Computador de escritorio,
+portátil o tableta
+Computador de escritorio Computador portátil Tableta
+P orcentaje
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+ 
+Por otro lado, en 2024 el 89,1% de los hogares poseían algún tipo de televisor a nivel nacional, 
+92,4% en las cabeceras y 77,8% en centros poblados y rural disperso. Por tipo de tecnología del 
+televisor, se presenta mayor tenencia del televisor LCD, Plasma  o LED  con un 70,0%  a nivel 
+nacional, 77,2% en las cabeceras y 45,1% en centros poblados y rural disperso. (Gráfico 3 y Anexo 
+C.1) 
+ 
+ 
+ 
+ 
+ 
+ 5 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 3. Proporción de hogares con tenencia de televisor y según tipo de tecnología 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+La infraestructura en los hogares para recibir servicios de televisión cambia dependiendo de la 
+zona. De lo anterior, en 2024 la televisión por Cable fue la más utilizada en el total nacional en el 
+50,3% de los hogares, siendo más alta la proporción en las cabeceras con un 60,4%. En contraste, 
+en los centros poblados y rural disperso la señal de televisión abierta fue el mayor servicio para 
+ver televisión utilizado en los hogares con 55,7%, seguido por la televisión por cable con 15,2% 
+(Gráfico 4 y Anexo C.1).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+89,1
+22,7
+70,0
+92,4
+19,2
+77,277,8
+35,0
+45,1
+0
+20
+40
+60
+80
+100
+ TV Convencional a color, LCD,
+Plasma o LED
+ TV Convencional a color TV LCD, Plasma o LED
+Porcentaje
+Total nacional  Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 6 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 4. Proporción de hogares por tipo de servicios utilizados para ver televisión    
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ECV. 
+Nota 1: La base de cálculo son los hogares con algún servicio de televisión. 
+Nota 2: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+De los hogares que reportaron utilizar la señal abierta para ver televisión, en 2024 la señal abierta 
+de Televisión Digital Terrestre (TDT) fue la de mayor uso tanto en el total  nacional (24,7%), en 
+cabeceras (21,4%) y centros poblados y rural disperso ( 36,1%). Por su parte,  la señal abierta de 
+Televisión análoga se ubicó en 16,1% de uso a nivel nacional , 13,7% en cabeceras y 24,6% en 
+centros poblados y rural disperso (Anexo C.1).  
+ 
+Gráfico 5. Proporción de los hogares que utilizan servicio de televisión abierta según tipo  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ECV. 
+Nota 1: La base de cálculo es el total de hogares. 
+Nota 2: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+35,2
+29,3
+55,7
+50,3
+60,4
+15,2
+8,7 8,8 8,5
+1,0 1,1 0,7
+0
+10
+20
+30
+40
+50
+60
+70
+Total nacional Cabecera Centros poblados y rural disperso
+Porcentaje
+Señal abierta Cable Satelital IPTV
+16,1
+13,7
+24,624,7
+21,4
+36,1
+5,6 5,8 5,0
+0
+5
+10
+15
+20
+25
+30
+35
+40
+Total nacional Cabecera Centros poblados y
+rural disperso
+Porcentaje
+Señal abierta análoga Señal abierta TDT Señal abierta análoga y TDT
+ 
+ 
+ 
+ 
+ 7 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+En 2024, el 65,6% del total nacional de hogares poseían conexión a Internet, 72,5% en cabeceras 
+y 41,9% en centros poblados y rural disperso. El departamento con mayor proporción de 
+conectados a este servicio es Bogotá D.C. con el 82,7%, y el departamento con menor proporción 
+es Vichada con el 15,4% (Anexo C.1).  
+ 
+Gráfico 6. Proporción de hogares con conexión a Internet 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+Fuente: DANE, ECV. 
+Nota 1: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024.  
+Nota 2: La definición de acceso a Internet comprende la conexión tanto fija como móvil mediante plan de datos o con 
+recarga permanente disponible para todos los miembros del hogar.  
+65,6 
+72,5 
+41,9 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+Total Cabecera Centros poblados y rural
+disperso
+Porcentaje
+15,4 
+26,5 
+28,7 
+30,1 
+31,5 
+34,3 
+38,6 
+41,3 
+46,4 
+47,2 
+49,0 
+54,6 
+55,1 
+57,6 
+57,6 
+58,9 
+60,2 
+60,5 
+60,6 
+62,0 
+63,4 
+64,5 
+65,2 
+66,9 
+66,9 
+66,9 
+70,8 
+71,0 
+73,0 
+73,4 
+76,5 
+77,0 
+82,7 
+0 10 20 30 40 50 60 70 80 90
+Vichada
+Vaupés
+Chocó
+La Guajira
+Guainía
+Arauca
+Putumayo
+Amazonas
+Sucre
+Córdoba
+Cauca
+Nariño
+Magdalena
+San Andrés
+Guaviare
+Atlántico
+Bolívar
+Norte De Santander
+Boyacá
+Caquetá
+Quindío
+Cesar
+Santander
+Antioquia
+Cundinamarca
+Caldas
+Huila
+Casanare
+Risaralda
+Valle Del Cauca
+Tolima
+Meta
+Bogotá D.C.
+Porcentaje
+ 
+ 
+ 
+ 
+ 8 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Por tipo de conexión, de los hogares con acceso a Internet el 73,6% poseían conexión a Internet 
+fijo en el total nacional , registrándose una  mayor proporción en las cabeceras ( 78,8%); sin 
+embargo, en centros poblados y rural disperso el principal tipo de conexión a Internet fue el móvil 
+con 74,6% (Anexo C.1). 
+ 
+Gráfico 7. Proporción de los hogares que tienen acceso a Internet según tipo de conexión 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+ 
+La ENTIC indagó por la calificación del servicio de Internet en los hogares, registrando en 2024 la 
+mayor calificación para el total nacional una calificación “Bueno” con 6 7,0%, influenciada por la 
+calificación registrada a nivel de cabecera con 72,4%. Seguido por la calificación “Malo” con 25,5%, 
+influenciada por la calificación registrada en centros poblados y rural disperso con 45,3% (Gráfico 
+8 y Anexo Mod.2-2). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73,6 
+62,8 
+36,4 
+78,8 
+60,8 
+39,7 42,2 
+74,6 
+16,8 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Internet fijo Internet móvil Internet fijo y móvil
+Porcentaje
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 9 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 8. Distribución de hogares con conexión a Internet según calificación del servicio   
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+En 2024 la velocidad de conexión a Internet fijo con mayor proporción contratada por los hogares 
+estuvo entre 30 y menos de 100 megas con el 20,8% a nivel nacional,  siendo aún mayor la 
+proporción en las cabeceras con 21,8%. El segundo rango de velocidad de conexión con mayor 
+proporción para el total nacional es entre 100 y 300 megas con 19,8% y le siguió el rango entre 2 
+y menos de 10 megas con 13,4%. Por otra parte, 18,4% de los hogares que tenían Internet fijo a 
+nivel nacional manifestaron no conocer la velocidad de conexión contratada (Anexo Mod.2-2). 
+ 
+Gráfico 9. Distribución de los hogares con conexión a Internet fijo por máxima velocidad contratada  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+10,6 
+2,9 
+4,3 
+45,3 
+21,1 
+25,5 
+42,6 
+72,4 
+67,0 
+1,5 
+3,6 
+3,2 
+0 20 40 60 80 100
+Centros poblados y
+rural disperso
+Cabecera
+Total nacional
+Porcentaje
+Muy malo Malo Bueno Muy bueno
+3,2
+2,8
+7,1
+13,4
+11,1
+35,4
+13,0
+12,8
+14,9
+20,8
+21,8
+11,9
+19,8
+21,5
+3,5
+8,6
+9,3
+1,8
+18,4
+17,8
+23,9
+0 10 20 30 40 50 60 70 80 90 100
+Total nacional
+Cabecera
+Centros poblados y rural
+disperso
+Porcentaje
+Menos de 256 Kbps Entre 256 Kbps y menos de 2 megas
+Entre 2 megas y menos de 10 megas Entre 10 megas y menos de 30 megas
+Entre 30 megas y menos de 100 megas Entre 100 megas y menos de 300 megas
+Entre 300 megas y menos de 600 megas Entre 600 megas y menos de 1.000 megas (1 Giga)
+Mayor a 1.000 megas (1 Giga) No sabe/No responde
+ 
+ 
+ 
+ 
+ 10 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+En cuanto al valor promedio pagado mensualmente por el servicio de Internet fijo en los hogares, 
+la mayor proporción para el total nacional est uvo entre $50.000 y $80.000 pesos con 3 9,0%, 
+seguido del rango entre $ 80.000 y $120.000 con 25,5%. Por su parte, en los centros poblados y 
+rural disperso la mayor proporción de hogares se ubica en el rango que pagó entre $50.000 y 
+$80.000 pesos, con 38,4% (Anexo Mod.2-2). 
+ 
+ 
+Gráfico 10. Distribución de hogares con conexión a Internet fijo según el valor promedio mensual 
+pagado por el servicio durante los últimos 12 meses 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+ 
+Para los hogares que no poseían conexión a Internet en 2024, la principal razón que adujeron por 
+la no tenencia fue el costo con el 45,0% para el total nacional, mientras que en cabeceras la 
+proporción fue de 50,0%. La segunda principal razón fue no considerarlo necesario con el 27,7% 
+en el total nacional y el 31,6% en cabeceras. Por su parte, en los centros poblados y rural disperso 
+el costo también fue la principal razón para no tener conexión a Internet con el 36,3%, seguido 
+también por no considerarlo necesario, con 21,0% (Gráfico 11 y Anexo Mod.2-4). 
+ 
+ 
+1,4
+1,2
+3,7
+4,7
+4,4
+7,6
+23,0
+21,5
+37,9
+39,0
+39,0
+38,4
+25,5
+27,3
+8,9
+5,6
+6,0
+1,9
+0 10 20 30 40 50 60 70 80 90 100
+Total Nacional
+Cabecera
+Centros poblados y Rural disperso
+Porcentaje
+Menos de $20.000 De $20.000 a $30.000 De $30.001 a $50.000 De $50.001 a $80.000
+De $80.001 a $120.000 De $120.001 a $180.000 Más de $180.000
+ 
+ 
+ 
+ 
+ 11 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 11. Distribución de los hogares que no tienen conexión a Internet según principal razón de 
+no tenencia 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+En la ENTIC se encontró que la principal razón por la que los hogares no tuvieran computador de 
+escritorio, portátil o tableta en 2024 es que es demasiado costoso, tanto a nivel nacional como en 
+cabeceras y centros poblados y rural disperso con proporciones  de 5 2,3%, 50,7% y  55,9% 
+respectivamente. Le siguió no estar interesados con 37,5%, 40,3% y 31,3% respectivamente (Anexo 
+Mod.2-5). 
+ 
+Gráfico 12. Distribución de los hogares que no poseen computador (de escritorio, portátil o tableta) 
+según principal razón de no tenencia 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+45,0
+50,0
+36,3
+27,7
+31,6
+21,0
+6,1
+4,7
+8,5
+3,1
+3,8
+2,0
+7,8
+6,0
+10,8
+6,7
+1,5
+15,4
+3,3
+2,2
+5,0
+0 10 20 30 40 50 60 70 80 90 100
+Total nacional
+Cabecera
+Centros poblados y rural
+disperso
+Porcentaje
+Es muy costoso No lo considera necesario
+No tiene un dispositivo para conectarse Puede acceder desde el trabajo, lainstitución educativa, la vivienda de otra persona
+No sabe usarlo No hay cobertura en la zona
+Aunque en la zona hay cobertura, la calidad del servicio es deficiente Puede conectarse sin costo desde lugares de acceso público
+37,5
+40,3
+31,3
+8,1
+7,1
+10,2
+52,3
+50,7
+55,9
+1,3
+1,6
+0,7
+0,6
+0,1
+1,7
+0 10 20 30 40 50 60 70 80 90 100
+Total nacional
+Cabecera
+Centros poblados y rural disperso
+Porcentaje
+No están interesados/No lo consideran necesario No saben cómo usarlo
+Es demasiado costoso Tienen acceso suficiente desde otros lugares sin costo
+Riesgo de hurto Falta de energía eléctrica
+ 
+ 
+ 
+ 
+ 12 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+2. INDICADORES DE TENENCIA Y USO DE 
+BIENES TIC EN PERSONAS 
+Para el caso del uso de computador de cualquier tipo, en 2024 el 35,1% de las personas en el total 
+nacional lo utilizaron, mientras que en las cabeceras la proporción fue de  40,6% y en centros 
+poblados y rural disperso16,5%. Los departamentos con mayor proporción de uso fueron Bogotá 
+D.C. (56,7%), Cundinamarca (40,1%) y San Andrés (40,0%) y los de menor proporción de uso fueron 
+Vichada (8,1%), Chocó (17,8%) y La Guajira (20,2%) (Anexo C.4). 
+ 
+Gráfico 13. Proporción de personas que usaron computador (de escritorio, portátil o tableta)  
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+t
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+35,1
+40,6
+16,5
+0
+15
+30
+45
+Total nacional Cabecera Centros poblados y rural
+disperso
+Porcentaje
+8,1
+17,8
+20,2
+20,5
+21,9
+22,3
+22,9
+23,1
+23,6
+24,8
+25,2
+25,8
+26,2
+26,3
+26,5
+27,3
+28,4
+28,7
+29,0
+30,4
+30,4
+31,0
+31,8
+32,5
+33,4
+34,5
+34,6
+35,0
+36,5
+38,8
+40,0
+40,1
+56,7
+0 10 20 30 40 50 60
+Vichada
+Chocó
+La Guajira
+Magdalena
+Huila
+Guainía
+Sucre
+Nariño
+Arauca
+Bolívar
+Córdoba
+Norte De Santander
+Putumayo
+Caquetá
+Cauca
+Vaupés
+Cesar
+Guaviare
+Risaralda
+Tolima
+Meta
+Quindío
+Casanare
+Boyacá
+Amazonas
+Atlántico
+Antioquia
+Caldas
+Santander
+Valle Del Cauca
+San Andrés
+Cundinamarca
+Bogotá D.C.
+Porcentaje
+Departamento
+ 
+ 
+ 
+ 
+ 13 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Al desagregar las personas que usaron computador en 2024 por tipo de dispositivo , en el total 
+nacional el 22,4% utilizaron computador portátil, 20,6% computador de escritorio y 4,5% tableta 
+(Anexo C.4). 
+ 
+Gráfico 14. Proporción de personas que usaron computador según tipo de dispositivo 
+Total nacional, Cabecera y Centros poblados y rural disperso  
+2024 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+ 
+En 2024 y para el total nacional, el 79,3% de las personas usaron Internet en cualquier lugar y 
+desde cualquier dispositivo, con una mayor proporción en cabeceras (84,6%) y menor proporción 
+en centros poblados y rural disperso (61,7%) . Los departamentos con mayor proporción de uso 
+fueron Bogotá D.C. (88,4%), Valle del Cauca (85,1%) y Atlántico (85,1%) ; mientras que los que 
+registraron menor proporción de uso fueron Vichada (18,8%), Vaupés (42,3%) y Guainía (48,4%) 
+(Gráfico 15 y Anexo C.4). 
+ 
+ 
+ 
+20,6 
+22,4 
+4,5 
+23,7 
+26,5 
+5,4 
+10,0
+8,6
+1,6
+0
+5
+10
+15
+20
+25
+30
+Computador de escritorio Computador portátil Tableta
+Porcentaje
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 14 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 15. Proporción de personas de 5 y más años que usaron Internet 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+ 
+La ENTIC también indaga por habilidades específicas que las personas saben realizar en el 
+computador o cuando utilizan Internet. Para el total nacional, el 57,2% de las personas que usan 
+computador o Internet saben copiar o mover archivos o carpetas; le si guen en su orden: enviar 
+correos electrónicos con archivos adjuntos (56,7%), copiar y pegar para mover información entre 
+documentos (54,7%), y usar procesadores de texto (51,8%). La diferencia de estas proporciones 
+entre cabeceras y centros poblados y rura l disperso se hace notoria para conectar o instalar 
+dispositivos adicionales (23,4% más en cabeceras), seguido por enviar correos electrónicos con 
+archivos adjuntos (22,7% más en cabeceras). (Gráfico 16 y Anexo Mod.4-2)  
+ 
+ 
+ 
+79,3
+84,6
+61,7
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Total nacional Cabecera Centros poblados y
+rural disperso
+Porcentaje
+18,8
+42,3
+48,4
+50,4
+53,4
+57,0
+62,3
+65,2
+65,9
+67,4
+70,8
+71,7
+71,9
+72,2
+73,2
+75,6
+77,8
+77,8
+77,9
+78,4
+78,5
+78,6
+79,2
+79,9
+80,1
+81,6
+83,0
+83,3
+83,5
+84,6
+85,1
+85,1
+88,4
+0 10 20 30 40 50 60 70 80 90 100
+Vichada
+Vaupés
+Guainía
+Chocó
+La Guajira
+Amazonas
+Putumayo
+Sucre
+Nariño
+Arauca
+Magdalena
+Boyacá
+Córdoba
+Cauca
+Quindío
+Guaviare
+Bolívar
+Norte De Santander
+Risaralda
+Caldas
+Tolima
+Caquetá
+Casanare
+Cesar
+Santander
+Antioquia
+Huila
+Meta
+Cundinamarca
+San Andrés
+Atlántico
+Valle Del Cauca
+Bogotá D.C.
+Porcentaje
+ 
+ 
+ 
+ 
+ 15 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 16. Proporción de las personas de 5 y más años que usaron computador * o Internet, según 
+habilidades 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota:  La definición de computador comprender el de escritorio, portátil o tableta. 
+ 
+En cuanto a la frecuencia de uso de Internet, en 2024 y para el total nacional, 77,1% de las personas 
+manifestaron usarlo diariamente, seguido por la frecuencia al menos una vez a la semana, pero no 
+cada día (21,2%). (Gráfico 17 y Anexo Mod.4-3) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+57,2
+56,7
+54,7
+51,8
+46,4
+43,8
+39,5
+39,1
+38,4
+24,8
+19,5
+8,2
+8,2
+61,0
+61,0
+58,7
+55,8
+50,4
+48,2
+43,7
+42,5
+42,7
+28,3
+22,3
+9,3
+9,6
+41,0
+38,3
+37,8
+34,6
+29,7
+24,8
+21,3
+24,3
+20,2
+9,5
+7,1
+3,5
+2,5
+0 10 20 30 40 50 60 70
+COPIAR O MOVER UN ARCHIVO O CARPETA
+ENVIAR CORREOS ELECTRÓNICOS CON ARCHIVOS ADJUNTOS
+USAR LAS FUNCIONES DE COPIAR Y PEGAR PARA DUPLICAR O MOVER INFORMACIÓN ENTRE 
+DOCUMENTOS, DISPOSITIVOS O EN EL ALMACENAMIENTO UTILIZADO A TRAVÉS DE INTERNET
+USAR PROCESADORES DE TEXTO
+TRANSFERIR ARCHIVOS ENTRE DISPOSITIVOS O POR INTERNET (COMPUTADOR, USB, CELULAR, 
+ETC.)
+CONECTAR O INSTALAR DISPOSITIVOS ADICIONALES
+CREAR PRESENTACIONES MEDIANTE UN PROGRAMA ESPECIALIZADO PARA ELLO
+BUSCAR, DESCARGAR O INSTALAR O CONFIGURAR PROGRAMAS COMPUTACIONALES 
+(SOFTWARE) O APLICACIONES
+USAR FÓRMULAS MATEMÁTICAS BÁSICAS EN UNA HOJA DE CÁLCULO
+LIMITAR LA DIFUSIÓN DE DATOS O INFORMACIÓN PERSONAL EN DISPOSITIVOS, CUENTAS O 
+APLICACIONES DE INTERNET
+MODIFICAR ASPECTOS DE SEGURIDAD DE BUSCADORES DE INTERNET
+CREAR UNA PÁGINA WEB
+UTILIZAR UN LENGUAJE DE PROGRAMACIÓN ESPECIALIZADO
+Porcentaje
+Total nacional Cabecera Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 16 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 17. Distribución de personas de 5 y más años que usaron Internet, según frecuencia de uso  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota 1: La base de cálculo son las personas que usaron Internet.  
+Nota 2: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+ 
+Para las personas que usaron I nternet todos los días de la semana, la ENTIC revela que en 
+promedio dedican 4,9 horas al día de uso en el total nacional, 5,2 horas en promedio en las 
+cabeceras y 3,3 horas promedio en centros poblados y rural disperso . Los departamentos con 
+mayor tiempo promedio de uso son San Andrés (7,1 horas), Atlántico (5,8 horas), Magdalena (5,7 
+horas) y Bogotá D.C. (5,6 horas).  Los departamentos con menores tiempos promedio de uso de 
+Internet al día son Huila (3,5 horas), Cauca (3,5 horas) y Boyacá y Nariño (3,7 horas). (Gráfico 18 y 
+Anexo Mod.4-3) 
+ 
+ 
+ 
+ 
+ 
+ 
+77,1
+21,2
+1,6
+0,2
+81,5
+17,3
+1,1
+0,1
+57,9
+38,1
+3,8
+0,2
+0 10 20 30 40 50 60 70 80 90
+TODOS LOS DÍAS DE LA SEMANA
+AL MENOS UNA VEZ A LA SEMANA, 
+PERO NO CADA DÍA
+AL MENOS UNA VEZ AL MES, PERO 
+NO CADA SEMANA
+AL MENOS UNA VEZ AL AÑO, PERO 
+NO CADA MES
+Porcentaje
+Total nacional Cabecera Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 17 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 18. Promedio de horas al día que una persona dedica al uso de Internet 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La base de cálculo son las personas que usan Internet todos los días, según desagregación.  
+4,9 5,2
+3,3
+0
+1
+2
+3
+4
+5
+6
+Total nacional Cabecera Centros poblados y Rural
+disperso
+Horas promedio al día 
+Área
+3,5
+3,5
+3,7
+3,7
+4,1
+4,1
+4,1
+4,2
+4,2
+4,3
+4,4
+4,4
+4,4
+4,5
+4,5
+4,6
+4,6
+4,6
+4,8
+4,8
+4,8
+5,0
+5,0
+5,0
+5,1
+5,1
+5,1
+5,2
+5,4
+5,6
+5,7
+5,8
+7,1
+0 1 2 3 4 5 6 7 8
+Huila
+Cauca
+Boyacá
+Nariño
+Amazonas
+Putumayo
+Sucre
+Caquetá
+Córdoba
+Tolima
+Cesar
+Quindío
+Casanare
+Meta
+Guaviare
+Norte De Santander
+Valle Del Cauca
+Risaralda
+La Guajira
+Caldas
+Vaupés
+Antioquia
+Arauca
+Santander
+Cundinamarca
+Vichada
+Chocó
+Bolívar
+Guainía
+Bogotá D.C.
+Magdalena
+Atlántico
+San Andrés
+Horas promedio al día
+Departamento
+ 
+ 
+ 
+ 
+ 18 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Dentro del total de personas que utilizaron Internet, el dispositivo a través del  cual se reporta 
+mayor acceso a este servicio es el teléfono celular con 9 7,5% en el total nacional, 9 7,3% en 
+cabeceras y 98,1% en centros poblados y rural disperso. Por su parte, el televisor inteligente fue 
+utilizado por el 43,8% del total nacional de personas que usaron Internet y le siguen en ese orden, 
+el computador portátil (27,4%) y el computador de escritorio (20,4%). (Anexo Mod.4-4) 
+ 
+Gráfico 19. Proporción de las personas de 5 y más años que usaron Internet, según dispositivos de 
+acceso 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes dispositivos para conectarse a Internet no suman 100% porque las opciones 
+de respuesta no son excluyentes.  
+ 
+De los dispositivos para acceder a Internet en 2024, los que principalmente se utilizaron para el 
+trabajo fueron el computador portátil y el computador de escritorio, con 50,8% y 44,0% 
+respectivamente para el total nacional. Por su parte, los dispositivos para acceder a Internet 
+principalmente utilizados con fines de entretenimiento fueron las consolas para juegos 
+electrónicos (99,6%), el televisor inteligente (98,8%) y el reloj inteligente (77,9%). Los lectores de 
+97,5
+43,8
+27,4
+20,4
+5,1
+4,6
+4,2
+4,1
+3,7
+97,3
+50,7
+31,1
+22,5
+6,1
+5,3
+4,8
+4,9
+4,4
+98,1
+14,1
+11,9
+11,3
+0,8
+1,5
+1,7
+0,7
+0,9
+0 10 20 30 40 50 60 70 80 90 100
+Teléfono celular inteligente (Smartphone)
+Televisor inteligente (Smart TV)
+Computador portátil
+Computador de escritorio
+Reloj inteligente (Smartwatch)
+Asistente virtual del hogar (Alexa, Google
+Home, App Casa, etc)
+Tableta
+Consolas para juegos electrónicos (Play
+Station, X-box, Wii, etc.)
+Lectores de libros electrónicos (E-readers o
+Kindle)
+Porcentaje
+Total nacional Cabecera Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 19 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+libros electrónicos fueron el dispositivo principalmente utilizado para acceder a Internet con fines 
+de educación, con 52,4% en el total nacional (Anexo Mod.4-5). 
+ 
+Gráfico 20. Distribución de las personas de 5 y más años que utilizaron dispositivos para acceder a 
+Internet según finalidad de uso  
+Total nacional 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+En 2024, el sitio en el que más se usó el Internet por las personas encuestadas fue el hogar con 
+92,6% en el total nacional, 93,4% en cabeceras y 89,5% en centros poblados y rural disperso. La 
+vivienda de otra persona ocupó el segundo lugar con 29,8% para el total nacional, seguido por el 
+trabajo ( 29,6%), desplazamiento de un sitio a otro ( 28,4%) y en  el establecimiento educativo  
+(17,4%). (Gráfico 21 y Anexo Mod.4-6) 
+ 
+ 
+ 
+ 
+ 
+99,6
+98,8
+77,9
+70,8
+65,1
+46,9
+33,6
+12,1
+9,7
+0,2
+0,7
+19,5
+18,0
+15,9
+24,5
+13,9
+50,8
+44,0
+0,2
+0,6
+2,5
+11,2
+19,0
+28,6
+52,4
+37,1
+46,4
+0 20 40 60 80 100
+Consolas para juegos electrónicos (Play station,
+X-Box, Wii, etc.)
+Televisor inteligente (SmarTV)
+Reloj inteligente (Smartwatch)
+Teléfono celular inteligente (smartphone)
+Asistente virtual del hogar (Alexa, Google home,
+App casa, etc.)
+Tableta
+Lectores de libros electrónicos (E-Readers o
+Kindle)
+Computador pórtatil
+Computador de escritorio
+Porcentaje
+Entretenimiento Trabajo Educación
+ 
+ 
+ 
+ 
+ 20 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 21. Proporción de las personas de 5 y más años que usaron Internet, según sitios de uso  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+92,6
+29,8
+29,6
+28,4
+17,4
+6,8
+6,6
+3,7
+93,4
+31,6
+33,0
+28,9
+17,7
+6,6
+7,6
+4,0
+89,5
+22,0
+15,0
+26,3
+16,0
+7,6
+2,0
+2,5
+0 10 20 30 40 50 60 70 80 90 100
+EL HOGAR O CASA
+EN LA VIVIENDA DE OTRA PERSONA (AMIGOS, FAMILIARES, ETC.)
+TRABAJO
+EN DESPLAZAMIENTO DE UN SITIO A OTRO (TRANSPORTE
+PÚBLICO, VEHÍCULO PARTICULAR)
+ESTABLECIMIENTO EDUCATIVO (UNIVERSIDAD, COLEGIO, ETC)
+LUGARES DE ACCESO PÚBLICO O COMUNITARIO A INTERNET
+(PUNTOS, KIOSCOS, BIBLIOTEGAS PÚBLICAS Y ZONAS WI-FI
+PÚBLICAS)
+ACCESO LIBRE EN LUGARES PÚBLICOS
+CAFÉ INTERNET O CABINA CON COSTO
+Porcentaje
+Total nacional Cabeceras Centros poblados y Rural disperso
+ 
+Fuente: DANE, ENTIC.  
+Nota: Las proporciones de los diferentes sitios de uso de Internet no suman 100% porque las opciones de respuesta 
+no son excluyentes.  
+ 
+En 2024 y para el total nacional, l a calificación con mayor porcentaje dado por las personas que 
+usaron Internet a los sitios de  acceso de este servicio  fue “Bueno” en todas las opciones 
+consultadas, oscilando entre el 66,7% y el 89,5%. El sitio con la mayor calificación “Bueno” fue el 
+café internet o cabina con costo (89,5%) mientras que el sitio con la mayor calificación “Malo” fue 
+los lugares de acceso público o comunitario a Internet (28,2%). (Gráfico 22 y Anexo Mod.4-6) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 21 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 22. Distribución de la calificación general del acceso a Internet por personas de 5 y más años, 
+según sitios de uso 
+Total nacional 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+ 
+Con relación a las actividades realizadas por las personas de 5 y más años que usaron Internet en 
+2024, video, llamada o mensajería instantánea (o por chat)  fue la de mayor uso , con 8 7,3% del 
+total nacional. Le siguieron, en orden de importancia, redes sociales (80,2%), descargar o ver en 
+línea imágenes, videos, películas o música (61,6%), enviar o recibir correos electrónicos (60,0%), y 
+el uso de Internet con fines de educación y aprendizaje (44,3%). Otras actividades relevantes que 
+las personas realizaron a través de Internet para el total nacional en 2024 fueron: descargar 
+software o aplicaciones  (40,2%), solicitar o cancelar citas médicas  (40,1%), buscar información 
+sobre asuntos de salud (36,7%), y acceder a resultados de exámenes médicos (35,9%), entre otros 
+(Gráfico 23 y Anexo Mod.4-7). 
+ 
+ 
+ 
+ 
+3,0
+0,6
+1,4
+1,7
+2,1
+4,0
+2,4
+0,2
+24,4
+11,1
+10,5
+18,8
+16,9
+28,2
+22,2
+7,6
+70,1
+85,2
+81,8
+77,2
+77,2
+66,7
+74,0
+89,5
+2,5
+3,1
+6,2
+2,4
+3,9
+1,2
+1,3
+2,8
+0 20 40 60 80 100
+EL HOGAR O CASA
+EN LA VIVIENDA DE OTRA PERSONA (AMIGOS, FAMILIARES, ETC.)
+TRABAJO
+EN DESPLAZAMIENTO DE UN SITIO A OTRO (TRANSPORTE
+PÚBLICO, VEHÍCULO PARTICULAR)
+ESTABLECIMIENTO EDUCATIVO (UNIVERSIDAD, COLEGIO, ETC)
+LUGARES DE ACCESO PÚBLICO O COMUNITARIO A INTERNET
+(PUNTOS, KIOSCOS, BIBLIOTEGAS PÚBLICAS Y ZONAS WI-FI
+PÚBLICAS)
+ACCESO LIBRE EN LUGARES PÚBLICOS
+CAFÉ INTERNET O CABINA CON COSTO
+Porcentaje
+MUY MALO MALO BUENO MUY BUENO
+ 
+ 
+ 
+ 
+ 22 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 23. Proporción de personas de 5 y más años que usaron Internet, según actividad de uso 
+Total nacional 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades de uso de Internet no suman 100% porque las opciones de 
+respuesta no son excluyentes.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3,1
+3,3
+5,5
+6,0
+7,0
+9,7
+11,0
+14,6
+14,9
+16,0
+16,3
+16,4
+17,9
+18,0
+18,4
+19,7
+24,1
+27,6
+31,4
+31,5
+31,8
+33,9
+35,9
+36,7
+40,1
+40,2
+44,3
+60,0
+61,6
+80,2
+87,3
+0 20 40 60 80 100
+Publicar opiniones sobre asuntos cívicos o políticos en sitios web
+Apostar en línea
+Vender productos o servicios
+Generación de la planilla y/o pago de la seguridad social
+Acceder, publicar o intercambiar opiniones sobre las características o calidad de un bien o servicio
+Escuchar radio en línea
+Acceder a sitios de chat, blogs, foros de noticias y debates en línea
+Buscar empleo o presentar una solicitud de empleo
+Hacer trámites con entidades públicas (nacional, departamental o municipal)
+Consulta de periódicos, revistas o libros digitales
+Ver televisión en línea
+Buscar información de entidades públicas (nacional, departamental o municipal)
+Redes laborales o profesionales
+Usar herramientas de Inteligencia Artificial
+Subir contenido propio a un sitio web para ser compartido
+Trabajar como requisito dentro de su empleo o actividad económica de independiente
+Comprar/ordenar productos o servicios
+Obtener información sobre bienes o servicios
+Descargar juegos o jugar en línea
+Consultar wikis y enciclopedias en línea
+Utilizar servicios en la nube
+Operaciones bancarias y otros servicios financieros
+Acceder a resultados de exámenes médicos
+Buscar información sobre asuntos de salud
+Solicitar o cancelar citas médicas
+Descargar software o aplicaciones
+Educación y aprendizaje
+Enviar o recibir correos electrónicos
+Descargar o ver en línea imágenes, videos, películas o música
+Redes sociales
+Video, llamada o mensajería instantánea
+Porcentaje
+ 
+ 
+ 
+ 
+ 23 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Del total nacional de personas de 5 y más años que usaron Internet para redes sociales en 2024, 
+el 96,8% lo hicieron para comunicarse con sus familiares y amigos, el 77,5% con fines de 
+entretenimiento, 53,5% para acceder a contenidos publicados por otros y hacer comentarios, y 
+23,6% para producir sus propios contenidos . Por otra parte, la s actividades menos realizadas en 
+las redes sociales fueron las de respaldar alguna iniciativa de una entidad pública (3,6%) y quejarse 
+por la atención o el servicio de alguna entidad pública (5.7%). (Anexo Mod.4-8) 
+ 
+Gráfico 24. Proporción de personas de 5 y más años que usaron redes sociales, según actividad  
+Total nacional 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades de uso de redes sociales no suman 100% porque las opciones de 
+respuesta no son excluyentes.  
+ 
+Teniendo en cuenta la dinámica continua en el desarrollo de las TIC a nivel mundial, dentro de las 
+nuevas temáticas indagadas en la ENTIC Hogares 2024 se encuentra la utilización de herramientas 
+de Inteligencia Artificial (IA). En ese sentido, en el formulario de la encuesta se incluyeron nuevas 
+preguntas enfocadas en el  uso de esta tecnología, entre las que se indaga el tipo de actividad 
+utilizada de IA, la principal razón por la que las personas utilizaron herramientas de IA, así como 
+también se les consultó a aquellas personas que no utilizaron herramientas de IA la principal razón 
+para no hacerlo.  
+ 
+3,6
+5,7
+5,9
+7,7
+8,7
+10,2
+11,2
+14,5
+18,8
+23,6
+53,5
+77,5
+96,8
+0 20 40 60 80 100
+RESPALDAR ALGUNA INICIATIVA DE UNA ENTIDAD PÚBLICA
+QUEJARSE POR LA ATENCIÓN O EL SERVICIO DE ALGUNA ENTIDAD PÚBLICA
+REPORTAR EL ESTADO DE LAS VÍAS/ RUTAS, REPORTAR ACCIDENTES O REPORTAR DELITOS U OTROS
+HECHOS QUE AFECTA LA SEGURIDAD CIUDADANA
+PROMOVER Y CONVOCAR EVENTOS O ENCUENTROS
+INTERACTUAR CON ENTIDADES PÚBLICAS/ OFICIALES/ DEL ESTADO
+PROMOVER SU NEGOCIO O ACTIVIDAD PROFESIONAL
+EXPRESAR SUS IDEAS U OPINIONES SOBRE HECHOS O TEMAS DE INTERÉS PÚBLICO
+CONOCER NUEVAS PERSONAS O TENER CITAS EN LÍNEA
+SER MIEMBRO DE GRUPOS Y CAUSAS EN GENERAL
+PRODUCIR SUS PROPIOS CONTENIDOS
+ACCEDER A CONTENIDOS PUBLICADOS POR OTROS Y HACER COMENTARIOS
+ENTRETENIMIENTO (EJ. JUEGO, FARÁNDULA, SEGUIR INFLUENCIADORES)
+COMUNICARSE CON FAMILIARES Y AMIGOS
+Porcentaje
+ 
+ 
+ 
+ 
+ 24 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+En 2024, para el total nacional, de las personas de 5 y más años que usaron Internet el 18,0% 
+utilizaron herramientas de IA, siendo mayor la proporción en cabeceras (20,4%) que en centros 
+poblados y rural disperso (8,1%). Los departamentos que tuvieron mayor proporción de personas 
+que utilizaron herramientas de IA a nivel nacional fueron Bogotá D.C. (25,2%), Santander (25,0%), 
+Quindío (24,7%) y Atlántico (23,8%). (Anexo Mod.4-7) 
+ 
+Gráfico 25. Proporción de personas de 5 y más años que usaron herramientas de Inteligencia Artificial 
+a través de Internet 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+ 
+De las personas de 5 y más años que utilizaron herramientas de IA a través de Internet, en el total 
+nacional el 90,4% lo hicieron para comunicarse o realizar consultas. Le siguieron, en orden de 
+importancia, realizar tareas académicas, profesionales o laborales  (80,7%), generar imágene s, 
+audios o videos (43,9%), y desarrollar software o aplicaciones (14,9%). (Gráfico 26 y Anexo Mod. 
+4-10) 
+ 
+ 
+18,0
+20,4
+8,1
+0
+5
+10
+15
+20
+25
+Total nacional Cabecera Centros poblados y
+rural disperso
+Porcentaje
+3,4
+3,7
+4,8
+7,4
+7,6
+8,0
+8,3
+8,8
+9,9
+11,4
+12,6
+12,8
+12,9
+13,3
+14,6
+14,7
+15,4
+15,5
+15,5
+16,4
+16,5
+16,9
+17,6
+18,0
+18,1
+18,2
+18,9
+19,4
+22,0
+23,8
+24,7
+25,0
+25,2
+0 10 20 30
+Huila
+Vichada
+Guainía
+Chocó
+La Guajira
+Vaupés
+Magdalena
+San Andrés
+Amazonas
+Córdoba
+Cesar
+Risaralda
+Arauca
+Norte De Santander
+Valle Del Cauca
+Putumayo
+Cauca
+Guaviare
+Nariño
+Boyacá
+Caquetá
+Antioquia
+BolÍvar
+Cundinamarca
+Meta
+Casanare
+Tolima
+Sucre
+Caldas
+Atlántico
+Quindío
+Santander
+Bogotá D.C.
+Porcentaje
+ 
+ 
+ 
+ 
+ 25 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 26. Porcentaje de personas de 5 y más años que usaron herramientas de Inteligencia Artificial 
+a través de Internet, según actividad realizada en esta tecnología  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades realizadas a través de Inteligencia Artificial no suman 100% 
+porque las opciones de respuesta no son excluyentes.  
+ 
+En cuanto a la principal razón que las personas justificaron para utilizar herramientas de IA, en el 
+total nacional el 49,5% manifestó que lo hizo para ahorrar tiempo, 23,8% respondió que lo hicieron 
+para reducir errores, 17,5% adujeron para apoyar la toma de decisiones y 9,3% automatizar tareas 
+repetitivas (Gráfico 27 y Anexo Mod. 4-10). 
+ 
+ 
+ 
+ 
+ 
+ 
+90,4
+80,7
+43,9
+14,9
+90,9
+81,0
+44,5
+15,5
+85,0
+77,2
+37,7
+7,7
+0 10 20 30 40 50 60 70 80 90 100
+PARA COMUNICARSE O REALIZAR CONSULTAS (EJ. CHATBOT,
+TRADUCCIÓN DE TEXTOS, ETC.)
+PARA REALIZAR TAREAS ACADÉMICAS, PROFESIONALES O
+LABORALES BÁSICAS (EJ. GENERACIÓN DE DOCUMENTOS DE
+TEXTO, ETC.)
+PARA GENERAR IMÁGENES, AUDIOS O VIDEOS (EJ. DISEÑO,
+PUBLICIDAD, CONTENIDOS, ETC.)
+PARA DESARROLLAR SOFTWARE O APLICACIONES (EJ.
+PROGRAMACIÓN)
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 26 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 27. Distribución de las  personas de 5 y más años que usaron herramientas de Inteligencia 
+Artificial a través de Internet, según principal razón para hacerlo 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota 1: La base de cálculo son las personas que usaron herramientas de Inteligencia Artificial cuando acceden a 
+Internet. 
+Nota 2: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+ 
+ 
+En cuanto a las personas que reportaron no utilizar herramientas de IA a través de Internet, en el 
+total nacional el 46,5% manifestó no saber qué es, seguido por 32,0% que adujeron no considerarla 
+necesaria para sus actividades académicas, laborales o profesionales , mientras que el  16,2% 
+reportaron el no saber utilizarla (Gráfico 28 y Anexo Mod. 4-11).  
+ 
+ 
+ 
+ 
+ 
+49,5
+23,8
+17,5
+9,3
+48,8
+23,7
+17,8
+9,7
+56,7
+24,8
+13,5
+5,0
+0 10 20 30 40 50 60
+AHORRAR TIEMPO
+REDUCIR ERRORES
+APOYAR LA TOMA DE
+DECISIONES
+AUTOMATIZAR TAREAS
+REPETITIVAS
+Porcentaje
+Total nacional Cabecera Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 27 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 28. Distribución de las personas de 5 y más años que no usaron herramientas de Inteligencia 
+Artificial a través de Internet, según principal razón para no hacerlo  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota 1: La base de cálculo son las personas que no usaron herramientas de Inteligencia Artificial cuando acceden a 
+Internet. 
+Nota 2: La suma de las distribuciones puede no dar 100% debido a la aproximación en el nivel de dígitos utilizados. 
+ 
+ 
+Por otra parte, de las personas que realizaron trámites con entidades públicas por Internet a nivel 
+nacional, el trámite que más realizaron fue la consulta de puesto de votación o designación como 
+jurado de votación con 57,0%; le siguieron, en orden de importancia,  el registro, actualización o 
+expedición del RUT (48,8%), la obtención de certificados de antecedentes  (46,0%) y el envío de 
+formularios diligenciados en línea para acceder a servicios de las entidades públicas  (43,7%). Los 
+trámites que menos realizaron las personas por Internet en 202 4 fueron: solicitud de expedición 
+o duplicado de la libreta militar (2,2%), solicitud de certificados de defunción (2,8%) y denunciar 
+irregularidades de los servidores públicos (6,4%). (Gráfico 29 y Anexo Mod.4-12) 
+ 
+ 
+46,5
+32,0
+16,2
+2,1
+1,0
+0,9
+0,7
+0,4
+0,1
+0,1
+43,0
+35,6
+16,0
+2,0
+1,1
+1,0
+0,8
+0,4
+0,1
+0,1
+59,7
+18,7
+16,9
+2,5
+0,4
+0,8
+0,2
+0,5
+0,0
+0,1
+0 10 20 30 40 50 60 70 80 90 100
+NO SABE QUÉ ES LA INTELIGENCIA ARTIFICIAL
+NO LA CONSIDERA NECESARIA PARA SUS ACTIVIDADES ACADÉMICAS,
+LABORALES O PROFESIONALES
+NO SABE UTILIZAR HERRAMIENTAS DE INTELIGENCIA ARTIFICIAL
+ES MUY COSTOSO ACCEDER A ESA TECNOLOGÍA
+NO LE TIENEN PERMITIDO UTILIZAR HERRAMIENTAS DE INTELIGENCIA
+ARTIFICIAL
+CONSIDERA QUE USTED APRENDE MÁS CUANDO NO LAS UTILIZA
+EN SU ENTORNO LABORAL, ACADÉMICO O FAMILIAR ALGUIEN MÁS LAS UTILIZA
+POR USTED
+EN SU ENTORNO NO CUENTA CON DATOS, INFORMACIÓN O HERRAMIENTAS
+TECNOLÓGICAS PARA UTILIZARLAS
+TEMOR DE QUE USTED O ALGUIEN MÁS PIERDA SU TRABAJO U OFICIO
+TIENE ALGUNA LIMITACIÓN FÍSICA O MENTAL QUE LE IMPIDE UTILIZARLAS
+Porcentaje
+Total nacional Cabecera Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 28 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 29. Proporción de las personas que usaron Internet para buscar información o realizar 
+trámites con entidades públicas, según tipo de trámite 
+Total nacional 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades o trámites en línea ante entidades públicas no suman 100% 
+porque las opciones de respuesta no son excluyentes.  
+ 
+Así mismo, la ENTIC Hogares 2024 indagó por las razones por las cuales las personas no realizaron 
+trámites con entidades públicas por Internet, en donde la principal razón radica en que prefieren 
+hacerlos de manera presencial o por teléfono ( 83,0%) para el total nacional, seguido por la 
+desconfianza sobre el uso que se le da a sus datos personales ( 61,6%), desconfianza de que el 
+trámite se realice correctamente ( 60,4%), y desconfianza de hacer el pago  del trámite en línea 
+(52,5%). (Gráfico 30 y Anexo Mod.4-15) 
+ 
+ 
+ 
+ 
+2,2
+2,8
+6,4
+9,6
+11,1
+11,2
+13,2
+14,3
+14,4
+14,9
+15,0
+15,5
+17,0
+20,3
+30,0
+31,4
+32,1
+33,3
+35,4
+42,2
+42,3
+42,9
+43,7
+46,0
+48,8
+57,0
+0 10 20 30 40 50 60
+Solicitud de expedición o duplicado de libreta militar
+Solicitud de expedición de copia del certificado de defunción
+Denunciar irregularidades o conductas inapropiadas de los servidores públicos
+Obtener información sobre procesos licitatorios
+Solicitud de expedición de copia de registro civil
+Participar en la definición de planes, programas, proyectos o normas de entidades públicas
+Hacer seguimiento a la gestión de las entidades públicas
+Solicitud de expedición o duplicado de la cédula de ciudadanía
+Obtención de certificados laborales ante entidades públicas
+Consulta y gestión de créditos educativos de entidades públicas
+Solicitud de expedición o renovación de pasaporte
+Pago de comparendos en línea
+Acceso a bibliotecas públicas
+Inscripción, consulta de resultados o solicitud de certificados de las pruebas saber
+Presentar peticiones, quejas o reclamos
+Responder o atender una solicitud o requerimiento de una entidad pública
+Inscripción, consulta o pago de programas académicos (colegios, sena, universidades públicas)
+Consultas sobre infracciones de tránsito (comparendos o multas)
+Consultar información sobre subsidios de programas de entidades públicas
+Descargar formularios oficiales para acceder a servicios de las entidades públicas
+Declaración, liquidación o pago de impuestos (renta, industria y comercio, predial, entre otros)
+Consultar información u obtener certificado del SISBEN
+Enviar formularios diligenciados en línea para acceder a servicios de las entidades públicas
+Obtención del certificado de antecedentes (procuraduría, contraloría, personería o de la policía)
+Registro, actualización o expedición de copias del RUT
+Consulta de puesto de votación o de designación como jurado de votación
+PORCENTAJE
+ 
+ 
+ 
+ 
+ 29 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 30. Proporción de las personas que no realizaron trámites con entidades públicas a través de 
+Internet, según razones para no hacerlo 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes razones para no realizar trámites en línea ante entidades públicas no suman 
+100% porque las opciones de respuesta no son excluyentes.  
+ 
+Otro de los nuevos temas indagados en la ENTIC Hogares 2024 es el c onocimiento que las 
+personas de 18 y más años que usaron Internet pudieron tener en programas de formación en 
+habilidades y competencias digitales , según diversas entidades que los pueden ofrecer . En ese 
+sentido, para el total nacional el 10,2% manifestaron conocer programas ofrecidos por  el 
+Ministerio de Tecnologías de la Información y las comunicaciones (MINTIC) , seguido por otra 
+entidad pública diferente a MINTIC (8,7%), alcaldías (7,3%) y cámaras de comercio (5,4%). (Gráfico 
+31 y Anexo Mod.4-14) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+83,0
+61,6 60,4
+52,5 50,9 49,8
+36,7
+82,8
+63,3 62,4
+53,6
+49,7 49,1
+39,0
+84,1
+54,5
+52,2
+48,5
+55,9
+52,4
+27,6
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Prefiere hacer el trámite de
+manera presencial o por
+teléfono
+Desconfianza del uso que
+le den a sus datos
+personales
+Desconfianza de que el
+trámite en línea o digital se
+realice correctamente
+Desconfianza de hacer el
+pago del trámite en línea
+No sabe cómo realizar los
+trámites en línea
+No le gusta realizar trámites
+en línea
+El trámite no está
+disponible en línea
+Porcentaje
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 30 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 31. Proporción de personas  de 18 y más años  que usaron Internet y con conocimiento en 
+programas de formación en habilidades y competencias digitales, según entidad que lo ofrece  
+Total nacional, Cabecera y Centros poblados y rural disperso  
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes entidades no suman 100% porque las opciones de respuesta no son 
+excluyentes.  
+ 
+Entre las personas que hicieron compras  de productos o servicios por Internet , en 2024 para el 
+total nacional el 84,7% reportó haber ordenado ropa, zapatos o accesorios, seguido por comidas 
+preparadas (59,0%), viajes (vuelos, reservas de hotel, alquiler de vehículos) (33,7%) y servicios TIC 
+diferentes a software (Internet, paquetes de datos) (33,3%). En contraste, los productos con menor 
+porcentaje de personas que los compraron por Internet fu eron, juegos de computador o 
+videojuegos (8,2%), software (9,1%) y música (9,2%). (Gráfico 32 y Anexo Mod.4-16) 
+ 
+ 
+ 
+ 
+ 
+ 
+10,2
+8,7
+7,3
+5,4
+4,4
+11,3
+9,7
+8,1
+6,3
+4,9
+5,0
+3,8
+4,0
+1,4
+2,0
+0 2 4 6 8 10 12
+Ministerio de Tecnologías de la Información y las
+Comunicaciones (MINTIC)
+Otra entidad pública del orden nacional diferente a
+MINTIC
+Alcaldías (sea de su municipio o de otro)
+Cámaras de comercio
+Gobernaciones (sea de su municipio o de otro)
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y Rural disperso
+ 
+ 
+ 
+ 
+ 31 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 32. Proporción de personas de 5 o más años que compraron a t ravés de Internet según tipo 
+de productos (bienes o servicios) 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes productos comprados a través de Internet no suman 100% porque las 
+opciones de respuesta no son excluyentes.  
+ 
+En 2024 y para el total nacional, el método de pago más utilizado para las compras por Internet 
+fue el pago contra entrega con 75,3%, seguido por  el pago en línea con tarjeta débito o 
+transferencia electrónica ( 65,5%) y pago con cuenta electrónica asociada al número del celular 
+(50,3%). Por su parte, en los centros poblados y rural disperso se destaca como segundo principal 
+medio de pago el realizado a través de algún punto de recaudo (4 0,5%). (Gráfico 33 y Anexo 
+Mod.4-16) 
+84,7
+59,0
+33,7
+33,3
+31,2
+26,5
+25,7
+24,6
+17,3
+16,1
+14,2
+13,0
+11,5
+10,1
+9,2
+9,1
+8,2
+85,2
+61,6
+35,1
+33,8
+32,8
+27,0
+26,1
+25,5
+18,1
+16,9
+14,8
+13,6
+11,9
+10,5
+9,6
+9,5
+8,6
+78,9
+23,9
+15,7
+26,3
+10,7
+19,6
+20,3
+11,8
+6,6
+5,8
+7,4
+5,0
+7,1
+5,4
+4,5
+3,6
+2,9
+0 15 30 45 60 75 90
+Ropa/zapatos/accesorios y artículos deportivos
+Comidas preparadas
+Viajes (vuelos, reservas de hotel, alquiler de vehículos)
+Servicios TIC diferentes a software (Internet, paquetes de datos)
+Entradas para eventos
+Equipos electrónicos (TV, equipo de sonido, cámaras, etc.)
+Electrodomésticos para el hogar
+Medicamentos
+Películas, videos o imágenes
+Mercado del hogar
+Computadores y equipo informático
+Libros/revistas o periódicos
+Productos financieros (acciones, seguros)
+Muebles
+Música
+Software
+Juegos de computador o videojuegos
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 32 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 33. Proporción de las personas que compraron productos a través de Internet según medios 
+de pago 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes medios de pago no suman 100% porque las opciones de respuesta no son 
+excluyentes.  
+ 
+ 
+Para esta ver sión de la ENTIC Hogares se indagó por los métodos de entrega que las personas 
+utilizaron cuando compraron productos a través de Internet. Por lo tanto, para el total nacional, el 
+73,0% de las personas que compraron productos por Internet emplearon la entrega directa, 37,4% 
+prefirieron la entrega en línea mediante descarga desde el sitio web  o aplicación, y 29,3% 
+establecieron la recogida del producto desde el punto de venta o de distribución  (Gráfico 34 y 
+Anexo Mod.4-16). 
+ 
+ 
+ 
+ 
+75,3
+65,5
+50,3
+35,1
+33,8
+20,9
+14,4
+9,0
+7,4
+3,7
+1,3
+75,5
+67,6
+51,4
+36,6
+33,3
+21,6
+15,0
+9,5
+7,5
+3,8
+1,4
+71,6
+37,1
+35,6
+15,0
+40,5
+12,1
+6,0
+2,7
+5,9
+1,3
+0,3
+0 10 20 30 40 50 60 70 80
+Pago contra entrega
+Pago en línea con tarjeta débito o transferencia electrónica (por
+ejemplo, PSE)
+Pago con cuenta electrónica asociada al número del celular
+Pago en línea con tarjeta de crédito
+Pago a través de algún punto de recaudo (Efecty, Baloto, Pagatodo,
+Móvilred)
+Consignación bancaria a través de recibo generado en línea
+Servicios de pago en línea (Pay Pal o Amazon Payments)
+Programas de redención de puntos acumulados (por ej. millas
+aéreas)
+Financiación directa otorgada por el vendedor
+Tarjetas prepago o cupones en línea
+Criptomonedas
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 33 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 34. Proporción de las personas que compraron productos a través de Internet según método 
+de entrega utilizado 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes métodos de entrega no suman 100% porque las opciones de respuesta no 
+son excluyentes.  
+ 
+ 
+En cuanto a las razones por las cuales las personas no compraron ningún bien o servicio por 
+Internet en 2024, a nivel nacional el 93,2% de las personas reportaron que prefieren hacerlo 
+personalmente, seguido por no sabe r hacer compras o pagos a través de Internet  (69,7%), 
+cuestiones de privacidad en dar datos personales ( 60,7), desconfianza en aspectos del producto 
+(59,4%) y no le interesa hacer compras a través de Internet (51,1%). En contraste, las razones con 
+menores porcentajes de respuesta fueron los costos  de envío son elevados/el transporte es 
+costoso (37,9%) y cuestiones técnicas de la plataforma de compra  (38,2%) (Gráfico 35 y Anexo 
+Mod.4-17). 
+ 
+ 
+ 
+ 
+73,0
+37,4
+29,3
+74,1
+38,0
+28,4
+58,3
+29,0
+41,8
+0 10 20 30 40 50 60 70 80
+Entrega directa al comprador por servicio de
+correo postal u otras formas de entrega
+Entrega en línea/electrónica mediante la
+descarga desde el sitio web o mediante una
+aplicación, software u otros dispositivos
+Recogida en el punto de venta o de
+distribución
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 34 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 35. Proporción de personas de 5 o más años que no compraron bienes o servicios por internet 
+según razones para no hacerlo 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes razones para no comprar productos por Internet no suman 100% porque las 
+opciones de respuesta no son excluyentes.  
+ 
+ 
+Para el total nacional de personas que no usaron Internet en 2024, 56,5% manifestaron como 
+razón principal no saber usarlo, seguido por ser muy costoso (50,8%) y no considerarlo necesario 
+(48,9%). Por otra parte, la razón asociada al costo de usar Internet se destaca más en los centros 
+poblados y rural disperso (56,5%) en comparación con las cabeceras (47,4%), mientras que la razón 
+asociada a razones de seguridad  o privacidad se destaca más en las cabeceras (21,5%) en 
+comparación con los centros poblados y rural disperso (10,2%). (Gráfico 36 y Anexo Mod.4-18) 
+93,2 93,4 92,8
+69,7 68,6
+73,7
+60,7
+64,2
+48,8
+59,4 62,2
+49,651,1 49,5
+56,9
+50,0
+53,8
+36,6
+40,5 40,0 42,1
+38,2 40,7
+29,7
+37,9 38,5 35,8
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+Total nacional Cabecera Centros poblados y rural disperso
+Prefiere ir a comprar personalmente
+No sabe hacer compras o pagos a través de Internet
+Cuestiones de privacidad en dar datos personales
+Desconfianza en aspectos del producto (garantías, entregas o devoluciones)
+No le interesa hacer compras a través de Internet
+Cuestiones de seguridad en dar información bancaria
+No tiene tarjeta de crédito o débito/cuenta bancaria
+Cuestiones técnicas de la plataforma de compra (fallas de conexión, fallas del sitio web, etc.)
+Los costos de envío son elevados/el transporte es costoso
+ 
+ 
+ 
+ 
+ 35 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 36. Proporción de personas de 5 o más años que no usaron internet, según razones de no 
+uso 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes razones para no usar Internet no suman 100% porque las opciones de 
+respuesta no son excluyentes.  
+ 
+ 
+En 2024, la proporción de personas de 5 y más años a nivel nacional que poseían teléfono celular 
+de cualquier tipo es del 78,1%, con una mayor proporción en cabeceras (81,9%) y menor 
+proporción en centros poblados y rural disperso (65,4%).  A nivel departamental, los porcentajes 
+de tenencia oscilan entre el 20,4% para el departamento con menor tenencia (Vichada), y el 88,0% 
+como mayor porcentaje de tenencia para Bogotá D.C. (Gráfico 37 y Anexo C.4).  
+ 
+ 
+ 
+ 
+56,5
+50,8
+48,9
+45,3
+36,0
+33,1
+28,9
+17,3
+10,0
+7,7
+53,5
+47,4
+49,1
+43,9
+38,9
+34,1
+32,5
+21,5
+12,1
+9,8
+61,5
+56,5
+48,7
+47,7
+31,2
+31,5
+22,9
+10,2
+6,5
+4,3
+0 10 20 30 40 50 60 70 80
+No sabe usarlo
+Es muy costoso
+No lo considera necesario
+No tiene un equipo electrónico para conectarse
+No sabe qué es Internet
+No hay cobertura en la zona
+No le tienen permitido usar Internet
+Por razones de seguridad o privacidad
+Por razones de salud física o mental
+Alguna limitación física o mental que no le permite usarlo
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 36 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 37. Proporción de personas de 5 y más años que tienen teléfono celular 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+78,1 81,9
+65,4
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Total nacional Cabecera Centros poblados y
+Rural disperso
+Porcentaje
+20,4
+31,3
+39,5
+50,3
+50,8
+56,6
+65,1
+65,2
+65,3
+69,3
+69,7
+70,5
+70,7
+71,6
+71,7
+71,9
+73,7
+74,6
+75,0
+75,1
+77,6
+80,2
+80,4
+80,4
+80,9
+82,4
+82,5
+82,6
+83,9
+84,3
+84,4
+85,2
+88,0
+0 10 20 30 40 50 60 70 80 90 100
+Vichada
+Vaupés
+Guainía
+La Guajira
+Amazonas
+Chocó
+Sucre
+Magdalena
+Córdoba
+Bolívar
+Putumayo
+Guaviare
+Cesar
+Nariño
+Caquetá
+Arauca
+Norte De Santander
+Cauca
+Huila
+Atlántico
+Casanare
+Tolima
+Meta
+Boyacá
+Santander
+Valle Del Cauca
+Cundinamarca
+Antioquia
+Risaralda
+San Andrés
+Caldas
+Quindío
+Bogotá D.C.
+Porcentaje
+ 
+ 
+ 
+ 
+ 37 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+De otro lado, el porcentaje del total nacional de  personas de 5 y más años que usaron teléfono 
+celular en 2024 es de 90,6%, 92,7% en cabecera y 8 3,4% en centros poblados y rural disperso . A 
+nivel departamental, los porcentajes de tenencia oscilan entre el 37,8% para el departamento con 
+menor uso (Vichada), y el 93,8% como mayor porcentaje de uso para Bogotá D.C. (Anexo C.4).  
+ 
+Gráfico 38. Proporción de personas de 5 y más años que usaron teléfono celular  
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso  
+2024 
+ 
+ 
+ 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+ 
+ 
+ 
+ 
+90,6 92,7
+83,4
+0
+20
+40
+60
+80
+100
+Total nacional Cabecera Centros poblados y
+Rural disperso
+Porcentaje
+37,8
+57,2
+59,1
+67,7
+70,9
+72,3
+83,2
+85,4
+86,3
+86,4
+87,1
+87,4
+87,8
+88,3
+88,8
+88,9
+90,0
+90,1
+90,7
+91,0
+91,5
+91,9
+91,9
+92,0
+92,1
+92,2
+92,2
+92,2
+92,3
+92,8
+92,8
+93,2
+93,8
+0 10 20 30 40 50 60 70 80 90 100
+Vichada
+Guainía
+Vaupés
+Amazonas
+Chocó
+La Guajira
+Putumayo
+Arauca
+Guaviare
+Magdalena
+Nariño
+Sucre
+Cauca
+Norte De Santander
+Córdoba
+Bolívar
+Cesar
+Risaralda
+Quindío
+Atlántico
+San Andrés
+Caldas
+Caquetá
+Casanare
+Meta
+Antioquia
+Tolima
+Boyacá
+Huila
+Valle Del Cauca
+Santander
+Cundinamarca
+Bogotá D.C.
+Porcentaje
+ 
+ 
+ 
+ 
+ 38 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+En 2024, para el total nacional la actividad de mayor uso en el teléfono celular fue para llamadas 
+personales o familiares (9 4,3%) seguido de entretenimiento ( 85,6%), navegación en internet 
+(83,2%) y mensajes de texto personales o familiares (76,3%). (Anexo Mod.4-19) 
+ 
+Gráfico 39. Proporción de personas de 5 o más años que utilizan teléfono celular, según actividad de 
+uso 
+Total nacional, Cabecera y Centros poblados y rural disperso  
+2024 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades de uso del teléfono celular no suman 100% porque las opciones 
+de respuesta no son excluyentes.  
+ 
+ 
+En 2024 para el total nacional, el porcentaje de personas de 5 y más años que escucharon señal 
+de radio dentro del hogar fue de 40,6%; en las cabeceras el porcentaje fue de 38,9% mientras que 
+en los centros poblados y rural disperso  la proporción fue de 46,2%. A nivel departamental, los 
+porcentajes de tenencia oscilan entre el 18,0% para el departamento con menor uso (V aupés), y 
+el 63,6% como mayor porcentaje de uso para Amazonas (Gráfico 40 y Anexo C.4). 
+ 
+ 
+ 
+94,3
+85,6
+83,2
+76,3
+45,5
+39,8
+0,6
+94,6
+88,2
+85,9
+79,6
+48,6
+43,4
+0,6
+93,1
+76,2
+73,6
+64,3
+34,4
+26,5
+0,4
+0 20 40 60 80 100
+Llamadas personales o familiares
+Entretenimiento
+Navegación en Internet
+Mensajes de texto personales o familiares (SMS,
+mensajería instantánea, chat, etc.)
+Llamadas laborales
+Mensajes de texto laborales (SMS, mensajería
+instantánea, chat, etc.)
+Venta de minutos
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 39 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 40. Proporción de personas de 5 o más años que escuchan señal de radio dentro del hogar 
+Total nacional, Departamental, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ECV. 
+Nota: Los datos del presente indicador básico son tomados del módulo TIC de la Encuesta de Calidad de Vida 2024. 
+40,6 38,9
+46,2
+0
+10
+20
+30
+40
+50
+Total nacional Cabecera Centros poblados y
+Rural disperso
+Porcentaje
+18,0
+21,0
+22,3
+22,5
+28,0
+28,2
+29,2
+29,6
+30,1
+30,5
+31,3
+33,7
+34,7
+36,1
+37,7
+38,6
+39,0
+40,8
+42,6
+44,5
+45,2
+45,9
+48,9
+48,9
+50,7
+51,1
+55,1
+55,5
+55,9
+56,8
+58,7
+59,8
+63,6
+0 10 20 30 40 50 60 70
+Vaupés
+Sucre
+Guainía
+Magdalena
+Atlántico
+Meta
+Guaviare
+Vichada
+Córdoba
+Casanare
+Chocó
+Cesar
+La Guajira
+Bolívar
+Nariño
+Norte De Santander
+Bogotá D.C.
+Antioquia
+San Andrés
+Valle Del Cauca
+Cundinamarca
+Santander
+Risaralda
+Tolima
+Caldas
+Caquetá
+Boyacá
+Quindío
+Huila
+Putumayo
+Arauca
+Cauca
+Amazonas
+Porcentaje
+ 
+ 
+ 
+ 
+ 40 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Por actividades de escucha de señal de radio, en 2024 la más utilizada fue la de entretenimiento 
+tanto en el total nacional (93,8%), cabeceras (93,4%) y centros poblados y rural disperso (94,7%). 
+Por otra parte, la actividad de información de interés comunitario presenta una mayor proporción 
+en los centros poblados y rural disperso (46,5%) en comparación con las cabeceras (36,4%). (Anexo 
+Mod.4-20). 
+ 
+ 
+Gráfico 41. Proporción de personas de 5 o más años que escuchan señal de radio  dentro del hogar, 
+según actividades de escucha 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes actividades de escucha de señal de radio no suman 100% porque las 
+opciones de respuesta no son excluyentes.  
+ 
+ 
+La ENTIC Hogares indagó también por el conocimiento que las personas tienen del código postal. 
+En ese sentido, en 2024 el porcentaje de personas de 5 y más años que conocen el código postal 
+de su residencia fue de 8,9%, mientras que en las cabeceras dicho porcentaje fue de 11,1% y en 
+los centros poblados y rural disperso 1,5% (Gráfico 42 y Anexo Mod.4-21). 
+ 
+ 
+ 
+93,8
+70,2
+39,2
+18,1
+93,4
+68,3
+36,4
+19,9
+94,7
+75,3
+46,5
+13,3
+0 20 40 60 80 100
+Entretenimiento (música, deportes,
+variedades, humor)
+Noticias
+Información de interés comunitario
+Educación y aprendizaje
+Porcentaje
+Total nacional
+ Cabecera
+ Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 41 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 42. Proporción de personas de 5 y más años que conocen el código postal de su residencia 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+Fuente: DANE, ENTIC. 
+ 
+La ENTIC también indaga por temas relacionados con la seguridad y el uso responsable del 
+Internet que ejercen las personas. Dentro de estos temas se encuentran los mecanismos de 
+protección de los dispositivos de acceso a Internet, prácticas de uso de Inter net, protocolos de 
+visitas a sitios web, prácticas de control parental, incidentes digitales, entre otros. 
+ 
+A la hora de proteger la información de los dispositivos con los que se accede a Internet, en 2024 
+el mecanismo de protección más utilizado es el de definir contraseñas seguras con el 61,4% de las 
+personas que usaron Internet en el total nacional, 6 4,5% en cabeceras y 4 7,8% en los centros 
+poblados y rural disperso. Por su parte, la proporción de personas que utiliza ron algún software 
+de protección como un antivirus fue de 41,9% en el total nacional, y realizar copias de seguridad 
+o de respaldo (back up) con 38,0% (Gráfico 43 y Anexo Mod.5-1).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8,9
+11,1
+1,5
+0,0
+2,0
+4,0
+6,0
+8,0
+10,0
+12,0
+Total nacional Cabecera Centros poblados y
+rural disperso
+Porcentaje
+ 
+ 
+ 
+ 
+ 42 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 43. Proporción de personas de 5 años y más que usaron internet según mecanismos de 
+protección de información de los dispositivos con los que se accede al servicio 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes mecanismos de protección no suman 100% porque las opciones de 
+respuesta no son excluyentes.  
+ 
+En 2024, la acción más usada cuando se accede a Internet o sitio web, fue limitar el acceso o su 
+perfil o contenido a las redes sociales , con el 36,3% del total nacional de personas que usaron 
+Internet. Le siguieron, en orden de importancia, negar el permiso del uso de la información 
+personal para fines publicitarios  con 34,6%, y restringir el acceso a su ubicación geográfica con 
+34,4%. La actividad menos practicada por las personas que usan Internet es utilizar software que 
+limita la capacidad de rastrear sus actividades en Internet (software antirastreo) , con 8,5% en el 
+total nacional (Gráfico 44 y Anexo Mod.5-1). 
+ 
+ 
+ 
+ 
+ 
+ 
+61,4 64,5
+47,8
+41,9
+45,9
+24,7
+38,0
+42,1
+20,4
+0
+10
+20
+30
+40
+50
+60
+70
+Total nacional Cabecera Centros poblados y rural
+disperso
+Porcentaje
+Definir contraseñas seguras (combinación de letras, números o caracteres especiales)
+Utilizar software de protección (antivirus, firewall, antispyware, etc.)
+Hacer copias de seguridad o respaldo (Back up) en dispositivos externos o servidores (incluido los de la nube)
+ 
+ 
+ 
+ 
+ 43 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 44. Proporción de personas de 5 años y más que usaron internet, según acciones realizadas 
+cuando visitan o acceden a páginas o sitios web en los últimos 12 meses 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de las diferentes acciones no suman 100% porque las opciones de respuesta no son 
+excluyentes.  
+ 
+ 
+A los menores de edad que usaron Internet se les preguntó si accedían acompañados de un adulto; 
+en ese sentido, a nivel nacional el 5 3,4% lo hace, 5 5,7% en las cabeceras y el 4 6,1% en centros 
+poblados y rural disperso. En cuanto a los jefes de hogar, se les indagó por el uso de alguna 
+herramienta digital de control parental, a lo cual en el total nacional el 10,1% lo hace, 11,2% en las 
+cabeceras y el 5,2% en centros poblados y rural disperso (Gráfico 45 y Anexo Mod.5-2). 
+ 
+ 
+ 
+ 
+ 
+ 
+3,0
+6,4
+16,2
+14,4
+15,9
+19,5
+18,1
+22,1
+9,7
+17,6
+31,8
+34,5
+36,7
+37,9
+38,5
+39,7
+8,5
+15,5
+28,8
+30,7
+32,7
+34,4
+34,6
+36,3
+0 10 20 30 40 50
+Utilizar software que limita la capacidad de rastrear sus actividades en
+Internet (software antirastreo)
+Pedir a los sitios web o a los motores de búsqueda el acceso a la
+Información que poseen sobre usted para actualizarla o eliminarla
+Leer la política de privacidad de los sitios web antes de proporcionar
+información personal
+Comprobar la veracidad de las noticias o información que accede o
+recibe a través de internet
+Comprobar que el sitio web donde tuvo que proporcionar información
+personal era seguro
+Restringir el acceso a su ubicación geográfica
+Negar el permiso del uso de la información personal para fines
+publicitarios
+ Limitar el acceso a su perfil o contenido en las redes sociales
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 44 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 45. Porcentaje de personas que usaron Internet según indicadores de control parental por 
+jefes de hogar y uso supervisado de Internet en menores de 18 años  
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024 
+ 
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: La base de cálculo del uso de Internet supervisado por un adulto son los menores de edad que usaron Internet, 
+y para el uso de herramientas digitales de control parental, son los jefes de hogar que usaron Internet. 
+ 
+Con relación a los incidentes de seguridad digital, en 2024 el reportado con mayor frecuencia para 
+el total nacional fue la captura de un virus informático con el 2, 9% de las personas que usaron 
+Internet, seguido por la pérdida económica como resultado de pagos fraudulentos por Internet 
+usando tarjeta de crédito o débito  (2,4%) y la captación de datos personales de manera ilícita o 
+fraudulenta a través de Internet (2,2%). (Gráfico 46 y Anexo Mod.5-3) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+53,4 55,7
+46,1
+10,1 11,2 
+5,2 
+0
+10
+20
+30
+40
+50
+60
+Total nacional Cabecera Centros poblados y
+rural disperso
+Porcentaje
+Navegación en Internet acompañado de un adulto
+Uso de alguna herramienta digital para controlar los contenidos que pueden ver los menores de edad (control parental)
+ 
+ 
+ 
+ 
+ 45 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Gráfico 46. Proporción de personas de 5 y más años que usaron Internet y que tuvieron incidentes de 
+seguridad digitales, según tipo 
+Total nacional, Cabecera y Centros poblados y rural disperso 
+2024  
+ 
+ 
+Fuente: DANE, ENTIC. 
+Nota: Las proporciones de los diferentes incidentes de seguridad digitales no suman 100% porque las opciones de 
+respuesta no son excluyentes.  
+  
+ 
+ 
+ 
+ 
+0,3
+0,2
+0,3
+0,4
+0,7
+0,8
+0,9
+0,9
+0,6
+1,3
+0,3
+0,6
+0,6
+0,8
+1,0
+2,3
+2,4
+2,5
+2,8
+3,2
+0,3
+0,5
+0,5
+0,7
+0,9
+2,0
+2,1
+2,2
+2,4
+2,9
+0 0,5 1 1,5 2 2,5 3 3,5
+Engaño o acoso de  un adulto con el fin de abusar sexualmente de
+usted (Grooming (grumin))
+Divulgación no consentida de videos o imágenes propias a través
+de internet (por ejemplo, sexting)
+Divulgación en internet de noticias falsas sobre usted
+Acoso mediante ataques personales o divulgación de información
+a través de internet (Ciberacoso)
+Extorsión a cambio de no divulgar información personal obtenida a
+través de internet
+Pérdida económica como resultado de recibir mensajes
+fraudulentos (Phishing (fichin))
+Suplantación de identidad
+Captación de datos personales de manera ilícita o fraudulenta a
+través de internet
+Pérdida económica como resultado de pagos fraudulentos por
+internet usando su tarjeta de crédito o débito
+Captura de un virus u otra infección informática, que resulta en
+pérdida de información, tiempo o daño del computador, tableta…
+Porcentaje
+Título del eje
+Total nacional Cabecera Centros poblados y rural disperso
+ 
+ 
+ 
+ 
+ 46 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+MÉTRICAS DE CALIDAD 
+Cobertura 
+El resultado final de los indicadores por cobertura en campo, se obtuvieron de la siguiente manera: 
+• A nivel de viviendas: Total de viviendas finales / Total viviendas finales esperadas. 
+• A nivel de hogares: Total de hogares con encuesta completa/ Total de hogares con encuesta 
+completa esperados.  
+• A nivel de persona: Total de personas con encuesta completa/ Total de personas con 
+encuesta completa esperadas. 
+ 
+Para este cálculo, la cantidad de viviendas, hogares y personas esperadas corresponden a la 
+información derivada del proceso de sensibilización. 
+• Cobertura en viviendas: 99,75% 
+• Cobertura en hogares: 98,79% 
+• Cobertura en personas con encuesta completa: 99,54% 
+Calidad 
+El Indicador de Calidad de la recolección permitió medir el desempeño de cada uno de los/las 
+recolectores/as por semana para observar las posibles alarmas y errores que se presentaron por 
+cada ciudad durante el acompañamiento del proceso de recolección y así emprender acciones de 
+mejora que aportaran al avance continuo del proceso y a la obtención de información con calidad.   
+ 
+Esta información se obtuvo de la revisión y acompañamiento que realizara el rol de supervisor/a 
+de campo a los recolectores, la cual era registrada en el formulario web de Indicador de Calidad 
+de la Recolección.  
+• Calidad: 94,09% 
+ 
+Oportunidad 
+El indicador de oportunidad permitió asegurar que la información reportada por parte de las 
+ciudades fuera en los tiempos establecidos, con el fin de realizar un seguimiento eficaz a los 
+resultados en cuanto a la recolección de la información y ejecución d e las actividades de 
+supervisión en campo. 
+• Oportunidad: 91,19% 
+ 
+ 
+ 
+ 
+ 
+ 
+ 47 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+FICHA METODOLÓGICA 
+Nombre de la operación estadística y sigla: 
+Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares) 
+ 
+Objetivo General 
+Obtener información que permita analizar y realizar comparaciones de las condiciones de tenencia 
+y uso de las TIC en hogares colombianos, las cuales posibiliten el seguimiento y la formulación de 
+políticas enfocadas al desarrollo y aprovechamiento de las TIC, así como hacer seguimiento a las 
+variables necesarias para el diseño e implementación de políticas públicas y público-privadas, los 
+planes y programas de estímulo y masificación social de las TIC para Colombia, con mayor 
+articulación técnica y congruencia conceptual. 
+ 
+Tipo de investigación 
+Encuesta por muestreo 
+ 
+Diseño muestral 
+Muestreo probabilístico, multietápico, estratificado y de conglomerados. 
+ 
+Cobertura geográfica 
+Total, nacional, áreas (cabecera - centros poblados y rural disperso) y departamental. 
+ 
+Tamaño de la muestra 
+La muestra proyectada fue de 53.300 hogares. Sin embargo, se obtuvo en campo 53.570 hogares 
+con encuestas completas. 
+ 
+Unidades Estadísticas: 
+Unidades de observación y análisis: viviendas, hogares y personas de 5 o más años. 
+Unidades de muestreo: se consideran dos etapas: 
+• (UPM) Unidades Primarias de Muestreo corresponde a los municipios del país.   
+• (USM) Unidades Secundarias de Muestreo corresponde a Segmentos o conglomerados, 
+de aproximadamente 10 viviendas contiguas. 
+ 
+ 
+ 
+ 
+ 
+ 48 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+GLOSARIO 
+Acceso a las TIC:  Comprende la infraestructura, los servicios, las aplicaciones, las condiciones y 
+los medios para el acercamiento de grupos de interés a las tecnologías de la información y la 
+comunicación (TIC).  
+ 
+Banca electrónica y otros servicios financieros en línea:  Transacciones bancarias para pagos o 
+transferencias, o para visualizar información sobre una cuenta bancaria. Incluye las transacciones 
+electrónicas por Internet para otro tipo de servicios financieros como la compra de acciones, bonos 
+y seguros.  ( 
+ 
+Coeficiente de Variación Estimado (CVE): Es una medida que resume la variabilidad de la 
+estimación de un parámetro. Se obtiene a partir de la información de la muestra e indica el grado 
+de precisión con el cual se está reportando un resultado. De tal forma que entre menor sea el c.v.e, 
+menor incertidumbre se tiene de la estimación y ésta es más precisa. Es considerado una medida 
+de dispersión relativa o de homogeneidad de los valores, y es de gran utilidad cuando se trata de 
+comparar grupos de datos correspondientes a diferentes variables.  
+ 
+Comercio electrónico:  Comprende la venta o la compra de bienes o servicios realizada mediante 
+redes informáticas en plataformas electrónicas específicamente diseñadas con el propósito de 
+registrar pedidos, independientemente de si el pago y la entrega de los bienes o servicios ocurren 
+en línea.   
+ 
+Comprar u ordenar productos o servicios (actividad de uso de Internet): Órdenes de compra 
+colocadas mediante una plataforma electrónica a través de Internet, sin importar si el pago se 
+realiza en línea o no. Incluye la compra por Internet de productos tales como música, viajes y 
+alojamiento. No se incluyen las órdenes que se cancelaron o no fueron concretadas.   
+ 
+Inteligencia Artificial: Sistema informático avanzado que busca emular el razonamiento humano. 
+ 
+Internet:  Conjunto descentralizado de redes de comunicación interconectadas que utilizan la 
+familia de protocolos TCP/IP para garantizar que las redes físicas heterogéneas que lo componen 
+funcionen como una red lógica única de alcance mundial.   
+ 
+Tableta: Dispositivo electrónico con características y habilidades similares a las de un computador 
+portátil (como la navegación en Internet), pero con un menor rendimiento y un diseño más simple, 
+compuesto básicamente por una pantalla táctil.  
+ 
+ 
+ 
+ 
+ 
+ 49 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+Tecnologías de la Información y Comunicación (TIC): Conjunto de recursos, herramientas, 
+equipos, programas informáticos, aplicaciones, redes y medios que permiten la compilación, el 
+procesamiento, el almacenamiento y la transmisión de información como voz, datos, texto, video 
+e imágenes.  
+ 
+Teléfono celular convencional: Dispositivo inalámbrico electrónico basado en la tecnología de 
+ondas de radio (transmisión por radio frecuencia), y que tiene la misma funcionalidad que 
+cualquier teléfono de línea fija, cuya principal característica es la realización de llamadas sin 
+depender de ningún terminal fijo.  
+ 
+Teléfono celular inteligente:  Teléfono móvil celular construido sobre una plataforma informática 
+y un sistema operativo móvil, y con características y habilidades similares a las de un computador, 
+tales como almacenamiento de datos, conexión a Internet para correo electrónico y navegac ión, 
+entre otras.   
+ 
+Televisión, videos, películas u otro contenido audiovisual para entretenimiento (actividad 
+de uso de Internet): Incluye el uso de radio o televisión vía web únicamente con fines de 
+entretenimiento y la búsqueda y consulta de películas o videos con el mismo fin. No se incluye el 
+uso de redes sociales ni la consulta de medios de comunicación con fines de obtener información  
+ 
+Televisor: Dispositivo que puede recibir señales de televisión utilizando medios comunes de 
+acceso, por aire, cable o satélite. Excluye la función de TV integrada en otro dispositivo, como una 
+computadora o un teléfono móvil 
+ 
+Internet de las cosas: Internet of Things (IoT):  Dispositivos interconectados que recolectan e 
+intercambian datos y pueden ser monitoreados o controlados remotamente mediante Internet, 
+sin requerir la interacción entre humanos o entre humanos y computadores. Se excluyen los 
+sensores y los dispositivos de detección simple de movimiento, sonido, temperatura, humo, etc.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 50 
+ 
+Boletín técnico 
+ 
+ 
+Encuesta de Tecnologías de la Información y las 
+Comunicaciones en Hogares – 2024 (ENTIC Hogares) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Si requiere información adicional, contáctenos a través del correo 
+ contacto@dane.gov.co 
+ 
+ 
+Departamento Administrativo Nacional de Estadística (DANE) 
+Bogotá D.C., Colombia 
+ 
+www.dane.gov.co 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,403 @@
+[
+ {
+  "id": "203",
+  "doi": "10.1007/s10462-023-10637-7",
+  "matriz_titulo": "The key artificial intelligence technologies in early childhood education: a review",
+  "matriz_anio": "2024",
+  "ok": true,
+  "titulo": "The key artificial intelligence technologies in early childhood education: a review",
+  "anio": 2024,
+  "revista": "Artificial Intelligence Review",
+  "volumen": "57",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "12",
+  "autores": [
+   "Yi, Honghu",
+   "Liu, Ting",
+   "Lan, Gongjin"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "075",
+  "doi": "10.1007/s40745-026-00689-1",
+  "matriz_titulo": "Deep Reinforcement Learning for Personalised Music Learning Pathways",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Deep Reinforcement Learning for Personalised Music Learning Pathways",
+  "anio": 2026,
+  "revista": "Annals of Data Science",
+  "volumen": "13",
+  "numero": "4",
+  "paginas": "1013-1032",
+  "articulo": null,
+  "autores": [
+   "Li, Ni",
+   "Hong, Zixiang"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "032",
+  "doi": "10.7717/peerj-cs.3464",
+  "matriz_titulo": "A reinforcement learningbased adaptive evaluation framework for personalized music education",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "A reinforcement learning-based adaptive evaluation framework for personalized music education",
+  "anio": 2026,
+  "revista": "PeerJ Computer Science",
+  "volumen": "12",
+  "numero": null,
+  "paginas": "e3464",
+  "articulo": "e3464",
+  "autores": [
+   "Li, Jing"
+  ],
+  "tipo": "journal-article",
+  "publisher": "PeerJ",
+  "doi_org_http": 302
+ },
+ {
+  "id": "077",
+  "doi": "10.1007/s44163-026-01115-4",
+  "matriz_titulo": "Deep learningbased personalized learning path planning and optimization model for music education",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Deep learning-based personalized learning path planning and optimization model for music education",
+  "anio": 2026,
+  "revista": "Discover Artificial Intelligence",
+  "volumen": "6",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "434",
+  "autores": [
+   "Li, Jing"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "044",
+  "doi": "10.1038/s41598-026-53749-0",
+  "matriz_titulo": "An adaptive emotion aware music education system using machine learning for personalized emotional wellbeing enhancement",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "An adaptive emotion aware music education system using machine learning for personalized emotional wellbeing enhancement",
+  "anio": 2026,
+  "revista": "Scientific Reports",
+  "volumen": "16",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "25833",
+  "autores": [
+   "Deng, Xinyun",
+   "Zhou, Yongxin",
+   "Guan, Xingzhi",
+   "Wang, Yuhui"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "046",
+  "doi": "10.1007/s44163-026-01858-0",
+  "matriz_titulo": "An affective computing framework for preschool music education using MoE architecture and neural radiance fields",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "An affective computing framework for preschool music education using MoE architecture and neural radiance fields",
+  "anio": 2026,
+  "revista": "Discover Artificial Intelligence",
+  "volumen": "6",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "812",
+  "autores": [
+   "Shi, Xinxin"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "038",
+  "doi": "10.5216/mh.v26.85176",
+  "matriz_titulo": "AIBased Feedback Systems in Piano Education Effects on Technical Accuracy and Learner Autonomy",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "AI-Based Feedback Systems in Piano Education: Effects on Technical Accuracy and Learner Autonomy",
+  "anio": 2026,
+  "revista": "Música Hodie",
+  "volumen": "26",
+  "numero": null,
+  "paginas": null,
+  "articulo": null,
+  "autores": [
+   "Deng, Xiaodong"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Universidade Federal de Goias",
+  "doi_org_http": 302
+ },
+ {
+  "id": "050",
+  "doi": "10.22630/MGV.2026.35.1.4",
+  "matriz_titulo": "Application of Computer Vision Technology in the Recognition of Guzheng Playing Posture",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "(The procedure of the editorial Expression of Concern is implemented for this paper, in relation to severe weaknesses recently detected) Application of computer vision technology in the recognition of Guzheng playing posture",
+  "anio": 2026,
+  "revista": "Machine Graphics &amp; Vision",
+  "volumen": "35",
+  "numero": "1",
+  "paginas": "71-92",
+  "articulo": null,
+  "autores": [
+   "Lu, Dan"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Warsaw University of Life Sciences - SGGW Press"
+ },
+ {
+  "id": "144",
+  "doi": "10.1007/s11042-026-21667-y",
+  "matriz_titulo": "Piano keyboard detection algorithm using deep learning",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Piano keyboard detection algorithm using deep learning",
+  "anio": 2026,
+  "revista": "Multimedia Tools and Applications",
+  "volumen": "85",
+  "numero": "5",
+  "paginas": null,
+  "articulo": "508",
+  "autores": [
+   "Chuluunsaikhan, Tserenpurev",
+   "Park, So-Hyun"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "164",
+  "doi": "10.1007/s10791-026-10022-2",
+  "matriz_titulo": "The application of deep reinforcement learning in music teaching interaction",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "The application of deep reinforcement learning in music teaching interaction",
+  "anio": 2026,
+  "revista": "Discover Computing",
+  "volumen": "29",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "131",
+  "autores": [
+   "Tang, Xiaoqing"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "129",
+  "doi": "10.1007/s44163-026-00832-0",
+  "matriz_titulo": "Music teaching evaluation using multimodal deep reinforcement learning",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Music teaching evaluation using multimodal deep reinforcement learning",
+  "anio": 2026,
+  "revista": "Discover Artificial Intelligence",
+  "volumen": "6",
+  "numero": "1",
+  "paginas": null,
+  "articulo": "151",
+  "autores": [
+   "Wang, Zhengzheng"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "doi_org_http": 302
+ },
+ {
+  "id": "220",
+  "doi": "10.1016/j.eswa.2026.132088",
+  "matriz_titulo": "Pedro Ramoneda a,∗, Masahiro Suzuki b, Akira Maezawa b, Xavier Serra a",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Difficulty-aware score generation for piano sight-reading",
+  "anio": 2026,
+  "revista": "Expert Systems with Applications",
+  "volumen": "321",
+  "numero": null,
+  "paginas": "132088",
+  "articulo": "132088",
+  "autores": [
+   "Ramoneda, Pedro",
+   "Suzuki, Masahiro",
+   "Maezawa, Akira",
+   "Serra, Xavier"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Elsevier BV",
+  "doi_org_http": 302
+ },
+ {
+  "id": "056",
+  "doi": "10.55670/fpll.futech.5.1.27",
+  "matriz_titulo": "Artificial intelligence and digital technologies for piano sightreading skill development a scoping review",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Artificial intelligence and digital technologies for piano sight-reading skill development: a scoping review",
+  "anio": 2026,
+  "revista": "Future Technology",
+  "volumen": "5",
+  "numero": "1",
+  "paginas": "314-323",
+  "articulo": null,
+  "autores": [
+   "Rui, Ruiqing",
+   "Amran, Muhammad Syawal",
+   "Nasri, Nurfaradilla Mohamad"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Future Publishing LLC"
+ },
+ {
+  "id": "002",
+  "doi": "10.31681/jetol.1243501",
+  "matriz_titulo": "Content analysis of music education studies related to augmented reality technology",
+  "matriz_anio": "2023",
+  "ok": true,
+  "titulo": "Content analysis of music education studies related to augmented reality technology",
+  "anio": 2023,
+  "revista": "Journal of Educational Technology and Online Learning",
+  "volumen": "6",
+  "numero": "2",
+  "paginas": "447-481",
+  "articulo": null,
+  "autores": [
+   "APAYDINLI, Köksal"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Journal of Educational Technology and Online Learning",
+  "doi_org_http": 302
+ },
+ {
+  "id": "186",
+  "doi": "10.30935/cedtech/13622",
+  "matriz_titulo": "Exploring the integration of bite-sized learning: A scoping review of research in education and related disciplines",
+  "matriz_anio": "2023",
+  "ok": true,
+  "titulo": "Exploring the integration of bite-sized learning: A scoping review of research in education and related disciplines",
+  "anio": 2023,
+  "revista": "Contemporary Educational Technology",
+  "volumen": "15",
+  "numero": "4",
+  "paginas": "ep468",
+  "articulo": null,
+  "autores": [
+   "Mazlan, Chamil Arkhasa Nikko",
+   "Abdullah, Mohd Hassan",
+   "Sulong, Mohd Azam",
+   "Abas, Ashardi",
+   "Ramdan, Mohamad Rohieszan",
+   "Safian, Abdul Rahman",
+   "Syariff M. Fuad, Dayang Rafidah"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Bastas Publications",
+  "doi_org_http": 302
+ },
+ {
+  "id": "161",
+  "doi": "10.6018/red.602301",
+  "matriz_titulo": "The Impact of Mobile Apps and Workload on University Music Education An Experimental Study",
+  "matriz_anio": "2024",
+  "ok": true,
+  "titulo": "El impacto de las apps móviles y la carga del trabajo en la Educación Musical universitaria: un estudio experimental",
+  "anio": 2024,
+  "revista": "Revista de Educación a Distancia (RED)",
+  "volumen": "24",
+  "numero": "80",
+  "paginas": null,
+  "articulo": null,
+  "autores": [
+   "Barroso-Osuna, Julio",
+   "León-Garrido, Antonio",
+   "Llorente-Cejudo, Carmen",
+   "Ruiz-Palmero, Julio"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Servicio de Publicaciones de la Universidad de Murcia",
+  "doi_org_http": 302
+ },
+ {
+  "id": "081",
+  "doi": "10.17811/rifie.20620",
+  "matriz_titulo": "Design and validation of an evaluation instrument for mobile music apps through expert judgment",
+  "matriz_anio": "2024",
+  "ok": true,
+  "titulo": "Diseño y validación de un instrumento de evaluación para apps móviles musicales a través del juicio de expertos",
+  "anio": 2024,
+  "revista": "Aula Abierta",
+  "volumen": "53",
+  "numero": "2",
+  "paginas": "169-179",
+  "articulo": null,
+  "autores": [
+   "León-Garrido, Antonio",
+   "Barroso-Osuna, Julio Manuel",
+   "Llorente-Cejudo, Mª Carmen"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Universidad de Oviedo",
+  "doi_org_http": 302
+ },
+ {
+  "id": "218",
+  "doi": "10.1177/21582440261457887",
+  "matriz_titulo": "Technology-Enhanced Strategies to Address Learning Needs in Undergraduate Music Theory: A Systematic Review",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Technology-Enhanced Strategies to Address Learning Needs in Undergraduate Music Theory: A Systematic Review",
+  "anio": 2026,
+  "revista": "Sage Open",
+  "volumen": "16",
+  "numero": "3",
+  "paginas": null,
+  "articulo": "21582440261457887",
+  "autores": [
+   "Zhu, Qisen",
+   "Jamaludin, Khairul Azhar",
+   "Li, Jinglong"
+  ],
+  "tipo": "journal-article",
+  "publisher": "SAGE Publications"
+ },
+ {
+  "id": "171",
+  "doi": "10.1504/IJICT.2026.10075950",
+  "matriz_titulo": "Transfer learningbased adaptive music teaching system for modulating students emotions",
+  "matriz_anio": "2026",
+  "ok": true,
+  "titulo": "Transfer learning-based adaptive music teaching system for modulating students emotions",
+  "anio": 2026,
+  "revista": "International Journal of Information and Communication Technology",
+  "volumen": "27",
+  "numero": "6",
+  "paginas": null,
+  "articulo": "10075950",
+  "autores": [
+   "Li, Mu"
+  ],
+  "tipo": "journal-article",
+  "publisher": "Inderscience Publishers"
+ }
+]

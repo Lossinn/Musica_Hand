@@ -1,0 +1,18 @@
+{
+ "n_fotogramas": 1000,
+ "dim_descriptor": 120,
+ "descriptor_ms": {
+  "media": 1.5978312000079313,
+  "p95": 3.4584000009999714
+ },
+ "clasificador_ms": {
+  "media": 0.7169665000146779,
+  "p95": 1.4525200032949215
+ },
+ "total_ms": {
+  "media": 2.314797700022609,
+  "p95": 4.798224999467492,
+  "max": 13.759100002062041
+ },
+ "equipo": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel | Python 3.12.10 | numpy 1.26.4"
+}

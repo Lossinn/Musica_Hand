@@ -1,0 +1,922 @@
+{
+ "profiles": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "name",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "age",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "avatar",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'iguana'",
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "created_at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "last_seen_at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "stars",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "coins",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 8,
+    "nombre": "streak_days",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 9,
+    "nombre": "last_play_date",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "''",
+    "pk": false
+   },
+   {
+    "cid": 10,
+    "nombre": "calibrated",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   }
+  ],
+  "fks": [],
+  "indices": []
+ },
+ "skills": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "code",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "name",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "note_code",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "level",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "difficulty",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "prerequisites",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'[]'",
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "order_index",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "description",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "''",
+    "pk": false
+   }
+  ],
+  "fks": [],
+  "indices": []
+ },
+ "skill_state": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "skill_code",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 2,
+    "nombre": "status",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'bloqueada'",
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "mastery",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "precision_v",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "consistency",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "speed",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "retention",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "1",
+    "pk": false
+   },
+   {
+    "cid": 8,
+    "nombre": "attempts",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 9,
+    "nombre": "hits",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 10,
+    "nombre": "mean_reaction_ms",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 11,
+    "nombre": "last_practice_at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 12,
+    "nombre": "due_at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 13,
+    "nombre": "ease",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "2.3",
+    "pk": false
+   },
+   {
+    "cid": 14,
+    "nombre": "interval_days",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "skill_code",
+    "ref_tabla": "skills",
+    "ref_col": "code",
+    "on_delete": "CASCADE"
+   },
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": []
+ },
+ "activities": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "code",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "kind",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "title",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "level",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "difficulty",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "skill_codes",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'[]'",
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "sequence",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'[]'",
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "mode",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'guiado'",
+    "pk": false
+   },
+   {
+    "cid": 8,
+    "nombre": "tempo_bpm",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "72",
+    "pk": false
+   },
+   {
+    "cid": 9,
+    "nombre": "duration_s",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "60",
+    "pk": false
+   },
+   {
+    "cid": 10,
+    "nombre": "hints",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "1",
+    "pk": false
+   },
+   {
+    "cid": 11,
+    "nombre": "repetitions",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "1",
+    "pk": false
+   },
+   {
+    "cid": 12,
+    "nombre": "description",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "''",
+    "pk": false
+   },
+   {
+    "cid": 13,
+    "nombre": "icon",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'🎵'",
+    "pk": false
+   },
+   {
+    "cid": 14,
+    "nombre": "tolerance_ms",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "2500",
+    "pk": false
+   }
+  ],
+  "fks": [],
+  "indices": []
+ },
+ "sessions": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "started_at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "ended_at",
+    "tipo": "REAL",
+    "not_null": false,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "activities_done",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "accuracy",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": []
+ },
+ "attempts": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "session_id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "activity_code",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "step_index",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "expected",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "detected",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "confidence",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 8,
+    "nombre": "correct",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 9,
+    "nombre": "reaction_ms",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 10,
+    "nombre": "attempt_number",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "1",
+    "pk": false
+   },
+   {
+    "cid": 11,
+    "nombre": "at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "session_id",
+    "ref_tabla": "sessions",
+    "ref_col": "id",
+    "on_delete": "SET NULL"
+   },
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": [
+   "idx_attempts_expected",
+   "idx_attempts_profile"
+  ]
+ },
+ "activity_results": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "session_id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "activity_code",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "accuracy",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "rhythm",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "gesture_quality",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 7,
+    "nombre": "stars",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 8,
+    "nombre": "score",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 9,
+    "nombre": "max_combo",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 10,
+    "nombre": "duration_s",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 11,
+    "nombre": "steps_total",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 12,
+    "nombre": "steps_correct",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": "0",
+    "pk": false
+   },
+   {
+    "cid": 13,
+    "nombre": "at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "session_id",
+    "ref_tabla": "sessions",
+    "ref_col": "id",
+    "on_delete": "SET NULL"
+   },
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": [
+   "idx_results_profile"
+  ]
+ },
+ "rewards": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "id",
+    "tipo": "INTEGER",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "kind",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "code",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 4,
+    "nombre": "label",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 5,
+    "nombre": "icon",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'⭐'",
+    "pk": false
+   },
+   {
+    "cid": 6,
+    "nombre": "at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": []
+ },
+ "achievements": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "code",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "title",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 2,
+    "nombre": "description",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   },
+   {
+    "cid": 3,
+    "nombre": "icon",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": "'🏆'",
+    "pk": false
+   }
+  ],
+  "fks": [],
+  "indices": []
+ },
+ "profile_achievements": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "profile_id",
+    "tipo": "INTEGER",
+    "not_null": true,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "code",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 2,
+    "nombre": "at",
+    "tipo": "REAL",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   }
+  ],
+  "fks": [
+   {
+    "col": "code",
+    "ref_tabla": "achievements",
+    "ref_col": "code",
+    "on_delete": "CASCADE"
+   },
+   {
+    "col": "profile_id",
+    "ref_tabla": "profiles",
+    "ref_col": "id",
+    "on_delete": "CASCADE"
+   }
+  ],
+  "indices": []
+ },
+ "meta": {
+  "columnas": [
+   {
+    "cid": 0,
+    "nombre": "key",
+    "tipo": "TEXT",
+    "not_null": false,
+    "defecto": null,
+    "pk": true
+   },
+   {
+    "cid": 1,
+    "nombre": "value",
+    "tipo": "TEXT",
+    "not_null": true,
+    "defecto": null,
+    "pk": false
+   }
+  ],
+  "fks": [],
+  "indices": []
+ },
+ "_resumen": {
+  "tablas": 11,
+  "columnas": 97,
+  "check_constraints": 0,
+  "wal": true,
+  "foreign_keys": true
+ }
+}
