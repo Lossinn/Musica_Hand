@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n, pct  # noqa: E402
+from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n  # noqa: E402
 import doc_base  # noqa: E402
 import logos  # noqa: E402
 import render  # noqa: E402
