@@ -27,7 +27,7 @@ El archivo `02_Modelado_BPMN_DFD_Gobernanza` va insertado en el documento (secci
 
 | Archivo | Qué es |
 | --- | --- |
-| `01_Documento_…pdf` | Plan de desarrollo en APA 7 (59 páginas): diagnóstico, literatura, prototipo, BPMN 2.0, DFD 0-1-2, gobernanza DAMA-DMBOK, finanzas, piloto, referencias y anexos A a E |
+| `01_Documento_…pdf` | Documento EBT en APA 7 (31 páginas): diagnóstico, literatura, método, prototipo, BPMN 2.0, DFD 0-1-2, gobernanza DAMA-DMBOK, finanzas, discusión y referencias |
 | `03_Poster_…pdf` | Póster vertical 900 × 1200 mm (vectorial, QR funcional) con logos UPB, HIS y SILOGE en la identidad del evento HIS |
 | `04_Modelo_Financiero_…xlsx` | Supuestos rotulados por procedencia, CAPEX, OPEX, beneficios, seis escenarios y flujo acumulado, con fórmulas |
 
