@@ -167,7 +167,7 @@ def literatura() -> str:
     h = [H1("Revisión de la literatura")]
     h.append(P(
         "La búsqueda partió de la matriz bibliográfica del proyecto, con 189 documentos únicos clasificados por su relación "
-        "con el sistema. Se seleccionaron 15 artículos de relación alta o media, publicados entre 2023 y 2026, con DOI. "
+        "con el sistema. Se seleccionaron 15 artículos de relación alta o media, publicados entre 2023 y 2026, con identificador de objeto digital, DOI. "
         "Cada DOI se contrastó con la interfaz de Crossref (título, año, autores y revista) y se comprobó que resuelve en "
         "doi.org; la verificación se repitió el 1 de octubre de 2026. Un artículo sobre la postura en la interpretación del "
         "guzheng se excluyó porque Crossref lo registra con una nota editorial de preocupación. La [[T:matriz]] resume el conjunto."))
@@ -201,11 +201,11 @@ def metodo() -> str:
         "contradecían el código se corrigieron a favor de este."))
     h.append(P(
         "Las fases fueron cinco: diagnóstico, con los indicadores del DANE, la caracterización de campo y el proceso As-Is "
-        "([[T:indic]]; [[T:campo]]; [[F:asis]]); revisión, con la selección de 15 estudios y la verificación de sus DOI "
+        "([[T:indic]]; [[T:campo]]); revisión, con la selección de 15 estudios y la verificación de sus DOI "
         "([[T:matriz]]); diseño y construcción, en Python con PySide6, MediaPipe, OpenCV, NumPy, PuLP y SQLite (10.581 "
-        "líneas de código y 1.746 de pruebas; [[F:arq]]); verificación, con pruebas automáticas, medición de latencia y "
-        "auditoría de integridad de datos ([[T:recon]]; [[T:pruebas]]; [[T:calidad]]); y evaluación financiera, con CAPEX, "
-        "OPEX, beneficios, ROI y periodo de recuperación ([[T:plantilla]]; [[T:escen]])."))
+        "líneas de código y 1.746 de pruebas); verificación, con pruebas automáticas, medición de latencia y "
+        "auditoría de integridad de datos; y evaluación financiera, con inversión inicial, CAPEX, "
+        "costos operativos, OPEX, beneficios, retorno sobre la inversión, ROI, y periodo de recuperación."))
     return "".join(h)
 
 
@@ -300,6 +300,7 @@ def prototipo() -> str:
     h.append(tabla("Suites de pruebas automáticas y resultado de su ejecución", ["Archivo", "Qué comprueba", "Resultado"], filas,
                    PRUEBAS.get("nota", ""), anchos=["20%", "54%", "26%"], clase="chica larga", ref="pruebas"))
     h.append(H2("Trazabilidad con los objetivos"))
+    h.append(P("La [[T:traza]] relaciona cada objetivo específico con el componente construido y su estado actual."))
     filas = [
         ["OE1", "Indicadores del DANE; 15 estudios con DOI verificado", "Cumplido; caracterización de campo secundaria"],
         ["OE2", "Visión, gemelo digital, repaso espaciado, planificador MILP, 14 pantallas, base SQLite local",
@@ -423,7 +424,7 @@ def gobernanza() -> str:
         f"El repositorio es SQLite, con {res['tablas']} tablas y {res['columnas']} campos, registro anticipado de escritura "
         "(<em>write-ahead logging</em>, WAL) y llaves foráneas activas. El diccionario de la [[T:dicc]] se extrajo del esquema "
         "real con las instrucciones PRAGMA de SQLite, de modo que no puede diferir del código. Fuera de la base hay dos "
-        "almacenes de archivos JSON: las plantillas de calibración y las melodías grabadas en el modo libre. Los almacenes de "
+        "almacenes de archivos en formato <em>JavaScript Object Notation</em>, JSON: las plantillas de calibración y las melodías grabadas en el modo libre. Los almacenes de "
         "los DFD corresponden así: D1, profiles, rewards y profile_achievements; D2, plantillas de cada perfil; D3, sessions, "
         "attempts y activity_results; D4, skill_state; D5, skills, activities y achievements; y D6, la fila del predictor en meta."))
     filas = []
@@ -448,6 +449,8 @@ def gobernanza() -> str:
                     "local. Ningún fotograma se escribe en disco. Elaboración propia a partir del código.",
                     ref="linaje"))
     h.append(H2("Dimensiones de calidad"))
+    h.append(P("La [[T:calidad]] fija para la completitud, la exactitud, la consistencia y la oportunidad un indicador, un "
+               "umbral y el resultado de la auditoría de integridad ejecutada sobre la base real."))
     calidad = [
         ["Completitud", "1 − nulos / esperados en campos críticos", "100 %", "Cumple: NOT NULL impuesto (prueba Q3)"],
         ["Exactitud", "Acierto del reconocimiento con ruido σ = 0,06", "≥ 96 %", "Cumple: 96,9 % ([[T:recon]])"],
@@ -466,7 +469,8 @@ def gobernanza() -> str:
         "[[T:rbac]] es por ahora una convención de la interfaz. La Ley Estatutaria 1581 de 2012 contiene reglas especiales "
         "para el tratamiento de datos de niños, niñas y adolescentes (Congreso de la República de Colombia, 2012); el "
         "procesamiento local reduce la exposición, pero no exime a la institución de obtener la autorización de los "
-        "representantes, y por ello el CAPEX incluye una consulta jurídica."))
+        "representantes, y por ello el CAPEX incluye una consulta jurídica. La [[T:politica]] fija las políticas de respaldo, "
+        "retención, eliminación y confidencialidad, con su estado de implementación."))
     rbac = [
         ["Niño o niña", "Jugar, calibrar y ver su progreso", "Interfaz infantil", "Sin barrera hacia Ajustes ni Zona de Padres"],
         ["Acudiente o docente", "Crear y borrar perfiles, leer informes, cambiar ajustes", "Número de identificación personal, PIN, de 4 dígitos guardado con <em>hash</em> y sal (propuesto)", "Pendiente"],
