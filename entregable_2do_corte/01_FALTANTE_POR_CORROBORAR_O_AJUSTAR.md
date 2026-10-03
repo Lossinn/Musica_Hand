@@ -8,6 +8,7 @@ Leyenda: **[Equipo]** solo el equipo puede resolverlo · **[Corroborar]** dato q
 
 - Se verificó el paquete contra la instrucción del segundo corte: los seis componentes, las reglas SILOGE (19 de 19 DOI verificados, resumen de 239 palabras, abstract de 198) y la convención de nombres del .zip.
 - Autores con nombre corregido (Andrés Julian Negrete Pacheco) y correos institucionales en la portada y en el póster.
+- Nuevo entregable `entrega_teams/poster_variante.pdf` (90 × 120 cm, versión académica compacta de 12 secciones, generada con `_fuentes/construir_poster_variante.py`). No va dentro del .zip oficial; decidir si se entrega aparte o reemplaza al 03.
 - Sigue pendiente reemplazar `XX` por el número de equipo en los nombres de archivo y en el póster.
 
 ## 0. Cambios de la revisión del 1 de octubre (prevalecen sobre lo que diga más abajo)
