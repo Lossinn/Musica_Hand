@@ -75,6 +75,7 @@ em { font-style: italic; }
 ul { padding-left: 7mm; margin-top: 2mm; } li { margin-bottom: 1mm; } li::marker { color: #B38F00; }
 .fig { background: #fff; border: .4mm solid #D6D6CF; border-radius: 2mm; padding: 2mm; margin: 3mm 0 1.5mm; }
 .fig img { width: 100%; display: block; border-radius: 1.4mm; }
+.flot { float: right; width: 46%; margin: 2mm 0 2mm 5mm; }
 .cap { font-size: 15pt; color: #555; line-height: 1.25; font-weight: 500; text-align: left; }
 .cap b { color: #1A1A1A; }
 table { width: 100%; border-collapse: collapse; margin: 3mm 0 1.5mm; font-size: 16.5pt; line-height: 1.22; }
@@ -160,20 +161,21 @@ De los 21 puntos de cada mano se calcula un <em>descriptor invariante</em> de 12
 consistencia, velocidad y retención con repaso espaciado; la sesión se elige con un programa lineal entero mixto, MILP:</p>
 <p class="eq">máx Σ<sub>i</sub> (1,00 g<sub>i</sub> + 0,70 r<sub>i</sub> + 0,35 m<sub>i</sub> − 0,55 f<sub>i</sub>) x<sub>i</sub>,
 x<sub>i</sub> ∈ {{0, 1}}, sujeto a 7 restricciones</p>
-<div class="fig"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio"></div>
-<p class="cap"><b>Figura 1.</b> Ejercicio guiado: la seña de cada mano se reconoce y se responde en pantalla.
-Estado: 14 pantallas, 63 actividades, 8 suites de pruebas, TRL 4.</p>"""))
+<div class="flot"><div class="fig" style="margin-top:0"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio"></div>
+<p class="cap"><b>Figura 1.</b> Ejercicio guiado: cada mano se reconoce y responde en pantalla.</p></div>
+<p><b>Estado funcional:</b> 14 pantallas, 63 actividades en 13 etapas, 8 suites de pruebas automáticas y perfiles por
+niño en SQLite local. Nivel de madurez TRL 4, validación en laboratorio.</p><div style="clear:both"></div>"""))
     s.append(sec(6, "Procesos BPMN 2.0", f"""
 <p><em>As-Is</em>: el docente prepara fichas, explica, corrige uno a uno con reproceso, anota en cuaderno y el acudiente
 recibe un informe tardío. <em>To-Be</em>: pools y carriles para niño, sistema local (visión, evaluación, planificación)
 y adulto; compuertas exclusivas, paralelas e inclusivas, eventos de temporizador y de mensaje.</p>
-<div class="fig">{svg('poster_bpmn_to_be')}</div>
+<div class="fig" style="width:82%;margin-left:auto;margin-right:auto">{svg('poster_bpmn_to_be')}</div>
 <p class="cap"><b>Figura 2.</b> Proceso To-Be: reconocimiento en cada fotograma, registro automático y repaso programado.</p>"""))
     s.append(sec(7, "Flujos de datos (DFD)", f"""
 <p>Nivel 0: el sistema intercambia datos con el niño, la cámara y el acudiente o docente, sin entidades en la nube.
 Nivel 1: reconocer, evaluar, gemelo, planificar, interfaz e informe, con los almacenes D3 Intentos y D4 Habilidad.
 Nivel 2: detalle del proceso crítico de evaluación y actualización del gemelo.</p>
-<div class="fig">{svg('poster_dfd1')}</div>
+<div class="fig" style="width:64%;margin-left:auto;margin-right:auto">{svg('poster_dfd1')}</div>
 <p class="cap"><b>Figura 3.</b> DFD nivel 1 simplificado; los niveles completos están en el documento.</p>"""))
     s.append(sec(8, "Gobernanza de datos (DAMA-DMBOK)", f"""
 <table><tr><th>Componente</th><th>Implementación</th></tr>
