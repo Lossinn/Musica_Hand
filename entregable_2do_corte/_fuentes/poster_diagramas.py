@@ -103,7 +103,7 @@ def bpmn_as_is() -> SVG:
     s.task(240, yn, 92, 52, "Imita la seña", icon="user", chars=8)
     s.flow([(240, y + 29), (240, yn - 26)])
     s.flow([(286, yn), (345, yn), (345, y + 29)])
-    s.pool(4, 236, 588, 86, "Acudiente", **POOL)
+    s.pool(4, 236, 588, 86, "Acudiente", **{**POOL, "fs": 15})
     ya = 279
     s.event(395, ya, "msg-start", None, r=12)
     s.task(490, ya, 140, 54, "Lee un informe tardío", icon="user", fill=RED_T, chars=14)
@@ -117,7 +117,7 @@ def bpmn_as_is() -> SVG:
 
 
 def bpmn_to_be() -> SVG:
-    s = PSVG(600, 532, "BPMN To-Be simplificado")
+    s = PSVG(600, 548, "BPMN To-Be simplificado")
     s.pool(4, 4, 588, 78, "Niño", **POOL)
     yA = 43
     s.event(92, yA, "start", None, r=12)
@@ -126,7 +126,7 @@ def bpmn_to_be() -> SVG:
     s.event(576, yA, "end", None, r=11)
     s.flow([(104, yA), (122, yA)]); s.flow([(222, yA), (388, yA)]); s.flow([(552, yA), (565, yA)])
     top = 94
-    hV, hE, hP = 124, 132, 92
+    hV, hE, hP = 124, 132, 108
     s.pool(4, top, 588, hV + hE + hP, "Sistema local", [("Visión", hV), ("Evaluación", hE), ("Planificación", hP)], **POOL)
     yV, yE, yP = top + 54, top + hV + 66, top + hV + hE + 50
     # visión
@@ -162,7 +162,7 @@ def bpmn_to_be() -> SVG:
     s.flow([(484, yE), (500, yE), (500, yP - 38), (360, yP - 38), (360, yP - 26)])
     s.flow([(460, yP), (509, yP)])
     # adulto
-    yC = 490
+    yC = 506
     s.pool(4, yC - 38, 588, 76, "Adulto", **POOL)
     s.event(250, yC, "start", None, r=11)
     s.task(370, yC, 168, 52, "Consulta la Zona de Padres", icon="user", chars=14)
@@ -194,31 +194,31 @@ def dfd1() -> SVG:
     c = canvas(600, 400, "DFD nivel 1 simplificado")
     R = 52
     L = dict(size=16)
-    c.entity("nino", 52, 60, 92, 46, "Niño")
-    c.entity("cam", 52, 345, 92, 46, "Cámara")
-    c.entity("adulto", 555, 345, 86, 46, "Adulto")
-    c.process("p6", 200, 60, R, "6.0", "Interfaz")
-    c.process("p5", 420, 60, R, "5.0", "Planificar")
-    c.process("p3", 305, 200, R, "3.0", "Evaluar")
-    c.process("p4", 490, 200, R, "4.0", "Gemelo")
-    c.process("p2", 200, 345, R, "2.0", "Reconocer")
-    c.process("p7", 405, 345, R, "7.0", "Informe")
-    c.store("d3", 305, 290, 124, 34, "D3", "Intentos")
+    c.entity("nino", 52, 60, 92, 46, "Niño", size=FS)
+    c.entity("cam", 52, 345, 92, 46, "Cámara", size=FS)
+    c.entity("adulto", 555, 345, 86, 46, "Adulto", size=FS)
+    c.process("p6", 200, 60, R, "6.0", "Interfaz", size=FS)
+    c.process("p5", 420, 60, R, "5.0", "Planificar", size=FS)
+    c.process("p3", 305, 200, R, "3.0", "Evaluar", size=FS)
+    c.process("p4", 490, 200, R, "4.0", "Gemelo", size=FS)
+    c.process("p2", 200, 345, R, "2.0", "Reconocer", size=FS)
+    c.process("p7", 405, 345, R, "7.0", "Informe", size=FS)
+    c.store("d3", 305, 290, 124, 34, "D3", "Intentos", size=16)
     c.store("d4", 545, 120, 106, 36, "D4", "Habilidad", size=15)
-    c.link("nino", "p6", "Actividad", off=-9, lpos=(124, 36), **L)
-    c.link("p6", "nino", "Resultado", off=-9, lpos=(124, 86), **L)
-    c.link("cam", "p2", "Fotogramas", lpos=(124, 328), **L)
+    c.link("nino", "p6", "Actividad", off=-9, lpos=(130, 27), **L)
+    c.link("p6", "nino", "Resultado", off=-9, lpos=(130, 95), **L)
+    c.link("cam", "p2", "Fotogramas", lpos=(124, 311), **L)
     c.link("p2", "p3", "Seña", lpos=(244, 270), anchor="end", **L)
     c.link("p3", "p6", "Acierto", lpos=(246, 130), anchor="end", **L)
     c.link("p5", "p6", "Ruta del día", lpos=(310, 46), **L)
     c.link("p5", "p3", "Secuencia", lpos=(372, 132), anchor="start", **L)
     c.link("p3", "p4", "Resultado", lpos=(397, 186), **L)
     c.link("p3", "d3", "Intento", lpos=(314, 261), anchor="start", **L)
-    c.link("d3", "p7", "Historial", lpos=(300, 330), anchor="end", **L)
+    c.link("d3", "p7", "Historial", lpos=(372, 281), anchor="start", **L)
     c.link("p4", "d4", "Dominio", both=True, lpos=(530, 172), anchor="start", **L)
     c.link("d4", "p5", "Estado", lpos=(488, 80), anchor="start", **L)
-    c.link("p7", "adulto", "Informe", off=-9, lpos=(484, 324), **L)
-    c.link("adulto", "p7", "Solicitud", off=-9, lpos=(484, 370), **L)
+    c.link("p7", "adulto", "Informe", off=-9, lpos=(478, 316), **L)
+    c.link("adulto", "p7", "Solicitud", off=-9, lpos=(478, 376), **L)
     return c.s
 
 
