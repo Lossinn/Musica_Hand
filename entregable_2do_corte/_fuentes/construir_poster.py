@@ -19,7 +19,7 @@ from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n  # noqa: E402
 import doc_base  # noqa: E402
 import logos  # noqa: E402
 import render  # noqa: E402
-from construir_documento import TITULO  # noqa: E402
+from construir_documento import AUTORES, TITULO  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 A = ROOT / "recursos" / "assets"
@@ -36,14 +36,14 @@ def svg(nombre: str) -> str:
     return s.replace(' width="', ' data-w="', 1).replace("<svg ", '<svg style="width:100%;height:auto;display:block" ', 1)
 
 
-def mano_svg() -> str:
-    """Esqueleto de mano abierta (21 puntos, topología de MediaPipe) como marca de agua de la cabecera."""
+def mano_svg(linea: str = "#FFCC00", punto: str = "#fff", borde: str = "none") -> str:
+    """Esqueleto de mano abierta (21 puntos, topología de MediaPipe): marca de agua y visual abstracta."""
     pts = logos._landmarks()
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     x0, x1, y0, y1 = min(xs) - 20, max(xs) + 20, min(ys) - 20, max(ys) + 20
-    ln = "".join(f'<line x1="{pts[a][0]}" y1="{pts[a][1]}" x2="{pts[b][0]}" y2="{pts[b][1]}" stroke="#FFCC00" '
+    ln = "".join(f'<line x1="{pts[a][0]}" y1="{pts[a][1]}" x2="{pts[b][0]}" y2="{pts[b][1]}" stroke="{linea}" '
                  f'stroke-width="7" stroke-linecap="round"/>' for a, b in logos.MP_EDGES)
-    dots = "".join(f'<circle cx="{x}" cy="{y}" r="{10 if i in (4, 8, 12, 16, 20) else 7}" fill="#fff"/>'
+    dots = "".join(f'<circle cx="{x}" cy="{y}" r="{10 if i in (4, 8, 12, 16, 20) else 7}" fill="{punto}" stroke="{borde}" stroke-width="3"/>'
                    for i, (x, y) in enumerate(pts))
     return f'<svg viewBox="{x0} {y0} {x1 - x0} {y1 - y0}" xmlns="http://www.w3.org/2000/svg">{ln}{dots}</svg>'
 
@@ -54,7 +54,7 @@ CSS = doc_base.FONT_FACE + """
 html, body { width: 900mm; height: 1200mm; }
 body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; }
 .poster { position: relative; width: 900mm; height: 1200mm; overflow: hidden; background: #C9A26B;
-  display: flex; flex-direction: column; padding: 22mm 50mm 16mm; gap: 9mm; }
+  display: flex; flex-direction: column; padding: 26mm 54mm 24mm; gap: 9mm; }
 .fondo, .kraft { position: absolute; inset: 0; }
 .fondo { background: url('__FONDO__') center/cover; opacity: .55; mix-blend-mode: multiply; }
 .kraft { background: linear-gradient(180deg, rgba(214,178,122,.45), rgba(196,156,98,.45)); }
@@ -62,6 +62,16 @@ body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; 
 .tira { position: absolute; top: 0; height: 1200mm; width: 34mm; }
 .tira.izq { left: 0; } .tira.der { right: 0; }
 .cab, .cuerpo, .pie, .franja { position: relative; }
+/* marco fino y marcas de esquina: delimitan el margen sin cargar la pieza */
+.marco { position: absolute; left: 44mm; right: 44mm; top: 14mm; bottom: 12mm; border: .5mm solid rgba(20,20,20,.45);
+  border-radius: 10mm; pointer-events: none; }
+.esq { position: absolute; width: 22mm; height: 22mm; border: 0 solid #141414; }
+.esq.a { left: 40mm; top: 10mm; border-width: 1.6mm 0 0 1.6mm; border-top-left-radius: 12mm; }
+.esq.b { right: 40mm; top: 10mm; border-width: 1.6mm 1.6mm 0 0; border-top-right-radius: 12mm; }
+.esq.c { left: 40mm; bottom: 8mm; border-width: 0 0 1.6mm 1.6mm; border-bottom-left-radius: 12mm; }
+.esq.d { right: 40mm; bottom: 8mm; border-width: 0 1.6mm 1.6mm 0; border-bottom-right-radius: 12mm; }
+.folio { position: absolute; bottom: 9.4mm; left: 50%; transform: translateX(-50%); background: #FFCC00; color: #141414;
+  font-size: 12pt; font-weight: 800; letter-spacing: 2.4pt; padding: .6mm 6mm; border-radius: 3mm; white-space: nowrap; }
 /* ------------------------------------------------------------- cabecera */
 .cab { background: #141414; border-radius: 8mm; padding: 11mm 16mm 12mm; color: #fff; overflow: hidden;
   box-shadow: 0 3mm 6mm rgba(0,0,0,.35); }
@@ -77,7 +87,23 @@ body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; 
 h1.titulo { margin-top: 9mm; color: #FFCC00; font-weight: 800; text-transform: uppercase; font-size: 56pt;
   line-height: 1.08; letter-spacing: .2pt; }
 .sub { margin-top: 5mm; font-size: 27pt; font-weight: 600; color: #fff; }
-.equipo { margin-top: 3mm; font-size: 21pt; color: #CFCFCF; font-weight: 500; line-height: 1.3; }
+.autores { margin-top: 8mm; padding-top: 6mm; border-top: .5mm solid #3A3A3A; position: relative; }
+.autores .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 10mm; margin-bottom: 5mm; }
+.autores .eti { font-size: 15pt; font-weight: 800; letter-spacing: 3pt; color: #FFCC00; text-transform: uppercase; }
+.autores .eti i { font-style: normal; color: #141414; background: #FFCC00; border-radius: 2mm; padding: .3mm 3mm; margin-left: 3mm; letter-spacing: 1pt; }
+.autores .doc { font-size: 16pt; color: #BDBDBD; font-weight: 500; }
+.autores .doc b { color: #fff; font-weight: 700; }
+.gente { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5mm; }
+.pers { display: flex; align-items: center; gap: 4.5mm; background: linear-gradient(160deg, #222 0%, #1A1A1A 100%);
+  border: .4mm solid #343434; border-top: 1.2mm solid #FFCC00; border-radius: 3.5mm; padding: 4.5mm 4.5mm 4.5mm 5mm; min-width: 0; }
+.mono { flex: none; width: 17mm; height: 17mm; border-radius: 50%; background: #FFCC00; color: #141414; display: flex;
+  align-items: center; justify-content: center; font-size: 19pt; font-weight: 800; letter-spacing: -.5pt;
+  box-shadow: 0 0 0 1mm #1A1A1A, 0 0 0 1.5mm #FFCC00; }
+.pers .txt { min-width: 0; }
+.pers .nom { display: block; font-size: 19.5pt; font-weight: 700; color: #fff; line-height: 1.12; }
+.pers .mail { display: flex; align-items: center; gap: 1.6mm; margin-top: 1.8mm; font-size: 15pt; font-weight: 600;
+  color: #FFCC00; white-space: nowrap; letter-spacing: -.1pt; }
+.pers .mail svg { flex: none; width: 4.6mm; height: 4.6mm; }
 .franja { height: 10mm; border-radius: 2mm; background: repeating-linear-gradient(135deg, #FFCC00 0 9mm, #141414 9mm 18mm); flex: none; }
 /* ---------------------------------------------------------------- cuerpo */
 .cuerpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12mm; }
@@ -119,12 +145,24 @@ li::before { content: ''; position: absolute; left: 0; top: 4.2mm; width: 4.4mm;
 .od span { display: block; font-size: 15pt; line-height: 1.15; margin-top: 1mm; font-weight: 600; }
 .pregunta { font-style: italic; font-weight: 600; background: #FFF6D6; border-left: 2.4mm solid #FFCC00; padding: 3mm 4mm; margin-bottom: 4mm; }
 .oe b { color: #141414; font-weight: 800; }
+.card.oscura li b { color: #FFCC00; font-weight: 800; margin-right: 1.5mm; }
 .brecha { background: #FFCC00; border-radius: 3mm; padding: 4mm 5mm; margin-top: 4mm; border: 1.2mm solid #141414; }
 .brecha p { font-size: 24pt; font-weight: 700; }
 .dia { background: #fff; border: .7mm solid #C8C8C8; border-radius: 3mm; padding: 1.5mm; }
 .cap { font-size: 18pt; color: #404040; font-weight: 600; margin: 2mm 0 0; line-height: 1.2; }
 .paso { text-align: center; font-size: 22pt; font-weight: 800; margin: 3mm 0; color: #141414; }
 .paso span { background: #FFCC00; border-radius: 10mm; padding: 1mm 8mm; }
+.manoviz { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  margin-top: 5mm; border-radius: 3mm; background: radial-gradient(circle at 50% 45%, #FFF1BF 0, #FFF8E1 45%, #fff 75%);
+  border: .7mm dashed #C8C8C8; padding: 4mm; }
+.manoviz .mv { flex: 1; min-height: 0; width: 100%; display: flex; justify-content: center; }
+.manoviz svg { height: 100%; max-height: 95mm; width: auto; }
+.manoviz p { font-size: 17pt; font-weight: 700; color: #404040; text-align: center; margin-top: 2mm; }
+.tags { display: flex; flex-wrap: wrap; gap: 3mm; }
+.tag { font-size: 19pt; font-weight: 700; padding: 1.6mm 5mm; border-radius: 10mm; border: .8mm solid #141414; background: #fff; }
+.prox { display: flex; align-items: center; gap: 4mm; background: #141414; color: #fff; border-radius: 3mm; padding: 3.5mm 5mm; }
+.prox b { color: #FFCC00; font-size: 15pt; letter-spacing: 1.6pt; text-transform: uppercase; flex: none; }
+.prox span { font-size: 21pt; font-weight: 600; line-height: 1.2; }
 .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; align-items: start; }
 .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
 .chip { background: #F5F5F5; border-radius: 3mm; padding: 3mm 3.5mm; font-size: 18pt; line-height: 1.15; font-weight: 600; border-left: 2.4mm solid #141414; }
@@ -166,9 +204,25 @@ def cabecera() -> str:
   </div>
   <h1 class="titulo">{TITULO}</h1>
   <p class="sub">Hand Sing Kids: visión por computador y programación entera mixta, procesamiento 100 % local</p>
-  <p class="equipo">Equipo XX: Isaias José Petro, Alejandro Pemberty Vergara, Juliana Esther Carrascal, Julian Andrés Negrete Pacheco y Juan Diego Guerra Gómez · Docente asesor: M.Sc. Cristian Javier
-    Cano Mogollón · Gestión Tecnológica, 2026-2</p>
+  {autores()}
 </header>"""
+
+
+SOBRE = ('<svg viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="2.2" stroke-linejoin="round">'
+         '<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 7 8.5-7" stroke-linecap="round"/></svg>')
+
+
+def autores() -> str:
+    """Franja de autores: monograma, nombre y correo institucional de cada integrante."""
+    # nombre de pila + primer apellido
+    ini = {"Alejandro Pemberty Vergara": "AP", "Juliana Esther Carrascal": "JC", "Andrés Julian Negrete Pacheco": "AN",
+           "Juan Diego Guerra Gómez": "JG", "Isaias José Petro": "IP"}.get
+    tarjetas = "".join(f'<div class="pers"><div class="mono">{ini(a)}</div><div class="txt"><span class="nom">{a}</span>'
+                       f'<span class="mail">{SOBRE}{m}</span></div></div>' for a, m in AUTORES)
+    return f"""<div class="autores">
+    <div class="meta"><span class="eti">Equipo de investigación<i>EBT · Equipo XX</i></span>
+      <span class="doc">Docente asesor: <b>M.Sc. Cristian Javier Cano Mogollón</b> · Gestión Tecnológica (8830 0064 0) · 2026-2</span></div>
+    <div class="gente">{tarjetas}</div></div>"""
 
 
 def columna1() -> str:
@@ -179,9 +233,9 @@ def columna1() -> str:
     <div class="kpi"><b>−{n(BRECHA, 1)}</b><span>puntos frente al promedio nacional</span></div>
     <div class="kpi"><b>{n(DANE['mon_3_12'] / 1000, 1)} mil</b><span>niños de 3 a 12 años en Montería</span></div>
   </div>
-  <ul><li>Nivelación manual: 1,0 a 1,5 h por semana en cada aula*</li>
+  <ul><li>Nivelación manual: 1,0 a 1,5 h/semana por aula*</li>
       <li>Papelería: $ 600.000 al año por aula*</li>
-      <li>Una solución en la nube excluye a la mitad de los hogares</li></ul>
+      <li>Una app en la nube excluye a la mitad de los hogares</li></ul>
   <p class="fuente">DANE (2025; s. f.). *Equipo 13 (2026), dato de campo no verificado.</p>
 </div>
 <div class="card"><h2><span class="n">2</span>Árbol de problemas</h2>
@@ -210,8 +264,11 @@ def columna1() -> str:
   </div>
   <div class="brecha"><p>Brecha: ningún estudio combina señas manuales, niños de 3 a 12 años, procesamiento local y
     adaptación interpretable.</p></div>
-  <p style="margin-top:5mm;font-weight:700">Decisiones tomadas de la literatura:</p>
-  <ul><li>Actividades breves</li><li>Dificultad objetivo intermedia</li><li>Planificación explícita en lugar de refuerzo profundo</li></ul>
+  <p class="rot" style="margin:6mm 0 3mm;text-align:left">DECISIONES TOMADAS DE LA LITERATURA</p>
+  <div class="tags"><span class="tag">Actividades breves</span><span class="tag">Dificultad intermedia</span>
+    <span class="tag">Planificación explícita, no refuerzo profundo</span></div>
+  <div class="manoviz"><div class="mv">{mano_svg("#141414", "#FFCC00", "#141414")}</div>
+    <p>21 puntos por mano → descriptor invariante de 120 componentes</p></div>
   <p class="fuente">Predominan el refuerzo profundo, los universitarios y el piano ({cita('075')}; {cita('038')}).</p>
 </div>"""
 
@@ -226,9 +283,9 @@ def columna2() -> str:
   <p class="cap">To-Be: reconocimiento en cada fotograma, registro automático y repaso programado</p>
 </div>
 <div class="card"><h2><span class="n">6</span>Flujo de datos (DFD)</h2>
-  <div class="dia"><div style="width:84%;margin:0 auto">{svg('poster_dfd0')}</div></div>
+  <div class="dia"><div style="width:72%;margin:0 auto">{svg('poster_dfd0')}</div></div>
   <p class="cap">Nivel 0: sin entidades en la nube</p>
-  <div class="dia" style="margin-top:3mm">{svg('poster_dfd1')}</div>
+  <div class="dia" style="margin-top:3mm"><div style="width:86%;margin:0 auto">{svg('poster_dfd1')}</div></div>
   <p class="cap">Nivel 1 simplificado (los niveles 1 y 2 completos están en el documento)</p>
 </div>
 <div class="card"><h2><span class="n">7</span>Gobernanza de datos</h2>
@@ -249,9 +306,9 @@ def columna3() -> str:
 <div class="card oscura"><h2><span class="n">8</span>Prototipo funcional</h2>
   <div class="shot"><img src="{uri(A / 'capturas' / '05_aventura.png')}" alt="Mapa de aventura"></div>
   <div class="shot"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio guiado"></div>
-  <ul style="margin-bottom:5mm"><li>OE2: reconoce las 8 señas (DO3 a DO4) con las dos manos</li>
-      <li>OE2: adapta cada sesión con gemelo digital y MILP</li>
-      <li>OE3: registra cada intento para medir el dominio</li></ul>
+  <ul style="margin-bottom:5mm"><li><b>OE2</b> Reconoce 8 señas (DO3 a DO4) con ambas manos</li>
+      <li><b>OE2</b> Adapta cada sesión: gemelo digital y MILP</li>
+      <li><b>OE3</b> Registra cada intento y mide el dominio</li></ul>
   <div class="kpis k4">
     <div class="kpi"><b>14</b><span>pantallas</span></div>
     <div class="kpi"><b>63</b><span>actividades</span></div>
@@ -276,10 +333,12 @@ def columna3() -> str:
   <p class="nota">Un aula sola no cumple la guía; la viabilidad depende de la escala.</p>
 </div>
 <div class="card"><h2><span class="n">10</span>Resultados y proyección</h2>
-  <ul><li>{n(BENCH['total_ms']['media'], 1)} ms de cómputo por fotograma</li>
-      <li>92 de cada 100 posturas que no son seña se rechazan</li>
-      <li>96,9 % de acierto con ruido moderado</li>
-      <li>Siguiente fase: piloto de 8 semanas con grupo de control</li></ul>
+  <div class="kpis k3">
+    <div class="kpi"><b>{n(BENCH['total_ms']['media'], 1)} ms</b><span>cómputo por fotograma</span></div>
+    <div class="kpi"><b>92 %</b><span>posturas sin seña rechazadas</span></div>
+    <div class="kpi"><b>96,9 %</b><span>acierto con ruido moderado</span></div>
+  </div>
+  <div class="prox"><b>Siguiente fase</b><span>Piloto de 8 semanas con grupo de control</span></div>
   <div class="qr" style="margin-top:auto;padding-top:5mm"><img src="{uri(A / 'qr_repositorio.svg')}" alt="QR">
     <p>Código, pruebas y documento<small>github.com/Lossinn/Musica_Hand</small></p></div>
 </div>"""
@@ -300,6 +359,8 @@ def html() -> str:
 <img class="marca" src="{uri(A / 'logos' / 'logo_his_texto.png')}" alt="">
 <img class="tira izq" src="{uri(A / 'backgrounds' / 'borde_amarillo_b.png')}" alt="">
 <img class="tira der" src="{uri(A / 'backgrounds' / 'borde_amarillo_a.png')}" alt="">
+<div class="marco"></div><div class="esq a"></div><div class="esq b"></div><div class="esq c"></div><div class="esq d"></div>
+<div class="folio">HAND SING KIDS · GESTIÓN TECNOLÓGICA · UPB MONTERÍA · 2026-2</div>
 {cabecera()}
 <div class="franja"></div>
 <main class="cuerpo"><section class="col">{columna1()}</section><section class="col">{columna2()}</section>

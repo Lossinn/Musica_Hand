@@ -54,12 +54,19 @@ def palabras(t: str) -> int:
     return len(re.findall(r"\S+", t))
 
 
+AUTORES = [("Alejandro Pemberty Vergara", "alejandro.pemberty@upb.edu.co"),
+           ("Juliana Esther Carrascal", "juliana.carrascal@upb.edu.co"),
+           ("Andrés Julian Negrete Pacheco", "andresj.negretep@upb.edu.co"),
+           ("Juan Diego Guerra Gómez", "juan.guerra@upb.edu.co"),
+           ("Isaias José Petro", "isaias.petro@upb.edu.co")]
+
+
 def portada() -> str:
     """Portada de trabajo de estudiante (APA 7, sección 2.3): título, autores, afiliación, curso, docente y fecha."""
     return f"""
 <section class="portada">
   <p class="titulo">{TITULO}</p>
-  <p>Isaias José Petro, Alejandro Pemberty Vergara, Juliana Esther Carrascal, Julian Andrés Negrete Pacheco y Juan Diego Guerra Gómez</p>
+  <p>{", ".join(a for a, _ in AUTORES[:-1])} y {AUTORES[-1][0]}</p>
   <p>Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería</p>
   <p>8830 0064 0: Gestión Tecnológica</p>
   <p>M.Sc. Cristian Javier Cano Mogollón</p>
