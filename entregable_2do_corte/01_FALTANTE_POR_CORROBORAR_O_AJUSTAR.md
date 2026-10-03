@@ -4,6 +4,12 @@ Documento interno del equipo. No se incluye en el `.zip` de entrega. Estado al 1
 
 Leyenda: **[Equipo]** solo el equipo puede resolverlo · **[Corroborar]** dato que debe verificarse con una fuente · **[Ajustar]** decisión o cambio pendiente.
 
+## 0a. Revisión final del 3 de octubre
+
+- Se verificó el paquete contra la instrucción del segundo corte: los seis componentes, las reglas SILOGE (19 de 19 DOI verificados, resumen de 239 palabras, abstract de 198) y la convención de nombres del .zip.
+- Autores con nombre corregido (Andrés Julian Negrete Pacheco) y correos institucionales en la portada y en el póster.
+- Sigue pendiente reemplazar `XX` por el número de equipo en los nombres de archivo y en el póster.
+
 ## 0. Cambios de la revisión del 1 de octubre (prevalecen sobre lo que diga más abajo)
 
 - Documento reducido de 59 a 31 páginas (3 preliminares + 25 de cuerpo + 3 de referencias). Se quitaron los anexos A a E, la comparación con el Equipo 13 y la figura de flujo de caja; el detalle sigue en `_fuentes/`.
