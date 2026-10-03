@@ -69,8 +69,8 @@ body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; 
 .arte-cab { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .cab > .logos, .cab > h1, .cab > .sub, .cab > .autores { position: relative; }
 .card h2::after { content: ''; margin-left: auto; flex: none; width: 24mm; height: 5mm;
-  background: radial-gradient(circle, #FFCC00 0 1.1mm, transparent 1.25mm) 0 50% / 6mm 5mm repeat-x; }
-.card.oscura h2::after { background-image: radial-gradient(circle, #141414 0 1.1mm, transparent 1.25mm); }
+  height: 0; border-top: 2.2mm dotted #FFCC00; }
+.card.oscura h2::after { border-top-color: #141414; }
 /* marco fino y marcas de esquina: delimitan el margen sin cargar la pieza */
 .marco { position: absolute; left: 44mm; right: 44mm; top: 14mm; bottom: 12mm; border: .5mm solid rgba(20,20,20,.45);
   border-radius: 10mm; pointer-events: none; }
@@ -164,7 +164,7 @@ li::before { content: ''; position: absolute; left: 0; top: 4.2mm; width: 4.4mm;
 .paso { text-align: center; font-size: 22pt; font-weight: 800; margin: 3mm 0; color: #141414; }
 .paso span { background: #FFCC00; border-radius: 10mm; padding: 1mm 8mm; }
 .manoviz { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  margin-top: 5mm; border-radius: 3mm; background: radial-gradient(circle at 50% 45%, #FFF1BF 0, #FFF8E1 45%, #fff 75%);
+  margin-top: 5mm; border-radius: 3mm; background: #FFF8E1;
   border: .7mm dashed #C8C8C8; padding: 4mm; }
 .manoviz .mv { flex: 1; min-height: 0; width: 100%; display: flex; justify-content: center; }
 .manoviz svg { height: 100%; max-height: 95mm; width: auto; }

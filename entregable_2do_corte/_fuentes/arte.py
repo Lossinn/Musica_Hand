@@ -184,7 +184,7 @@ def fondo_principal() -> str:
     """Póster principal (900 x 1200, fondo kraft): segunda capa en márgenes y canales."""
     rng = random.Random(11)
     d = ""
-    c = [puntos(900, 1200, paso=8, r=.5, op=.22)]
+    c = [puntos(900, 1200, paso=11, r=.6, op=.22)]
     c.append(anillos(60, 1190, 30, 6, 14, op=.16))
     c.append(anillos(860, 300, 20, 5, 12, op=.13))
     c.append(onda(40, 860, 362, 9, 38, lineas=6, op=.22, sw=.55))
@@ -199,7 +199,7 @@ def cabecera_principal(w=800, h=330) -> str:
     """Arte para la cabecera oscura del póster principal (en mm del bloque)."""
     rng = random.Random(5)
     d = ""
-    c = [puntos(w, h, paso=6, r=.45, color="#fff", op=.10)]
+    c = [puntos(w, h, paso=8, r=.5, color="#fff", op=.10)]
     c.append(onda(w * .38, w + 10, h * .22, 16, 34, lineas=8, color=AM, op=.16, sw=.6))
     c.append(anillos(w - 40, h * .62, 18, 5, 13, color=AM, op=.12))
     for x, y, di in ((w, 40, 4), (w, h - 30, 5), (w * .55, 0, 2)):
@@ -215,7 +215,7 @@ def fondo_variante() -> str:
     c = ['<rect x="0" y="0" width="900" height="1200" fill="#F2EEE3"/>',
          halo(80, 420, 300, op=.30), halo(860, 1050, 340, op=.30),
          halo(840, 560, 240, NE, op=.08), halo(120, 1150, 220, NE, op=.08),
-         puntos(900, 1200, paso=7, r=.5, op=.20)]
+         puntos(900, 1200, paso=10, r=.6, op=.20)]
     c.append(anillos(450, 760, 40, 9, 28, op=.10))
     c.append(anillos(30, 1180, 26, 5, 14, op=.16))
     c.append(onda(20, 880, 290, 12, 44, lineas=8, op=.22, sw=.6))
@@ -232,7 +232,7 @@ def fondo_variante() -> str:
 def cabecera_variante(w=832, h=300) -> str:
     rng = random.Random(9)
     d = ""
-    c = [puntos(w, h, paso=6, r=.45, color="#fff", op=.10)]
+    c = [puntos(w, h, paso=8, r=.5, color="#fff", op=.10)]
     c.append(onda(w * .30, w - 120, h * .74, 12, 30, lineas=8, color=AM, op=.14, sw=.6))
     c.append(barras(w * .30, h - 2, w * .4, 26, 70, op=.16))
     c.append(anillos(w * .63, h * .25, 14, 5, 12, color=AM, op=.10))

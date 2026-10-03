@@ -85,7 +85,7 @@ h1 { font-size: 44pt; line-height: 1.1; font-weight: 800; text-transform: upperc
 .sec h2 { display: flex; align-items: center; gap: 3.5mm; background: #141414; color: #fff; font-size: 25pt; font-weight: 800;
   text-transform: uppercase; letter-spacing: .4pt; padding: 2.4mm 6mm; border-radius: 3mm 3mm 0 0; margin: 0 -6mm 3.5mm; }
 .sec h2::after { content: ''; margin-left: auto; flex: none; width: 22mm; height: 4mm;
-  background: radial-gradient(circle, #FFCC00 0 1mm, transparent 1.15mm) 0 50% / 5.5mm 4mm repeat-x; }
+  height: 0; border-top: 2mm dotted #FFCC00; }
 .sec h2 i { font-style: normal; background: #FFCC00; color: #141414; border-radius: 1.4mm; padding: 0 2.6mm; font-size: 20pt; }
 p, li { font-size: 22pt; line-height: 1.32; font-weight: 500; text-align: justify; hyphens: auto; }
 p + p { margin-top: 2.4mm; }
