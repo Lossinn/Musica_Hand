@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n, referencia_html  # noqa: E402
+from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n, referencia_html, REF_EXTRA, DOIS  # noqa: E402
 import doc_base  # noqa: E402
 import render  # noqa: E402
 from construir_documento import AUTORES, TITULO  # noqa: E402
@@ -22,6 +22,16 @@ ROOT = Path(__file__).resolve().parents[1]
 A = ROOT / "recursos" / "assets"
 BRECHA = DANE["hog_internet_nal"] - DANE["hog_internet_cor"]
 REFS = ["075", "038", "203"]
+EXTRA = ("Zhang", "Departamento Administrativo Nacional de Estadistica 2", "Departamento Administrativo Nacional de Estadistica 1",
+         "DAMA International", "Congreso de la Republica de Colombia")
+
+
+def referencias() -> list[str]:
+    """Subconjunto APA 7 de las referencias del documento, en orden alfabético."""
+    items = [(DOIS[r]["autores"][0].split(",")[0], referencia_html(r)) for r in REFS]
+    items += [(c, t + u) for c, u, t in REF_EXTRA if c in EXTRA]
+    items.sort(key=lambda t: t[0].lower())
+    return [h for _, h in items]
 
 CSS = doc_base.FONT_FACE + """
 @page { size: 900mm 1200mm; margin: 0; }
@@ -182,11 +192,11 @@ Nivel 2: detalle del proceso crítico de evaluación y actualización del gemelo
 cámara y MediaPipe.</p>"""))
     s.append(sec(10, "Viabilidad financiera: ROI y payback", f"""
 <table><tr><th>Concepto (un aula)</th><th class="r">COP</th></tr>
-<tr><td>CAPEX: desarrollo, hardware, consulta jurídica</td><td class="r">{cop(TOT['capex'])}</td></tr>
-<tr><td>OPEX anual: mantenimiento y soporte</td><td class="r">{cop(TOT['opex'])}</td></tr>
+<tr><td>CAPEX: ingeniería, hardware, licencias, capacitación y consulta jurídica</td><td class="r">{cop(TOT['capex'])}</td></tr>
+<tr><td>OPEX anual: soporte, reposición y energía (nube y API: $ 0)</td><td class="r">{cop(TOT['opex'])}</td></tr>
 <tr><td>Beneficios anuales: horas de nivelación y papelería</td><td class="r">{cop(TOT['beneficios'])}</td></tr>
 <tr class="t"><td>Beneficio neto anual</td><td class="r">{cop(BASE['beneficio_neto'])}</td></tr></table>
-<p class="eq">ROI = (beneficio neto − CAPEX) / CAPEX · Payback = CAPEX / beneficio neto mensual</p>
+<p class="eq">ROI = beneficio neto anual / CAPEX · Payback = CAPEX / beneficio neto mensual</p>
 <div class="kpi">
   <div class="hl"><small>ROI · 4 aulas</small><b>{n(INST['roi_pct'], 1)} %</b><span>guía ≥ 30 %</span></div>
   <div class="hl"><small>Payback · 4 aulas</small><b>{n(INST['payback_meses'], 1)}</b><span>meses (guía ≤ 12)</span></div>
@@ -198,12 +208,8 @@ cámara y MediaPipe.</p>"""))
 seña y adapta la práctica con un gemelo digital y una planificación MILP explicable a un docente. La brecha de
 conectividad de 18,4 puntos justifica el diseño local. Limitaciones: una sola calibración, sin pruebas con niños y
 beneficios basados en cifras secundarias. Siguiente fase: piloto cuasi-experimental de ocho semanas con grupo de control.</p>"""))
-    refs = "".join(f"<p>{referencia_html(r)}</p>" for r in REFS)
-    s.append(sec(12, "Referencias", f"""<div class="refs">
-<p>Departamento Administrativo Nacional de Estadística. (2025). <em>Encuesta de tecnologías de la información y las
-comunicaciones en hogares, ENTIC Hogares 2024</em>. DANE.</p>{refs}
-<p>Zhang, F., Bazarevsky, V., Vakunov, A., Tkachenka, A., Sung, G., Chang, C.-L. y Grundmann, M. (2020). MediaPipe
-Hands: On-device real-time hand tracking. <em>arXiv</em>. https://doi.org/10.48550/arXiv.2006.10214</p></div>
+    refs = "".join(f"<p>{r}</p>" for r in referencias())
+    s.append(sec(12, "Referencias", f"""<div class="refs">{refs}</div>
 <div class="qr"><img src="{uri(A / 'qr_repositorio.svg')}" alt="QR"><p><b>Código, pruebas y documento completo</b><br>
 github.com/Lossinn/Musica_Hand</p></div>"""))
     return "".join(s)
