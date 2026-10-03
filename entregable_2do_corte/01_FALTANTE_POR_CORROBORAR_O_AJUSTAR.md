@@ -14,14 +14,15 @@ Leyenda: **[Equipo]** solo el equipo puede resolverlo · **[Corroborar]** dato q
 - BPMN To-Be corregido (faltaban evento de inicio del pool del sistema, flujo entre «Hace la seña» y «Oye la nota», y un mensaje llegaba a un evento de fin). DFD 0: rótulos de los flujos con el acudiente estaban invertidos; corregido. As-Is con nivelación manual y 6 marcas (sobrecosto, cuello de botella, reproceso, registro manual, redundancia, tiempo muerto).
 - Pruebas (1 oct.): 7 suites pasan en lote; `test_integracion.py` agotó 600 s en lote y pasa sola en 8,7 s. Así se informa en la Tabla 5. Revisar por qué se cuelga tras el cierre anómalo de `test_rhythm.py` (0xc0000409).
 - El `.zip` ahora contiene solo los 3 archivos exigidos (01, 03, 04).
-- Sigue pendiente: número de equipo, nombres, fecha real de entrega (`FECHA` en `construir_documento.py`), y borrar el `.xlsx` duplicado de la raíz (bloqueado por Excel).
+- 2 oct.: nombres de los 5 integrantes ya en portada y póster (sin correos: dos parecen tener errores, ver punto 1.2).
+- Sigue pendiente: número de equipo, fecha real de entrega (`FECHA` en `construir_documento.py`), y borrar el `.xlsx` duplicado de la raíz (bloqueado por Excel).
 
 ## 1. Antes de subir a Teams (bloqueantes)
 
 | # | Tipo | Pendiente | Dónde se ve | Cómo cerrarlo |
 |---|---|---|---|---|
 | 1 | Equipo | Número de equipo (`XX`) en los nombres de archivo y del `.zip` | `entrega_teams/` | Renombrar los 3 archivos y el `.zip`; si se cambia el nombre del proyecto, mantener el patrón `GT_Corte2_Equipo_XX_NombreProyecto.zip` |
-| 2 | Equipo | Nombres, códigos y correos institucionales | Portada del documento y encabezado del póster | Editar `TITULO`/`portada()` en `_fuentes/construir_documento.py` y la línea «Equipo XX» en `_fuentes/construir_poster.py`; regenerar |
+| 2 | Equipo | Nombres: hechos (2 oct.). Faltan correos confirmados (`alejandro@pemberty@upb.edu.co` tiene dos @; `juan.gurra@` ¿es `juan.guerra@`?) y códigos, si se quieren en el póster | Portada del documento y encabezado del póster | Editar `TITULO`/`portada()` en `_fuentes/construir_documento.py` y la línea «Equipo XX» en `_fuentes/construir_poster.py`; regenerar |
 | 3 | Equipo | Fecha de la portada (hoy figura 30 de septiembre de 2026) | Portada | Poner la fecha real de entrega |
 | 4 | Corroborar | Que los DOI de las 15 referencias sigan resolviendo el día de la entrega | Referencias | Ejecutar `_fuentes/verificar_doi.py` |
 | 5 | Corroborar | Que el QR del póster abre el repositorio correcto y es accesible para el docente | Póster, sección «Más información» | Escanear con un teléfono; si el repositorio es privado, hacerlo público o dar acceso |

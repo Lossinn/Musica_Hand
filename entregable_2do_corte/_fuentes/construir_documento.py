@@ -59,7 +59,7 @@ def portada() -> str:
     return f"""
 <section class="portada">
   <p class="titulo">{TITULO}</p>
-  <p>Equipo XX: [nombres completos de los integrantes]</p>
+  <p>Isaias José Petro, Alejandro Pemberty Vergara, Juliana Esther Carrascal, Julian Andrés Negrete Pacheco y Juan Diego Guerra Gómez</p>
   <p>Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería</p>
   <p>8830 0064 0: Gestión Tecnológica</p>
   <p>M.Sc. Cristian Javier Cano Mogollón</p>

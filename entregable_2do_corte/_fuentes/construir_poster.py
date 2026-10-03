@@ -166,7 +166,7 @@ def cabecera() -> str:
   </div>
   <h1 class="titulo">{TITULO}</h1>
   <p class="sub">Hand Sing Kids: visión por computador y programación entera mixta, procesamiento 100 % local</p>
-  <p class="equipo">Equipo XX: [integrantes, códigos y correos institucionales] · Docente asesor: M.Sc. Cristian Javier
+  <p class="equipo">Equipo XX: Isaias José Petro, Alejandro Pemberty Vergara, Juliana Esther Carrascal, Julian Andrés Negrete Pacheco y Juan Diego Guerra Gómez · Docente asesor: M.Sc. Cristian Javier
     Cano Mogollón · Gestión Tecnológica, 2026-2</p>
 </header>"""
 
