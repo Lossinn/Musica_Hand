@@ -13,6 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n, referencia_html, REF_EXTRA, DOIS  # noqa: E402
+import arte  # noqa: E402
 import doc_base  # noqa: E402
 import render  # noqa: E402
 from construir_documento import AUTORES, TITULO  # noqa: E402
@@ -37,11 +38,19 @@ CSS = doc_base.FONT_FACE + """
 @page { size: 900mm 1200mm; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 900mm; height: 1200mm; }
-body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #1A1A1A; background: #FAFAF7; }
+body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #1A1A1A; background: #F2EEE3; }
 .poster { width: 900mm; height: 1200mm; display: flex; flex-direction: column; padding: 22mm 34mm 18mm; gap: 8mm;
   position: relative; overflow: hidden; }
-.poster::before { content: ''; position: absolute; left: 14mm; right: 14mm; top: 10mm; bottom: 8mm;
-  border: .5mm solid #C9C9C2; border-radius: 6mm; }
+.arte { position: absolute; left: 0; top: 0; width: 900mm; height: 1200mm; }
+.arte-cab { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.poster::before { content: ''; position: absolute; left: 14mm; right: 14mm; top: 10mm; bottom: 8mm; z-index: 0;
+  border: .5mm solid rgba(20,20,20,.35); border-radius: 6mm; }
+.poster::after { content: ''; position: absolute; left: 10mm; top: 6mm; width: 26mm; height: 26mm; z-index: 0;
+  border: 0 solid #141414; border-width: 1.4mm 0 0 1.4mm; border-top-left-radius: 9mm; }
+.esq2 { position: absolute; right: 10mm; bottom: 4mm; width: 26mm; height: 26mm; border: 0 solid #141414;
+  border-width: 0 1.4mm 1.4mm 0; border-bottom-right-radius: 9mm; }
+.cab { overflow: hidden; box-shadow: 1.6mm 2.4mm 0 rgba(0,0,0,.22); }
+.cab > .fila1, .cab > .gente, .cab > .doc { position: relative; }
 .cab, .cuerpo, .pie { position: relative; }
 /* cabecera */
 .cab { background: #141414; color: #fff; border-radius: 5mm; padding: 9mm 14mm 9mm; border-bottom: 3mm solid #FFCC00; }
@@ -63,11 +72,20 @@ h1 { font-size: 44pt; line-height: 1.1; font-weight: 800; text-transform: upperc
 .doc { margin-top: 4mm; font-size: 15pt; color: #BDBDBD; }
 .doc b { color: #fff; }
 /* cuerpo en dos columnas que fluyen */
-.cuerpo { flex: 1; min-height: 0; column-count: 2; column-gap: 14mm; column-fill: balance;
-  column-rule: .4mm solid #D6D6CF; }
-.sec { break-inside: avoid; margin-bottom: 7mm; }
+.cuerpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.colv { display: flex; flex-direction: column; gap: 6.5mm; min-width: 0; }
+.colv > .sec:last-child { flex: 1; display: flex; flex-direction: column; }
+.firma { flex: 1; min-height: 20mm; display: flex; align-items: center; justify-content: center; margin-top: 3mm;
+  border-top: .4mm dashed #C8C8C8; padding-top: 3mm; }
+.firma { position: relative; }
+.firma svg { position: absolute; left: 0; top: 3mm; width: 100%; height: calc(100% - 3mm); }
+.sec { background-color: rgba(255,255,255,.95); border-radius: 3mm;
+  padding: 0 6mm 4.5mm; box-shadow: 1mm 1.4mm 0 rgba(60,45,10,.16); border-bottom: 1.6mm solid #141414; position: relative; z-index: 0; }
+.esq-card { position: absolute; right: 0; bottom: 0; width: 70mm; height: 52mm; z-index: -1; }
 .sec h2 { display: flex; align-items: center; gap: 3.5mm; background: #141414; color: #fff; font-size: 25pt; font-weight: 800;
-  text-transform: uppercase; letter-spacing: .4pt; padding: 2.2mm 5mm; border-radius: 2mm; margin-bottom: 3.5mm; }
+  text-transform: uppercase; letter-spacing: .4pt; padding: 2.4mm 6mm; border-radius: 3mm 3mm 0 0; margin: 0 -6mm 3.5mm; }
+.sec h2::after { content: ''; margin-left: auto; flex: none; width: 22mm; height: 4mm;
+  background: radial-gradient(circle, #FFCC00 0 1mm, transparent 1.15mm) 0 50% / 5.5mm 4mm repeat-x; }
 .sec h2 i { font-style: normal; background: #FFCC00; color: #141414; border-radius: 1.4mm; padding: 0 2.6mm; font-size: 20pt; }
 p, li { font-size: 22pt; line-height: 1.32; font-weight: 500; text-align: justify; hyphens: auto; }
 p + p { margin-top: 2.4mm; }
@@ -96,14 +114,14 @@ tr.t td { font-weight: 800; border-top: .6mm solid #141414; border-bottom: none;
 .qr { display: flex; gap: 5mm; align-items: center; margin-top: 3mm; }
 .qr img { width: 46mm; height: 46mm; border: .6mm solid #141414; border-radius: 2mm; background: #fff; flex: none; }
 .qr p { font-size: 17pt; text-align: left; }
-.pie { flex: none; display: flex; justify-content: space-between; font-size: 13pt; color: #555; font-weight: 600;
+.pie { flex: none; background: rgba(255,255,255,.7); border-radius: 2mm; padding-left: 4mm; padding-right: 4mm; display: flex; justify-content: space-between; font-size: 13pt; color: #555; font-weight: 600;
   border-top: .6mm solid #141414; padding-top: 2.5mm; }
 """
 
 
 def cabecera() -> str:
     gente = "".join(f'<div class="p"><b>{a}</b><span>{SOBRE}{m}</span></div>' for a, m in AUTORES)
-    return f"""<header class="cab">
+    return f"""<header class="cab">{arte.cabecera_variante()}
   <div class="fila1">
     <div class="tile upb"><img src="{uri(A / 'logos' / 'upb_logo_vertical_blanco.png')}" alt="UPB"></div>
     <div><p class="evento" style="text-align:left">Gestión Tecnológica · Segundo corte · 2026-2</p>
@@ -119,7 +137,7 @@ def cabecera() -> str:
 
 
 def sec(num: int, titulo: str, cuerpo: str) -> str:
-    return f'<section class="sec"><h2><i>{num}</i>{titulo}</h2>{cuerpo}</section>'
+    return f'<section class="sec">{arte.esquina(op=.08, seed=7)}<h2><i>{num}</i>{titulo}</h2>{cuerpo}</section>'
 
 
 def cuerpo() -> str:
@@ -169,13 +187,13 @@ niño en SQLite local. Nivel de madurez TRL 4, validación en laboratorio.</p><d
 <p><em>As-Is</em>: el docente prepara fichas, explica, corrige uno a uno con reproceso, anota en cuaderno y el acudiente
 recibe un informe tardío. <em>To-Be</em>: pools y carriles para niño, sistema local (visión, evaluación, planificación)
 y adulto; compuertas exclusivas, paralelas e inclusivas, eventos de temporizador y de mensaje.</p>
-<div class="fig" style="width:82%;margin-left:auto;margin-right:auto">{svg('poster_bpmn_to_be')}</div>
+<div class="fig" style="width:68%;margin-left:auto;margin-right:auto">{svg('poster_bpmn_to_be')}</div>
 <p class="cap"><b>Figura 2.</b> Proceso To-Be: reconocimiento en cada fotograma, registro automático y repaso programado.</p>"""))
     s.append(sec(7, "Flujos de datos (DFD)", f"""
 <p>Nivel 0: el sistema intercambia datos con el niño, la cámara y el acudiente o docente, sin entidades en la nube.
 Nivel 1: reconocer, evaluar, gemelo, planificar, interfaz e informe, con los almacenes D3 Intentos y D4 Habilidad.
 Nivel 2: detalle del proceso crítico de evaluación y actualización del gemelo.</p>
-<div class="fig" style="width:64%;margin-left:auto;margin-right:auto">{svg('poster_dfd1')}</div>
+<div class="fig" style="width:76%;margin-left:auto;margin-right:auto">{svg('poster_dfd1')}</div>
 <p class="cap"><b>Figura 3.</b> DFD nivel 1 simplificado; los niveles completos están en el documento.</p>"""))
     s.append(sec(8, "Gobernanza de datos (DAMA-DMBOK)", f"""
 <table><tr><th>Componente</th><th>Implementación</th></tr>
@@ -213,13 +231,15 @@ beneficios basados en cifras secundarias. Siguiente fase: piloto cuasi-experimen
     refs = "".join(f"<p>{r}</p>" for r in referencias())
     s.append(sec(12, "Referencias", f"""<div class="refs">{refs}</div>
 <div class="qr"><img src="{uri(A / 'qr_repositorio.svg')}" alt="QR"><p><b>Código, pruebas y documento completo</b><br>
-github.com/Lossinn/Musica_Hand</p></div>"""))
-    return "".join(s)
+github.com/Lossinn/Musica_Hand</p></div>
+<div class="firma">{arte.firma()}</div>"""))
+    return f'<div class="colv">{"".join(s[:6])}</div><div class="colv">{"".join(s[6:])}</div>'
 
 
 def html() -> str:
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Póster variante 90 x 120 cm</title>
 <style>{CSS}</style></head><body><div class="poster">
+{arte.fondo_variante()}<div class="esq2"></div>
 {cabecera()}
 <main class="cuerpo">{cuerpo()}</main>
 <footer class="pie"><span>Hand Sing Kids · Empresa de Base Tecnológica · Montería, Córdoba</span>

@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from datos import BASE, BENCH, CAT, DANE, INST, TOT, cita, cop, n  # noqa: E402
+import arte  # noqa: E402
 import doc_base  # noqa: E402
 import logos  # noqa: E402
 import render  # noqa: E402
@@ -25,6 +26,8 @@ ROOT = Path(__file__).resolve().parents[1]
 A = ROOT / "recursos" / "assets"
 D = ROOT / "recursos" / "diagramas"
 BRECHA = DANE["hog_internet_nal"] - DANE["hog_internet_cor"]
+ESQ = arte.esquina()
+ESQ_O = arte.esquina("#FFCC00", .16, 4)
 
 
 def uri(p: Path) -> str:
@@ -62,6 +65,12 @@ body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; 
 .tira { position: absolute; top: 0; height: 1200mm; width: 34mm; }
 .tira.izq { left: 0; } .tira.der { right: 0; }
 .cab, .cuerpo, .pie, .franja { position: relative; }
+.arte { position: absolute; left: 0; top: 0; width: 900mm; height: 1200mm; }
+.arte-cab { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.cab > .logos, .cab > h1, .cab > .sub, .cab > .autores { position: relative; }
+.card h2::after { content: ''; margin-left: auto; flex: none; width: 24mm; height: 5mm;
+  background: radial-gradient(circle, #FFCC00 0 1.1mm, transparent 1.25mm) 0 50% / 6mm 5mm repeat-x; }
+.card.oscura h2::after { background-image: radial-gradient(circle, #141414 0 1.1mm, transparent 1.25mm); }
 /* marco fino y marcas de esquina: delimitan el margen sin cargar la pieza */
 .marco { position: absolute; left: 44mm; right: 44mm; top: 14mm; bottom: 12mm; border: .5mm solid rgba(20,20,20,.45);
   border-radius: 10mm; pointer-events: none; }
@@ -74,7 +83,7 @@ body { font-family: 'Montserrat', Helvetica, Arial, sans-serif; color: #141414; 
   font-size: 12pt; font-weight: 800; letter-spacing: 2.4pt; padding: .6mm 6mm; border-radius: 3mm; white-space: nowrap; }
 /* ------------------------------------------------------------- cabecera */
 .cab { background: #141414; border-radius: 8mm; padding: 11mm 16mm 12mm; color: #fff; overflow: hidden;
-  box-shadow: 0 3mm 6mm rgba(0,0,0,.35); }
+  box-shadow: 1.6mm 2.4mm 0 rgba(0,0,0,.28); }
 .cab .mano { position: absolute; right: -4mm; bottom: -10mm; width: 120mm; opacity: .13; }
 .logos { display: grid; grid-template-columns: auto 1fr auto auto; gap: 10mm; align-items: center; }
 .tile { height: 54mm; border-radius: 5mm; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -109,9 +118,11 @@ h1.titulo { margin-top: 9mm; color: #FFCC00; font-weight: 800; text-transform: u
 .cuerpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12mm; }
 .col { display: flex; flex-direction: column; gap: 10mm; min-width: 0; }
 .col > .card:last-child { flex: 1; }
-.card { background: rgba(255,255,255,.97); border-radius: 4mm; padding: 0 9mm 8mm; box-shadow: 0 2mm 4mm rgba(60,35,5,.3);
+.card { background: rgba(255,255,255,.97); border-radius: 4mm; padding: 0 9mm 8mm; box-shadow: 1.2mm 1.8mm 0 rgba(60,35,5,.28);
   border-bottom: 3mm solid #141414; display: flex; flex-direction: column; padding-bottom: 7mm; }
 .card.oscura { background: #1c1c1c; color: #fff; }
+.card { position: relative; z-index: 0; }
+.esq-card { position: absolute; right: 0; bottom: 0; width: 80mm; height: 60mm; z-index: -1; }
 .card h2 { margin: 0 -9mm 6mm; padding: 3.5mm 9mm; background: #141414; color: #FFCC00; border-radius: 4mm 4mm 0 0;
   font-size: 32pt; font-weight: 800; text-transform: uppercase; line-height: 1.1; display: flex; align-items: center; gap: 4mm; }
 .card.oscura h2 { background: #FFCC00; color: #141414; }
@@ -194,7 +205,7 @@ table.fin tr.tot td { border-top: 1mm solid #141414; border-bottom: none; font-w
 
 def cabecera() -> str:
     return f"""
-<header class="cab"><div class="mano">{mano_svg()}</div>
+<header class="cab">{arte.cabecera_principal()}<div class="mano">{mano_svg()}</div>
   <div class="logos">
     <div class="tile upb"><img src="{uri(A / 'logos' / 'upb_logo_vertical_blanco.png')}" alt="UPB"></div>
     <div class="inst"><b>Universidad Pontificia Bolivariana, Seccional Montería</b>Facultad de Ingeniería Industrial ·
@@ -227,7 +238,7 @@ def autores() -> str:
 
 def columna1() -> str:
     return f"""
-<div class="card"><h2><span class="n">1</span>Problemática regional</h2>
+<div class="card">{ESQ}<h2><span class="n">1</span>Problemática regional</h2>
   <div class="kpis k3">
     <div class="kpi"><b>{n(DANE['hog_internet_cor'], 1)} %</b><span>hogares de Córdoba con internet</span></div>
     <div class="kpi"><b>−{n(BRECHA, 1)}</b><span>puntos frente al promedio nacional</span></div>
@@ -238,7 +249,7 @@ def columna1() -> str:
       <li>Una app en la nube excluye a la mitad de los hogares</li></ul>
   <p class="fuente">DANE (2025; s. f.). *Equipo 13 (2026), dato de campo no verificado.</p>
 </div>
-<div class="card"><h2><span class="n">2</span>Árbol de problemas</h2>
+<div class="card">{ESQ}<h2><span class="n">2</span>Árbol de problemas</h2>
   <div class="arbol">
     <div class="rot">EFECTOS</div>
     <div class="fila"><div class="caja e">Abandono y retroalimentación tardía</div><div class="caja e">Docentes sin datos para reforzar</div></div>
@@ -250,14 +261,14 @@ def columna1() -> str:
     <div class="od"><b>9</b><span>Industria e innovación</span></div>
     <div class="od"><b>10</b><span>Menos desigualdad</span></div></div>
 </div>
-<div class="card"><h2><span class="n">3</span>Pregunta y objetivos</h2>
+<div class="card">{ESQ}<h2><span class="n">3</span>Pregunta y objetivos</h2>
   <p class="pregunta">¿Puede un sistema local de reconocimiento de señas dar retroalimentación inmediata y registro objetivo
     del dominio de las notas a niños de 3 a 12 años?</p>
   <ul class="oe"><li><b>OE1</b> Diagnosticar la brecha y revisar la literatura</li>
       <li><b>OE2</b> Construir visión, gemelo digital y planificador</li>
       <li><b>OE3</b> Verificar el desempeño y estimar el ROI</li></ul>
 </div>
-<div class="card"><h2><span class="n">4</span>Estado del arte</h2>
+<div class="card">{ESQ}<h2><span class="n">4</span>Estado del arte</h2>
   <div class="kpis k2">
     <div class="kpi"><b>15</b><span>estudios 2023 a 2026 con DOI verificado</span></div>
     <div class="kpi"><b>189</b><span>documentos en la matriz bibliográfica</span></div>
@@ -275,20 +286,18 @@ def columna1() -> str:
 
 def columna2() -> str:
     return f"""
-<div class="card"><h2><span class="n">5</span>Procesos BPMN 2.0</h2>
+<div class="card">{ESQ}<h2><span class="n">5</span>Procesos BPMN 2.0</h2>
   <div class="dia">{svg('poster_bpmn_as_is')}</div>
-  <p class="cap">As-Is: 1 nivelación manual · 2 atención uno a uno · 3 reproceso · 4 registro en papel · 5 informe tardío</p>
+  <p class="cap">As-Is: 1 nivelación · 2 uno a uno · 3 reproceso · 4 papel · 5 informe tardío</p>
   <p class="paso"><span>▼ To-Be con Hand Sing Kids</span></p>
   <div class="dia">{svg('poster_bpmn_to_be')}</div>
-  <p class="cap">To-Be: reconocimiento en cada fotograma, registro automático y repaso programado</p>
+  <p class="cap">To-Be: reconocimiento, registro y repaso automáticos</p>
 </div>
-<div class="card"><h2><span class="n">6</span>Flujo de datos (DFD)</h2>
-  <div class="dia"><div style="width:72%;margin:0 auto">{svg('poster_dfd0')}</div></div>
-  <p class="cap">Nivel 0: sin entidades en la nube</p>
-  <div class="dia" style="margin-top:3mm"><div style="width:86%;margin:0 auto">{svg('poster_dfd1')}</div></div>
-  <p class="cap">Nivel 1 simplificado (los niveles 1 y 2 completos están en el documento)</p>
+<div class="card">{ESQ}<h2><span class="n">6</span>Flujo de datos (DFD)</h2>
+  <div class="dia"><div style="width:90%;margin:0 auto">{svg('poster_dfd1')}</div></div>
+  <p class="cap">Nivel 1: ninguna entidad en la nube (niveles 0, 1 y 2 en el documento)</p>
 </div>
-<div class="card"><h2><span class="n">7</span>Gobernanza de datos</h2>
+<div class="card">{ESQ}<h2><span class="n">7</span>Gobernanza de datos</h2>
   <div class="chips">
     <div class="chip"><b>0</b>imágenes guardadas en disco</div>
     <div class="chip"><b>0</b>módulos de red en el código</div>
@@ -297,13 +306,13 @@ def columna2() -> str:
   </div>
   <div class="linaje"><div class="lp e">Cámara</div><div class="lp e">21 puntos</div><div class="lp e">Descriptor</div>
     <div class="lp s">Nota</div><div class="lp p">Intento</div><div class="lp p">Gemelo</div><div class="lp p">Decisión</div></div>
-  <p class="cap">Linaje: efímero (punteado), de sesión y persistente. RBAC: niño, acudiente o docente (PIN propuesto) y sistema</p>
+  <p class="cap">Linaje efímero, de sesión y persistente · RBAC: niño, adulto (PIN propuesto) y sistema</p>
 </div>"""
 
 
 def columna3() -> str:
     return f"""
-<div class="card oscura"><h2><span class="n">8</span>Prototipo funcional</h2>
+<div class="card oscura">{ESQ_O}<h2><span class="n">8</span>Prototipo funcional</h2>
   <div class="shot"><img src="{uri(A / 'capturas' / '05_aventura.png')}" alt="Mapa de aventura"></div>
   <div class="shot"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio guiado"></div>
   <ul style="margin-bottom:5mm"><li><b>OE2</b> Reconoce 8 señas (DO3 a DO4) con ambas manos</li>
@@ -317,7 +326,7 @@ def columna3() -> str:
   </div>
   <p class="fuente">Python · PySide6 · MediaPipe · OpenCV · PuLP · SQLite</p>
 </div>
-<div class="card"><h2><span class="n">9</span>Retorno de la inversión</h2>
+<div class="card">{ESQ}<h2><span class="n">9</span>Retorno de la inversión</h2>
   <table class="fin">
     <tr><td>CAPEX (un aula)</td><td>{cop(TOT['capex'])}</td></tr>
     <tr><td>OPEX anual</td><td>{cop(TOT['opex'])}</td></tr>
@@ -332,7 +341,7 @@ def columna3() -> str:
   </div>
   <p class="nota">Un aula sola no cumple la guía; la viabilidad depende de la escala.</p>
 </div>
-<div class="card"><h2><span class="n">10</span>Resultados y proyección</h2>
+<div class="card">{ESQ}<h2><span class="n">10</span>Resultados y proyección</h2>
   <div class="kpis k3">
     <div class="kpi"><b>{n(BENCH['total_ms']['media'], 1)} ms</b><span>cómputo por fotograma</span></div>
     <div class="kpi"><b>92 %</b><span>posturas sin seña rechazadas</span></div>
@@ -356,6 +365,7 @@ def html() -> str:
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Póster científico 90 x 120 cm</title>
 <style>{CSS}</style></head><body><div class="poster">
 <div class="fondo"></div><div class="kraft"></div>
+{arte.fondo_principal()}
 <img class="marca" src="{uri(A / 'logos' / 'logo_his_texto.png')}" alt="">
 <img class="tira izq" src="{uri(A / 'backgrounds' / 'borde_amarillo_b.png')}" alt="">
 <img class="tira der" src="{uri(A / 'backgrounds' / 'borde_amarillo_a.png')}" alt="">
