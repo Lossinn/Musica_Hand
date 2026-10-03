@@ -163,7 +163,7 @@ consistencia, velocidad y retención con repaso espaciado; la sesión se elige c
 x<sub>i</sub> ∈ {{0, 1}}, sujeto a 7 restricciones</p>
 <div class="flot"><div class="fig" style="margin-top:0"><img src="{uri(A / 'capturas' / '11_ejercicio.png')}" alt="Ejercicio"></div>
 <p class="cap"><b>Figura 1.</b> Ejercicio guiado: cada mano se reconoce y responde en pantalla.</p></div>
-<p><b>Estado funcional:</b> 14 pantallas, 63 actividades en 13 etapas, 8 suites de pruebas automáticas y perfiles por
+<p><b>Estado funcional:</b> 14 pantallas, 63 actividades, 8 suites de pruebas automáticas y perfiles por
 niño en SQLite local. Nivel de madurez TRL 4, validación en laboratorio.</p><div style="clear:both"></div>"""))
     s.append(sec(6, "Procesos BPMN 2.0", f"""
 <p><em>As-Is</em>: el docente prepara fichas, explica, corrige uno a uno con reproceso, anota en cuaderno y el acudiente
