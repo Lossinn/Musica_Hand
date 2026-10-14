@@ -323,23 +323,24 @@ def illo_piensa(ox, oy) -> str:
 
 
 # ------------------------------------------------------------------ tarjetas de paso
-def paso(x, y, w, h, num, color, bisel, titulo, sub, illo, illo_dx) -> str:
-    lineas_t = "".join(f'<tspan x="{x + 92}" dy="{0 if i == 0 else 33}">{t}</tspan>' for i, t in enumerate(titulo))
-    y_sub = y + 56 + 33 * (len(titulo) - 1) + 36
-    lineas_s = "".join(f'<tspan x="{x + 92}" dy="{0 if i == 0 else 24}">{t}</tspan>' for i, t in enumerate(sub))
+def paso(x, y, w, h, num, color, bisel, titulo, sub, illo, illo_dx, esc=0.82) -> str:
+    tx = x + 84
+    lineas_t = "".join(f'<tspan x="{tx}" dy="{0 if i == 0 else 31}">{t}</tspan>' for i, t in enumerate(titulo))
+    y_sub = y + 54 + 31 * (len(titulo) - 1) + 36
+    lineas_s = "".join(f'<tspan x="{tx}" dy="{0 if i == 0 else 23}">{t}</tspan>' for i, t in enumerate(sub))
     return f'''
 <g>
   <rect x="{x}" y="{y + 6}" width="{w}" height="{h}" rx="30" fill="{bisel}" opacity=".9"/>
   <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="30" fill="url(#gCard)" filter="url(#sombraCard)"/>
   <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="30" fill="none" stroke="{color}" stroke-width="4"/>
   <rect x="{x + 18}" y="{y + 8}" width="{w - 36}" height="10" rx="5" fill="#fff" opacity=".8"/>
-  <circle cx="{x + 48}" cy="{y + 50}" r="32" fill="{bisel}"/>
-  <circle cx="{x + 48}" cy="{y + 46}" r="32" fill="{color}"/>
-  <circle cx="{x + 48}" cy="{y + 46}" r="32" fill="url(#gGloss)"/>
-  <text x="{x + 48}" y="{y + 61}" text-anchor="middle" class="f" font-weight="700" font-size="42" fill="#fff" stroke="{bisel}" stroke-width="1.5" paint-order="stroke">{num}</text>
-  <text x="{x + 92}" y="{y + 56}" class="f" font-weight="600" font-size="31" fill="{INK}">{lineas_t}</text>
-  <text x="{x + 92}" y="{y_sub}" class="n" font-weight="700" font-size="19.5" fill="{INK2}">{lineas_s}</text>
-  {illo(x + illo_dx, y + 14)}
+  <circle cx="{x + 44}" cy="{y + 48}" r="29" fill="{bisel}"/>
+  <circle cx="{x + 44}" cy="{y + 44}" r="29" fill="{color}"/>
+  <circle cx="{x + 44}" cy="{y + 44}" r="29" fill="url(#gGloss)"/>
+  <text x="{x + 44}" y="{y + 58}" text-anchor="middle" class="f" font-weight="700" font-size="38" fill="#fff" stroke="{bisel}" stroke-width="1.5" paint-order="stroke">{num}</text>
+  <text x="{tx}" y="{y + 54}" class="f" font-weight="600" font-size="29" fill="{INK}">{lineas_t}</text>
+  <text x="{tx}" y="{y_sub}" class="n" font-weight="700" font-size="18.5" fill="{INK2}">{lineas_s}</text>
+  <g transform="translate({x + illo_dx} {y + 12}) scale({esc})">{illo(0, 0)}</g>
 </g>'''
 
 
@@ -372,9 +373,9 @@ def fondo() -> str:
 def camino(rows) -> str:
     """Camino de juego (cinta con pentagrama) que serpentea entre los pasos."""
     (y1, y2, y3) = rows
-    m1, m2 = y1 + 158 / 2, y2 + 158 / 2
-    m3 = y3 + 158 / 2
-    d = (f"M70,{m1} H830 C890,{m1} 890,{m2} 830,{m2} H70 C10,{m2} 10,{m3} 70,{m3} H830")
+    m1, m2 = y1 + 152 / 2, y2 + 152 / 2
+    m3 = y3 + 152 / 2
+    d = (f"M80,{m1} H820 C905,{m1} 905,{m2} 820,{m2} H80 C-5,{m2} -5,{m3} 80,{m3} H820")
     return (f'<path d="{d}" stroke="#E7C9A6" stroke-width="58" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>'
             f'<path d="{d}" stroke="#FFF3E2" stroke-width="46" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
             + "".join(f'<path d="{d}" transform="translate(0 {o})" stroke="#E6C7A3" stroke-width="1.3" fill="none"/>' for o in (-16, -8, 0, 8, 16)))
@@ -383,24 +384,24 @@ def camino(rows) -> str:
 # ------------------------------------------------------------------ teclado de señas
 def teclado(y) -> str:
     n = len(NOTAS)
-    cw, gap = 94, 10.3
+    cw, gap = 88, 16
     x0 = (W - (n * cw + (n - 1) * gap)) / 2
     out = []
     # base de madera tipo xilófono
-    out.append(f'<rect x="{x0 - 22}" y="{y + 120}" width="{n * cw + (n - 1) * gap + 44}" height="34" rx="17" fill="url(#gMadera)" filter="url(#sombraCard)"/>')
-    out.append(f'<rect x="{x0 - 12}" y="{y + 124}" width="{n * cw + (n - 1) * gap + 24}" height="6" rx="3" fill="#fff" opacity=".25"/>')
+    out.append(f'<rect x="{x0 - 22}" y="{y + 114}" width="{n * cw + (n - 1) * gap + 44}" height="30" rx="17" fill="url(#gMadera)" filter="url(#sombraCard)"/>')
+    out.append(f'<rect x="{x0 - 12}" y="{y + 117}" width="{n * cw + (n - 1) * gap + 24}" height="5" rx="3" fill="#fff" opacity=".25"/>')
     for i, (code, nombre, col, bev) in enumerate(NOTAS):
         x = x0 + i * (cw + gap)
         ratio = 452 / 336 if code not in ("DO4", "SI3") else (692 / 514 if code == "DO4" else 704 / 516)
         h = cw * ratio
-        top = y + 120 - h + 6 - i * 3.2   # cada tarjeta un poquito más alta: la nota sube
+        top = y
         out.append(f'<g filter="url(#sombraCarta)"><image href="{uri(SENAS / f"{code}.png")}" x="{x:.1f}" y="{top:.1f}" '
                    f'width="{cw}" height="{h:.1f}" preserveAspectRatio="xMidYMid meet"/></g>')
         # tecla de color sobre la base
-        out.append(f'<rect x="{x + 6}" y="{y + 126}" width="{cw - 12}" height="22" rx="8" fill="{bev}"/>'
-                   f'<rect x="{x + 6}" y="{y + 124}" width="{cw - 12}" height="20" rx="8" fill="{col}"/>'
-                   f'<rect x="{x + 14}" y="{y + 127}" width="{cw - 28}" height="5" rx="2.5" fill="#fff" opacity=".45"/>'
-                   f'<circle cx="{x + 13}" cy="{y + 134}" r="2.2" fill="{bev}"/><circle cx="{x + cw - 13}" cy="{y + 134}" r="2.2" fill="{bev}"/>')
+        out.append(f'<rect x="{x + 6}" y="{y + 122}" width="{cw - 12}" height="20" rx="8" fill="{bev}"/>'
+                   f'<rect x="{x + 6}" y="{y + 120}" width="{cw - 12}" height="18" rx="8" fill="{col}"/>'
+                   f'<rect x="{x + 14}" y="{y + 123}" width="{cw - 28}" height="5" rx="2.5" fill="#fff" opacity=".45"/>'
+                   f'<circle cx="{x + 13}" cy="{y + 129}" r="2.2" fill="{bev}"/><circle cx="{x + cw - 13}" cy="{y + 129}" r="2.2" fill="{bev}"/>')
     return "".join(out)
 
 
@@ -451,15 +452,15 @@ def html() -> str:
     preparar_senas()
     grano = preparar_grano()
     fuentes = A / "fonts"
-    rows = (430, 615, 800)
-    xl, xr, cw, ch = 46, 474, 380, 158
+    rows = (420, 598, 776)
+    xl, xr, cw, ch = 36, 468, 396, 152
     pasos = [
-        (xl, rows[0], 1, "DO3", ["¡Hola,", "soy Kiki!"], ["Elige tu amigo", "para jugar"], illo_hola, 178),
-        (xr, rows[0], 2, "RE3", ["Enséñale", "tus manos"], ["Kiki aprende", "tus señas 📷"], illo_camara, 168),
-        (xr, rows[1], 3, "MI3", ["Haz la", "seña"], ["¡Do son dos", "puñitos! ✊✊"], illo_sena, 178),
-        (xl, rows[1], 4, "FA3", ["¡Suena", "la nota!"], ["Tus manos", "hacen música"], illo_sonido, 172),
-        (xl, rows[2], 5, "SOL3", ["¡Ganas", "estrellas!"], ["Si fallas, Kiki", "te ayuda"], illo_estrellas, 170),
-        (xr, rows[2], 6, "LA3", ["Kiki elige", "tu juego"], ["Ni muy fácil,", "ni muy difícil"], illo_piensa, 176),
+        (xl, rows[0], 1, "DO3", ["¡Hola,", "soy Kiki!"], ["Elige tu amigo", "para jugar"], illo_hola, 228),
+        (xr, rows[0], 2, "RE3", ["Enséñale", "tus manos"], ["Kiki aprende", "tus señas"], illo_camara, 226),
+        (xr, rows[1], 3, "MI3", ["Haz la", "seña"], ["¡Do son dos", "puñitos! ✊✊"], illo_sena, 222),
+        (xl, rows[1], 4, "FA3", ["¡Suena", "la nota!"], ["Tus manos", "hacen música"], illo_sonido, 230),
+        (xl, rows[2], 5, "SOL3", ["¡Ganas", "estrellas!"], ["Si fallas, Kiki", "te ayuda"], illo_estrellas, 226),
+        (xr, rows[2], 6, "LA3", ["Kiki elige", "tu juego"], ["Ni muy fácil,", "ni muy difícil"], illo_piensa, 222),
     ]
     tarjetas = "".join(paso(x, y, cw, ch, n, C[c][0], C[c][1], t, s, il, dx) for x, y, n, c, t, s, il, dx in pasos)
 
@@ -468,32 +469,32 @@ def html() -> str:
         return (f'<g transform="translate({x} {y}) rotate({rot})"><circle r="16" fill="{col}"/><circle r="16" fill="url(#gGloss)"/>'
                 f'<path d="M-5,-8 L6,0 L-5,8" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>')
     m = [r + ch / 2 for r in rows]
-    flechas = (flecha(450, m[0], 0, "#FF9F1C") + flecha(872, (m[0] + m[1]) / 2, 90, "#FFD13B")
-               + flecha(450, m[1], 180, "#2EC4B6") + flecha(28, (m[1] + m[2]) / 2, 90, "#38B6FF")
+    flechas = (flecha(450, m[0], 0, "#FF9F1C") + flecha(884, (m[0] + m[1]) / 2, 90, "#FFD13B")
+               + flecha(450, m[1], 180, "#2EC4B6") + flecha(16, (m[1] + m[2]) / 2, 90, "#38B6FF")
                + flecha(450, m[2], 0, "#7A5CFA"))
     # lazo "¡otra vez!": del paso 6 vuelve al paso 3
     lazo = f'''
 <path d="M{xr + cw - 40},{rows[2] + ch + 4} C{xr + cw + 30},{rows[2] + ch + 40} 905,{rows[1] + 40} {xr + cw + 6},{rows[1] + 20}"
       stroke="#7A5CFA" stroke-width="5" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
 <path d="M{xr + cw + 18},{rows[1] + 8} L{xr + cw + 2},{rows[1] + 20} L{xr + cw + 20},{rows[1] + 30}" stroke="#7A5CFA" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<g transform="translate({xr + 156} {rows[2] + ch + 10})">
+<g transform="translate({xr + 190} {rows[2] + ch + 10})">
   <rect x="0" y="0" width="206" height="40" rx="20" fill="#7A5CFA"/>
   <rect x="0" y="0" width="206" height="40" rx="20" fill="url(#gGloss)"/>
   <text x="103" y="27" text-anchor="middle" class="f" font-weight="600" font-size="20" fill="#fff">🔁 ¡Y otra vez!</text>
 </g>'''
     seccion = f'''
-<g transform="translate(450 392)">
+<g transform="translate(450 384)">
   <rect x="-170" y="-26" width="340" height="50" rx="25" fill="{INK}"/>
   <text x="0" y="9" text-anchor="middle" class="f" font-weight="600" font-size="27" fill="#FFD13B">¿Cómo se juega?</text>
 </g>'''
-    ty = 1000
+    ty = 986
     teclado_tit = f'''
 <text x="450" y="{ty}" text-anchor="middle" class="f" font-weight="700" font-size="34" fill="{INK}">Las 8 señas de la música</text>
 <text x="450" y="{ty + 26}" text-anchor="middle" class="n" font-weight="700" font-size="17" fill="{INK2}">Cada nota tiene su color y su seña con las dos manos</text>'''
     pie = f'''
-<g transform="translate(450 1178)">
-  <rect x="-372" y="-19" width="744" height="34" rx="17" fill="#fff" opacity=".9"/>
-  <g transform="translate(-352 -11)">
+<g transform="translate(450 1187)">
+  <rect x="-372" y="-16" width="744" height="30" rx="15" fill="#fff" opacity=".92"/>
+  <g transform="translate(-352 -12)">
     <rect x="0" y="7" width="15" height="12" rx="3" fill="#2EC4B6"/>
     <path d="M3,8 V4.5 a4.5,4.5 0 0 1 9,0 V8" stroke="#1E8F85" stroke-width="2.2" fill="none"/>
   </g>
@@ -540,7 +541,7 @@ def html() -> str:
   </pattern>
 </defs>'''
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}mm" height="{H}mm">'
-           f'{defs}{fondo()}{cabecera()}{seccion}{camino(rows)}{flechas}{tarjetas}{lazo}{teclado_tit}{teclado(1046)}{pie}</svg>')
+           f'{defs}{fondo()}{cabecera()}{seccion}{camino(rows)}{flechas}{tarjetas}{lazo}{teclado_tit}{teclado(1022)}{pie}</svg>')
     return f'''<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>Hand Sing Kids — Reverso infantil</title>
 <style>
