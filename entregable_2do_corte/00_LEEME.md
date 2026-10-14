@@ -11,6 +11,7 @@ entregable_2do_corte/
 ├── entrega_teams/                                lo que se sube a Teams
 │   ├── 01_Documento_EBT_GestionTecnologica_Equipo_XX.pdf
 │   ├── 03_Poster_Cientifico_90x120_Equipo_XX.pdf
+│   ├── 03b_Poster_Reverso_Ninos_90x120_Equipo_XX.pdf (+ .png)   reverso infantil
 │   ├── 04_Modelo_Financiero_ROI_Equipo_XX.xlsx
 │   └── GT_Corte2_Equipo_XX_HandSingKids.zip
 ├── recursos/
@@ -29,6 +30,7 @@ El archivo `02_Modelado_BPMN_DFD_Gobernanza` va insertado en el documento (secci
 | --- | --- |
 | `01_Documento_…pdf` | Documento EBT en APA 7 (31 páginas): diagnóstico, literatura, método, prototipo, BPMN 2.0, DFD 0-1-2, gobernanza DAMA-DMBOK, finanzas, discusión y referencias |
 | `03_Poster_…pdf` | Póster vertical 900 × 1200 mm (vectorial, QR funcional) con logos UPB, HIS y SILOGE en la identidad del evento HIS |
+| `03b_Poster_Reverso_Ninos_…pdf` | Reverso del póster para niños de 5 años (900 × 1200 mm): flujo de juego en 6 pasos con Kiki, las 8 tarjetas oficiales de señas y logos UPB, HIS y SILOGE. Se regenera con `_fuentes/construir_poster_ninos.py` |
 | `04_Modelo_Financiero_…xlsx` | Supuestos rotulados por procedencia, CAPEX, OPEX, beneficios, seis escenarios y flujo acumulado, con fórmulas |
 
 ## Qué cambió al analizar el estudio del Equipo 13 (PINT2)
