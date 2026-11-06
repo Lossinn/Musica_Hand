@@ -388,3 +388,8 @@ def bloque(nombre: str) -> None:
     """Ejecuta un bloque de la redacción técnica original del equipo (extraído de construir_articulo.py)."""
     import json as _json
     exec(compile(_json.loads((AQUI / "bloques.json").read_text(encoding="utf-8"))[nombre], f"<bloque {nombre}>", "exec"), globals())
+
+
+def cita_autor(nombre: str) -> str:
+    partes = nombre.split()
+    return " ".join(x[0] + "." for x in partes[:-1]) + " " + partes[-1]
