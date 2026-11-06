@@ -1,12 +1,12 @@
 {
  "palabras": {
-  "unico": 7684
+  "unico": 7760
  },
  "entre_articulos": {},
  "contra_fuentes": {
   "documento_tecnico.md": {
    "unico": {
-    "pct": 1.25,
+    "pct": 1.6,
     "tramo_max": 17
    }
   },
@@ -24,8 +24,8 @@
   },
   "articulo_anterior_Pemberty.docx": {
    "unico": {
-    "pct": 16.28,
-    "tramo_max": 147
+    "pct": 13.13,
+    "tramo_max": 53
    }
   },
   "capitulo6_borrador.md": {

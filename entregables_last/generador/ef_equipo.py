@@ -39,8 +39,26 @@ T("El Modo Libre permite improvisar. Muestra un cronómetro desde la primera not
 '''
 cuerpo = cuerpo.replace('H2("Reconocimiento de señas")', NUEVO + 'H2("Reconocimiento de señas")', 1)
 
+cuerpo = cuerpo.replace("[2.6, 7.9, 1.3, 1.4]", "[3.2, 7.4, 1.0, 1.3]").replace("[3.0, 12.0])", "[3.6, 11.4])").replace("[2.0, 3.0, 2.2, 2.4, 5.0]", "[2.2, 3.6, 2.0, 2.4, 4.8]")
+cuerpo = cuerpo.replace('figura(["capturas_app.png"], 14.5,', 'figura(["capturas_app.png"], 11.0,')
 CODIGO_DATOS = compile(datos_src, "datos", "exec")
 CODIGO_CUERPO = compile(cuerpo, "cuerpo", "exec")
+
+
+EQ_OV = {
+ "kappa": r"\begin{aligned}\kappa&=\operatorname{clip}\!\left(\frac{r-0{,}35}{0{,}65},\,0,\,1\right),\ r&=\frac{\lVert p_d-p_a\rVert}{\lVert p_b-p_a\rVert+\lVert p_c-p_b\rVert+\lVert p_d-p_c\rVert}\end{aligned}",
+ "dist": r"d(a,b)^2=\frac{1}{\sum_g w_g}\sum_g w_g\,\frac{1}{|g|}\sum_{i\in g}(a_i-b_i)^2",
+ "prec": r"\begin{aligned}P_s&=\frac{h_s+\alpha}{n_s+\alpha+\beta},\ \alpha&=1,\ \beta=3\end{aligned}",
+ "ret": r"\begin{aligned}R_s&=\exp\!\left(-\frac{\Delta t}{\tau_s}\right),\ \tau_s&=\tau_0\,\varepsilon_s\,(0{,}6+\mathcal{M}_s^{-}),\ \tau_0&=1{,}8\ \text{días}\end{aligned}",
+ "sm2": r"\begin{aligned}\varepsilon&\leftarrow\operatorname{clip}\!\big(\varepsilon+0{,}1-(1-q)(0{,}8+(1-q)),\&\qquad 1{,}3,\,2{,}8\big),\ I&\leftarrow\begin{cases}1 & q<0{,}6\ \max(1,I\varepsilon) & \text{en otro caso}\end{cases}\end{aligned}",
+ "logit": r"\begin{aligned}p&=\frac{1}{1+e^{-z}},\ z&=w_1\,\mathrm{precision}+w_2\,\mathrm{dificultad}\&\quad+w_3\,\mathrm{dias}+b\end{aligned}",
+ "p": r"\begin{aligned}p_i&=\frac{1}{1+e^{-k(\bar\mu_i-\mathrm{dif}_i)}},\ k&=6\end{aligned}",
+ "eta": r"\begin{aligned}\eta_i&=\exp\!\left(-\frac{(p_i-p^{*})^2}{2\sigma_p^2}\right),\ \sigma_p&=0{,}18\end{aligned}",
+ "obj": r"\begin{aligned}\max\ &\sum_{i\in A}\big(\alpha_1g_i+\alpha_2r_i\&\quad+\alpha_3m_i-\alpha_4f_i\big)x_i,\ \alpha&=(1{,}00;\ 0{,}70;\ 0{,}35;\ 0{,}55)\end{aligned}",
+ "vent": r"\begin{aligned}h_i&=\frac{\max\!\big(W_{\min},\,\min(\text{tol},\,0{,}85\,g)\big)}{2},\ \text{ventana}_i&=\big[a_i-1{,}15\,h_i,\ a_i+0{,}85\,h_i\big]\end{aligned}",
+}
+
+from ef_eq import EQ_OV  # noqa: E402  (sustituye el bloque anterior)
 
 EQ_REF = {"{E_ACEPT}": "{eq:acepta}", "{E_TEMP}": "{eq:temp}"}
 
@@ -61,7 +79,7 @@ def contenido(e):
     def H3(t): e.sub3(t)
     def T(t): e.P(adapt(t))
 
-    def ecuacion(k, l): e.eq(k, l)
+    def ecuacion(k, l): e.eq(k, EQ_OV.get(k, l))
 
     def tabla(titulo, cab_, filas, fuente_, anchos):
         n_t[0] += 1

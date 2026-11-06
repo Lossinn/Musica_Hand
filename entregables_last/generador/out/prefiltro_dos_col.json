@@ -1,0 +1,44 @@
+{
+ "palabras": {
+  "unico": 7760
+ },
+ "entre_articulos": {},
+ "contra_fuentes": {
+  "documento_tecnico.md": {
+   "unico": {
+    "pct": 1.6,
+    "tramo_max": 17
+   }
+  },
+  "documento_2do_corte (html)": {
+   "unico": {
+    "pct": 0.23,
+    "tramo_max": 14
+   }
+  },
+  "motor_analitico_y_estado_avance.md": {
+   "unico": {
+    "pct": 0.0,
+    "tramo_max": 0
+   }
+  },
+  "articulo_anterior_Pemberty.docx": {
+   "unico": {
+    "pct": 13.13,
+    "tramo_max": 53
+   }
+  },
+  "capitulo6_borrador.md": {
+   "unico": {
+    "pct": 0.0,
+    "tramo_max": 0
+   }
+  },
+  "README.md": {
+   "unico": {
+    "pct": 0.0,
+    "tramo_max": 0
+   }
+  }
+ }
+}

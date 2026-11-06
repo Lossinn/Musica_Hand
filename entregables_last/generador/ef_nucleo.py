@@ -102,7 +102,8 @@ def ref_larga(clave: str) -> str:
 def _orden_alfa(clave: str) -> str:
     if clave == "dane":
         return "dane"
-    return _autores(REFS[CLAVES[clave]])[0][0].lower()
+    au = _autores(REFS[CLAVES[clave]])[0]
+    return au[0].lower() + " " + au[1].lower()
 
 
 # ---------------------------------------------------------------- OMML
