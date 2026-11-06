@@ -296,6 +296,16 @@ class Escrito:
         pf.space_before = Pt(12); pf.space_after = Pt(4); pf.keep_with_next = True
         self._texto(p, titulo, 12, True)
 
+    def sub3(self, titulo):
+        p = self.d.add_paragraph(); pf = p.paragraph_format
+        pf.space_before = Pt(4); pf.space_after = Pt(2); pf.keep_with_next = True
+        self._texto(p, titulo, 10, True, True)
+
+    def nota(self, texto):
+        p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.space_after = Pt(8)
+        self._texto(p, texto, 8.5)
+
     def P(self, texto, sangria=True, keep=False):
         p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         if sangria:
@@ -343,10 +353,10 @@ class Escrito:
     # ---- tablas estilo booktabs
     def tabla(self, clave, caption, cab, filas, anchos, size=9, alinear=None):
         self.n_tab += 1
-        self.nuevas[f"tab:{clave}"] = f"Cuadro {self.n_tab}"
+        self.nuevas[f"tab:{clave}"] = f"Tabla {self.n_tab}"
         p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         pf = p.paragraph_format; pf.space_before = Pt(6); pf.space_after = Pt(3); pf.keep_with_next = True
-        r = p.add_run(f"Cuadro {self.n_tab}: "); _fuente(r, 9, True)
+        r = p.add_run(f"Tabla {self.n_tab}. "); _fuente(r, 9, True)
         self._texto(p, caption, 9)
         t = self.d.add_table(rows=1, cols=len(cab)); t.alignment = WD_TABLE_ALIGNMENT.CENTER; t.autofit = False
         t.allow_autofit = False
@@ -411,7 +421,7 @@ class Escrito:
             p.add_run().add_picture(str(FIG / archivo), width=Cm(ancho_cm))
         c = self.d.add_paragraph(); c.alignment = WD_ALIGN_PARAGRAPH.CENTER
         c.paragraph_format.space_before = Pt(3); c.paragraph_format.space_after = Pt(8)
-        r = c.add_run(f"Figura {self.n_fig}: "); _fuente(r, 9, True)
+        r = c.add_run(f"Figura {self.n_fig}. "); _fuente(r, 9, True)
         self._texto(c, caption, 9)
         if ancha:
             self.dos_columnas()
