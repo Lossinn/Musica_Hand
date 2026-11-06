@@ -37,7 +37,7 @@ Sustituir cada marcador por el archivo real, con el mismo nombre, y volver a com
 - Captura de Publindex con la categoría vigente de la revista.
 - Leer el texto completo de las 22 referencias: solo se verificaron existencia y metadatos.
 - Código de asignatura: 8830 0064 0 (2.º corte) frente a 8830 0048 0 (Corte 3).
-- Mención histórica a John Curwen: se quitó del artículo porque no tiene referencia verificada.
+- La frase inicial sobre la tradición de enseñar música con las manos desde el siglo XIX es un dato histórico general sin referencia verificada; si el docente la pide, añadan una fuente.
 
 ## Advertencias honestas sobre el contenido
 - **No hubo pruebas con niños.** Las cifras son de laboratorio, con una calibración de una persona y perturbaciones simuladas. TRL 4.
