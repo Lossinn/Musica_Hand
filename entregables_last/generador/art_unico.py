@@ -1,5 +1,5 @@
 """Artículo único del equipo: todo el proyecto Hand Sing Kids presentado como artículo científico (plantilla Revista UIS Ingenierías)."""
-import json, sys
+import json, math, sys
 from nucleo_hsk import *
 import nucleo_hsk as N
 
@@ -48,7 +48,7 @@ H2("Lo que dice la literatura")
 T("La combinación de inteligencia artificial y educación musical es un campo joven y muy activo. Para ubicarnos reunimos y clasificamos las fuentes con un procedimiento descrito en la sección 2.1 y resumido en la Figura 1. "
   "De 226 archivos obtenidos con dos ecuaciones de búsqueda en Scopus y con artículos de método quedaron 189 documentos únicos, y 87 de ellos resultaron directamente aprovechables. Es una muestra de conveniencia, no una revisión sistemática completa, y la tomamos como lo que es: "
   "un mapa para orientarnos.")
-figura(["prisma_hsk.png"], 11.5, "Figura 1. Flujo de la búsqueda bibliográfica según PRISMA 2020 {c:prisma_nota}, con las cifras del corpus del proyecto (informe del 9 de septiembre de 2026). No se registró el número de resultados de cada ecuación en Scopus.")
+figura(["prisma_hsk.png"], 11.5, "Figura 1. Flujo de la búsqueda bibliográfica según PRISMA 2020 {c:prisma}, con las cifras del corpus del proyecto (informe del 9 de septiembre de 2026). No se registró el número de resultados de cada ecuación en Scopus.")
 T("El corpus es reciente (el 85 % es de 2025 y 2026) y está dominado por revisiones: sistemáticas, de alcance y bibliométricas suman casi la mitad. China y el sudeste asiático concentran cerca del 60 % de la producción, mientras que lo iberoamericano, alrededor del 20 %, aporta buena parte de los estudios empíricos escolares. "
   "Lo que más nos importó está en el núcleo de 22 documentos. Allí aparecen rutas de aprendizaje musical personalizadas con aprendizaje por refuerzo o profundo {c:li_hong,li_peerj,li_disc,tang,wang}, sistemas que atienden el estado afectivo del estudiante {c:deng_sci,shi}, "
   "retroalimentación con IA y detección visual del teclado en el piano {c:deng_piano,chulu}, generación de ejercicios según la dificultad {c:ramoneda} y una revisión sobre tecnologías de IA en la primera infancia {c:yi}, además de estudios sobre aplicaciones y realidad aumentada {c:apay,barroso,leon}. "
@@ -253,7 +253,7 @@ def r_um(S_, obj):
     return 0.0 if fac <= LAM else ((fac - LAM) / (1 - LAM)) ** (1 / GAM)
 T(f"Como la retención multiplica al desempeño, una nota solo puede ser dominada si su desempeño combinado supera 0,80, y cuanto menor es, más alta debe mantenerse la retención. Con $S=0{{,}}95$ la nota deja de estar dominada cuando $R$ baja de {f(r_um(0.95, 0.8), 2)} y retrocede cuando baja de {f(r_um(0.95, 0.7), 3)}; "
   f"con $S=0{{,}}90$ los umbrales son {f(r_um(0.90, 0.8), 2)} y {f(r_um(0.90, 0.7), 2)}, y con $S=0{{,}}85$, {f(r_um(0.85, 0.8), 2)} y {f(r_um(0.85, 0.7), 2)} (Figura 8). En días, con $S=0{{,}}95$, dominio previo de 0,90 y el factor de facilidad en sus extremos (1,3 y 2,8), $\\tau_s$ vale 3,5 y 7,6 días: "
-  f"la nota deja de estar dominada tras unos {f(-3.51 * __import__('math').log(r_um(0.95, 0.8)), 1)} a {f(-7.56 * __import__('math').log(r_um(0.95, 0.8)), 1)} días sin practicar. Son valores de la fórmula con supuestos explícitos, no observaciones.")
+  f"la nota deja de estar dominada tras unos {f(-3.51 * math.log(r_um(0.95, 0.8)), 1)} a {f(-7.56 * math.log(r_um(0.95, 0.8)), 1)} días sin practicar. Son valores de la fórmula con supuestos explícitos, no observaciones.")
 figura(["dominio_retencion.png"], 9.0, "Figura 8. Dominio según la retención para tres niveles de desempeño combinado (curvas calculadas con la ecuación del dominio).")
 
 H2("Comportamiento del optimizador en una instancia ilustrativa")
@@ -323,4 +323,4 @@ declaraciones(dict(
     datos="El código, la calibración de referencia, las pruebas y los scripts de evaluación están en el repositorio del proyecto. Las salidas de las mediciones (resultados_vision.json, sensibilidad_umbrales.json), el corpus bibliográfico y la verificación de referencias están en las carpetas de análisis y de datos de la entrega. El repositorio público está por definir.",
     ia="Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para apoyar el análisis del código, la ejecución y documentación de las mediciones, la verificación de referencias y la redacción de borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.",
     en="Author Contributions: the student authors contributed to conceptualization, software, investigation, formal analysis and writing of the original draft, each with their own front (recognition, timing and feedback, adaptive learning, optimization, engineering and deployment, verification of figures and pedagogical rationale); C. J. Cano-Mogollón contributed supervision and review and editing. Funding: none external. Conflicts of interest: none. Informed consent and IRB: not applicable (laboratory evaluation). Data and code: project repository and analysis folders."))
-cierre(autores, TITULO_ES, "Hand Sing Kids: enseñanza de notas musicales con señas de las manos", Path(sys.argv[1]))
+cierre(autores, TITULO_ES, "Hand Sing Kids: enseñanza de notas musicales con señas de las manos", Path(sys.argv[1]), esperadas=22)
