@@ -9,8 +9,15 @@ BASE = "https://api.openalex.org/works"
 def get(params):
     url = BASE + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": "clorificador-prisma/1.0 (mailto:roxana.munoz@upb.edu.co)"})
-    with urllib.request.urlopen(req, timeout=60) as f:
-        return json.load(f)
+    for intento in range(6):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as f:
+                time.sleep(1.5)
+                return json.load(f)
+        except urllib.error.HTTPError as e:
+            if e.code != 429: raise
+            time.sleep(15 * (intento + 1))
+    raise RuntimeError("OpenAlex limita la tasa")
 out = {"fecha": datetime.date.today().isoformat(), "ecuacion": ECUACION, "fuente": "OpenAlex API"}
 f0 = "from_publication_date:2020-01-01,to_publication_date:2026-11-06"
 # 1 identificados (sin filtros de tipo/idioma, solo ventana temporal)
