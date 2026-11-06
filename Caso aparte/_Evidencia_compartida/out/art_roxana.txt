@@ -120,57 +120,33 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): los estudiantes autores participaron en conceptualización, metodología, investigación, análisis formal y redacción del borrador original; Cristian Javier Cano-Mogollón realizó la supervisión y la revisión y edición del manuscrito. Los autores leyeron y aprobaron la versión final.
+[Normal] Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): la primera autora concibió el planteamiento del balance de masa, ejecutó la simulación y redactó el borrador; los demás autores aportaron en la curación de datos, la verificación de la bibliografía y la revisión; Cristian Javier Cano-Mogollón supervisó el trabajo y revisó el manuscrito.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] Según el presupuesto del proyecto, los insumos de laboratorio previstos (160.000 COP) están a cargo del semillero SILOGE de la UPB. [Por confirmar por el equipo.]
+[Normal] El presupuesto del proyecto prevé que el semillero SILOGE cubra los insumos de laboratorio (160.000 COP). [Por confirmar por el equipo.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores declaran que no existen conflictos de intereses relacionados con la presente publicación. [Por confirmar por el equipo.]
+[Normal] Los autores declaran que no existen conflictos de intereses. [Por confirmar por el equipo.]
 
-[Heading 3] Consentimiento informado
+[Heading 3] Consentimiento informado y ética
 
-[Normal] No aplica. No se recolectaron datos de personas; el estudio es un análisis de diseño, modelación y simulación.
-
-[Heading 3] Declaración de la Junta de Revisión Institucional
-
-[Normal] No aplica, dado que no hubo participantes humanos. La encuesta comunitaria prevista en el proyecto requerirá consentimiento informado.
+[Normal] No aplica: el estudio no incluyó personas. La encuesta comunitaria prevista requerirá consentimiento informado.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] Los scripts de simulación, la búsqueda bibliográfica, la verificación de referencias y las salidas numéricas están en la carpeta de evidencia compartida del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. 
+[Normal] Los scripts de simulación, la búsqueda bibliográfica y las salidas numéricas están en la carpeta de evidencia del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. 
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para ejecutar y documentar los análisis, verificar las referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.
+[Normal] Un asistente de inteligencia artificial (Claude, de Anthropic) apoyó la ejecución de los análisis, la verificación de referencias y la redacción de borradores. Los autores revisaron el contenido y responden por el texto y por los resultados.
 
-[Subtitulos] Author Contributions
+[Subtitulos] Declarations (English)
 
-[Normal] CRediT roles (to be confirmed by the team before submission): the student authors contributed to conceptualization, methodology, investigation, formal analysis and writing of the original draft; C. J. Cano-Mogollón contributed supervision and review and editing.
-
-[Subtitulos] Funding and Acknowledgments
-
-[Normal] Laboratory supplies are budgeted by the SILOGE research seed group. [To be confirmed by the team.]
-
-[Subtitulos] Conflicts of Interest
-
-[Normal] The authors declare that there is no conflict of interests. [To be confirmed by the team.]
-
-[Subtitulos] Informed Consent Statement
-
-[Normal] Not applicable.
-
-[Subtitulos] Institutional Review Board Statement
-
-[Normal] Not applicable.
-
-[Subtitulos] Data, Code, and Research Materials Availability
-
-[Normal] Simulation scripts, search logs, reference verification and numerical outputs are in the shared evidence folder of the project.
+[Normal] Author Contributions: the first author conceived the mass-balance approach, ran the simulation and drafted the manuscript; the other authors contributed to data curation, literature verification and review; C. J. Cano-Mogollón supervised and reviewed. Funding: laboratory supplies are budgeted by the SILOGE seed group. No conflicts of interest. Informed consent and ethics approval: not applicable. Data and code: shared evidence folder of the project.
 
 [Heading 1] References
 
