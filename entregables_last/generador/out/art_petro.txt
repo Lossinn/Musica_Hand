@@ -128,11 +128,9 @@
 
 [Normal] Los demás componentes del sistema, como el seguimiento del dominio, el repaso espaciado y la selección de actividades, se tratan en otros trabajos del equipo y en la literatura sobre aprendizaje adaptativo [17]–[21].
 
-[Heading 2] Madurez tecnológica e impacto esperado
+[Heading 2] Madurez tecnológica
 
-[Normal] Se propone **TRL 4**, validación de componentes en entorno de laboratorio. La evidencia a favor es que los componentes funcionan integrados en una aplicación ejecutable, con ocho baterías de prueba sin fallos y mediciones reproducibles con intervalos de confianza. La evidencia en contra de un nivel superior es que ningún componente se validó en el entorno de uso (aula, niños, iluminación y cámaras reales) ni con usuarios. El paso a TRL 5 exige un piloto con niños en aula; el protocolo está diseñado y no se ha ejecutado. El equipo debe confirmar el nivel final.
-
-[Normal] El impacto esperado en Montería y Córdoba se formula como tres hipótesis a validar: (H1) niños de 3 a 12 años aprenden a reproducir las ocho señas con calibración individual en una sesión corta; (H2) en aula, la tasa de notas disparadas por error con niños es comparable a la de laboratorio o menor al aumentar la ventana; y (H3) la aplicación funciona sin conexión a internet en computadores con cámara. Solo H3 es una propiedad de diseño (los datos se guardan en una base SQLite local); las otras dos requieren datos de campo.
+[Normal] El reconocedor está en TRL 4: sus componentes funcionan integrados y se validaron en laboratorio con mediciones repetibles, pero ninguno se probó en el entorno de uso, con niños, cámaras y luz reales. El paso a TRL 5 exige un piloto en aula, cuyo protocolo está diseñado y no se ha ejecutado; el nivel final debe confirmarlo el equipo.
 
 [Heading 1] Conclusiones
 

@@ -100,11 +100,9 @@
 
 [Normal] Para los componentes de aprendizaje personalizado y estimación del dominio del sistema, véanse los trabajos sobre seguimiento del conocimiento y práctica distribuida [17]–[21].
 
-[Heading 2] Madurez tecnológica e impacto esperado
+[Heading 2] Madurez tecnológica
 
-[Normal] Se propone **TRL 4**, validación de componentes en entorno de laboratorio. La evidencia a favor es que los componentes funcionan integrados en una aplicación ejecutable, con ocho baterías de prueba sin fallos y mediciones reproducibles con intervalos de confianza. La evidencia en contra de un nivel superior es que ningún componente se validó en el entorno de uso (aula, niños, iluminación y cámaras reales) ni con usuarios. El paso a TRL 5 exige un piloto con niños en aula; el protocolo está diseñado y no se ha ejecutado. El equipo debe confirmar el nivel final.
-
-[Normal] El impacto esperado en Montería y Córdoba se formula como tres hipótesis a validar: (H1) niños de 3 a 12 años aprenden a reproducir las ocho señas con calibración individual en una sesión corta; (H2) en aula, la tasa de notas disparadas por error con niños es comparable a la de laboratorio o menor al aumentar la ventana; y (H3) la aplicación funciona sin conexión a internet en computadores con cámara. Solo H3 es una propiedad de diseño (los datos se guardan en una base SQLite local); las otras dos requieren datos de campo.
+[Normal] Con estas verificaciones, el nivel de madurez que mejor se sostiene es TRL 4: componentes validados en laboratorio, mediciones repetibles y ningún componente probado en el entorno de uso. Las cifras que no se pudieron medir, como los fotogramas por segundo, deben medirse con la cámara real antes de hablar de TRL 5, que además exige un piloto con niños.
 
 [Heading 1] Conclusiones
 

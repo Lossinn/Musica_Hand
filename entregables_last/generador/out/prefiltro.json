@@ -1,10 +1,10 @@
 {
  "palabras": {
   "carrascal": 2162,
-  "guerra": 2526,
+  "guerra": 2394,
   "negrete": 2351,
   "pemberty": 2135,
-  "petro": 3187,
+  "petro": 3054,
   "quintana": 2107,
   "vitola": 2165
  },
@@ -34,24 +34,24 @@
    "tramo_max": 121
   },
   "guerra vs negrete": {
-   "pct": 9.77,
+   "pct": 10.31,
    "tramo_max": 54
   },
   "guerra vs pemberty": {
-   "pct": 11.16,
+   "pct": 11.73,
    "tramo_max": 121
   },
   "guerra vs petro": {
-   "pct": 16.32,
-   "tramo_max": 197
+   "pct": 9.26,
+   "tramo_max": 54
   },
   "guerra vs quintana": {
-   "pct": 11.27,
+   "pct": 11.9,
    "tramo_max": 99
   },
   "guerra vs vitola": {
-   "pct": 15.6,
-   "tramo_max": 194
+   "pct": 8.63,
+   "tramo_max": 54
   },
   "negrete vs pemberty": {
    "pct": 10.32,
@@ -70,7 +70,7 @@
    "tramo_max": 144
   },
   "pemberty vs petro": {
-   "pct": 10.86,
+   "pct": 10.81,
    "tramo_max": 77
   },
   "pemberty vs quintana": {
@@ -82,12 +82,12 @@
    "tramo_max": 77
   },
   "petro vs quintana": {
-   "pct": 7.2,
+   "pct": 7.52,
    "tramo_max": 99
   },
   "petro vs vitola": {
-   "pct": 14.37,
-   "tramo_max": 194
+   "pct": 8.96,
+   "tramo_max": 167
   },
   "quintana vs vitola": {
    "pct": 10.29,
@@ -101,7 +101,7 @@
     "tramo_max": 0
    },
    "guerra": {
-    "pct": 0.56,
+    "pct": 0.59,
     "tramo_max": 17
    },
    "negrete": {
@@ -113,7 +113,7 @@
     "tramo_max": 0
    },
    "petro": {
-    "pct": 0.41,
+    "pct": 0.43,
     "tramo_max": 13
    },
    "quintana": {
@@ -191,7 +191,7 @@
     "tramo_max": 111
    },
    "guerra": {
-    "pct": 30.57,
+    "pct": 24.38,
     "tramo_max": 442
    },
    "negrete": {
@@ -203,7 +203,7 @@
     "tramo_max": 127
    },
    "petro": {
-    "pct": 47.45,
+    "pct": 43.45,
     "tramo_max": 480
    },
    "quintana": {
