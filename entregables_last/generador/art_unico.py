@@ -9,23 +9,23 @@ SU = json.loads((BASE / "analisis" / "sensibilidad_umbrales.json").read_text(enc
 QD = json.loads((BASE / "generador" / "quintana_demo.json").read_text(encoding="utf-8"))["escenarios"]
 LAM, GAM = 0.65, 0.40
 
-TITULO_ES = ("Hand Sing Kids: un sistema que enseña las notas musicales con señas de las manos, estima lo que aprende cada niño y elige sus actividades. "
-             "Diseño, evaluación técnica de laboratorio y camino hacia el aula en Montería")
-TITULO_EN = ("Hand Sing Kids: a system that teaches musical notes through hand signs, estimates what each child learns and chooses their activities. "
-             "Design, laboratory technical evaluation and the road to the classroom in Montería")
+TITULO_ES = ("Hand Sing Kids: señas de las manos, aprendizaje adaptativo y selección de actividades para enseñar música a niños. "
+             "Diseño, evaluación de laboratorio y camino hacia el aula en Montería")
+TITULO_EN = ("Hand Sing Kids: hand signs, adaptive learning and activity selection to teach music to children. "
+             "Design, laboratory evaluation and the road to the classroom in Montería")
 
 RES_ES = ("Aprender música con las manos es una práctica antigua, pero llevarla a una aplicación obliga a resolver a la vez tres problemas: reconocer cuándo el niño hizo de verdad una seña, estimar lo que sabe y decidir qué debe practicar después. "
-          "Este artículo presenta Hand Sing Kids, una aplicación de escritorio en Python que asigna a cada una de las ocho notas de Do3 a Do4 una seña de las dos manos y usa una cámara, MediaPipe y una base local, sin conexión a internet. "
-          "El reconocedor describe cada postura con un vector de 120 componentes invariante al tamaño, la posición y el giro de la mano y acepta una nota solo si la distancia, la confianza y el margen lo permiten; el modelo de aprendizaje combina precisión, consistencia, velocidad y retención con repaso espaciado y un predictor logístico; "
-          "y la sesión se elige resolviendo un problema entero mixto con respaldo exacto. La búsqueda bibliográfica reunió 189 documentos únicos, de los cuales 87 resultaron aprovechables y solo ocho trataban la música infantil. "
-          f"En laboratorio, con una calibración de una persona y perturbaciones simuladas, el reconocimiento fue de {f(A[0]['nuevo']['pct'], 0)} % sin ruido y de {f(A[3]['nuevo']['pct'])} % con ruido de 0,09; ante 640 posturas que no son seña, el método disparó una nota por error en {f(FPG['pct'])} % de los casos, frente a 100 % del método inicial. "
-          "Ocho baterías de pruebas terminaron sin fallos. No hubo pruebas con niños: el nivel de madurez es TRL 4 y el efecto sobre el aprendizaje en Montería y Córdoba queda planteado como hipótesis, con un plan de piloto.")
+          "Este artículo presenta Hand Sing Kids, una aplicación de escritorio en Python que asigna una seña de las dos manos a cada nota de Do3 a Do4 y funciona con cámara y base local, sin internet. "
+          "El reconocedor describe cada postura con un vector de 120 componentes invariante al tamaño, la posición y el giro de la mano y acepta una nota solo si la distancia, la confianza y el margen lo permiten; el modelo de aprendizaje combina precisión, consistencia, velocidad y retención con repaso espaciado; "
+          "y la sesión se elige con un problema entero mixto que tiene respaldo exacto. De 189 documentos únicos reunidos, 87 resultaron aprovechables y solo ocho trataban la música infantil. "
+          f"En laboratorio, con una calibración de una persona y perturbaciones simuladas, el reconocimiento fue de {f(A[0]['nuevo']['pct'], 0)} % sin ruido y de {f(A[3]['nuevo']['pct'])} % con ruido de 0,09, y ante 640 posturas que no son seña el método disparó una nota por error en {f(FPG['pct'])} % de los casos, frente a 100 % del método inicial. "
+          "No hubo pruebas con niños: el nivel de madurez es TRL 4 y el efecto sobre el aprendizaje en Montería y Córdoba se plantea como hipótesis, con un plan de piloto.")
 RES_EN = ("Learning music with the hands is an old practice, but taking it to an application means solving three problems at once: recognizing when a child really made a sign, estimating what the child knows and deciding what to practise next. "
-          "This paper presents Hand Sing Kids, a desktop application in Python that assigns a two-handed sign to each of the eight notes from C3 to C4 and relies on a camera, MediaPipe and a local database, with no internet connection. "
-          "The recognizer describes each posture with a 120-component vector invariant to hand size, position and rotation and accepts a note only if distance, confidence and margin allow it; the learning model combines accuracy, consistency, speed and retention with spaced repetition and a logistic predictor; "
-          "and the session is chosen by solving a mixed-integer problem with an exact fallback. The literature search gathered 189 unique documents, 87 of which proved useful and only eight dealt with children's music. "
-          f"In the laboratory, with a single-person calibration and simulated perturbations, recognition was {f(A[0]['nuevo']['pct'], 0)} % without noise and {f(A[3]['nuevo']['pct'])} % at noise 0.09; over 640 postures that are not signs, the method fired a wrong note in {f(FPG['pct'])} % of cases, against 100 % for the initial method. "
-          "Eight test suites ran without failures. No tests with children were done: the technology readiness level is TRL 4 and the effect on learning in Montería and Córdoba is stated as a hypothesis, with a pilot plan.")
+          "This paper presents Hand Sing Kids, a desktop application in Python that assigns a two-handed sign to each note from C3 to C4 and works with a camera and a local database, with no internet. "
+          "The recognizer describes each posture with a 120-component vector invariant to hand size, position and rotation and accepts a note only if distance, confidence and margin allow it; the learning model combines accuracy, consistency, speed and retention with spaced repetition; "
+          "and the session is chosen with a mixed-integer problem that has an exact fallback. Of 189 unique documents gathered, 87 proved useful and only eight dealt with children's music. "
+          f"In the laboratory, with a single-person calibration and simulated perturbations, recognition was {f(A[0]['nuevo']['pct'], 0)} % without noise and {f(A[3]['nuevo']['pct'])} % at noise 0.09, and over 640 non-sign postures the method fired a wrong note in {f(FPG['pct'])} % of cases, against 100 % for the initial method. "
+          "No tests with children were done: the readiness level is TRL 4 and the effect on learning in Montería and Córdoba is stated as a hypothesis, with a pilot plan.")
 KW_ES = "educación musical infantil; reconocimiento de gestos; seguimiento de manos; aprendizaje adaptativo; repaso espaciado; programación entera mixta; madurez tecnológica; Montería"
 KW_EN = "children's music education; gesture recognition; hand tracking; adaptive learning; spaced repetition; mixed-integer programming; technology readiness; Montería"
 
@@ -59,7 +59,7 @@ tabla("Tabla 1. Relación de los 189 documentos únicos con el proyecto",
        ["B. Relevante", "IA o tecnología en educación musical: retroalimentación, evaluación, personalización, apps, realidad aumentada", "65", "34,4"],
        ["C. Método o contexto", "Revisiones y bibliometrías de IA en educación no musical, método bibliométrico, gamificación general", "61", "32,3"],
        ["D. Marginal", "Temas alejados que entraron por la amplitud de las ecuaciones", "41", "21,7"]],
-      "Fuente: informe bibliométrico del corpus del proyecto, 9 de septiembre de 2026.", [2.6, 8.6, 1.0, 1.0])
+      "Fuente: informe bibliométrico del corpus del proyecto, 9 de septiembre de 2026.", [2.6, 7.9, 1.3, 1.4])
 T("Dos hallazgos del corpus justifican este trabajo. Solo ocho documentos, el 4,2 %, tratan explícitamente la educación musical infantil o preescolar, y muy pocos combinan niños con tecnología de interacción; el grueso se hace en educación superior y conservatorio. "
   "Además, hay poca evidencia experimental con niños. En los títulos y resúmenes revisados no apareció un trabajo cuya entrada sea una seña manual por nota, calibrada para cada niño, con una decisión de sesión resuelta de forma exacta; no leímos todos los textos completos, así que esto no excluye que exista.")
 
@@ -211,16 +211,15 @@ H2("Sensibilidad de los umbrales de aceptación")
 filas = [[f(r["valor"], 2), f(r["ac_006"]), f(r["ac_009"]), f(r["fp"])] for r in SU["confidence_threshold"]]
 tabla("Tabla 6. Efecto del umbral de confianza (valor por defecto: 0,55) sobre el reconocimiento con ruido y sobre las notas falsas (%)",
       ["Confianza mínima", "Ruido 0,06", "Ruido 0,09", "Notas falsas"], filas, "Fuente: elaboración propia (analisis/sensibilidad_umbrales.py).", [3.5, 3.0, 3.0, 3.0])
-T("El caso base reproduce exactamente los resultados anteriores. El umbral de confianza es la perilla que mueve el compromiso (Figura 5): con 0,35 se reconocen todas las señas con ruido hasta 0,09, pero el 55,0 % de las posturas negativas dispara una nota, y con 0,75 casi no hay notas falsas (0,0 %), pero solo se reconoce el 43,5 % de las señas válidas con ruido alto. "
+T("El caso base reproduce exactamente los resultados anteriores. El umbral de confianza es la perilla que mueve el compromiso: con 0,35 se reconocen todas las señas con ruido hasta 0,09, pero el 55,0 % de las posturas negativas dispara una nota, y con 0,75 casi no hay notas falsas (0,0 %), pero solo se reconoce el 43,5 % de las señas válidas con ruido alto. "
   "El valor por defecto queda en una zona intermedia. En cambio, variar el umbral de distancia entre 0,65 y 1,25, o el de margen entre 0,00 y 0,16, no cambió ningún resultado con este protocolo. Para el margen hay una explicación aritmética: si la confianza de la mejor nota es al menos 0,55, la de la segunda es a lo sumo 0,45 "
   "y el margen es al menos $2\\cdot0{,}55-1=0{,}10$, de modo que la condición de 0,08 nunca decide mientras la confianza mínima sea de 0,55 o más.")
-figura(["umbral_confianza.png"], 9.0, "Figura 5. Compromiso entre reconocimiento con ruido 0,09 y notas falsas al variar el umbral de confianza (círculo: valor por defecto).")
 
 H2("Separabilidad de las señas y latencia")
 T(f"Con la calibración real, {MX['pares_sobre_0_65']} de los {MX['pares_ordenados']} pares ordenados de notas distintas ({MX['pares_unicos_sobre_0_65']} pares no ordenados de 28) superan una similitud coseno de 0,65, el umbral del método inicial; el par más parecido es {MX['max_cos'][0]}–{MX['max_cos'][1]}, con {f(MX['max_cos'][2], 3)}. "
   f"Con el descriptor propuesto, la distancia entre notas distintas va de {f(MX['dist_min_entre_notas'], 3)} a {f(MX['dist_max_entre_notas'], 3)}, lo que ajusta la temperatura a $T={f(MX['temperatura'], 3)}$ según la ecuación {{E_TEMP}}. En el método inicial, dos nubes de puntos con forma de mano siempre se parecen, "
-  "y por eso un umbral fijo de similitud no separa notas; el descriptor traslada la comparación a magnitudes que sí cambian de una seña a otra (Figura 6).")
-figura(["matriz_similitud.png"], 15.5, "Figura 6. Matrices 8 × 8 de las señas calibradas: (a) similitud coseno del método inicial; (b) distancia por bloques del descriptor propuesto.")
+  "y por eso un umbral fijo de similitud no separa notas; el descriptor traslada la comparación a magnitudes que sí cambian de una seña a otra (Figura 5).")
+figura(["matriz_similitud.png"], 15.5, "Figura 5. Matrices 8 × 8 de las señas calibradas: (a) similitud coseno del método inicial; (b) distancia por bloques del descriptor propuesto.")
 T(f"El descriptor y el clasificador tardaron {f(LT['media_ms'], 2)} ms por fotograma en promedio (percentil 95: {f(LT['p95_ms'], 2)} ms; máximo: {f(LT['max_ms'], 2)} ms; {LT['reps']} repeticiones, un solo equipo). La cifra excluye la captura, el rastreo de MediaPipe y el dibujo en pantalla; la latencia de extremo a extremo no se midió.")
 
 H2("Ventana de acierto en Canciones")
@@ -232,10 +231,9 @@ for bpm in (40, 60, 80, 100, 120):
     g, w, a_, d_ = ventana(bpm, 480); filas.append([str(bpm), m(g), m(0.85 * g), m(w), m(a_), m(d_)])
 tabla("Tabla 7. Ventana de acierto según el tempo (ms), con $W_{\\min}=480$ ms y tolerancia no limitante",
       ["bpm", "g", "0,85 g", "Ancho", "Antes de la línea", "Después de la línea"], filas, "Fuente: cálculo propio con la ecuación de la ventana; no es una medición.", [1.5, 2.0, 2.0, 2.0, 3.2, 3.2])
-T("Hasta unos 100 bpm la ventana depende solo del intervalo entre notas, y a partir de ahí actúa el piso de 480 ms. A 120 bpm el 85 % del intervalo es de 425 ms, la ventana se mantiene en 480 ms y deja 276 ms antes y 204 ms después de la línea (Figura 7). "
+T("Hasta unos 100 bpm la ventana depende solo del intervalo entre notas, y a partir de ahí actúa el piso de 480 ms. A 120 bpm el 85 % del intervalo es de 425 ms, la ventana se mantiene en 480 ms y deja 276 ms antes y 204 ms después de la línea. "
   "La asimetría da más margen para adelantarse que para retrasarse, lo que compensa el tiempo que tarda el reconocimiento en confirmar. Sobre el piso, repetimos el cálculo con 380, 480 y 580 ms: a 80 bpm no interviene en ninguno de los tres casos, a 100 bpm solo con 580 ms, a 120 bpm con 480 y 580 ms, y a 140 bpm con los tres. "
   "Cuando el piso decide, cada 100 ms de piso son 100 ms más de tolerancia total.")
-figura(["ventana_tempo.png"], 10.0, "Figura 7. Reparto de la ventana de acierto antes (azul) y después (verde) de la línea de la nota, según el tempo.")
 
 H2("Comportamiento del modelo de aprendizaje")
 def factor(R_):
@@ -252,9 +250,8 @@ def r_um(S_, obj):
     fac = obj / S_
     return 0.0 if fac <= LAM else ((fac - LAM) / (1 - LAM)) ** (1 / GAM)
 T(f"Como la retención multiplica al desempeño, una nota solo puede ser dominada si su desempeño combinado supera 0,80, y cuanto menor es, más alta debe mantenerse la retención. Con $S=0{{,}}95$ la nota deja de estar dominada cuando $R$ baja de {f(r_um(0.95, 0.8), 2)} y retrocede cuando baja de {f(r_um(0.95, 0.7), 3)}; "
-  f"con $S=0{{,}}90$ los umbrales son {f(r_um(0.90, 0.8), 2)} y {f(r_um(0.90, 0.7), 2)}, y con $S=0{{,}}85$, {f(r_um(0.85, 0.8), 2)} y {f(r_um(0.85, 0.7), 2)} (Figura 8). En días, con $S=0{{,}}95$, dominio previo de 0,90 y el factor de facilidad en sus extremos (1,3 y 2,8), $\\tau_s$ vale 3,5 y 7,6 días: "
+  f"con $S=0{{,}}90$ los umbrales son {f(r_um(0.90, 0.8), 2)} y {f(r_um(0.90, 0.7), 2)}, y con $S=0{{,}}85$, {f(r_um(0.85, 0.8), 2)} y {f(r_um(0.85, 0.7), 2)}. En días, con $S=0{{,}}95$, dominio previo de 0,90 y el factor de facilidad en sus extremos (1,3 y 2,8), $\\tau_s$ vale 3,5 y 7,6 días: "
   f"la nota deja de estar dominada tras unos {f(-3.51 * math.log(r_um(0.95, 0.8)), 1)} a {f(-7.56 * math.log(r_um(0.95, 0.8)), 1)} días sin practicar. Son valores de la fórmula con supuestos explícitos, no observaciones.")
-figura(["dominio_retencion.png"], 9.0, "Figura 8. Dominio según la retención para tres niveles de desempeño combinado (curvas calculadas con la ecuación del dominio).")
 
 H2("Comportamiento del optimizador en una instancia ilustrativa")
 T("La instancia tiene 12 actividades, un dominio estimado decreciente entre el Do (0,90) y el Do agudo (0,05), urgencia de repaso en Do y Re, $K=4$, $T_{\\max}=30$ min y la dificultad media máxima de 0,72. Se resolvió por enumeración exhaustiva de las 495 combinaciones, de las cuales 180 son factibles. "
