@@ -63,7 +63,7 @@ T("El clorificador usa tubería de PVC de 1 y 2 pulgadas. Una Tee divide el fluj
 figura(["esquema.png"], 14.0, "Figura 2. Clorificador pasivo con derivación; las tres válvulas (V_bp, V_in, V_out) controlan la fracción α.")
 H2("Modelo y simulación")
 T("El residual libre se calcula con el balance de masa del proyecto, donde $C_c$ es el cloro de cámara, $\\alpha$ la fracción derivada, $D$ la demanda, $k$ el decaimiento, $t$ el tiempo de contacto y los $f$ "
-  "factores de temperatura, pH, turbidez y caudal:")
+  "factores de temperatura, pH, turbidez y caudal; la cinética del decaimiento depende de esas condiciones {c:powell}:")
 ecuacion("res", r"C_r=\max\!\left(\frac{(\alpha\,C_c-D)\,e^{-kt}}{f_T\,f_{pH}\,f_{tu}\,f_Q},\,0\right)")
 T("Se simularon " + N + " escenarios con la semilla 42 y las distribuciones del cuaderno del proyecto, que son supuestos y no mediciones: caudal normal (1,0; 0,25) L/s, tiempo de contacto normal (20; 4) min, "
   "cloro de cámara normal (1,2; 0,3) mg/L, demanda normal (0,65; 0,18) mg/L, fracción beta(2,5; 5,5), decaimiento normal (0,035; 0,010) por minuto, temperatura normal (28; 3) °C, pH normal (7,2; 0,4) y turbidez gamma(2,2; 0,6) NTU. "
@@ -120,7 +120,7 @@ T("Dos hallazgos orientan el trabajo experimental. El primero es que la fracció
 T("La comparación con estudios de campo debe leerse con cautela. Una desviación estándar de 0,5 a 0,8 mg/L en un clorador modificado {c:usvi} es mayor que la ventana de 0,3 mg/L del diseño, y en Ghana, aunque el método "
   "pasivo terminó con 100 % de las mediciones en el rango de 0,2 a 2,0 mg/L tras cinco meses, hubo grandes fluctuaciones intermedias {c:ghana}. La norma colombiana admite un rango más ancho (0,3–2,0 mg/L) que el "
   "objetivo del proyecto; con ese rango, la tolerancia a la variabilidad sería mucho mayor y el diseño tendría margen. Además, en los dispositivos que se desempeñan bien, el soporte técnico recurrente parece "
-  "importar tanto como el aparato {c:honduras,odisha}.")
+  "importar tanto como el aparato {c:honduras,odisha}, y en el uso doméstico de dosificadores el conocimiento del procedimiento correcto se asoció con tener cloro residual {c:kmu}.")
 T("Limitaciones. Las distribuciones son supuestos; los factores de temperatura, pH, turbidez y caudal no están ajustados a datos; la correlación de Spearman mide asociación monótona y no efectos de interacción; y la "
   "desviación entre réplicas de 0,10 mg/L del análisis de potencia es una hipótesis hasta que se mida. La hoja de aleatorización y el diseño 2³ ya están listos; lo que falta es ejecutarlos.")
 
