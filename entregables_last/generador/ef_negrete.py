@@ -83,8 +83,8 @@ def contenido(e):
         g = 60000 / bpm
         filas.append([str(bpm), m(0.85 * g)] + [m(max(w, 0.85 * g)) for w in (380, 480, 580)])
     e.tabla("sens", "Ancho de la ventana (ms) según el piso $W_{\\min}$.", ["bpm", "$0{,}85\\,g$", "380", "480", "580"], filas, [1.2, 1.8, 1.6, 1.6, 1.6], alinear=["r"] * 5)
-    e.P("Hasta 100 bpm el piso no interviene en ninguno de los tres casos. A partir de 120 bpm, el piso decide: con 380 ms la ventana a 140 bpm sería de 380 ms, con 480 ms, de 480 ms, y con 580 ms, de 580 ms. Es decir, una diferencia de 100 ms en el piso se traduce "
-        "directamente en 100 ms más de tolerancia total en los tempos rápidos. El piso de 480 ms se justifica por el tiempo que el reconocimiento y el niño necesitan; un piso menor volvería muy exigente el factor de tempo 1,15, que es el que más lo usa.")
+    e.P("A 80 bpm el piso no interviene en ninguno de los tres casos. A 100 bpm solo interviene el de 580 ms; a 120 bpm, los de 480 y 580 ms, mientras que con 380 ms la ventana sigue siendo la de 425 ms que fija el intervalo; y a 140 bpm intervienen los tres, con ventanas de 380, 480 y 580 ms. "
+        "Cuando el piso decide, una diferencia de 100 ms en el piso se traduce directamente en 100 ms más de tolerancia total. El piso de 480 ms se apoya en el tiempo que necesitan el reconocimiento y el niño; uno menor haría muy exigentes los tempos rápidos, aunque esa afirmación debe confirmarse con niños.")
     e.sub("Costo del reconocimiento en el tiempo de respuesta")
     e.P(f"El descriptor y el clasificador tardaron {f(LT['media_ms'], 2)} ms por fotograma en promedio, con percentil 95 de {f(LT['p95_ms'], 2)} ms y máximo de {f(LT['max_ms'], 2)} ms en {LT['reps']} repeticiones. Es una fracción pequeña de la ventana mínima, pero no incluye la captura de la cámara, el rastreo ni el dibujo en pantalla, "
         "de modo que la latencia de extremo a extremo sigue sin medirse. La versión inicial de la documentación reportaba 2,3 ms en otro equipo; no puede decirse que las dos cifras se contradigan, porque no consta que tuvieran el mismo alcance.")
@@ -97,7 +97,7 @@ def contenido(e):
 
     e.sec("Conclusiones")
     e.P("Hand Sing Kids resuelve el problema del tiempo con tres piezas: un estabilizador con periodo refractario y detección de suelta, una ventana de acierto asimétrica con piso de 480 ms y un puntaje con combo. Se explicó por qué el umbral de suelta es de seis fotogramas y cómo "
-        "el tempo y el piso reparten la ventana. El análisis de sensibilidad muestra que el piso solo decide a partir de unos 120 bpm, y que entonces cada 100 ms de piso son 100 ms de tolerancia total.")
+        "el tempo y el piso reparten la ventana. El análisis de sensibilidad muestra que el piso empieza a decidir entre 100 y 140 bpm según su valor, y que entonces cada 100 ms de piso son 100 ms de tolerancia total.")
     e.P("Las constantes del puntaje y de la ventana provienen del diseño y no de datos de niños; el nivel de madurez es TRL 4. Como líneas de trabajo se identifican cuatro: medir la latencia de extremo a extremo con la cámara real; registrar en un piloto las notas duplicadas y las señas repetidas; "
         "ajustar el piso y el puntaje con observaciones de niños y docentes; y mantener la prueba del parpadeo breve en la batería del estabilizador.")
     e.referencias()
