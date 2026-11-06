@@ -389,6 +389,15 @@ def cierre(autores, titulo_es: str, titulo_corto: str, salida: Path, esperadas: 
                 if "{E_" + k.upper() + "}" in r.text:
                     r.text = r.text.replace("{E_" + k.upper() + "}", f"({v})")
     ORDEN_FIN = list(ORDEN)
+    def limpio(t):
+        t = re.sub(r"\{c:([^}]+)\}", lambda mm: cita(mm.group(1)), t)
+        for k, v in EQ_MAP.items():
+            t = t.replace("{E_" + k.upper() + "}", f"({v})")
+        for lat, uni in (("\alpha", "α"), ("\Phi", "Φ"), ("\approx", "≈"), ("\ ", " "), ("\,", " "), ("\mathrm{NTU}", "NTU"), ("\min", "mín"),
+                         ("\%", "%"), ("\\", ""), ("$", ""), ("{,}", ","), ("{{,}}", ","), ("_{", "_"), ("^{", "^")):
+            t = t.replace(lat, uni)
+        return t.replace("}", "") if "_" in t or "^" in t else t
+    LOG[:] = [(e_, limpio(t_)) for e_, t_ in LOG]
     for i, k in enumerate(ORDEN_FIN, 1):
         par(f"[{i}] {ref_ieee(k)}", "Normal", size=8)
 
