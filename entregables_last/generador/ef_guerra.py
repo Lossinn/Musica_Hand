@@ -74,6 +74,10 @@ def contenido(e):
             [3.0, 2.5, 3.0], size=8)
     e.P("En todos los casos se adoptó el valor del código o de la medición, y las diferencias quedan registradas.")
 
+    e.sub("Trazabilidad de las cifras")
+    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['8 % de notas falsas y 30 semillas', 'resultados_vision.json'], ['Latencia', 'resultados_vision.json'], ['40 ms del optimizador', 'salida_pruebas.txt'], ['Dependencia del umbral de confianza', 'sensibilidad_umbrales.json'], ['Cifras reportadas', 'Documentación y documentos previos del proyecto'], ['Discrepancias', 'Revisión del código y la documentación']], [3.4, 5.1], size=8)
+
     e.sec("Conclusiones")
     e.P("De cinco cifras reportadas, una se reprodujo (8 % de notas falsas), una resultó del mismo orden (38 ms), una no coincide pero se midió en otro equipo (latencia), una no pudo compararse por falta de protocolo (94,2 %) y una no se midió (30 fotogramas por segundo). Se mostró además que la tasa de notas falsas depende del umbral de confianza, "
         "y se hallaron seis discrepancias entre documentación y código, resueltas a favor del código y de la medición.")

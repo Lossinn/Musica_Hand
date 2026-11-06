@@ -117,6 +117,10 @@ def contenido(e):
     e.P("El descriptor propuesto cuesta sensibilidad cuando el ruido es alto: de 100 % a 86,0 % entre ruido 0 y 0,09. El método inicial no pierde nada porque no rechaza nada. En un juego infantil el intercambio favorece al primero: pedir que se repita una seña "
         "cuesta unos segundos, mientras que una nota falsa interrumpe la actividad y puede enseñar un sonido equivocado.")
 
+    e.sub("Trazabilidad de las cifras")
+    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Aciertos por nivel de ruido', 'resultados_vision.json (evidencia_vision.py, semilla 11)'], ['Notas falsas y desglose', 'resultados_vision.json (semilla 23)'], ['Estabilidad con 30 semillas', 'resultados_vision.json'], ['Separabilidad y latencia', 'resultados_vision.json; matriz_similitud'], ['Sensibilidad de umbrales', 'sensibilidad_umbrales.json (sensibilidad_umbrales.py)'], ['Pruebas del repositorio', 'salida_pruebas.txt']], [3.4, 5.1], size=8)
+
     e.sec("Conclusiones")
     e.P(f"Un descriptor invariante de 120 componentes con decisión por distancia, confianza y margen redujo las notas disparadas por error de 100 % a {f(FPG['pct'])} % en 640 posturas que no son seña, con una pérdida de sensibilidad visible solo con ruido alto. "
         "El error que queda se concentra en las transiciones, y de ahí salen dos pasos concretos: ajustar el umbral de confianza, la única perilla de la regla de aceptación que mueve el compromiso entre acertar y abstenerse, e incorporar la velocidad de la mano, que hoy no interviene en la decisión, como señal de que una postura en movimiento rápido difícilmente es una seña deliberada.")

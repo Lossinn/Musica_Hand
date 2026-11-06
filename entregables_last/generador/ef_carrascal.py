@@ -107,6 +107,10 @@ def contenido(e):
             [["H1: una secuencia adaptada produce mejor retención a una semana que una fija", "Dos grupos de niños, medición a una semana"], ["H2: el predictor mejora al estimador fijo tras 40 intentos", "Registros de intentos y error de predicción en datos nuevos"],
              ["H3: los repasos programados coinciden con lo que el niño olvida", "Fechas de práctica y fallos posteriores"]], [4.8, 3.7])
 
+    e.sub("Trazabilidad de las cifras")
+    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Constantes del dominio y del repaso', 'Código del repositorio (módulos de dominio y repaso)'], ['78 % del predictor', 'Prueba unitaria del predictor (salida_pruebas.txt)'], ['Dominio según $R$ y $S$', 'Cálculo con la ecuación del dominio (este documento)'], ['Umbrales de retención y días', 'Cálculo con supuestos explícitos (este documento)'], ['Baterías de dominio y predictor', 'salida_pruebas.txt']], [3.4, 5.1], size=8)
+
     e.sec("Conclusiones")
     e.P("Hand Sing Kids estima el dominio de cada nota con cuatro componentes, programa repasos con repetición espaciada y reemplaza la fórmula fija por un predictor desde los 40 intentos. El análisis de la fórmula muestra un límite estructural: al multiplicar la retención por el desempeño, una nota solo puede ser dominada si su desempeño combinado supera 0,80, "
         "y retrocede cuando la retención cae muy por debajo del umbral, lo que depende de $\\tau_s$ y, por tanto, del factor de facilidad.")

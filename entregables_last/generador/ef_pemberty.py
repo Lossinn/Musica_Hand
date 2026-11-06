@@ -72,6 +72,10 @@ def contenido(e):
              ["4", "Medición inicial, sesiones con la herramienta y medición final; grupo con método tradicional", "Docente titular"], ["5", "Registro de notas falsas y señas repetidas con niños; opinión del docente", "Equipo y docente"]], [0.9, 5.3, 2.3], size=8)
     e.P("Con ese diseño se podría pasar de TRL 4 a TRL 5 y solo entonces hablar de efecto sobre el aprendizaje.")
 
+    e.sub("Trazabilidad de las cifras")
+    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['62 módulos y 10.581 líneas', 'Medición del repositorio, 5 de noviembre de 2026'], ['Ocho baterías sin fallos', 'salida_pruebas.txt'], ['Mediciones del reconocedor', 'resultados_vision.json'], ['Versiones del entorno', 'Registro de la evaluación'], ['Referencias', 'verificacion_referencias.csv']], [3.4, 5.1], size=8)
+
     e.sec("Conclusiones")
     e.P("Hand Sing Kids tiene un estado de ingeniería verificable: ocho baterías de prueba sin fallos y mediciones repetibles con una sola orden. Eso no basta para llevarlo a un aula. Antes hacen falta la aprobación ética, el consentimiento de los acudientes, la política de datos de menores, la medición de la latencia de extremo a extremo y un protocolo de piloto con medición antes y después. Hasta entonces, la herramienta está en TRL 4.")
     e.P("Como líneas de trabajo se identifican cinco: gestionar la aprobación ética y la autorización de una institución aliada; redactar la política de datos de menores con asesoría jurídica; medir la latencia de extremo a extremo y la iluminación en el aula; probar la instalación en un equipo limpio y en macOS; y diseñar el piloto con grupo de comparación.")

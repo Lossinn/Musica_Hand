@@ -159,7 +159,7 @@ class Escrito:
         d = self.d
         st = d.styles["Normal"]; st.font.name = FUENTE; st.font.size = Pt(10)
         st.element.rPr.rFonts.set(qn("w:eastAsia"), FUENTE)
-        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = 1.08
+        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = 1.12
         s = d.sections[0]
         s.page_width = Cm(21.59); s.page_height = Cm(27.94)
         s.left_margin = s.right_margin = Cm(1.9); s.top_margin = Cm(2.4); s.bottom_margin = Cm(2.2)

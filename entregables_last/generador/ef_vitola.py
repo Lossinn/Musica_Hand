@@ -87,6 +87,10 @@ def contenido(e):
             [["Calibración de una sola persona", "Calibrar a cada niño; medir con varios niños"], ["Falsos positivos con niños", "Registrar las notas falsas; ampliar la ventana por niño"], ["Iluminación y cámaras del aula", "Medir en el aula antes del piloto"],
              ["Adopción por el docente", "Probar si el docente puede calibrar sin apoyo técnico"], ["Datos de menores", "Aprobación ética; consentimiento; datos mínimos"]], [3.6, 4.9], size=8.5)
 
+    e.sub("Trazabilidad de las cifras")
+    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Evidencia técnica', 'resultados_vision.json; salida_pruebas.txt'], ['Población de Montería', 'DANE, proyecciones municipales 2020–2035'], ['Tamaño de muestra', 'Fórmula normal para dos grupos (este documento)'], ['Latencia parcial', 'resultados_vision.json'], ['Referencias', 'verificacion_referencias.csv (Crossref y DataCite)']], [3.4, 5.1], size=8)
+
     e.sec("Conclusiones")
     e.P("Hand Sing Kids lleva una idea pedagógica antigua, enseñar las notas con las manos, a una herramienta que corre en un computador con cámara y sin internet. En laboratorio reconoce las señas de su calibración y evita casi todas las notas falsas. Su utilidad para el aprendizaje en Montería y Córdoba no está demostrada y depende de un piloto con niños, "
         "con docentes y con las autorizaciones éticas correspondientes.")
