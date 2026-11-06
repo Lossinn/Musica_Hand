@@ -121,7 +121,7 @@ T("La segunda es que compartir la unidad cambia el resultado. Con un hogar, la r
   "como infraestructura comunal, a cargo de la junta de acción comunal, y no como equipo doméstico. La evidencia de Dhaka apunta en el mismo sentido: los hogares de bajos ingresos tienen menos capacidad de pago por el servicio y podrían necesitar "
   "subsidios {c:dhaka}.")
 T("La tercera es la más importante: el costo bajo no basta. La simulación indica que, con los supuestos actuales, el diseño casi nunca llega al rango. En los estudios revisados, el éxito dependió de que la dosis se ajustara a "
-  "la fuente, y dispositivos de bajo costo mostraron consistencia desigual {c:guatemala,uganda,ghana}. Las limitaciones son claras: el beneficio mensual es un supuesto, la simulación usa distribuciones no medidas, el "
+  "la fuente, y dispositivos de bajo costo mostraron consistencia desigual {c:guatemala,uganda,ghana}; un ensayo aleatorizado en 20 aldeas de Odisha documentó dificultades operativas, entre ellas mantener una dosificación constante {c:odisha}, y las pruebas de laboratorio con dosificadores en línea indican que la posición de instalación y el diseño modificado afectan el cloro residual {c:aquatabs,usvi}. Las limitaciones son claras: el beneficio mensual es un supuesto, la simulación usa distribuciones no medidas, el "
   "precio de las pastillas y su masa por paquete requieren confirmación, y no se midió la aceptación de la comunidad. Además, el rango de diseño del proyecto (0,2–0,5 mg/L) es más estrecho que el de la norma (0,3–2,0 mg/L).")
 
 # ------------------------------------------------------------------ 5. Conclusiones

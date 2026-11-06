@@ -1,0 +1,223 @@
+[Título art] Costo, consumo de cloro y condiciones de operación de un clorificador pasivo de bajo costo en PVC para una comunidad rural de Montería: análisis de viabilidad preliminar
+
+[Título art] Cost, chlorine consumption and operating conditions of a low-cost passive PVC chlorinator for a rural community in Montería: preliminary feasibility analysis
+
+[Nombre autores] Andrea Guzmán-Gómez^{1}^{*}, Roxana Elena Muñoz-Rodiño^{2}, Camilo Esteban Alvarez-Durán^{3}, Cristian Javier Cano-Mogollón^{4}
+
+[Normal] ^{1} Autor 1: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
+
+[Normal] ^{2} Autor 2: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
+
+[Normal] ^{3} Autor 3: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
+
+[Normal] ^{4} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+
+[Normal] ^{*} Autor de correspondencia: Andrea Guzmán-Gómez (andrea.guzmang@upb.edu.co).
+
+[Subtitulos] Resumen:
+
+[Normal] Un dispositivo barato no resuelve el acceso al agua segura si no se sostiene en el tiempo ni entrega la dosis necesaria. Se evalúa la viabilidad preliminar de un clorificador pasivo de PVC para la vereda El Vidrial, en Montería, con materiales de 159.991 COP. Con la lista de materiales y el presupuesto del proyecto se calculó el consumo de pastillas de tricloro al 90 % por balance de masa, el costo del cloro por metro cúbico y el tiempo de recuperación según cuántos hogares compartan una unidad, y se contrastaron con evidencia de cloración pasiva en otros países. El costo teórico del cloro fue de 6,7 a 17,5 COP por metro cúbico con disolución ideal. Con un beneficio supuesto de 25.000 COP mensuales por hogar y un costo operativo de 15.000 COP al mes, una unidad usada por un solo hogar se recupera en 16,0 meses y su valor presente neto a 12 meses es negativo; compartida por tres hogares, en 2,7 meses. Sin embargo, la simulación técnica del proyecto indica que solo 1,0 % de los escenarios llega al rango de 0,2 a 0,5 mg/L, de modo que el costo bajo es una condición necesaria pero no suficiente. Los beneficios son supuestos, no mediciones, y el nivel de madurez es TRL 3.
+
+[Subtitulos] Palabras clave:
+
+[Normal] cloración pasiva; viabilidad económica; costo de operación; tiempo de recuperación; adopción comunitaria; agua rural; Montería
+
+[Subtitulos] Abstract:
+
+[Normal] A cheap device does not deliver safe water if it cannot be sustained over time or does not provide the required dose. The preliminary feasibility of a passive PVC chlorinator for El Vidrial, a rural community in Montería, is assessed, with materials costing 159,991 COP. Using the project's bill of materials and budget, the consumption of 90 % trichloroisocyanuric acid tablets was calculated by mass balance, together with the chlorine cost per cubic metre and the payback period as a function of how many households share a unit, and these were contrasted with evidence on passive chlorination elsewhere. The theoretical chlorine cost was 6,7 to 17,5 COP per cubic metre under ideal dissolution. With an assumed benefit of 25,000 COP per household per month and an operating cost of 15,000 COP per month, a unit used by one household pays back in 16,0 months and its 12-month net present value is negative; shared by three households, in 2,7 months. However, the project's technical simulation shows that only 1,0 % of scenarios reach 0.2 to 0.5 mg/L, so low cost is necessary but not sufficient. Benefits are assumptions, not measurements, and the readiness level is TRL 3.
+
+[Subtitulos] Keywords:
+
+[Normal] passive chlorination; economic feasibility; operating cost; payback period; community adoption; rural water; Montería
+
+[Heading 1] Introducción
+
+[Heading 2] Una tecnología pensada para quien no puede pagar otra
+
+[Normal] En las comunidades rurales dispersas, el costo decide qué tecnología llega. Las plantas compactas y los dosificadores con bomba exigen inversión, energía y personal que las juntas de agua no tienen. La cloración pasiva, que desinfecta sin electricidad ni una acción diaria del usuario, se propone como una vía más accesible {c:amrose,mercado}, y la evidencia agregada indica que clorar el agua en el punto de uso reduce la diarrea infantil {c:arnold,clasen}. La carga de enfermedad por agua insegura sigue siendo alta {c:wolf}, y un ensayo aleatorizado de cloración en línea en el punto de recolección estudió su efecto sobre la diarrea en niños {c:pickering}. Si el dispositivo funciona, su costo bajo lo hace replicable.
+
+[Normal] El Vidrial es una vereda rural de Montería, Córdoba, cuyos hogares, según la caracterización preliminar del proyecto, usan fuentes sin tratamiento adecuado o métodos informales de potabilización. El proyecto construyó un diseño de PVC por gravedad con derivación y cámara de pastillas, cuyos materiales cuestan 159.991 COP. La pregunta de este trabajo no es solo cuánto cuesta, sino qué hace falta, además de ese precio, para que el dispositivo sirva.
+
+[Heading 2] Evidencia sobre costos, demanda y sostenibilidad
+
+[Normal] La búsqueda bibliográfica reproducible (sección 2.4, Figura 1) retuvo 13 estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos. Los datos económicos y de adopción son menos abundantes que los técnicos, pero consistentes. En sistemas por gravedad de Nepal, el cloro costó entre 0,06 y 0,09 USD por metro cúbico tratado, un valor similar al del monitoreo {c:nepal}. En Dhaka, 196 propietarios de viviendas de alquiler mostraron una demanda efectiva por cloración en línea comparable a la de otros productos, pero menor en las viviendas de ingresos bajos, lo que sugiere que llegar a los más pobres exigiría reducir costos, subsidiar o ambos {c:dhaka}. En Kisumu, Kenia, 27 % de los kioscos de agua a los que se ofreció un dosificador Venturi se comprometió con un paquete de servicio {c:venturi}. En Honduras, la frecuencia de las visitas técnicas se correlacionó con el éxito de la cloración y los problemas técnicos explicaron solo 26 % de los lapsos sin cloro {c:honduras}. Y en Kenia, Malawi y Uganda, el conocimiento del uso correcto del dosificador y la promoción comunitaria se asociaron con tener cloro residual {c:kmu}. En Etiopía, la dificultad de las cadenas de suministro de cloro llevó a probar clorador con producción in situ {c:etiopia}.
+
+[Figura Título] Figura 1. Flujo de la búsqueda bibliográfica (PRISMA 2020), OpenAlex, 6 de noviembre de 2026.
+
+[Tabla Título] Tabla 1. Factores de sostenibilidad reportados en estudios de cloración pasiva o con dosificadores
+
+[Tabla Título] Fuente: elaboración propia a partir de los resúmenes de las referencias citadas.
+
+[Heading 2] Objetivo
+
+[Normal] El objetivo es estimar, con los datos del propio proyecto, el costo de materiales, el consumo de cloro y el tiempo de recuperación de un clorificador pasivo de PVC, y discutir bajo qué condiciones técnicas y sociales ese costo bajo se traduce en agua protegida.
+
+[Heading 1] Métodos
+
+[Heading 2] Lista de materiales y presupuesto
+
+[Normal] Se tomó el presupuesto de materiales del proyecto (Tabla 2), con precios unitarios de ferretería. El dispositivo usa tubería y accesorios de PVC a presión de 1 y 2 pulgadas y tres válvulas de bola; la cámara de 2 pulgadas y 0,50 m aloja las pastillas de tricloro al 90 % (Figura 2).
+
+[Figura Título] Figura 2. Esquema del clorificador pasivo con derivación (Q_cámara = α·Q_total).
+
+[Heading 2] Consumo de cloro por balance de masa
+
+[Normal] Para una dosis $d$ en mg/L y un caudal $Q$ en L/s, la masa de cloro por día y la masa de pastillas de tricloro al 90 % de cloro disponible son:
+
+[Normal] Se evaluaron dos dosis: 0,4 mg/L, solo el residual meta, y 1,05 mg/L, que suma la demanda media supuesta de 0,65 mg/L. El cálculo supone disolución ideal y no incluye pérdidas por disolución irregular. El precio del cloro se tomó de la ficha del proyecto (un paquete de 15.000 COP; la especificación indica 1 kg).
+
+[Heading 2] Viabilidad económica
+
+[Normal] Con la inversión $I$ (159.991 COP), el beneficio mensual supuesto $B$ por hogar (25.000 COP, del documento del proyecto), el costo operativo mensual $O$ (15.000 COP, de la ficha de costos) y $n$ hogares que comparten la unidad, el tiempo de recuperación simple y el valor presente neto a 12 meses con tasa mensual $r=0{,}8\ \%$ son:
+
+[Normal] El beneficio de 25.000 COP es un supuesto del proyecto que agrupa ahorro en compra de agua y en gastos de salud; no fue medido. Se ofrece el cálculo como análisis de sensibilidad, no como pronóstico.
+
+[Heading 2] Contraste con el desempeño técnico
+
+[Normal] Para no separar costo de eficacia, se incorporaron los resultados de la simulación Monte Carlo del proyecto, reproducida con la semilla 42 y 1.000 escenarios. Sus distribuciones son supuestos del equipo. Las proporciones llevan intervalos de Wilson {c:wilson}. La búsqueda bibliográfica y el flujo PRISMA 2020 {c:prisma} se describen en prisma_cifras.json; el rango objetivo del proyecto es de 0,2 a 0,5 mg/L, y la Resolución 2115 de 2007 fija 0,3 a 2,0 mg/L {c:res2115}; las guías de la OMS orientan el residual y el tiempo de contacto {c:oms}; la cinética de decaimiento depende de la temperatura y del agua {c:powell}.
+
+[Heading 1] Resultados
+
+[Heading 2] Costo de materiales
+
+[Tabla Título] Tabla 2. Presupuesto de materiales del prototipo (COP)
+
+[Tabla Título] Fuente: Presupuesto y costos del prototipo, proyecto del equipo.
+
+[Normal] Las tres válvulas de bola son 28 % del total y la soldadura y las pastillas, 26 %. El resto es tubería y accesorios. El costo de 159.991 COP es del orden de 40 USD según el propio documento del proyecto, frente a un rango de 1,2 a 4,5 millones de COP para cloradores comerciales de inyección eléctrica citado en la misma ficha; esta comparación no pudo contrastarse con cotizaciones.
+
+[Heading 2] Consumo de cloro y costo por metro cúbico
+
+[Tabla Título] Tabla 3. Consumo teórico de cloro y de pastillas de tricloro al 90 % si el sistema opera 24 horas
+
+[Tabla Título] Fuente: elaboración propia con la ecuación (1); disolución ideal.
+
+[Normal] Un kilogramo de pastillas alcanza para 857 m³ con 1,05 mg/L y para 2.250 m³ con 0,4 mg/L. Con un precio de 15.000 COP por kilogramo, el costo teórico del cloro es de 17,5 COP por m³ con 1,05 mg/L y de 6,7 COP por m³ con 0,4 mg/L. En Nepal, el cloro costó de 0,06 a 0,09 USD por m³ {c:nepal}; con el tipo de cambio implícito del proyecto (159.991 COP, unos 40 USD), eso equivale a unos 240–360 COP por m³, más de diez veces el valor ideal. El cálculo estequiométrico es, por tanto, un piso y no una estimación del gasto real.
+
+[Heading 2] Tiempo de recuperación
+
+[Normal] Con los supuestos del proyecto, una unidad usada por un solo hogar tiene un beneficio mensual bruto de 25.000 COP y se recupera en 6,4 meses; descontando el costo operativo de 15.000 COP, el tiempo sube a 16,0 meses y el valor presente neto a 12 meses es de -46.005 COP, es decir, negativo. Compartida por dos hogares, la recuperación baja a 4,6 meses; por tres, a 2,7; y por diez, a 0,7 (Figura 3). Sin restar el costo operativo, el valor presente neto a 12 meses es de 124.974 COP; el documento del proyecto reporta 96.800 COP con una tasa rotulada como anual y no fue posible reproducir esa cifra con los datos disponibles, por lo que aquí se usa el cálculo propio.
+
+[Figura Título] Figura 3. Tiempo de recuperación simple según el número de hogares que comparten una unidad (beneficio supuesto de 25.000 COP/mes por hogar).
+
+[Heading 2] Costo bajo frente a desempeño técnico
+
+[Normal] La simulación del proyecto dio 1,0 % de escenarios en el rango de 0,2 a 0,5 mg/L (IC 95 %: 0,5 a 1,8 %) y 99,0 % por debajo. La dosis efectiva media fue de 0,39 mg/L frente a una demanda media supuesta de 0,65 mg/L. Si esos supuestos se confirmaran, el ahorro estimado no se materializaría, porque el agua no quedaría protegida. Por eso la viabilidad económica de la Tabla 3 y la Figura 3 solo tiene sentido condicionada a que la calibración funcione.
+
+[Heading 1] Discusión
+
+[Normal] Tres lecturas se desprenden. La primera es que el material es el menor de los costos. Lo que decide la sostenibilidad es lo que rodea al dispositivo: el suministro de pastillas, la capacitación y las visitas técnicas. En Honduras, la frecuencia de las visitas técnicas fue el mejor predictor del éxito {c:honduras}; en Kenia, Malawi y Uganda lo fue el conocimiento del uso correcto {c:kmu}. Ninguna de esas partidas está en el presupuesto de 159.991 COP, y deberían aparecer en un presupuesto de operación del piloto.
+
+[Normal] La segunda es que compartir la unidad cambia el resultado. Con un hogar, la recuperación es de unos 16 meses con el costo operativo supuesto; con dos o más, baja de cinco meses. Eso sugiere que el diseño tiene sentido como infraestructura comunal, a cargo de la junta de acción comunal, y no como equipo doméstico. La evidencia de Dhaka apunta en el mismo sentido: los hogares de bajos ingresos tienen menos capacidad de pago por el servicio y podrían necesitar subsidios {c:dhaka}.
+
+[Normal] La tercera es la más importante: el costo bajo no basta. La simulación indica que, con los supuestos actuales, el diseño casi nunca llega al rango. En los estudios revisados, el éxito dependió de que la dosis se ajustara a la fuente, y dispositivos de bajo costo mostraron consistencia desigual {c:guatemala,uganda,ghana}; un ensayo aleatorizado en 20 aldeas de Odisha documentó dificultades operativas, entre ellas mantener una dosificación constante {c:odisha}, y las pruebas de laboratorio con dosificadores en línea indican que la posición de instalación y el diseño modificado afectan el cloro residual {c:aquatabs,usvi}. Las limitaciones son claras: el beneficio mensual es un supuesto, la simulación usa distribuciones no medidas, el precio de las pastillas y su masa por paquete requieren confirmación, y no se midió la aceptación de la comunidad. Además, el rango de diseño del proyecto (0,2–0,5 mg/L) es más estrecho que el de la norma (0,3–2,0 mg/L).
+
+[Heading 1] Conclusiones
+
+[Normal] El clorificador de PVC cuesta 159.991 COP en materiales y su cloro teórico cuesta entre 6,7 y 17,5 COP por m³, aunque el gasto real será mayor. Una unidad que sirva a un solo hogar se recupera en 16,0 meses con los supuestos del proyecto; compartida por tres, en 2,7. Pero la viabilidad económica está condicionada a un desempeño técnico que la simulación actual no respalda (1,0 % de cumplimiento). El prototipo está en TRL 3.
+
+[Heading 1] Recomendaciones
+
+[Normal] (1) Medir en campo el consumo real de pastillas y confirmar su precio y masa. (2) Presupuestar capacitación y visitas técnicas del piloto. (3) Reemplazar el beneficio supuesto por una encuesta de gasto en agua y salud. (4) Evaluar el modelo de unidad comunal. (5) Ejecutar la validación técnica antes de cualquier cálculo de retorno a escala.
+
+[Heading 2] Contribución de los autores
+
+[Normal] Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): los estudiantes autores participaron en conceptualización, metodología, investigación, análisis formal y redacción del borrador original; Cristian Javier Cano-Mogollón realizó la supervisión y la revisión y edición del manuscrito. Los autores leyeron y aprobaron la versión final.
+
+[Heading 2] Declaraciones finales
+
+[Heading 3] Financiación
+
+[Normal] Según el presupuesto del proyecto, los insumos de laboratorio previstos (160.000 COP) están a cargo del semillero SILOGE de la UPB. [Por confirmar por el equipo.]
+
+[Heading 3] Conflicto de intereses
+
+[Normal] Los autores declaran que no existen conflictos de intereses relacionados con la presente publicación. [Por confirmar por el equipo.]
+
+[Heading 3] Consentimiento informado
+
+[Normal] No aplica. No se recolectaron datos de personas; el estudio es un análisis de diseño, modelación y simulación.
+
+[Heading 3] Declaración de la Junta de Revisión Institucional
+
+[Normal] No aplica, dado que no hubo participantes humanos. La encuesta comunitaria prevista en el proyecto requerirá consentimiento informado.
+
+[Heading 3] Disponibilidad de datos, código y materiales de investigación
+
+[Normal] Los scripts de simulación, la búsqueda bibliográfica, la verificación de referencias y las salidas numéricas están en la carpeta de evidencia compartida del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. Los cálculos económicos están en complemento.py y resultados_complemento.json.
+
+[Heading 3] Uso de herramientas de inteligencia artificial
+
+[Normal] Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para ejecutar y documentar los análisis, verificar las referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.
+
+[Subtitulos] Author Contributions
+
+[Normal] CRediT roles (to be confirmed by the team before submission): the student authors contributed to conceptualization, methodology, investigation, formal analysis and writing of the original draft; C. J. Cano-Mogollón contributed supervision and review and editing.
+
+[Subtitulos] Funding and Acknowledgments
+
+[Normal] Laboratory supplies are budgeted by the SILOGE research seed group. [To be confirmed by the team.]
+
+[Subtitulos] Conflicts of Interest
+
+[Normal] The authors declare that there is no conflict of interests. [To be confirmed by the team.]
+
+[Subtitulos] Informed Consent Statement
+
+[Normal] Not applicable.
+
+[Subtitulos] Institutional Review Board Statement
+
+[Normal] Not applicable.
+
+[Subtitulos] Data, Code, and Research Materials Availability
+
+[Normal] Simulation scripts, search logs, reference verification and numerical outputs are in the shared evidence folder of the project.
+
+[Heading 1] References
+
+[Normal] [1] S. Amrose, Z. Burt, and I. Ray, “Safe Drinking Water for Low-Income Regions,” Annual Review of Environment and Resources, vol. 40, no. 1, pp. 203-231, 2015, doi: 10.1146/annurev-environ-031411-091819.
+
+[Normal] [2] K. Cherukumilli, R. Bain, Y. Chen, and A. J. Pickering, “Estimating the Global Target Market for Passive Chlorination,” Environmental Science & Technology Letters, vol. 10, no. 1, pp. 105-110, 2022, doi: 10.1021/acs.estlett.2c00781.
+
+[Normal] [3] B. F. Arnold and J. M. Colford, “TREATING WATER WITH CHLORINE AT POINT-OF-USE TO IMPROVE WATER QUALITY AND REDUCE CHILD DIARRHEA IN DEVELOPING COUNTRIES: A SYSTEMATIC REVIEW AND META-ANALYSIS,” The American Journal of Tropical Medicine and Hygiene, vol. 76, no. 2, pp. 354-364, 2007, doi: 10.4269/ajtmh.2007.76.354.
+
+[Normal] [4] T. F. Clasen et al., “Interventions to improve water quality for preventing diarrhoea,” Cochrane Database of Systematic Reviews, vol. 2015, no. 10, 2015, doi: 10.1002/14651858.CD004794.pub3.
+
+[Normal] [5] J. Wolf et al., “Burden of disease attributable to unsafe drinking water, sanitation, and hygiene in domestic settings: a global analysis for selected adverse health outcomes,” The Lancet, vol. 401, no. 10393, pp. 2060-2071, 2023, doi: 10.1016/S0140-6736(23)00458-0.
+
+[Normal] [6] A. J. Pickering et al., “Effect of in-line drinking water chlorination at the point of collection on child diarrhoea in urban Bangladesh: a double-blind, cluster-randomised controlled trial,” The Lancet Global Health, vol. 7, no. 9, pp. e1247-e1256, 2019, doi: 10.1016/S2214-109X(19)30315-8.
+
+[Normal] [7] Y. S. Crider et al., “Evaluation of System-Level, Passive Chlorination in Gravity-Fed Piped Water Systems in Rural Nepal,” Environmental Science & Technology, vol. 56, no. 19, pp. 13985-13995, 2022, doi: 10.1021/acs.est.2c03133.
+
+[Normal] [8] D. W. Smith et al., “Effective Demand for In-Line Chlorination Bundled with Rental Housing in Dhaka, Bangladesh,” Environmental Science & Technology, vol. 55, no. 18, pp. 12471-12482, 2021, doi: 10.1021/acs.est.1c01308.
+
+[Normal] [9] J. E. Powers et al., “Design, performance, and demand for a novel in-line chlorine doser to increase safe water access,” npj Clean Water, vol. 4, no. 1, art. 4, 2021, doi: 10.1038/s41545-020-00091-1.
+
+[Normal] [10] M. Lindmark, W. Meier, D. Calix, and C. Just, “Performance of Community Water Board-Managed Passive In-Line Chlorinators Supported by a Circuit Rider Program in Rural Honduras,” ACS ES&T Water, vol. 3, no. 12, pp. 4011-4019, 2023, doi: 10.1021/acsestwater.3c00425.
+
+[Normal] [11] I. Evance et al., “Assessing factors affecting the use of chlorine dispensers for household water treatment in rural Kenya, Malawi, and Uganda,” Journal of Water, Sanitation and Hygiene for Development, vol. 15, no. 1, pp. 84-94, 2024, doi: 10.2166/washdev.2024.407.
+
+[Normal] [12] R. Meierhofer et al., “Water quality at the point of consumption and child health after installing in-line chlorination with electrolysis in Ethiopia,” PLOS Water, vol. 5, no. 7, art. e0000575, 2026, doi: 10.1371/journal.pwat.0000575.
+
+[Normal] [13] L. D. Lukas Dössegger et al., “Assessment of low-cost, non-electrically powered chlorination devices for gravity-driven membrane water kiosks in eastern Uganda,” Waterlines, vol. 40, no. 2, pp. 92-106, 2021, doi: 10.3362/1756-3488.20-00014.
+
+[Normal] [14] E. B. Wilson, “Probable Inference, the Law of Succession, and Statistical Inference,” Journal of the American Statistical Association, vol. 22, no. 158, pp. 209-212, 1927, doi: 10.1080/01621459.1927.10502953.
+
+[Normal] [15] M. J. Page et al., “The PRISMA 2020 statement: an updated guideline for reporting systematic reviews,” BMJ, art. n71, 2021, doi: 10.1136/bmj.n71.
+
+[Normal] [16] Ministerio de la Protección Social y Ministerio de Ambiente, Vivienda y Desarrollo Territorial, “Resolución 2115 de 2007, por medio de la cual se señalan características, instrumentos básicos y frecuencias del sistema de control y vigilancia para la calidad del agua para consumo humano,” Bogotá, Colombia, 2007. [Online]. Available: https://normograma.invima.gov.co/normograma/compilacion/docs/resolucion_minproteccion_2115_2007.htm. Accessed: Nov. 6, 2026.
+
+[Normal] [17] World Health Organization, Guidelines for Drinking-water Quality: Fourth Edition Incorporating the First and Second Addenda. Geneva, Switzerland: WHO, 2022. [Online]. Available: https://www.who.int/publications/i/item/9789240045064. Accessed: Nov. 6, 2026.
+
+[Normal] [18] J. C. Powell, N. B. Hallam, J. R. West, C. F. Forster, and J. Simms, “Factors which control bulk chlorine decay rates,” Water Research, vol. 34, no. 1, pp. 117-126, 2000, doi: 10.1016/S0043-1354(99)00097-4.
+
+[Normal] [19] J. M. Locher et al., “Assessment of a local and low-cost passive in-line chlorination device in rural Guatemala,” PLOS Water, vol. 3, no. 9, art. e0000255, 2024, doi: 10.1371/journal.pwat.0000255.
+
+[Normal] [20] C. Delaire et al., “Comparison of passive and manual chlorination in small piped water networks in rural Ghana: Technical performance, ease-of-use, and cost,” PLOS Water, vol. 3, no. 10, art. e0000295, 2024, doi: 10.1371/journal.pwat.0000295.
+
+[Normal] [21] J. Lowe et al., “In-line chlorination for drinking water in rural Odisha, India: A randomized controlled implementation trial,” PLOS Water, vol. 5, no. 4, art. e0000440, 2026, doi: 10.1371/journal.pwat.0000440.
+
+[Normal] [22] L. E. Voth-Gaeddert and A. Schranck, “Inline Chlorinator for Potable Water Systems in Low-Resource Settings,” Journal of Environmental Engineering, vol. 147, no. 7, art. 06021003, 2021, doi: 10.1061/(asce)ee.1943-7870.0001883.
+
+[Normal] [23] L. E. Voth-Gaeddert, M. Lemley, K. Brathwaite, A. Schranck, and S. Libbey, “Design and Evaluation of a Household Chlorination System for Treating Cistern Water in the US Virgin Islands,” Journal of Environmental Engineering, vol. 148, no. 11, art. 06022002, 2022, doi: 10.1061/(asce)ee.1943-7870.0002063.
