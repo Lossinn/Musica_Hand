@@ -10,3 +10,7 @@ Generado el 6 de noviembre de 2026. Fuente única: el proyecto `8.clorificadorde
 | `8.clorificadordeAgua (2)/` | Proyecto original, sin modificar |
 
 Cada carpeta personal empieza en su `00_LEEME.md`. Pendientes que no se pueden generar: preprint escaneado a mano, certificado Turnitin y constancia de envío.
+
+
+## Versión definitiva (6 nov 2026)
+Lo que se entrega es `ENTREGA_FINAL_CLORIFICADOR/` (un solo artículo en dos columnas que integra las tres líneas de análisis); los entregables sueltos están en `ENTREGABLES_CLORIFICADOR/`. Se regenera con `_Evidencia_compartida/armar_clor.py`. Las carpetas personales anteriores quedan como material de apoyo.
