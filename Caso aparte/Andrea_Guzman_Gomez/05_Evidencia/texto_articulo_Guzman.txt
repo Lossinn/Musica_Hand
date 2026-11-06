@@ -2,17 +2,17 @@
 
 [Título art] Cost, chlorine consumption and operating conditions of a low-cost passive PVC chlorinator for a rural community in Montería: preliminary feasibility analysis
 
-[Nombre autores] Andrea Guzmán-Gómez^{1}^{*}, Roxana Elena Muñoz-Rodiño^{2}, Camilo Esteban Alvarez-Durán^{3}, Cristian Javier Cano-Mogollón^{4}
+[Nombre autores] Andrea Guzmán-Gómez^1^*, Roxana Elena Muñoz-Rodiño^2, Camilo Esteban Alvarez-Durán^3, Cristian Javier Cano-Mogollón^4
 
-[Normal] ^{1} Autor 1: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
+[Normal] ^1 Autor 1: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
 
-[Normal] ^{2} Autor 2: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
+[Normal] ^2 Autor 2: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
 
-[Normal] ^{3} Autor 3: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
+[Normal] ^3 Autor 3: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
 
-[Normal] ^{4} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^4 Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
 
-[Normal] ^{*} Autor de correspondencia: Andrea Guzmán-Gómez (andrea.guzmang@upb.edu.co).
+[Normal] ^* Autor de correspondencia: Andrea Guzmán-Gómez (andrea.guzmang@upb.edu.co).
 
 [Subtitulos] Resumen:
 
@@ -34,13 +34,13 @@
 
 [Heading 2] Una tecnología pensada para quien no puede pagar otra
 
-[Normal] En las comunidades rurales dispersas, el costo decide qué tecnología llega. Las plantas compactas y los dosificadores con bomba exigen inversión, energía y personal que las juntas de agua no tienen. La cloración pasiva, que desinfecta sin electricidad ni una acción diaria del usuario, se propone como una vía más accesible {c:amrose,mercado}, y la evidencia agregada indica que clorar el agua en el punto de uso reduce la diarrea infantil {c:arnold,clasen}. La carga de enfermedad por agua insegura sigue siendo alta {c:wolf}, y un ensayo aleatorizado de cloración en línea en el punto de recolección estudió su efecto sobre la diarrea en niños {c:pickering}. Si el dispositivo funciona, su costo bajo lo hace replicable.
+[Normal] En las comunidades rurales dispersas, el costo decide qué tecnología llega. Las plantas compactas y los dosificadores con bomba exigen inversión, energía y personal que las juntas de agua no tienen. La cloración pasiva, que desinfecta sin electricidad ni una acción diaria del usuario, se propone como una vía más accesible [1], [2], y la evidencia agregada indica que clorar el agua en el punto de uso reduce la diarrea infantil [3], [4]. La carga de enfermedad por agua insegura sigue siendo alta [5], y un ensayo aleatorizado de cloración en línea en el punto de recolección estudió su efecto sobre la diarrea en niños [6]. Si el dispositivo funciona, su costo bajo lo hace replicable.
 
 [Normal] El Vidrial es una vereda rural de Montería, Córdoba, cuyos hogares, según la caracterización preliminar del proyecto, usan fuentes sin tratamiento adecuado o métodos informales de potabilización. El proyecto construyó un diseño de PVC por gravedad con derivación y cámara de pastillas, cuyos materiales cuestan 159.991 COP. La pregunta de este trabajo no es solo cuánto cuesta, sino qué hace falta, además de ese precio, para que el dispositivo sirva.
 
 [Heading 2] Evidencia sobre costos, demanda y sostenibilidad
 
-[Normal] La búsqueda bibliográfica reproducible (sección 2.4, Figura 1) retuvo 13 estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos. Los datos económicos y de adopción son menos abundantes que los técnicos, pero consistentes. En sistemas por gravedad de Nepal, el cloro costó entre 0,06 y 0,09 USD por metro cúbico tratado, un valor similar al del monitoreo {c:nepal}. En Dhaka, 196 propietarios de viviendas de alquiler mostraron una demanda efectiva por cloración en línea comparable a la de otros productos, pero menor en las viviendas de ingresos bajos, lo que sugiere que llegar a los más pobres exigiría reducir costos, subsidiar o ambos {c:dhaka}. En Kisumu, Kenia, 27 % de los kioscos de agua a los que se ofreció un dosificador Venturi se comprometió con un paquete de servicio {c:venturi}. En Honduras, la frecuencia de las visitas técnicas se correlacionó con el éxito de la cloración y los problemas técnicos explicaron solo 26 % de los lapsos sin cloro {c:honduras}. Y en Kenia, Malawi y Uganda, el conocimiento del uso correcto del dosificador y la promoción comunitaria se asociaron con tener cloro residual {c:kmu}. En Etiopía, la dificultad de las cadenas de suministro de cloro llevó a probar clorador con producción in situ {c:etiopia}.
+[Normal] La búsqueda bibliográfica reproducible (sección 2.4, Figura 1) retuvo 13 estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos. Los datos económicos y de adopción son menos abundantes que los técnicos, pero consistentes. En sistemas por gravedad de Nepal, el cloro costó entre 0,06 y 0,09 USD por metro cúbico tratado, un valor similar al del monitoreo [7]. En Dhaka, 196 propietarios de viviendas de alquiler mostraron una demanda efectiva por cloración en línea comparable a la de otros productos, pero menor en las viviendas de ingresos bajos, lo que sugiere que llegar a los más pobres exigiría reducir costos, subsidiar o ambos [8]. En Kisumu, Kenia, 27 % de los kioscos de agua a los que se ofreció un dosificador Venturi se comprometió con un paquete de servicio [9]. En Honduras, la frecuencia de las visitas técnicas se correlacionó con el éxito de la cloración y los problemas técnicos explicaron solo 26 % de los lapsos sin cloro [10]. Y en Kenia, Malawi y Uganda, el conocimiento del uso correcto del dosificador y la promoción comunitaria se asociaron con tener cloro residual [11]. En Etiopía, la dificultad de las cadenas de suministro de cloro llevó a probar clorador con producción in situ [12].
 
 [Figura Título] Figura 1. Flujo de la búsqueda bibliográfica (PRISMA 2020), OpenAlex, 6 de noviembre de 2026.
 
@@ -62,19 +62,19 @@
 
 [Heading 2] Consumo de cloro por balance de masa
 
-[Normal] Para una dosis $d$ en mg/L y un caudal $Q$ en L/s, la masa de cloro por día y la masa de pastillas de tricloro al 90 % de cloro disponible son:
+[Normal] Para una dosis d en mg/L y un caudal Q en L/s, la masa de cloro por día y la masa de pastillas de tricloro al 90 % de cloro disponible son:
 
 [Normal] Se evaluaron dos dosis: 0,4 mg/L, solo el residual meta, y 1,05 mg/L, que suma la demanda media supuesta de 0,65 mg/L. El cálculo supone disolución ideal y no incluye pérdidas por disolución irregular. El precio del cloro se tomó de la ficha del proyecto (un paquete de 15.000 COP; la especificación indica 1 kg).
 
 [Heading 2] Viabilidad económica
 
-[Normal] Con la inversión $I$ (159.991 COP), el beneficio mensual supuesto $B$ por hogar (25.000 COP, del documento del proyecto), el costo operativo mensual $O$ (15.000 COP, de la ficha de costos) y $n$ hogares que comparten la unidad, el tiempo de recuperación simple y el valor presente neto a 12 meses con tasa mensual $r=0{,}8\ \%$ son:
+[Normal] Con la inversión I (159.991 COP), el beneficio mensual supuesto B por hogar (25.000 COP, del documento del proyecto), el costo operativo mensual O (15.000 COP, de la ficha de costos) y n hogares que comparten la unidad, el tiempo de recuperación simple y el valor presente neto a 12 meses con tasa mensual r=0,8 % son:
 
 [Normal] El beneficio de 25.000 COP es un supuesto del proyecto que agrupa ahorro en compra de agua y en gastos de salud; no fue medido. Se ofrece el cálculo como análisis de sensibilidad, no como pronóstico.
 
 [Heading 2] Contraste con el desempeño técnico
 
-[Normal] Para no separar costo de eficacia, se incorporaron los resultados de la simulación Monte Carlo del proyecto, reproducida con la semilla 42 y 1.000 escenarios. Sus distribuciones son supuestos del equipo. Las proporciones llevan intervalos de Wilson {c:wilson}. La búsqueda bibliográfica y el flujo PRISMA 2020 {c:prisma} se describen en prisma_cifras.json; el rango objetivo del proyecto es de 0,2 a 0,5 mg/L, y la Resolución 2115 de 2007 fija 0,3 a 2,0 mg/L {c:res2115}; las guías de la OMS orientan el residual y el tiempo de contacto {c:oms}; la cinética de decaimiento depende de la temperatura y del agua {c:powell}.
+[Normal] Para no separar costo de eficacia, se incorporaron los resultados de la simulación Monte Carlo del proyecto, reproducida con la semilla 42 y 1.000 escenarios. Sus distribuciones son supuestos del equipo. Las proporciones llevan intervalos de Wilson [14]. La búsqueda bibliográfica y el flujo PRISMA 2020 [15] se describen en prisma_cifras.json; el rango objetivo del proyecto es de 0,2 a 0,5 mg/L, y la Resolución 2115 de 2007 fija 0,3 a 2,0 mg/L [16]; las guías de la OMS orientan el residual y el tiempo de contacto [17]; la cinética de decaimiento depende de la temperatura y del agua [18].
 
 [Heading 1] Resultados
 
@@ -92,7 +92,7 @@
 
 [Tabla Título] Fuente: elaboración propia con la ecuación (1); disolución ideal.
 
-[Normal] Un kilogramo de pastillas alcanza para 857 m³ con 1,05 mg/L y para 2.250 m³ con 0,4 mg/L. Con un precio de 15.000 COP por kilogramo, el costo teórico del cloro es de 17,5 COP por m³ con 1,05 mg/L y de 6,7 COP por m³ con 0,4 mg/L. En Nepal, el cloro costó de 0,06 a 0,09 USD por m³ {c:nepal}; con el tipo de cambio implícito del proyecto (159.991 COP, unos 40 USD), eso equivale a unos 240–360 COP por m³, más de diez veces el valor ideal. El cálculo estequiométrico es, por tanto, un piso y no una estimación del gasto real.
+[Normal] Un kilogramo de pastillas alcanza para 857 m³ con 1,05 mg/L y para 2.250 m³ con 0,4 mg/L. Con un precio de 15.000 COP por kilogramo, el costo teórico del cloro es de 17,5 COP por m³ con 1,05 mg/L y de 6,7 COP por m³ con 0,4 mg/L. En Nepal, el cloro costó de 0,06 a 0,09 USD por m³ [7]; con el tipo de cambio implícito del proyecto (159.991 COP, unos 40 USD), eso equivale a unos 240–360 COP por m³, más de diez veces el valor ideal. El cálculo estequiométrico es, por tanto, un piso y no una estimación del gasto real.
 
 [Heading 2] Tiempo de recuperación
 
@@ -106,11 +106,11 @@
 
 [Heading 1] Discusión
 
-[Normal] Tres lecturas se desprenden. La primera es que el material es el menor de los costos. Lo que decide la sostenibilidad es lo que rodea al dispositivo: el suministro de pastillas, la capacitación y las visitas técnicas. En Honduras, la frecuencia de las visitas técnicas fue el mejor predictor del éxito {c:honduras}; en Kenia, Malawi y Uganda lo fue el conocimiento del uso correcto {c:kmu}. Ninguna de esas partidas está en el presupuesto de 159.991 COP, y deberían aparecer en un presupuesto de operación del piloto.
+[Normal] Tres lecturas se desprenden. La primera es que el material es el menor de los costos. Lo que decide la sostenibilidad es lo que rodea al dispositivo: el suministro de pastillas, la capacitación y las visitas técnicas. En Honduras, la frecuencia de las visitas técnicas fue el mejor predictor del éxito [10]; en Kenia, Malawi y Uganda lo fue el conocimiento del uso correcto [11]. Ninguna de esas partidas está en el presupuesto de 159.991 COP, y deberían aparecer en un presupuesto de operación del piloto.
 
-[Normal] La segunda es que compartir la unidad cambia el resultado. Con un hogar, la recuperación es de unos 16 meses con el costo operativo supuesto; con dos o más, baja de cinco meses. Eso sugiere que el diseño tiene sentido como infraestructura comunal, a cargo de la junta de acción comunal, y no como equipo doméstico. La evidencia de Dhaka apunta en el mismo sentido: los hogares de bajos ingresos tienen menos capacidad de pago por el servicio y podrían necesitar subsidios {c:dhaka}.
+[Normal] La segunda es que compartir la unidad cambia el resultado. Con un hogar, la recuperación es de unos 16 meses con el costo operativo supuesto; con dos o más, baja de cinco meses. Eso sugiere que el diseño tiene sentido como infraestructura comunal, a cargo de la junta de acción comunal, y no como equipo doméstico. La evidencia de Dhaka apunta en el mismo sentido: los hogares de bajos ingresos tienen menos capacidad de pago por el servicio y podrían necesitar subsidios [8].
 
-[Normal] La tercera es la más importante: el costo bajo no basta. La simulación indica que, con los supuestos actuales, el diseño casi nunca llega al rango. En los estudios revisados, el éxito dependió de que la dosis se ajustara a la fuente, y dispositivos de bajo costo mostraron consistencia desigual {c:guatemala,uganda,ghana}; un ensayo aleatorizado en 20 aldeas de Odisha documentó dificultades operativas, entre ellas mantener una dosificación constante {c:odisha}, y las pruebas de laboratorio con dosificadores en línea indican que la posición de instalación y el diseño modificado afectan el cloro residual {c:aquatabs,usvi}. Las limitaciones son claras: el beneficio mensual es un supuesto, la simulación usa distribuciones no medidas, el precio de las pastillas y su masa por paquete requieren confirmación, y no se midió la aceptación de la comunidad. Además, el rango de diseño del proyecto (0,2–0,5 mg/L) es más estrecho que el de la norma (0,3–2,0 mg/L).
+[Normal] La tercera es la más importante: el costo bajo no basta. La simulación indica que, con los supuestos actuales, el diseño casi nunca llega al rango. En los estudios revisados, el éxito dependió de que la dosis se ajustara a la fuente, y dispositivos de bajo costo mostraron consistencia desigual [13], [19], [20]; un ensayo aleatorizado en 20 aldeas de Odisha documentó dificultades operativas, entre ellas mantener una dosificación constante [21], y las pruebas de laboratorio con dosificadores en línea indican que la posición de instalación y el diseño modificado afectan el cloro residual [22], [23]. Las limitaciones son claras: el beneficio mensual es un supuesto, la simulación usa distribuciones no medidas, el precio de las pastillas y su masa por paquete requieren confirmación, y no se midió la aceptación de la comunidad. Además, el rango de diseño del proyecto (0,2–0,5 mg/L) es más estrecho que el de la norma (0,3–2,0 mg/L).
 
 [Heading 1] Conclusiones
 
