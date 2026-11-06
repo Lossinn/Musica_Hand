@@ -28,7 +28,7 @@ out["tras_filtros_tipo_idioma_doi"] = get({"filter": F, "per-page": 1})["meta"][
 out["cribados_titulo_con_chlorin"] = get({"filter": F + ",title.search:(chlorination OR chlorinator OR chlorine OR chlorinators)", "per-page": 1})["meta"]["count"]
 cands = []
 for page in (1, 2, 3):
-    r = get({"filter": F + ",title.search:(chlorination OR chlorinator OR chlorine OR chlorinators)", "sort": "relevance_score:desc", "search": "passive in-line chlorination rural community drinking water", "per-page": 100, "page": page,
+    r = get({"filter": F + ",title.search:(chlorination OR chlorinator OR chlorine OR chlorinators)", "sort": "cited_by_count:desc", "per-page": 100, "page": page,
              "select": "id,doi,title,publication_year,primary_location,authorships,cited_by_count"})
     for w in r["results"]:
         cands.append({"doi": (w.get("doi") or "").replace("https://doi.org/", ""), "titulo": w.get("title"), "anio": w.get("publication_year"),
