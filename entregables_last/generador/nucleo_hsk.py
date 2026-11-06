@@ -272,3 +272,119 @@ def figura(archivos: list[str], ancho: float, pie: str) -> None:
     par(pie, "Figura Título", WD_ALIGN_PARAGRAPH.CENTER)
 
 
+
+
+# ================================================================== utilidades de encabezado, declaraciones y cierre
+import sys as _sys
+
+
+def m(x) -> str:
+    return f"{int(round(x)):,}".replace(",", ".")
+
+
+EQUIPO = {  # clave: (nombre en el artículo, correo, ID)
+    "Vitola": ("Antolin De Jesús Vitola-Montes", "antolin.vitola@upb.edu.co", "000523062"),
+    "Petro": ("Isaías José Petro-Rodríguez", "isaias.petro@upb.edu.co", "000522944"),
+    "Negrete": ("Andrés Julián Negrete-Pacheco", "andresj.negretep@upb.edu.co", "000506474"),
+    "Carrascal": ("Juliana Esther Carrascal-Hernández", "juliana.carrascal@upb.edu.co", "000518109"),
+    "Quintana": ("Angel Quintana-Jiménez", "angel.quintana@upb.edu.co", "000454040"),
+    "Pemberty": ("Alejandro Pemberty-Vergara", "alejandro.pemberty@upb.edu.co", "000362954"),
+    "Guerra": ("Juan Diego Guerra-Gómez", "juan.guerra@upb.edu.co", "000520912"),
+}
+DOCENTE = ("M.Sc. Cristian Javier Cano Mogollón", "cristian.cano@upb.edu.co")
+DANE_REF = ("DANE, “Proyecciones de población municipal 2020–2035, actualización post COVID-19 (Montería, 2026),” "
+            "Bogotá, Colombia. [Online]. Available: https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/"
+            "Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx. Accessed: Nov. 5, 2026.")
+
+
+def encabezado(primero: str, titulo_es: str, titulo_en: str, res_es: str, res_en: str, kw_es: str, kw_en: str):
+    orden = [primero] + [k for k in EQUIPO if k != primero]
+    autores = [EQUIPO[k] for k in orden]
+    corresp = autores[0][0]
+    par(titulo_es, "Título art"); par(titulo_en, "Título art")
+    doc.add_paragraph(style="Normal")
+    nombres = ", ".join(f"{n}^{{{i + 1}}}" + ("^{*}" if n == corresp else "") for i, (n, _, _) in enumerate(autores))
+    par(nombres + f", Cristian Javier Cano-Mogollón^{{{len(autores) + 1}}}", "Nombre autores")
+    doc.add_paragraph(style="Normal")
+    for i, (n, mail, _) in enumerate(autores, 1):
+        par(f"^{{{i}}} Autor {i}: {n} - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. "
+            f"ORCID: pendiente. Correo electrónico: {mail}", "Normal", size=8)
+    par(f"^{{{len(autores) + 1}}} Co-Autor / Co-Investigador: {DOCENTE[0]}. Filiación: Docente Titular, Facultad de Ingeniería "
+        "Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), "
+        f"Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: {DOCENTE[1]}", "Normal", size=8)
+    par(f"^{{*}} Autor de correspondencia: {corresp} ({autores[0][1]}).", "Normal", size=8)
+    doc.add_paragraph(style="Normal")
+    par("Resumen:", "Subtitulos"); par(res_es, "Normal", WD_ALIGN_PARAGRAPH.JUSTIFY)
+    par("Palabras clave:", "Subtitulos"); par(kw_es, "Normal")
+    par("Abstract:", "Subtitulos"); par(res_en, "Normal", WD_ALIGN_PARAGRAPH.JUSTIFY)
+    par("Keywords:", "Subtitulos"); par(kw_en, "Normal")
+    return autores
+
+
+def resto(frase_intro: str) -> None:
+    """Cita, en una frase, las referencias aún no usadas (cada artículo debe citar las 21 fuentes del equipo)."""
+    faltan = [k for k in list(CLAVES) + ["dane"] if k not in ORDEN]
+    if faltan:
+        T(frase_intro + " {c:" + ",".join(faltan) + "}.")
+
+
+def declaraciones(d: dict) -> None:
+    sin_num(par("Contribución de los autores", "Heading 2")); T(d["cred"])
+    sin_num(par("Declaraciones finales", "Heading 2"))
+    H3("Financiación"); T(d["fin"])
+    H3("Conflicto de intereses"); T(d["conf"])
+    H3("Consentimiento informado"); T(d["cons"])
+    H3("Declaración de la Junta de Revisión Institucional"); T(d["irb"])
+    H3("Disponibilidad de datos, código y materiales de investigación"); T(d["datos"])
+    H3("Uso de herramientas de inteligencia artificial"); T(d["ia"])
+    par("Declarations (English)", "Subtitulos"); T(d["en"])
+
+
+def cierre(autores, titulo_es: str, titulo_corto: str, salida: Path, esperadas: int = 21):
+    sin_num(par("References", "Heading 1"))
+    import re as _re
+
+    def limpio(t):
+        t = _re.sub(r"\{c:([^}]+)\}", lambda mm: cita(mm.group(1)), t)
+        t = t.replace("{E_ACEPT}", e("acepta") if "acepta" in EQ_MAP else "")
+        for k, v in EQ_MAP.items():
+            t = t.replace("{E_" + k.upper() + "}", f"({v})")
+        return t
+    for p in doc.paragraphs:
+        for r in p.runs:
+            if "{E_" in r.text:
+                r.text = limpio(r.text)
+    ORDEN_FIN = list(ORDEN)
+    for i, k in enumerate(ORDEN_FIN, 1):
+        par(f"[{i}] " + (DANE_REF if k == "dane" else ref_ieee(k)), "Normal", size=8)
+
+    def reemplazar(parte, viejo, nuevo):
+        for t in parte._element.iter(qn("w:t")):
+            if viejo in (t.text or ""):
+                t.text = t.text.replace(viejo, nuevo)
+    sec = doc.sections[0]
+    reemplazar(sec.header, "Apellido, A. Apellido", autores[0][0].split("-")[0].split()[-1] + " et al.")
+    reemplazar(sec.even_page_header, "Título del artículo", titulo_corto)
+    reemplazar(sec.first_page_footer, "Autores (A. Apellido).,", ", ".join(cita_autor(a[0].replace("-", " ")) for a in autores) + " y C. J. Cano-Mogollón,")
+    reemplazar(sec.first_page_footer, "Título en el idioma en que se presenta el artículo,", titulo_es + ",")
+    # texto plano para el ESCRITO FINAL
+    visto = []
+    for est, t in LOG:
+        t = _re.sub(r"\{c:([^}]+)\}", lambda mm: cita(mm.group(1)), t)
+        for k, v in EQ_MAP.items():
+            t = t.replace("{E_" + k.upper() + "}", f"({v})")
+        t = t.replace("{E_ACEPT}", e("acepta") if "acepta" in EQ_MAP else "")
+        for lat, uni in (("\\alpha", "α"), ("\\approx", "≈"), ("\\mathcal{M}", "M"), ("\\bar\\mu", "μ"), ("\\", ""), ("$", ""), ("{,}", ","), ("_{", "_"), ("^{", "^")):
+            t = t.replace(lat, uni)
+        visto.append((est, t))
+    salida.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(salida))
+    salida.with_suffix(".txt").write_text("\n\n".join(f"[{a}] {b}" for a, b in visto), encoding="utf-8")
+    print("guardado", salida.name, "| refs:", len(ORDEN_FIN), "| ecuaciones:", EQ_N[0])
+    assert len(ORDEN_FIN) == esperadas, [k for k in list(CLAVES) + ["dane"] if k not in ORDEN_FIN]
+
+
+def bloque(nombre: str) -> None:
+    """Ejecuta un bloque de la redacción técnica original del equipo (extraído de construir_articulo.py)."""
+    import json as _json
+    exec(compile(_json.loads((AQUI / "bloques.json").read_text(encoding="utf-8"))[nombre], f"<bloque {nombre}>", "exec"), globals())
