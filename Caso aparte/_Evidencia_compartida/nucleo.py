@@ -363,7 +363,8 @@ def cierre(autores, titulo_es: str, titulo_corto: str, salida: Path, esperadas: 
     for p in doc.paragraphs:
         for r in p.runs:
             for k, v in EQ_MAP.items():
-                r.text = r.text.replace("{E_" + k.upper() + "}", f"({v})")
+                if "{E_" + k.upper() + "}" in r.text:
+                    r.text = r.text.replace("{E_" + k.upper() + "}", f"({v})")
     ORDEN_FIN = list(ORDEN)
     for i, k in enumerate(ORDEN_FIN, 1):
         par(f"[{i}] {ref_ieee(k)}", "Normal", size=8)
