@@ -1,0 +1,121 @@
+{
+ "palabras": {
+  "roxana": 3035,
+  "camilo": 2930,
+  "andrea": 2884
+ },
+ "entre_articulos": {
+  "camilo vs roxana": {
+   "pct_de_a": 18.06,
+   "tramo_max_palabras": 207
+  },
+  "andrea vs roxana": {
+   "pct_de_a": 18.04,
+   "tramo_max_palabras": 207
+  },
+  "andrea vs camilo": {
+   "pct_de_a": 15.92,
+   "tramo_max_palabras": 207
+  }
+ },
+ "contra_fuentes": {
+  "PI-I documento final (docx)": {
+   "roxana": {
+    "pct": 0.1,
+    "tramo_max_palabras": 8
+   },
+   "camilo": {
+    "pct": 0.03,
+    "tramo_max_palabras": 8
+   },
+   "andrea": {
+    "pct": 0.14,
+    "tramo_max_palabras": 9
+   }
+  },
+  "Entrega 2.º corte (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.03,
+    "tramo_max_palabras": 8
+   }
+  },
+  "Modelo matemático (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Especificaciones (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Presupuesto (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "DOE (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Propuesta CI (docx)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  }
+ }
+}
