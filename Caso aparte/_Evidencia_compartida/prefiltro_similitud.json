@@ -1,21 +1,21 @@
 {
  "palabras": {
-  "roxana": 3035,
-  "camilo": 2930,
-  "andrea": 2884
+  "roxana": 2957,
+  "camilo": 2822,
+  "andrea": 2782
  },
  "entre_articulos": {
   "camilo vs roxana": {
-   "pct_de_a": 18.06,
-   "tramo_max_palabras": 207
+   "pct_de_a": 6.5,
+   "tramo_max_palabras": 76
   },
   "andrea vs roxana": {
-   "pct_de_a": 18.04,
-   "tramo_max_palabras": 207
+   "pct_de_a": 6.31,
+   "tramo_max_palabras": 54
   },
   "andrea vs camilo": {
-   "pct_de_a": 15.92,
-   "tramo_max_palabras": 207
+   "pct_de_a": 4.36,
+   "tramo_max_palabras": 54
   }
  },
  "contra_fuentes": {
@@ -25,7 +25,7 @@
     "tramo_max_palabras": 8
    },
    "camilo": {
-    "pct": 0.03,
+    "pct": 0.04,
     "tramo_max_palabras": 8
    },
    "andrea": {
@@ -43,7 +43,7 @@
     "tramo_max_palabras": 0
    },
    "andrea": {
-    "pct": 0.03,
+    "pct": 0.04,
     "tramo_max_palabras": 8
    }
   },

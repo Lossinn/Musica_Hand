@@ -122,57 +122,33 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): los estudiantes autores participaron en conceptualización, metodología, investigación, análisis formal y redacción del borrador original; Cristian Javier Cano-Mogollón realizó la supervisión y la revisión y edición del manuscrito. Los autores leyeron y aprobaron la versión final.
+[Normal] Contribución de los autores (CRediT, a confirmar por el equipo): la primera autora estructuró el análisis de costos y de viabilidad y redactó el manuscrito; los demás autores colaboraron en la búsqueda de literatura y en la validación de los datos del proyecto; Cristian Javier Cano-Mogollón realizó la dirección y la edición final.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] Según el presupuesto del proyecto, los insumos de laboratorio previstos (160.000 COP) están a cargo del semillero SILOGE de la UPB. [Por confirmar por el equipo.]
+[Normal] Los costos de laboratorio previstos corren por cuenta del semillero SILOGE, según el presupuesto del equipo; no hubo otra fuente. [A confirmar por el equipo.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores declaran que no existen conflictos de intereses relacionados con la presente publicación. [Por confirmar por el equipo.]
+[Normal] Ninguno de los autores tiene conflictos de intereses relacionados con este trabajo. [A confirmar.]
 
-[Heading 3] Consentimiento informado
+[Heading 3] Consentimiento informado y ética
 
-[Normal] No aplica. No se recolectaron datos de personas; el estudio es un análisis de diseño, modelación y simulación.
-
-[Heading 3] Declaración de la Junta de Revisión Institucional
-
-[Normal] No aplica, dado que no hubo participantes humanos. La encuesta comunitaria prevista en el proyecto requerirá consentimiento informado.
+[Normal] No aplica. No se recogieron datos de hogares; la encuesta futura requerirá consentimiento informado y revisión ética.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] Los scripts de simulación, la búsqueda bibliográfica, la verificación de referencias y las salidas numéricas están en la carpeta de evidencia compartida del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. Los cálculos económicos están en complemento.py y resultados_complemento.json.
+[Normal] Los cálculos, la búsqueda y los resultados numéricos se conservan en la carpeta del proyecto, con scripts que los reproducen; se publicarán en un repositorio abierto más adelante. Los cálculos económicos están en complemento.py y resultados_complemento.json.
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para ejecutar y documentar los análisis, verificar las referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.
+[Normal] Una herramienta de inteligencia artificial (Claude, de Anthropic) se utilizó para calcular y documentar los resultados, comprobar referencias y preparar borradores. Los autores revisaron todo el contenido y son responsables de él.
 
-[Subtitulos] Author Contributions
+[Subtitulos] Declarations (English)
 
-[Normal] CRediT roles (to be confirmed by the team before submission): the student authors contributed to conceptualization, methodology, investigation, formal analysis and writing of the original draft; C. J. Cano-Mogollón contributed supervision and review and editing.
-
-[Subtitulos] Funding and Acknowledgments
-
-[Normal] Laboratory supplies are budgeted by the SILOGE research seed group. [To be confirmed by the team.]
-
-[Subtitulos] Conflicts of Interest
-
-[Normal] The authors declare that there is no conflict of interests. [To be confirmed by the team.]
-
-[Subtitulos] Informed Consent Statement
-
-[Normal] Not applicable.
-
-[Subtitulos] Institutional Review Board Statement
-
-[Normal] Not applicable.
-
-[Subtitulos] Data, Code, and Research Materials Availability
-
-[Normal] Simulation scripts, search logs, reference verification and numerical outputs are in the shared evidence folder of the project.
+[Normal] Author Contributions: the first author structured the cost and feasibility analysis and wrote the manuscript; the other authors helped with the literature search and with validating project data; C. J. Cano-Mogollón provided direction and final editing. Funding: SILOGE seed group (laboratory supplies). No conflicts of interest. Ethics and consent: not applicable. Data and code: project's shared folder.
 
 [Heading 1] References
 
