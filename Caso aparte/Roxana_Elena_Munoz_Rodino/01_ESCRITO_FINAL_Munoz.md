@@ -29,17 +29,17 @@
 
 [Título art] Mass balance and chlorine demand in a passive PVC bypass chlorinator: compliance simulation for a rural community in Montería, Córdoba
 
-[Nombre autores] Roxana Elena Muñoz-Rodiño^{1}^{*}, Camilo Esteban Alvarez-Durán^{2}, Andrea Guzmán-Gómez^{3}, Cristian Javier Cano-Mogollón^{4}
+[Nombre autores] Roxana Elena Muñoz-Rodiño^1^*, Camilo Esteban Alvarez-Durán^2, Andrea Guzmán-Gómez^3, Cristian Javier Cano-Mogollón^4
 
-^{1} Autor 1: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
+^1 Autor 1: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
 
-^{2} Autor 2: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
+^2 Autor 2: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
 
-^{3} Autor 3: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
+^3 Autor 3: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
 
-^{4} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+^4 Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
 
-^{*} Autor de correspondencia: Roxana Elena Muñoz-Rodiño (roxana.munoz@upb.edu.co).
+^* Autor de correspondencia: Roxana Elena Muñoz-Rodiño (roxana.munoz@upb.edu.co).
 
 **Resumen:
 
@@ -61,13 +61,13 @@ water disinfection; passive chlorination; chlorine demand; mass balance; Monte C
 
 ## El problema de dosificar sin conocer la demanda
 
-Desinfectar con cloro parece una operación sencilla: se agrega una cantidad de producto y se espera. En la práctica, el cloro que se agrega se reparte entre lo que oxida la materia orgánica y los metales disueltos, lo que decae con el tiempo y la temperatura, y lo que queda como residual libre, que es lo único que protege el agua después. Si la dosis no supera la demanda, el residual es cero aunque se haya vertido producto. La Resolución 2115 de 2007 pide que el cloro residual libre esté entre 0,3 y 2,0 mg/L en cualquier punto de la red y dice, además, que la dosis debe resultar de pruebas frecuentes de demanda {c:res2115}. Las guías de la Organización Mundial de la Salud van en la misma dirección {c:oms}. Un dispositivo que no parte de la demanda del agua que trata está calibrado a ciegas.
+Desinfectar con cloro parece una operación sencilla: se agrega una cantidad de producto y se espera. En la práctica, el cloro que se agrega se reparte entre lo que oxida la materia orgánica y los metales disueltos, lo que decae con el tiempo y la temperatura, y lo que queda como residual libre, que es lo único que protege el agua después. Si la dosis no supera la demanda, el residual es cero aunque se haya vertido producto. La Resolución 2115 de 2007 pide que el cloro residual libre esté entre 0,3 y 2,0 mg/L en cualquier punto de la red y dice, además, que la dosis debe resultar de pruebas frecuentes de demanda [1]. Las guías de la Organización Mundial de la Salud van en la misma dirección [2]. Un dispositivo que no parte de la demanda del agua que trata está calibrado a ciegas.
 
-El Vidrial es una vereda rural de Montería, Córdoba, cuyas familias, según la caracterización preliminar del proyecto, usan fuentes de agua sin tratamiento adecuado o métodos informales de potabilización. El contexto no es excepcional: la carga de enfermedad atribuible al agua insegura y al saneamiento deficiente sigue siendo alta {c:wolf}, y revisiones y ensayos muestran que clorar en el punto de uso o de recolección reduce la diarrea infantil {c:arnold,clasen,pickering}. Entre las opciones de bajo costo, la cloración pasiva, es decir, la que no requiere electricidad ni una acción diaria del usuario, se considera una vía para ampliar el acceso {c:amrose,mercado}.
+El Vidrial es una vereda rural de Montería, Córdoba, cuyas familias, según la caracterización preliminar del proyecto, usan fuentes de agua sin tratamiento adecuado o métodos informales de potabilización. El contexto no es excepcional: la carga de enfermedad atribuible al agua insegura y al saneamiento deficiente sigue siendo alta [3], y revisiones y ensayos muestran que clorar en el punto de uso o de recolección reduce la diarrea infantil [4]–[6]. Entre las opciones de bajo costo, la cloración pasiva, es decir, la que no requiere electricidad ni una acción diaria del usuario, se considera una vía para ampliar el acceso [7], [8].
 
 ## Qué muestra la literatura reciente
 
-Se hizo una búsqueda reproducible en OpenAlex (sección 2.4). De 328 registros se retuvieron 13 estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos (Figura 1). Sus resultados dependen mucho de qué tan bien se ajusta la dosis a las condiciones locales. En seis sistemas de agua por gravedad de Nepal, la cloración pasiva bajó la presencia de E. coli en los grifos de más de 80 % a 7 % en un año {c:nepal}. En Guatemala, un clorador local de bajo costo redujo la contaminación fecal, pero solo 24 % de las muestras de grifo alcanzó el mínimo de 0,2 mg/L {c:guatemala}. En Ghana, el cloro libre estuvo en el rango de 0,2 a 2,0 mg/L en 86 % de las mediciones con el método pasivo y en 71 % con el manual, y las fluctuaciones observadas no quedaron explicadas por el pH, la temperatura, la conductividad ni la turbidez; los autores señalan cambios en la demanda de cloro como posible causa {c:ghana}. En Uganda, siete dispositivos sin electricidad se compararon por consistencia de dosis y solo uno, el clorador en T, alcanzó la dosis correcta con probabilidad de 90 % {c:uganda}. El patrón se repite: el dispositivo funciona cuando su dosis se ajusta a la fuente, y falla cuando no. Otros estudios aportan el contexto de adopción y costo {c:venturi,dhaka,honduras,kmu,odisha,etiopia,aquatabs,usvi}.
+Se hizo una búsqueda reproducible en OpenAlex (sección 2.4). De 328 registros se retuvieron 13 estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos (Figura 1). Sus resultados dependen mucho de qué tan bien se ajusta la dosis a las condiciones locales. En seis sistemas de agua por gravedad de Nepal, la cloración pasiva bajó la presencia de E. coli en los grifos de más de 80 % a 7 % en un año [9]. En Guatemala, un clorador local de bajo costo redujo la contaminación fecal, pero solo 24 % de las muestras de grifo alcanzó el mínimo de 0,2 mg/L [10]. En Ghana, el cloro libre estuvo en el rango de 0,2 a 2,0 mg/L en 86 % de las mediciones con el método pasivo y en 71 % con el manual, y las fluctuaciones observadas no quedaron explicadas por el pH, la temperatura, la conductividad ni la turbidez; los autores señalan cambios en la demanda de cloro como posible causa [11]. En Uganda, siete dispositivos sin electricidad se compararon por consistencia de dosis y solo uno, el clorador en T, alcanzó la dosis correcta con probabilidad de 90 % [12]. El patrón se repite: el dispositivo funciona cuando su dosis se ajusta a la fuente, y falla cuando no. Otros estudios aportan el contexto de adopción y costo [13]–[20].
 
 *Figura 1. Flujo de la búsqueda bibliográfica (PRISMA 2020), OpenAlex, 6 de noviembre de 2026.
 
@@ -89,29 +89,29 @@ El clorificador se construye con tubería y accesorios de PVC a presión de 1 y 
 
 ## Balance de masa
 
-El caudal total se reparte entre derivación y cámara, y la fracción que pasa por la cámara es $\alpha$:
+El caudal total se reparte entre derivación y cámara, y la fracción que pasa por la cámara es alpha:
 
-La disolución de la pastilla sigue una ley de transferencia de masa tipo Noyes–Whitney, con coeficiente $k_m$, área expuesta $A_s$ y solubilidad de saturación $C_{sat}$. La concentración en la cámara y, al recombinar con agua sin cloro, la concentración en la mezcla son:
+La disolución de la pastilla sigue una ley de transferencia de masa tipo Noyes–Whitney, con coeficiente k_m, área expuesta A_s y solubilidad de saturación C_sat. La concentración en la cámara y, al recombinar con agua sin cloro, la concentración en la mezcla son:
 
-El cloro residual libre resulta de restar la demanda $D$ y de aplicar el decaimiento de primer orden, con constante $k$ y tiempo de contacto $t$, y los factores de temperatura, pH, turbidez y caudal que calibró el equipo en su simulación:
+El cloro residual libre resulta de restar la demanda D y de aplicar el decaimiento de primer orden, con constante k y tiempo de contacto t, y los factores de temperatura, pH, turbidez y caudal que calibró el equipo en su simulación:
 
-con $f_T=e^{0{,}03(T-25)}$, $f_{pH}=1+0{,}06\,|pH-7{,}2|$, $f_{tu}=1+0{,}15\,\mathrm{NTU}$ y $f_Q=1+0{,}08\,(Q-1)$. Estos factores son del modelo del proyecto y no están ajustados a mediciones; la dependencia de la cinética con la temperatura y la composición del agua es conocida {c:powell}. Si se quiere un residual objetivo $C^{*}$ y se llama $\Phi=e^{kt}f_Tf_{pH}f_{tu}f_Q$ al factor de pérdida, la mezcla debe entregar al menos:
+con f_T=e^0,03(T-25), f_pH=1+0,06 |pH-7,2|, f_tu=1+0,15 NTU y f_Q=1+0,08 (Q-1). Estos factores son del modelo del proyecto y no están ajustados a mediciones; la dependencia de la cinética con la temperatura y la composición del agua es conocida [21]. Si se quiere un residual objetivo C^* y se llama Φ=e^ktf_Tf_pHf_tuf_Q al factor de pérdida, la mezcla debe entregar al menos:
 
 ## Simulación
 
-Se reprodujo el cuaderno Monte Carlo del proyecto con la misma semilla (42) y 1.000 escenarios. Las distribuciones son supuestos del equipo: caudal normal de media 1,0 L/s; tiempo de contacto de 20 min; cloro en cámara de 1,2 mg/L; demanda de 0,65 mg/L; fracción derivada beta(2,5; 5,5); constante de decaimiento de 0,035 por minuto; temperatura de 28 °C; pH de 7,2 y turbidez gamma. La reproducción coincidió con el archivo del cuaderno (diferencia máxima 0,0). El rango objetivo es de 0,2 a 0,5 mg/L, con meta de 0,4. Los intervalos de proporciones son de Wilson {c:wilson}. Para el mapa de cumplimiento se multiplicó la dosis efectiva por una escala de 0,5 a 6 y se varió la demanda media de 0,05 a 1,0 mg/L, con 20.000 escenarios por celda.
+Se reprodujo el cuaderno Monte Carlo del proyecto con la misma semilla (42) y 1.000 escenarios. Las distribuciones son supuestos del equipo: caudal normal de media 1,0 L/s; tiempo de contacto de 20 min; cloro en cámara de 1,2 mg/L; demanda de 0,65 mg/L; fracción derivada beta(2,5; 5,5); constante de decaimiento de 0,035 por minuto; temperatura de 28 °C; pH de 7,2 y turbidez gamma. La reproducción coincidió con el archivo del cuaderno (diferencia máxima 0,0). El rango objetivo es de 0,2 a 0,5 mg/L, con meta de 0,4. Los intervalos de proporciones son de Wilson [22]. Para el mapa de cumplimiento se multiplicó la dosis efectiva por una escala de 0,5 a 6 y se varió la demanda media de 0,05 a 1,0 mg/L, con 20.000 escenarios por celda.
 
 ## Búsqueda bibliográfica
 
-La búsqueda se hizo en OpenAlex el 6 de noviembre de 2026 con la ecuación guardada en prisma_cifras.json, en título y resumen, artículos de 2020 a 2026 en inglés o español con DOI. El cribado exigió que el título tratara de cloración; la elegibilidad se evaluó sobre título y resumen con tres criterios (agua de consumo, dispositivo pasivo o dosificador, contexto de bajos recursos). El flujo sigue la guía PRISMA 2020 {c:prisma} y se muestra en la Figura 1. No es una revisión sistemática completa: la lectura de texto completo queda pendiente.
+La búsqueda se hizo en OpenAlex el 6 de noviembre de 2026 con la ecuación guardada en prisma_cifras.json, en título y resumen, artículos de 2020 a 2026 en inglés o español con DOI. El cribado exigió que el título tratara de cloración; la elegibilidad se evaluó sobre título y resumen con tres criterios (agua de consumo, dispositivo pasivo o dosificador, contexto de bajos recursos). El flujo sigue la guía PRISMA 2020 [23] y se muestra en la Figura 1. No es una revisión sistemática completa: la lectura de texto completo queda pendiente.
 
 # Resultados
 
 ## Qué dosis necesita el diseño
 
-Con los valores medios supuestos, el factor de pérdida es $\Phi\approx 2,64$. Para dejar 0,4 mg/L con una demanda de 0,65 mg/L, la mezcla debe entregar $C_s^{\min}\approx 1,71$ mg/L, según la ecuación {E_REQ}. La dosis efectiva media del modelo es $C_0\alpha=0,39$ mg/L, es decir, 4,4 veces menos. La dosis efectiva supera a la demanda en solo 16,2 % de los escenarios.
+Con los valores medios supuestos, el factor de pérdida es Φapprox 2,64. Para dejar 0,4 mg/L con una demanda de 0,65 mg/L, la mezcla debe entregar C_s^mínapprox 1,71 mg/L, según la ecuación (5). La dosis efectiva media del modelo es C_0alpha=0,39 mg/L, es decir, 4,4 veces menos. La dosis efectiva supera a la demanda en solo 16,2 % de los escenarios.
 
-La concentración que debe tener la cámara depende de cuánta agua pasa por ella. Con la mezcla requerida, una fracción $\alpha=0{,}2$ exige una cámara de 8,5 mg/L y $\alpha=0{,}5$, de 3,4 mg/L (Tabla 2). Con una cámara que apenas disuelva 1,2 mg/L, como supone la simulación, ninguna fracción razonable alcanza la mezcla requerida.
+La concentración que debe tener la cámara depende de cuánta agua pasa por ella. Con la mezcla requerida, una fracción alpha=0,2 exige una cámara de 8,5 mg/L y alpha=0,5, de 3,4 mg/L (Tabla 2). Con una cámara que apenas disuelva 1,2 mg/L, como supone la simulación, ninguna fracción razonable alcanza la mezcla requerida.
 
 *Tabla 2. Concentración de cámara necesaria según la fracción derivada
 
@@ -131,9 +131,9 @@ Al barrer la escala de la dosis y la demanda media (Figura 4), el máximo de cum
 
 # Discusión
 
-El resultado central no es que el dispositivo falle, sino que el diseño no puede juzgarse sin conocer la demanda. Con los supuestos del equipo, la dosis queda a una fracción de lo necesario, y subirla lo suficiente exige una cámara muy concentrada que una pastilla en erosión pasiva difícilmente sostiene. Esto coincide con la experiencia de campo: en Ghana las fluctuaciones del cloro no se explicaron por las variables fisicoquímicas medidas y se atribuyeron a cambios en la demanda {c:ghana}; en Guatemala, un dispositivo barato mejoró la calidad microbiológica pero dosificó poco {c:guatemala}; y en Uganda el dispositivo que acertó con mayor frecuencia fue el de mejor diseño hidráulico {c:uganda}.
+El resultado central no es que el dispositivo falle, sino que el diseño no puede juzgarse sin conocer la demanda. Con los supuestos del equipo, la dosis queda a una fracción de lo necesario, y subirla lo suficiente exige una cámara muy concentrada que una pastilla en erosión pasiva difícilmente sostiene. Esto coincide con la experiencia de campo: en Ghana las fluctuaciones del cloro no se explicaron por las variables fisicoquímicas medidas y se atribuyeron a cambios en la demanda [11]; en Guatemala, un dispositivo barato mejoró la calidad microbiológica pero dosificó poco [10]; y en Uganda el dispositivo que acertó con mayor frecuencia fue el de mejor diseño hidráulico [12].
 
-Hay una consecuencia práctica. La Resolución 2115 ya pide que la dosis salga de pruebas de demanda {c:res2115}, y el protocolo del proyecto mide cloro por DPD pero no define una prueba de demanda previa. Incorporarla, aunque sea con una dosis de ensayo en un recipiente, convierte la calibración de las válvulas en un procedimiento y no en un tanteo. Además, la presencia de partículas y materia orgánica en un agua de pozo o de río debería justificar una etapa previa de reducción de turbidez, algo que las guías recomiendan para que la desinfección sea eficaz {c:oms}.
+Hay una consecuencia práctica. La Resolución 2115 ya pide que la dosis salga de pruebas de demanda [1], y el protocolo del proyecto mide cloro por DPD pero no define una prueba de demanda previa. Incorporarla, aunque sea con una dosis de ensayo en un recipiente, convierte la calibración de las válvulas en un procedimiento y no en un tanteo. Además, la presencia de partículas y materia orgánica en un agua de pozo o de río debería justificar una etapa previa de reducción de turbidez, algo que las guías recomiendan para que la desinfección sea eficaz [2].
 
 Hay tres límites. Primero, las distribuciones, en particular la demanda de 0,65 mg/L y el cloro de cámara de 1,2 mg/L, son supuestos sin medición; si la demanda real fuera de 0,1 a 0,2 mg/L, el cuadro cambiaría. Segundo, el repositorio incluye un formato de captura con diez registros fechados en septiembre de 2026, cinco de ellos con cloro y cuatro dentro del rango, cuya procedencia no pudo confirmarse; no se usaron como resultado, pero su contraste con la simulación indica que los supuestos de demanda y de cámara deben recalibrarse con mediciones. Tercero, el rango de diseño del proyecto (0,2–0,5 mg/L) es más estrecho que el de la norma (0,3–2,0 mg/L) y su límite inferior queda por debajo del mínimo normativo; un diseño que apunte al valor legal tendría más margen.
 
