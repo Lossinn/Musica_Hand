@@ -1,18 +1,18 @@
 {
  "palabras": {
-  "unico": 7619
+  "unico": 7684
  },
  "entre_articulos": {},
  "contra_fuentes": {
   "documento_tecnico.md": {
    "unico": {
-    "pct": 2.42,
-    "tramo_max": 31
+    "pct": 1.25,
+    "tramo_max": 17
    }
   },
   "documento_2do_corte (html)": {
    "unico": {
-    "pct": 0.29,
+    "pct": 0.23,
     "tramo_max": 14
    }
   },
@@ -24,7 +24,7 @@
   },
   "articulo_anterior_Pemberty.docx": {
    "unico": {
-    "pct": 16.42,
+    "pct": 16.28,
     "tramo_max": 147
    }
   },
