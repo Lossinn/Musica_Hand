@@ -270,10 +270,15 @@ def contenido(e):
     ns.update(dict(H1=H1, H2=H2, T=T, ecuacion=ecuacion, tabla=tabla, figura=figura))
     autores = ["Roxana Elena Muñoz-Rodiño, Camilo Esteban Alvarez-Durán", "Andrea Guzmán-Gómez, Cristian Javier Cano-Mogollón"]
     afil = ["Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia · Asignatura Gestión Tecnológica",
+            "roxana.munoz@upb.edu.co · camilo.alvarezd@upb.edu.co · andrea.guzmang@upb.edu.co",
+            "Autor de correspondencia: Camilo Esteban Alvarez-Durán (camilo.alvarezd@upb.edu.co)",
             "Cristian Javier Cano-Mogollón: Docente Titular, Facultad de Ingeniería Industrial; Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE); Hub Industrial Solution (HIS) · cristian.cano@upb.edu.co"]
     e.titulo_bloque([TITULO_ES, TITULO_EN], autores, afil, RES_ES, KW_ES, RES_EN, KW_EN)
     exec(compile(CUERPO, "cuerpo", "exec"), ns)
     e.sec_sin_numero("Declaraciones")
+    e.P("**Contribución de los autores.** Roxana Elena Muñoz-Rodiño planteó el balance de masa, ejecutó la simulación y redactó el borrador; Camilo Esteban Alvarez-Durán desarrolló el análisis de sensibilidad y el diseño experimental; Andrea Guzmán-Gómez estructuró el análisis de costos y de viabilidad. Los tres participaron en la búsqueda de literatura, la curación de datos, la unificación de la bibliografía y la revisión. Cristian Javier Cano-Mogollón supervisó el trabajo y revisó el manuscrito.", sangria=False)
+    e.P("**Financiación.** El presupuesto del proyecto prevé que el semillero SILOGE cubra los insumos de laboratorio (160.000 COP); no hubo otra fuente.", sangria=False)
+    e.P("**Conflicto de intereses.** Los autores declaran que no existen conflictos de intereses relacionados con este trabajo.", sangria=False)
     e.P("**Ética y consentimiento.** El estudio es un análisis con modelos y simulación; no incluyó personas ni se recogieron datos de hogares. Una prueba con la comunidad pasará antes por revisión ética y consentimiento informado.", sangria=False)
     e.P("**Datos y código.** Los scripts de simulación, la búsqueda bibliográfica, el análisis de potencia y las salidas numéricas (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv) se entregan junto con este artículo.", sangria=False)
     e.P("**Uso de herramientas de inteligencia artificial.** Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para apoyar la reproducción de la simulación, la búsqueda bibliográfica, la verificación de referencias y la redacción de borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.", sangria=False)

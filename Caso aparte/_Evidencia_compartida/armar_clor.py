@@ -29,14 +29,34 @@ GUIA = GUIA.replace("el documento técnico, el del segundo corte", "el documento
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
-    for sub in ("1_Articulo", "2_Soporte", "3_Envio", "4_Evidencia", "5_ZIP_para_Teams"):
+    for sub in ("1_Articulo", "3_Envio", "4_Evidencia", "5_ZIP_para_Teams"):
         (OUT / sub).mkdir(parents=True)
     dx = OUT / "1_Articulo" / "Articulo_Maquetado_EquipoNN.docx"
     r = subprocess.run([sys.executable, "-X", "utf8", str(AQUI / "ef_clor.py"), str(dx)], cwd=AQUI, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr[-1500:]
     convert(str(dx), str(dx.with_suffix(".pdf")))
     npag = len(pymupdf.open(str(dx.with_suffix(".pdf"))))
-    sop = OUT / "2_Soporte"
+    # preprint manuscrito: los tres escaneos del equipo, orientados y comprimidos en un solo PDF
+    pre = OUT / "2_Preprint"; (pre / "originales").mkdir(parents=True)
+    fuentes = {}
+    for p in (RAIZ / "pre_print").glob("*.pdf"):
+        for clave in ("Roxana", "WhatsApp", "Andrea"):
+            if p.name.startswith(clave):
+                fuentes[clave] = p
+        shutil.copy2(p, pre / "originales" / p.name)
+    giros = {("Roxana", 0): 270, ("Roxana", 1): 270, ("Roxana", 2): 270, ("WhatsApp", 11): 90}
+    m = pymupdf.open()
+    for clave in ("Roxana", "WhatsApp", "Andrea"):
+        orig = pymupdf.open(str(fuentes[clave]))
+        for i, pg in enumerate(orig):
+            if (clave, i) in giros:
+                pg.set_rotation(giros[clave, i])
+            r_ = pg.rect
+            pm = pg.get_pixmap(dpi=max(40, int(1500 / (r_.width / 72))))
+            nuevo = m.new_page(width=r_.width, height=r_.height)
+            nuevo.insert_image(nuevo.rect, stream=pm.tobytes("jpg", jpg_quality=68))
+    m.save(str(pre / "Preprint_Manuscrito_EquipoNN.pdf"), garbage=3, deflate=True); npre = len(m)
+    sop = OUT / "2_Soporte"; sop.mkdir()
     pdf_html(FICHA, sop / "Ficha_Revista_Indexada_EquipoNN.pdf")
     pdf_html(GUIA, sop / "Guia_Turnitin_1pagina.pdf")
     # carta
@@ -66,6 +86,7 @@ def main():
         shutil.copy2(g, ev / "fig" / g.name)
     z = OUT / "5_ZIP_para_Teams" / "02_GT_Corte3_CierreProyecto_EquipoNN.zip"
     with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
+        zf.write(pre / "Preprint_Manuscrito_EquipoNN.pdf", "Preprint_Manuscrito_EquipoNN.pdf")
         zf.write(sop / "Ficha_Revista_Indexada_EquipoNN.pdf", "Ficha_Revista_Indexada_EquipoNN.pdf")
         zf.write(dx.with_suffix(".pdf"), "Articulo_Maquetado_EquipoNN.pdf")
     (OUT / "LEEME.md").write_text(f"""# Entrega del equipo: clorificador de agua para El Vidrial, Corte 3
@@ -76,16 +97,16 @@ Gestión Tecnológica, UPB Seccional Montería. Preparada el {FECHA}.
 | Carpeta | Contenido |
 |---|---|
 | `1_Articulo/` | Artículo único del equipo en dos columnas, PDF y Word ({npag} páginas, 22 referencias verificadas). Autores: Roxana Muñoz, Camilo Alvarez, Andrea Guzmán y el docente Cristian Cano |
+| `2_Preprint/` | Preprint manuscrito: los tres escaneos del equipo (Roxana, Camilo y Andrea, {npre} páginas en total) unidos en un PDF, y los originales |
 | `2_Soporte/` | Ficha de la revista y guía de una página para Turnitin |
 | `3_Envio/` | Carta al editor y pasos de radicación en OJS |
 | `4_Evidencia/` | Scripts, resultados de la simulación, búsqueda bibliográfica, referencias, hoja de aleatorización del diseño 2³ y figuras |
 | `5_ZIP_para_Teams/` | `02_GT_Corte3_CierreProyecto_EquipoNN.zip` con lo que ya existe |
 
 ## El ZIP
-Contiene `Ficha_Revista_Indexada_EquipoNN.pdf` y `Articulo_Maquetado_EquipoNN.pdf`. No hay archivos simulados.
+Contiene `Preprint_Manuscrito_EquipoNN.pdf`, `Ficha_Revista_Indexada_EquipoNN.pdf` y `Articulo_Maquetado_EquipoNN.pdf`. No hay archivos simulados.
 
-Los otros tres archivos de la rúbrica se añaden cuando existan, con estos nombres:
-- `Preprint_Manuscrito_EquipoNN.pdf`: el escaneo del preprint escrito a mano.
+Los otros dos archivos de la rúbrica se añaden cuando existan, con estos nombres:
 - `Certificado_Turnitin_EquipoNN.pdf`: lo emite Turnitin al subir el PDF del artículo (guía en `2_Soporte/`).
 - `Constancia_Envio_Revista_EquipoNN.pdf`: la entrega el portal de la revista al radicar (pasos en `3_Envio/`).
 
@@ -93,7 +114,8 @@ Los otros tres archivos de la rúbrica se añaden cuando existan, con estos nomb
 - Los resultados provienen de una simulación con distribuciones supuestas por el equipo; no hay mediciones del prototipo. El artículo lo dice y ubica el desarrollo en TRL 3.
 - Los tres análisis personales anteriores (balance de masa, sensibilidad y diseño experimental, costo y viabilidad) quedaron integrados en este único artículo; las versiones individuales están en las carpetas de cada integrante.
 - La búsqueda bibliográfica se hizo en OpenAlex y la elegibilidad se evaluó sobre título y resumen. Se verificó que cada referencia existe y que sus metadatos coinciden.
-- El artículo no incluye ORCID, autor de correspondencia, financiación ni conflicto de intereses; hay que añadirlos antes del envío si la revista los pide.
+- El artículo recoge los correos, el autor de correspondencia (Camilo Alvarez), la financiación y la declaración de conflicto de intereses tal como figuran en los preprints manuscritos. No incluye ORCID.
+- Los tres preprints suman {npre} páginas; la guía pide de 2 a 3 para el equipo. Se giraron las páginas que se escanearon de lado y se comprimieron las imágenes.
 - Filtro previo de similitud: {pi1['pct']:.1f} % contra el documento final del Proyecto Integrador I y {seg['pct']:.1f} % contra el del segundo corte. No sustituye a Turnitin.
 - El artículo declara el uso de un asistente de inteligencia artificial. Antes de defenderlo, todos deben haberlo leído completo.
 """, encoding="utf-8")
@@ -102,7 +124,7 @@ Los otros tres archivos de la rúbrica se añaden cuando existan, con estos nomb
     if pl.exists():
         shutil.rmtree(pl)
     pl.mkdir()
-    for a in (dx, dx.with_suffix(".pdf"), sop / "Ficha_Revista_Indexada_EquipoNN.pdf", z):
+    for a in (dx, dx.with_suffix(".pdf"), pre / "Preprint_Manuscrito_EquipoNN.pdf", sop / "Ficha_Revista_Indexada_EquipoNN.pdf", z):
         shutil.copy2(a, pl / a.name)
     print("listo:", npag, "páginas;", [i.filename for i in zipfile.ZipFile(z).infolist()])
 
