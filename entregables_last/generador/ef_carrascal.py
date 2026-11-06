@@ -13,13 +13,13 @@ def contenido(e):
     resumen = ("Una secuencia fija de ejercicios trata igual a todos los niños: repite lo que uno ya domina y adelanta lo que otro aún no ha aprendido. Este trabajo presenta el modelo de aprendizaje de Hand Sing Kids, una aplicación que enseña las ocho notas de Do3 a Do4 "
                "con señas de las manos. Después de cada intento, el sistema actualiza una estimación del dominio de la nota que combina precisión, consistencia, velocidad y retención, esta última con decaimiento exponencial por los días sin practicar; programa los repasos "
                "con una adaptación del esquema SM-2 a una calidad continua; y, cuando el niño acumula 40 intentos, sustituye la fórmula fija por un predictor logístico de tres variables. Una nota pasa a dominada con un valor de 0,80 y al menos seis intentos y retrocede si baja de 0,70. "
-               "Un análisis de sensibilidad de la fórmula muestra que, por la forma en que la retención multiplica al desempeño, una nota con desempeño de 0,95 deja de estar dominada cuando la retención cae por debajo de aproximadamente 0,70 y retrocede cuando cae por debajo de 0,03. "
+               "Un análisis de sensibilidad de la fórmula muestra que, por la forma en que la retención multiplica al desempeño, una nota con desempeño de 0,95 deja de estar dominada cuando la retención cae por debajo de aproximadamente 0,22 y retrocede cuando cae por debajo de 0,03. "
                "Las pruebas del dominio y del predictor del repositorio pasaron; el predictor alcanza 78 % sobre sus propios datos de entrenamiento, lo que solo comprueba que el ajuste converge. No hay datos de niños: las constantes son de diseño y el efecto sobre el aprendizaje "
                "es una hipótesis. El nivel de madurez es TRL 4.")
     abstract = ("A fixed exercise sequence treats all children alike: it repeats what one child already masters and moves ahead on what another has not yet learned. This paper presents the learning model of Hand Sing Kids, an application that teaches the eight notes from C3 to C4 with hand signs. "
                 "After each attempt, the system updates a mastery estimate that combines accuracy, consistency, speed and retention, the latter decaying exponentially with days without practice; schedules reviews with an adaptation of the SM-2 scheme to a continuous quality; "
                 "and, once the child has 40 attempts, replaces the fixed formula with a three-variable logistic predictor. A note becomes mastered at 0.80 with at least six attempts and falls back below 0.70. A sensitivity analysis of the formula shows that, because retention multiplies performance, "
-                "a note with performance 0.95 stops being mastered when retention falls below about 0.70 and falls back when it drops below 0.03. The mastery and predictor test suites passed; the predictor reaches 78 % on its own training data, which only checks that the fit converges. "
+                "a note with performance 0.95 stops being mastered when retention falls below about 0.22 and falls back when it drops below 0.03. The mastery and predictor test suites passed; the predictor reaches 78 % on its own training data, which only checks that the fit converges. "
                 "There are no data from children: the constants are design decisions and the effect on learning is a hypothesis. The readiness level is TRL 4.")
     titulo(e, "Carrascal", "Del intento al dominio: estimación del aprendizaje y repaso espaciado en Hand Sing Kids", resumen,
            "aprendizaje adaptativo; seguimiento del conocimiento; repaso espaciado; dominio de habilidades; educación musical infantil.", abstract,
@@ -87,8 +87,8 @@ def contenido(e):
         return ((fac - LAM) / (1 - LAM)) ** (1 / GAM)
     r_dom = {S: r_umbral(S, 0.80) for S in (0.95, 0.90, 0.85)}
     r_ret = {S: r_umbral(S, 0.70) for S in (0.95, 0.90, 0.85)}
-    e.P(f"Con $S=0{{,}}95$, la nota deja de estar dominada cuando $R$ baja de {f(r_dom[0.95], 2)} y retrocede cuando baja de {f(r_ret[0.95], 3)}; con $S=0{{,}}90$, deja de estar dominada con $R<{f(r_dom[0.90], 2)}$ y retrocede con $R<{f(r_ret[0.90], 2)}$; con $S=0{{,}}85$, "
-        f"ya no alcanza el 0,80 ni siquiera con $R=1$ y retrocede con $R<{f(r_ret[0.85], 2)}$ ({{fig:dom}}). Una consecuencia es que una nota con desempeño de 0,85 no puede ser dominada por mucho que se practique, y que el umbral de 0,80 exige un desempeño combinado alto.")
+    e.P(f"Con $S=0{{,}}95$, la nota deja de estar dominada cuando $R$ baja de {f(r_dom[0.95], 2)} y retrocede cuando baja de {f(r_ret[0.95], 3)}; con $S=0{{,}}90$, los umbrales son {f(r_dom[0.90], 2)} y {f(r_ret[0.90], 2)}; y con $S=0{{,}}85$, {f(r_dom[0.85], 2)} y {f(r_ret[0.85], 2)} ({{fig:dom}}). "
+        "Cuanto menor es el desempeño combinado, más alta debe mantenerse la retención para conservar el dominio, y con $S\le 0{,}80$ la nota no puede ser dominada ni con retención perfecta.")
     e.figura("dom", "dominio_retencion.png", "Dominio según la retención para tres niveles de desempeño combinado $S$ (curvas calculadas con la ecuación del dominio; no son datos de niños).", 8.3)
     e.sub("Tiempo hasta que una nota retrocede")
     taus = []
