@@ -1,0 +1,121 @@
+{
+ "palabras": {
+  "roxana": 2957,
+  "camilo": 2822,
+  "andrea": 2782
+ },
+ "entre_articulos": {
+  "camilo vs roxana": {
+   "pct_de_a": 6.5,
+   "tramo_max_palabras": 76
+  },
+  "andrea vs roxana": {
+   "pct_de_a": 6.31,
+   "tramo_max_palabras": 54
+  },
+  "andrea vs camilo": {
+   "pct_de_a": 4.36,
+   "tramo_max_palabras": 54
+  }
+ },
+ "contra_fuentes": {
+  "PI-I documento final (docx)": {
+   "roxana": {
+    "pct": 0.1,
+    "tramo_max_palabras": 8
+   },
+   "camilo": {
+    "pct": 0.04,
+    "tramo_max_palabras": 8
+   },
+   "andrea": {
+    "pct": 0.14,
+    "tramo_max_palabras": 9
+   }
+  },
+  "Entrega 2.º corte (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.04,
+    "tramo_max_palabras": 8
+   }
+  },
+  "Modelo matemático (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Especificaciones (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Presupuesto (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "DOE (md)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  },
+  "Propuesta CI (docx)": {
+   "roxana": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "camilo": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   },
+   "andrea": {
+    "pct": 0.0,
+    "tramo_max_palabras": 0
+   }
+  }
+ }
+}
