@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra suave -->
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="greenShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#059669" flood-opacity="0.14"/>
+    </filter>
+
+    <!-- Marcadores de flecha limpios -->
+    <marker id="arrowBpmn" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#64748B"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#10B981"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#0284C7"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-title { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 800; }
+    .font-sub { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 700; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 400; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  </style>
+
+  <!-- Fondo Limpio y Suave -->
+  <rect width="1440" height="1020" fill="#F8FAFC"/>
+
+  <!-- ========================================================================
+       CABECERA TIPO NOTION / STRIPE
+       ======================================================================== -->
+  <g transform="translate(50, 25)">
+    <rect x="0" y="0" width="1340" height="80" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 14 Q 0 0 14 0 L 14 80 Q 0 80 0 66 Z" fill="#10B981"/>
+
+    <text x="35" y="35" class="font-title" font-size="18" fill="#0F172A" letter-spacing="0.3">MODELADO DE PROCESOS BPMN 2.0 — PROCESO OPTIMIZADO (TO-BE)</text>
+    <text x="35" y="58" class="font-body" font-size="12" fill="#64748B">
+      Sistema Ciberfísico Híbrido: Dosificación Cinética, Gobernanza DAMA y Alertas • <tspan class="font-sub" fill="#0F172A">El Vidrial 2026</tspan>
+    </text>
+
+    <!-- Badge Autores & Estándar -->
+    <rect x="940" y="21" width="375" height="38" rx="8" fill="#ECFDF5"/>
+    <text x="955" y="44" class="font-body" font-size="11.5" fill="#065F46">
+      <tspan class="font-sub" fill="#047857">Estándar OMG BPMN 2.0</tspan> • EBT: Roxana • Andrea • Camilo
+    </text>
+  </g>
+
+  <!-- ========================================================================
+       POOL 1: EBT & JAC EL VIDRIAL (OPERACIÓN DE CAMPO)
+       ======================================================================== -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="1340" height="330" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 50 0 L 50 330 L 14 330 Q 0 330 0 316 Z" fill="#047857"/>
+    <text x="-165" y="31" transform="rotate(-90)" class="font-title" font-size="11.5" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      POOL 1: OPERACIÓN EN CAMPO (JAC &amp; EBT)
+    </text>
+
+    <line x1="50" y1="170" x2="1340" y2="170" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+    <!-- Cabecera Lane 1: Operador JAC -->
+    <rect x="50" y="0" width="45" height="170" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="-85" y="78" transform="rotate(-90)" class="font-sub" font-size="10" fill="#475569" text-anchor="middle">
+      OPERADOR JAC
+    </text>
+
+    <!-- Cabecera Lane 2: Ingeniero EBT -->
+    <rect x="50" y="170" width="45" height="160" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="-250" y="78" transform="rotate(-90)" class="font-sub" font-size="10" fill="#475569" text-anchor="middle">
+      INGENIERO EBT
+    </text>
+
+    <!-- ==================== ELEMENTOS EN LANE 1 ==================== -->
+    <!-- Evento Inicio -->
+    <circle cx="140" cy="85" r="18" fill="#ECFDF5" stroke="#10B981" stroke-width="2.5"/>
+    <circle cx="140" cy="85" r="7" fill="#10B981"/>
+    <text x="140" y="120" class="font-sub" font-size="9.5" fill="#0F172A" text-anchor="middle">Inicio Turno</text>
+    <text x="140" y="132" class="font-body" font-size="8.5" fill="#64748B" text-anchor="middle">Matutino</text>
+
+    <line x1="162" y1="85" x2="200" y2="85" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBpmn)"/>
+
+    <!-- Tarea 1: Aforo y Registro en App -->
+    <g transform="translate(200, 52)">
+      <rect x="0" y="0" width="150" height="66" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="85" height="16" rx="4" fill="#F0FDFA"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#0F766E">1. MEDICIÓN</text>
+      <text x="10" y="42" class="font-title" font-size="11" fill="#0F172A">Aforo de Caudal</text>
+      <text x="10" y="57" class="font-body" font-size="9.5" fill="#64748B">Ingreso L/s en App Móvil</text>
+    </g>
+
+    <!-- Salida a Pool 2 (Mensaje a la nube) -->
+    <path d="M 350 85 L 400 85 L 400 320" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowBlue)"/>
+
+    <!-- Retorno desde Nube con Vueltas de Calibración -->
+    <path d="M 520 320 L 520 85 L 560 85" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowBlue)"/>
+
+    <!-- Tarea 2: Calibración Válvula Bypass -->
+    <g transform="translate(560, 52)">
+      <rect x="0" y="0" width="160" height="66" rx="8" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2" filter="url(#greenShadow)"/>
+      <rect x="10" y="8" width="95" height="16" rx="4" fill="#ECFDF5"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#047857">2. CALIBRACIÓN</text>
+      <text x="10" y="42" class="font-title" font-size="11" fill="#064E3B">Ajuste de Válvula</text>
+      <text x="10" y="57" class="font-body" font-size="9.5" fill="#475569">Vueltas precisas de bypass</text>
+    </g>
+
+    <line x1="720" y1="85" x2="760" y2="85" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBpmn)"/>
+
+    <!-- Evento Intermedio Temporizador: 30 min contacto -->
+    <g transform="translate(760, 67)">
+      <circle cx="18" cy="18" r="18" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+      <circle cx="18" cy="18" r="14" fill="none" stroke="#F59E0B" stroke-width="1"/>
+      <path d="M 18 8 L 18 18 L 25 18" stroke="#D97706" stroke-width="2" fill="none"/>
+      <text x="18" y="47" class="font-sub" font-size="8.5" fill="#92400E" text-anchor="middle">30 min de</text>
+      <text x="18" y="58" class="font-body" font-size="8" fill="#B45309" text-anchor="middle">Contacto C•t</text>
+    </g>
+
+    <line x1="800" y1="85" x2="840" y2="85" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBpmn)"/>
+
+    <!-- Tarea 3: Ensayo DPD -->
+    <g transform="translate(840, 52)">
+      <rect x="0" y="0" width="150" height="66" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="75" height="16" rx="4" fill="#F0FDFA"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#0F766E">3. CONTROL</text>
+      <text x="10" y="42" class="font-title" font-size="11" fill="#0F172A">Ensayo DPD</text>
+      <text x="10" y="57" class="font-body" font-size="9.5" fill="#64748B">Lectura cloro libre</text>
+    </g>
+
+    <line x1="990" y1="85" x2="1030" y2="85" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBpmn)"/>
+
+    <!-- Compuerta de Validación Res. 2115 -->
+    <g transform="translate(1030, 65)">
+      <polygon points="20,0 40,20 20,40 0,20" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="20" y="25" class="font-title" font-size="14" fill="#047857" text-anchor="middle">✓</text>
+      <text x="20" y="-12" class="font-sub" font-size="9.5" fill="#065F46" text-anchor="middle">¿0.3 a 2.0 mg/L?</text>
+      <text x="20" y="-2" class="font-body" font-size="8" fill="#047857" text-anchor="middle">(Res. 2115/2007)</text>
+    </g>
+
+    <!-- Rama SÍ: Liberar Agua Conforme -->
+    <line x1="1070" y1="85" x2="1110" y2="85" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <text x="1080" y="78" class="font-sub" font-size="10" fill="#10B981">Sí</text>
+
+    <g transform="translate(1110, 52)">
+      <rect x="0" y="0" width="145" height="66" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2" filter="url(#greenShadow)"/>
+      <rect x="10" y="8" width="70" height="16" rx="4" fill="#D1FAE5"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#065F46">APROBADO</text>
+      <text x="10" y="42" class="font-title" font-size="11" fill="#064E3B">Liberar Suministro</text>
+      <text x="10" y="57" class="font-body" font-size="9" fill="#047857">Agua Potable a Red</text>
+    </g>
+
+    <line x1="1255" y1="85" x2="1280" y2="85" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <circle cx="1298" cy="85" r="16" fill="#10B981" stroke="#047857" stroke-width="3"/>
+    <path d="M 1292 85 L 1296 89 L 1305 80" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+
+    <!-- Rama NO: Reajuste Válvula Bypass (Bucle cerrado) -->
+    <path d="M 1050 105 L 1050 145 L 640 145 L 640 118" stroke="#E11D48" stroke-width="2" fill="none" marker-end="url(#arrowBpmn)"/>
+    <text x="1060" y="125" class="font-sub" font-size="9.5" fill="#E11D48">No</text>
+    <text x="840" y="140" class="font-mono" font-size="9" fill="#BE123C" text-anchor="middle">[Ajuste Inmediato de Válvula con Soporte Remoto EBT]</text>
+
+    <!-- ==================== ELEMENTOS EN LANE 2 ==================== -->
+    <g transform="translate(250, 215)">
+      <rect x="0" y="0" width="220" height="80" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="135" height="16" rx="4" fill="#F1F5F9"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#475569">CALIBRACIÓN PERIÓDICA</text>
+      <text x="10" y="44" class="font-title" font-size="11" fill="#0F172A">Ajuste de Parámetros Cinéticos</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#64748B">Calibración de k20 y factor Arrhenius θ</text>
+      <text x="10" y="73" class="font-mono" font-size="8.5" fill="#0284C7">Auditoría semanal con fotómetro</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================
+       POOL 2: HYDROVIDRIAL CLOUD (MOTOR INTELIGENTE & GOBERNANZA DAMA)
+       ======================================================================== -->
+  <g transform="translate(50, 475)">
+    <rect x="0" y="0" width="1340" height="230" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 50 0 L 50 230 L 14 230 Q 0 230 0 216 Z" fill="#0284C7"/>
+    <text x="-115" y="31" transform="rotate(-90)" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      POOL 2: HYDROVIDRIAL CLOUD (MOTOR DAMA)
+    </text>
+
+    <line x1="50" y1="115" x2="1340" y2="115" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+    <!-- Cabecera Lane 3: Motor Cinético -->
+    <rect x="50" y="0" width="45" height="115" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="-57" y="78" transform="rotate(-90)" class="font-sub" font-size="9" fill="#475569" text-anchor="middle">
+      MOTOR CINÉTICO
+    </text>
+
+    <!-- Cabecera Lane 4: Gobernanza DAMA -->
+    <rect x="50" y="115" width="45" height="115" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="-172" y="78" transform="rotate(-90)" class="font-sub" font-size="9" fill="#475569" text-anchor="middle">
+      GOBERNANZA DAMA
+    </text>
+
+    <!-- Tarea Automatizada en Lane 3: Modelo Cinético Arrhenius -->
+    <g transform="translate(350, 22)">
+      <rect x="0" y="0" width="220" height="72" rx="8" fill="#F0FDFA" stroke="#2DD4BF" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="140" height="16" rx="4" fill="#CCFBF1"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#0F766E">ALGORITMO ARRHENIUS</text>
+      <text x="10" y="44" class="font-mono" font-size="11" fill="#115E59">dC/dt = -kd(T) • C</text>
+      <text x="10" y="62" class="font-body" font-size="9.5" fill="#134E4A">Calcula Q2 óptimo y vueltas de válvula</text>
+    </g>
+
+    <!-- Persistencia a Lane 4 -->
+    <path d="M 460 94 L 460 135" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+
+    <!-- Tarea Lane 4: Persistencia PostgreSQL + Hash -->
+    <g transform="translate(350, 135)">
+      <rect x="0" y="0" width="220" height="72" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="135" height="16" rx="4" fill="#F1F5F9"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#475569">POSTGRESQL &amp; CHECKSUM</text>
+      <text x="10" y="44" class="font-title" font-size="11" fill="#0F172A">Persistencia Inmutable</text>
+      <text x="10" y="62" class="font-mono" font-size="9" fill="#0284C7">Firma SHA-256 • Integridad 100%</text>
+    </g>
+
+    <!-- Generación de Reportes a Secretaría de Salud -->
+    <path d="M 570 171 L 800 171" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+
+    <g transform="translate(800, 135)">
+      <rect x="0" y="0" width="230" height="72" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="10" y="8" width="135" height="16" rx="4" fill="#F1F5F9"/>
+      <text x="15" y="19" class="font-sub" font-size="8.5" fill="#475569">AUTOMATIZACIÓN DAMA</text>
+      <text x="10" y="44" class="font-title" font-size="11" fill="#0F172A">Generación de Boletines</text>
+      <text x="10" y="62" class="font-body" font-size="9.5" fill="#64748B">Reportes SIVICAP para Secretaría</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================
+       POOL 3: IMPACTO EN AUTORIDAD SANITARIA & COMUNIDAD
+       ======================================================================== -->
+  <g transform="translate(50, 725)">
+    <rect x="0" y="0" width="1340" height="140" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 50 0 L 50 140 L 14 140 Q 0 140 0 126 Z" fill="#4F46E5"/>
+    <text x="-70" y="31" transform="rotate(-90)" class="font-title" font-size="10.5" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8">
+      POOL 3: BENEFICIARIOS
+    </text>
+
+    <!-- Tarea Familias -->
+    <g transform="translate(180, 25)">
+      <rect x="0" y="0" width="380" height="90" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5" filter="url(#greenShadow)"/>
+      <rect x="15" y="10" width="165" height="18" rx="4" fill="#D1FAE5"/>
+      <text x="20" y="23" class="font-sub" font-size="9" fill="#065F46">IMPACTO EN COMUNIDAD</text>
+      <text x="15" y="48" class="font-title" font-size="13" fill="#064E3B">Consumo Seguro y Ahorro Familiar</text>
+      <text x="15" y="68" class="font-body" font-size="10.5" fill="#047857">Ahorro mensual de $58.000 COP por hogar en compra de pimpinas.</text>
+      <text x="15" y="82" class="font-mono" font-size="9" fill="#059669">0 brotes de EDA registrados tras puesta en marcha</text>
+    </g>
+
+    <!-- Conexión hacia Secretaría de Salud -->
+    <path d="M 915 207 L 915 260 L 915 750" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowBlue)"/>
+
+    <!-- Tarea Autoridad Sanitaria -->
+    <g transform="translate(730, 25)">
+      <rect x="0" y="0" width="380" height="90" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="15" y="10" width="180" height="18" rx="4" fill="#E0E7FF"/>
+      <text x="20" y="23" class="font-sub" font-size="9" fill="#3730A3">VIGILANCIA EPIDEMIOLÓGICA</text>
+      <text x="15" y="48" class="font-title" font-size="13" fill="#1E1B4B">Secretaría de Salud de Montería</text>
+      <text x="15" y="68" class="font-body" font-size="10.5" fill="#4338CA">Recepción en tiempo real de registros SIVICAP auditados.</text>
+      <text x="15" y="82" class="font-mono" font-size="9" fill="#4F46E5">Trazabilidad oficial de agua potable sin riesgo (IRCA &lt; 5%)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================
+       TARJETA DE SÍNTESIS Y MÉTRICAS DE IMPACTO
+       ======================================================================== -->
+  <g transform="translate(50, 885)">
+    <rect x="0" y="0" width="1340" height="110" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <rect x="30" y="15" width="220" height="24" rx="6" fill="#ECFDF5"/>
+    <text x="40" y="31" class="font-sub" font-size="10" fill="#065F46">BENEFICIOS CUANTITATIVOS TO-BE</text>
+
+    <text x="30" y="60" class="font-title" font-size="13" fill="#0F172A">
+      • Eficiencia Operativa: Reducción de tiempos de control en 94% • Ahorro Económico Familiar: $36.000.000 COP/año
+    </text>
+    <text x="30" y="78" class="font-body" font-size="11.5" fill="#475569">
+      • Salud Pública: Mitigación del 80% de incapacidades médicas por EDAs • Retorno Financiero: Payback de 3.32 meses y ROI del 361.2%
+    </text>
+    <text x="30" y="96" class="font-mono" font-size="10.5" fill="#059669">
+      [CUMPLIMIENTO DE INGENIERÍA: Res. 2115/2007 • Cloro libre continuo en 0.3-2.0 mg/L • Calidad DAMA-DMBOK >= 98%]
+    </text>
+  </g>
+</svg>

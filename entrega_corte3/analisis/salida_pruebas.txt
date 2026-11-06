@@ -1,0 +1,211 @@
+Python Python 3.12.10 | Windows-11-10.0.26200-SP0 | numpy 1.26.4 | PuLP 2.9.0
+=== tests/test_audio.py
+
+1. Prioridad entre sonido personalizado, incluido y sintetizado
+  ok   la carpeta de sonidos incluidos existe en el paquete
+  ok   hay una grabación real incluida para DO3
+  ok   hay una grabación real incluida para RE3
+  ok   hay una grabación real incluida para MI3
+  ok   hay una grabación real incluida para FA3
+  ok   hay una grabación real incluida para SOL3
+  ok   hay una grabación real incluida para LA3
+  ok   hay una grabación real incluida para SI3
+  ok   hay una grabación real incluida para DO4
+  ok   nota_DO3 usa la grabación incluida, no la sintetizada
+  ok   nota_RE3 usa la grabación incluida, no la sintetizada
+  ok   nota_MI3 usa la grabación incluida, no la sintetizada
+  ok   nota_FA3 usa la grabación incluida, no la sintetizada
+  ok   nota_SOL3 usa la grabación incluida, no la sintetizada
+  ok   nota_LA3 usa la grabación incluida, no la sintetizada
+  ok   nota_SI3 usa la grabación incluida, no la sintetizada
+  ok   nota_DO4 usa la grabación incluida, no la sintetizada
+  ok   un efecto sin grabación incluida (acierto) sigue usando el sintetizado
+  ok   sin archivo incluido ni personalizado, 'musica_fondo' no está registrada (play_music() sobre ella no hace nada, no falla)
+  ok   pedir una música de fondo que no existe no reproduce nada
+  ok   un sonido personalizado de la familia gana a la grabación incluida
+
+2. La música de fondo se apaga en las pantallas con cámara activa
+  ok   'calibration' es un modo de juego con cámara: sin música de fondo
+  ok   'exercise' es un modo de juego con cámara: sin música de fondo
+  ok   'freeplay' es un modo de juego con cámara: sin música de fondo
+  ok   'rhythm' es un modo de juego con cámara: sin música de fondo
+  ok   'home' es una pantalla principal: sí lleva música de fondo
+  ok   'adventure' es una pantalla principal: sí lleva música de fondo
+  ok   'songs' es una pantalla principal: sí lleva música de fondo
+  ok   'progress' es una pantalla principal: sí lleva música de fondo
+  ok   'parents' es una pantalla principal: sí lleva música de fondo
+  ok   'settings' es una pantalla principal: sí lleva música de fondo
+  ok   'results' es una pantalla principal: sí lleva música de fondo
+  ok   'profiles' es una pantalla principal: sí lleva música de fondo
+  ok   'create_profile' es una pantalla principal: sí lleva música de fondo
+  ok   la pantalla de bienvenida administra su propia música: no se toca aquí
+  ok   prende en pantallas principales, apaga al entrar a jugar, vuelve a prender al salir (['play:musica_fondo', 'stop', 'play:musica_fondo'])
+
+Las tres capas de sonido y la música de fondo fuera del juego funcionan como se esperaba.
+EXIT=0
+=== tests/test_integracion.py
+
+1. Reconocimiento a partir de posturas reales
+  ok   las tres señas se reconocieron en orden (['DO3', 'RE3', 'MI3'])
+
+2. Una actividad completa
+  ok   la actividad terminó sola al completar la secuencia
+  ok   se acertaron todos los pasos (4/4 · 100%)
+  ok   se otorgaron tres estrellas (3)
+
+3. Persistencia y dominio
+  ok   los intentos quedaron guardados (4)
+  ok   el dominio se actualizó para las tres notas
+  ok   los valores de dominio están en rango
+  ok   se programó el próximo repaso de cada nota
+  ok   el perfil ganó estrellas (3)
+  ok   se desbloqueó algún logro (['primer_gesto', 'tres_estrellas'])
+
+4. Decisión de la siguiente actividad
+  ok   el motor adaptativo decidió: subir — Vamos por algo un poco más difícil
+  ok   el optimizador armó una ruta (milp, 4 actividades)
+
+5. Aislamiento de los datos
+  ok   la base de datos se creó en la carpeta de datos
+  ok   las plantillas se guardaron por perfil
+  ok   los sonidos se generaron en el primer arranque
+
+El ciclo completo funciona de extremo a extremo.
+EXIT=0
+=== tests/test_mastery.py
+  ok   test_consistencia_penaliza_alternar
+  ok   test_el_intervalo_de_repaso_crece_y_se_reinicia
+  ok   test_el_olvido_puede_degradar_una_habilidad
+  ok   test_la_practica_sostenida_lleva_al_dominio
+  ok   test_precision_no_salta_a_uno
+  ok   test_retencion_decae_con_el_tiempo
+  ok   test_una_sesion_perfecta_no_basta_para_dominar
+  ok   test_velocidad_depende_de_la_edad
+
+Todas las pruebas pasaron.
+EXIT=0
+=== tests/test_optimizer.py
+  ok   test_acota_la_dificultad_media
+  ok   test_es_rapido
+  ok   test_incluye_una_actividad_ludica
+  ok   test_la_seleccion_cambia_con_el_perfil
+  ok   test_milp_y_enumeracion_coinciden
+  ok   test_no_insiste_mas_de_dos_veces_en_la_misma_habilidad
+  ok   test_prefiere_lo_que_el_nino_tiene_flojo
+  ok   test_respeta_el_tamano_y_el_tiempo
+
+Sesión elegida (milp, 46 ms, objetivo 2.9524):
+   🫧 Burbujas Musicales             dif=0.34  juego
+   👋 Conoce a Sol                   dif=0.17  ejercicio
+   🎠 Fa y Sol se columpian          dif=0.24  ejercicio
+   ⚡ Zigzag musical                 dif=0.43  ejercicio
+
+Todas las pruebas pasaron.
+EXIT=0
+=== tests/test_predictor.py
+
+1. Sin entrenar: usa la fórmula fija
+  ok   el predictor nuevo empieza sin entrenar
+  ok   sin entrenar, el método reportado es la fórmula fija
+  ok   la probabilidad está en rango (0.769)
+  ok   una actividad más difícil que el dominio actual predice menos éxito
+
+2. Con menos de MIN_SAMPLES intentos, fit() no hace nada
+  ok   fit() devuelve None si no alcanzan los intentos
+  ok   el predictor sigue sin entrenar
+
+3. Con datos suficientes, fit() ajusta un modelo que responde a sus propias variables
+  ok   fit() entrena con suficientes intentos
+  ok   el predictor queda marcado como entrenado
+  ok   reporta el número de muestras usadas (400)
+  ok   el ajuste hace mejor que el azar sobre sus propios datos (78%)
+  ok   más precisión en la nota predice más éxito (0.156 → 0.869)
+  ok   más dificultad predice menos éxito (0.958 → 0.620)
+  ok   to_json()/from_json() conserva el modelo entrenado
+
+4. El generador procedural produce actividades válidas
+  ok   se generaron actividades (4)
+  ok   código con el prefijo esperado (proc_e7b5b1ff2b)
+  ok   la secuencia generada no está vacía
+  ok   todas las habilidades de la actividad existen en los estados dados
+  ok   código con el prefijo esperado (proc_cce7c36471)
+  ok   la secuencia generada no está vacía
+  ok   todas las habilidades de la actividad existen en los estados dados
+  ok   código con el prefijo esperado (proc_183dcfbc47)
+  ok   la secuencia generada no está vacía
+  ok   todas las habilidades de la actividad existen en los estados dados
+  ok   código con el prefijo esperado (proc_eeed6a863c)
+  ok   la secuencia generada no está vacía
+  ok   todas las habilidades de la actividad existen en los estados dados
+  ok   sin al menos dos notas abiertas, no se genera nada
+
+El predictor entrenable y el generador procedural funcionan como se esperaba.
+EXIT=0
+=== tests/test_rhythm.py
+
+1. Planificación de tiempos (sin Qt real, solo el reloj interno)
+  ok   la primera nota llega justo tras el tiempo de vuelo inicial
+  ok   nota 1: el intervalo es el del tempo constante (666.7 ms)
+  ok   nota 2: el intervalo es el del tempo constante (666.7 ms)
+  ok   nota 3: el intervalo es el del tempo constante (666.7 ms)
+  ok   ninguna ventana de acierto queda por debajo del mínimo
+  ok   un intervalo grabado demasiado corto se recorta al mínimo (220 ms)
+  ok   un intervalo grabado demasiado largo se recorta al máximo (4000 ms)
+
+1b. El factor de tempo afloja velocidad y ventana
+  ok   «lento» separa más las notas y «rápido» las junta más (833 > 600 > 522 ms)
+  ok   «lento» también ensancha la ventana de acierto (708 > 510 ms)
+
+1c. La fórmula de combo calca la de Notas Rítmicas
+  ok   el puntaje acumulado coincide con la fórmula de v0 (3600 == 3600)
+  ok   25 aciertos seguidos mantienen la racha completa
+
+2. Una canción completa, con aciertos y una nota fallada a propósito
+  ok   la canción de prueba existe en el catálogo
+  ok   la canción terminó sola pese a la nota que nunca se confirmó, sin quedarse esperándola
+  ok   se contaron todos los pasos, incluida la nota fallada (14)
+  ok   se acertó todo menos la nota fallada a propósito (13/14)
+  ok   la nota que no se tocó quedó registrada como fallada, no ignorada
+  ok   apply_result actualizó el dominio de cada nota de la canción, igual que con un ejercicio guiado
+  ok   los intentos de la canción quedaron guardados en la base de datos
+
+3. Solo suena la nota correcta dentro de Canciones
+  ok   la canción de prueba existe en el catálogo
+  ok   la partida arrancó de verdad antes de seguir la prueba
+  ok   una seña hecha antes de que cualquier nota entre a la ventana de acierto tampoco suena
+  ok   la nota 0 llegó a su ventana de acierto
+  ok   una seña que no es la pedida no suena nada (pedía DO3, se hizo RE3)
+  ok   la seña equivocada no falla la nota: sigue pendiente para un próximo intento, como en 'Notas Rítmicas'
+  ok   un reintento con la seña correcta sí suena (['DO3'])
+  ok   el reintento correcto sí resuelve la nota como acierto
+  ok   la nota 1 llegó a su ventana de acierto
+  ok   la seña correcta sí suena (['DO3', 'DO3'])
+
+El motor de nota viajera funciona como se esperaba.
+EXIT=0
+=== tests/test_stabilizer.py
+  ok   test_confirma_de_inmediato_con_ventana_de_un_fotograma
+  ok   test_confirma_una_sena_sostenida
+  ok   test_el_voto_recupera_lecturas_perdidas
+  ok   test_mano_quieta_no_dispara_rafaga
+  ok   test_no_confirma_lecturas_sueltas
+  ok   test_parpadeo_breve_no_duplica_la_nota_sostenida
+  ok   test_permite_repetir_la_misma_nota_tras_soltar
+  ok   test_transicion_no_dispara_las_notas_del_camino
+
+Todas las pruebas pasaron.
+EXIT=0
+=== tests/test_vision.py
+A. SEÑAS VÁLIDAS con variación de tamaño, giro por mano y ruido
+   ruido   método nuevo   método v1
+    0.00         100.0%      100.0%
+    0.03         100.0%      100.0%
+    0.06          96.9%      100.0%
+    0.09          86.0%      100.0%
+
+B. POSTURAS QUE NO SON NINGUNA SEÑA (transiciones y manos cruzadas)
+   n = 640   notas disparadas por error:
+   método nuevo: 8.0%     método v1: 100.0%
+
+Todas las pruebas pasaron.
+EXIT=0

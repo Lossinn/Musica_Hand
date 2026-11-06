@@ -1,0 +1,395 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra suave -->
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+
+    <!-- Marcadores de flecha limpios -->
+    <marker id="arrowLin" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-title { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 800; }
+    .font-sub { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 700; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 400; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  </style>
+
+  <!-- Fondo Limpio y Suave -->
+  <rect width="1440" height="1020" fill="#F8FAFC"/>
+
+  <!-- ========================================================================
+       CABECERA TIPO NOTION / STRIPE
+       ======================================================================== -->
+  <g transform="translate(50, 25)">
+    <rect x="0" y="0" width="1340" height="80" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 14 Q 0 0 14 0 L 14 80 Q 0 80 0 66 Z" fill="#6366F1"/>
+
+    <text x="35" y="35" class="font-title" font-size="18" fill="#0F172A" letter-spacing="0.3">LINAJE DEL DATO (DATA LINEAGE) — GOBERNANZA DAMA-DMBOK</text>
+    <text x="35" y="58" class="font-body" font-size="12" fill="#64748B">
+      Trazabilidad End-to-End: Desde la Reacción Química DPD hasta la Toma de Decisiones • <tspan class="font-sub" fill="#0F172A">HydroVidrial 2026</tspan>
+    </text>
+
+    <!-- Badge Autores & Estándar -->
+    <rect x="940" y="21" width="375" height="38" rx="8" fill="#EEF2FF"/>
+    <text x="955" y="44" class="font-body" font-size="11.5" fill="#4338CA">
+      <tspan class="font-sub" fill="#6366F1">DAMA-DMBOK 2.ª Ed.</tspan> • EBT: Roxana • Andrea • Camilo
+    </text>
+  </g>
+
+  <!-- ========================================================================
+       5 COLUMNAS ESTRUCTURADAS DEL LINAJE DE DATOS (250px ANCHO CADA UNA)
+       ======================================================================== -->
+
+  <!-- ==================== COLUMNA 1: ORIGEN Y CAPTURA FÍSICA ==================== -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="255" height="740" rx="14" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <!-- Cabecera de Columna -->
+    <path d="M 0 14 Q 0 0 14 0 L 241 0 Q 255 0 255 14 L 255 42 L 0 42 Z" fill="#0284C7"/>
+    <text x="127" y="26" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      1. ORIGEN &amp; CAPTURA FÍSICA
+    </text>
+
+    <!-- Sub-card 1.1: Muestra en Tanque -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="225" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="105" height="16" rx="4" fill="#E0F2FE"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0369A1">MUESTRA CRUDA</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Muestreo en Tanque</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Salida tras 30 min de contacto</text>
+      <text x="10" y="74" class="font-body" font-size="9.5" fill="#475569">en tanque comunal de El Vidrial.</text>
+      <text x="10" y="94" class="font-mono" font-size="8.5" fill="#0284C7">[Frecuencia: Diario 07:00h]</text>
+    </g>
+
+    <!-- Flecha descendente -->
+    <line x1="127" y1="175" x2="127" y2="195" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 1.2: Reacción DPD-1 -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="225" height="115" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="115" height="16" rx="4" fill="#E0F2FE"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0369A1">REACTIVO QUÍMICO</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Tableta DPD-1</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Oxidación con cloro libre</text>
+      <text x="10" y="74" class="font-body" font-size="9.5" fill="#475569">generando color magenta en cubeta.</text>
+      <text x="10" y="96" class="font-mono" font-size="8.5" fill="#0284C7">[Complejo estequiométrico]</text>
+    </g>
+
+    <!-- Flecha descendente -->
+    <line x1="127" y1="330" x2="127" y2="350" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 1.3: Lectura Colorimétrica -->
+    <g transform="translate(15, 360)">
+      <rect x="0" y="0" width="225" height="120" rx="8" fill="#F0F9FF" stroke="#7DD3FC" stroke-width="1.5"/>
+      <rect x="10" y="8" width="125" height="16" rx="4" fill="#BAE6FD"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0369A1">DATO ANALÓGICO</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0C4A6E">Lectura Colorimétrica</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#0369A1">Disco / Comparador visual.</text>
+      <text x="10" y="78" class="font-mono" font-size="11" fill="#0284C7">Cloro: 0.1 a 5.0 mg/L</text>
+      <text x="10" y="98" class="font-body" font-size="9" fill="#475569">Primera cuantificación metrológica</text>
+    </g>
+
+    <!-- Tarjeta Inferior de Dimensión DAMA -->
+    <g transform="translate(15, 530)">
+      <rect x="0" y="0" width="225" height="185" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5"/>
+      <rect x="10" y="10" width="145" height="18" rx="4" fill="#BAE6FD"/>
+      <text x="14" y="23" class="font-sub" font-size="8.5" fill="#0369A1">DIMENSIÓN DAMA 1</text>
+      
+      <text x="10" y="52" class="font-title" font-size="12" fill="#0C4A6E">Exactitud (Accuracy)</text>
+      <text x="10" y="72" class="font-body" font-size="9.5" fill="#334155">• Tolerancia DPD: ± 0.05 mg/L</text>
+      <text x="10" y="90" class="font-body" font-size="9.5" fill="#334155">• Calibración de cero óptico</text>
+      <text x="10" y="108" class="font-body" font-size="9.5" fill="#334155">• Contramuestra mensual en</text>
+      <text x="10" y="122" class="font-body" font-size="9.5" fill="#334155">  laboratorio de aguas UPB</text>
+      <text x="10" y="145" class="font-mono" font-size="9" fill="#0284C7">Error Relativo: &lt;= 5.0%</text>
+      <text x="10" y="165" class="font-sub" font-size="8.5" fill="#0369A1">Estado: CERTIFICADO</text>
+    </g>
+  </g>
+
+  <!-- Flecha 1 a 2 -->
+  <line x1="305" y1="420" x2="320" y2="420" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrowLin)"/>
+
+  <!-- ==================== COLUMNA 2: INGESTA Y NORMALIZACIÓN ==================== -->
+  <g transform="translate(320, 120)">
+    <rect x="0" y="0" width="255" height="740" rx="14" fill="#FFFFFF" stroke="#99F6E4" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 241 0 Q 255 0 255 14 L 255 42 L 0 42 Z" fill="#0D9488"/>
+    <text x="127" y="26" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      2. INGESTA &amp; NORMALIZACIÓN
+    </text>
+
+    <!-- Sub-card 2.1: App Móvil -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="225" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="105" height="16" rx="4" fill="#CCFBF1"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0F766E">FORMULARIO APP</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">App HydroVidrial</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Ingreso por Operador JAC</text>
+      <text x="10" y="74" class="font-mono" font-size="8.5" fill="#0D9488">• cloro_libre_dpd (mg/L)</text>
+      <text x="10" y="88" class="font-mono" font-size="8.5" fill="#0D9488">• caudal_lps, temp_c</text>
+    </g>
+
+    <line x1="127" y1="175" x2="127" y2="195" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 2.2: Pydantic Validation -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="225" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="125" height="16" rx="4" fill="#CCFBF1"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0F766E">PYDANTIC SCHEMAS</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Validación de Tipos</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Restricciones de Frontera:</text>
+      <text x="10" y="74" class="font-mono" font-size="8.5" fill="#0F766E">• 0.0 &lt;= cloro &lt;= 5.0</text>
+      <text x="10" y="88" class="font-mono" font-size="8.5" fill="#0F766E">• operador_id NOT NULL</text>
+      <text x="10" y="104" class="font-body" font-size="8.5" fill="#64748B">Rechazo de anomalías</text>
+    </g>
+
+    <line x1="127" y1="335" x2="127" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 2.3: SQLite Offline Buffer -->
+    <g transform="translate(15, 365)">
+      <rect x="0" y="0" width="225" height="115" rx="8" fill="#F0FDFA" stroke="#5EEAD4" stroke-width="1.5"/>
+      <rect x="10" y="8" width="115" height="16" rx="4" fill="#CCFBF1"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#0F766E">BUFFER LOCAL</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#134E4A">SQLite Offline-First</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#0D9488">Cola de mensajes local.</text>
+      <text x="10" y="78" class="font-mono" font-size="10" fill="#0F766E">Sin pérdida de datos</text>
+      <text x="10" y="96" class="font-body" font-size="9" fill="#475569">Sincronización automática con señal</text>
+    </g>
+
+    <!-- Tarjeta Inferior de Dimensión DAMA -->
+    <g transform="translate(15, 530)">
+      <rect x="0" y="0" width="225" height="185" rx="10" fill="#F0FDFA" stroke="#99F6E4" stroke-width="1.5"/>
+      <rect x="10" y="10" width="145" height="18" rx="4" fill="#CCFBF1"/>
+      <text x="14" y="23" class="font-sub" font-size="8.5" fill="#0F766E">DIMENSIÓN DAMA 2</text>
+      
+      <text x="10" y="52" class="font-title" font-size="12" fill="#134E4A">Completitud (Completeness)</text>
+      <text x="10" y="72" class="font-body" font-size="9.5" fill="#334155">• 100% campos obligatorios</text>
+      <text x="10" y="90" class="font-body" font-size="9.5" fill="#334155">• Zero-nulls en registros</text>
+      <text x="10" y="108" class="font-body" font-size="9.5" fill="#334155">• Timestamp UTC auditado</text>
+      <text x="10" y="122" class="font-body" font-size="9.5" fill="#334155">• Coordenadas GPS del pozo</text>
+      <text x="10" y="145" class="font-mono" font-size="9" fill="#0D9488">Completitud: &gt;= 98.0%</text>
+      <text x="10" y="165" class="font-sub" font-size="8.5" fill="#0F766E">Estado: CUMPLIDO</text>
+    </g>
+  </g>
+
+  <!-- Flecha 2 a 3 -->
+  <line x1="575" y1="420" x2="590" y2="420" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrowLin)"/>
+
+  <!-- ==================== COLUMNA 3: PROCESAMIENTO Y CINÉTICA ==================== -->
+  <g transform="translate(590, 120)">
+    <rect x="0" y="0" width="255" height="740" rx="14" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 241 0 Q 255 0 255 14 L 255 42 L 0 42 Z" fill="#4F46E5"/>
+    <text x="127" y="26" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      3. PROCESAMIENTO &amp; REGLAS
+    </text>
+
+    <!-- Sub-card 3.1: Modelo Arrhenius -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="225" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="125" height="16" rx="4" fill="#EEF2FF"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#4338CA">MODELO MATEMÁTICO</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Cinética Arrhenius</text>
+      <text x="10" y="60" class="font-mono" font-size="9" fill="#4F46E5">kd(T) = k20 • θ^(T-20)</text>
+      <text x="10" y="74" class="font-mono" font-size="9" fill="#4F46E5">dC/dt = -kd(T) • C</text>
+      <text x="10" y="94" class="font-body" font-size="8.5" fill="#64748B">Cálculo de Q2 y vueltas de válvula</text>
+    </g>
+
+    <line x1="127" y1="175" x2="127" y2="195" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 3.2: Reglas Resolución 2115 -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="225" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="120" height="16" rx="4" fill="#EEF2FF"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#4338CA">REGLAS NORMATIVAS</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Resolución 2115/2007</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Rango Legal: 0.3 a 2.0 mg/L</text>
+      <text x="10" y="74" class="font-mono" font-size="8.5" fill="#15803D">• CONFORME (0.3 - 2.0)</text>
+      <text x="10" y="88" class="font-mono" font-size="8.5" fill="#DC2626">• ALERTA (Fuera de rango)</text>
+      <text x="10" y="104" class="font-body" font-size="8.5" fill="#64748B">Generación automática de flag</text>
+    </g>
+
+    <line x1="127" y1="335" x2="127" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 3.3: Capa Business Logic -->
+    <g transform="translate(15, 365)">
+      <rect x="0" y="0" width="225" height="115" rx="8" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.5"/>
+      <rect x="10" y="8" width="115" height="16" rx="4" fill="#E0E7FF"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#4338CA">BUSINESS LOGIC</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#312E81">Servicios Python</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#4338CA">Algoritmo determinístico.</text>
+      <text x="10" y="78" class="font-mono" font-size="10" fill="#4F46E5">Test Coverage &gt; 90%</text>
+      <text x="10" y="96" class="font-body" font-size="9" fill="#475569">Control de versiones semántico</text>
+    </g>
+
+    <!-- Tarjeta Inferior de Dimensión DAMA -->
+    <g transform="translate(15, 530)">
+      <rect x="0" y="0" width="225" height="185" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <rect x="10" y="10" width="145" height="18" rx="4" fill="#E0E7FF"/>
+      <text x="14" y="23" class="font-sub" font-size="8.5" fill="#4338CA">DIMENSIÓN DAMA 3</text>
+      
+      <text x="10" y="52" class="font-title" font-size="12" fill="#312E81">Consistencia (Consistency)</text>
+      <text x="10" y="72" class="font-body" font-size="9.5" fill="#334155">• Coherencia masa-balance</text>
+      <text x="10" y="90" class="font-body" font-size="9.5" fill="#334155">• Validaciones cruzadas</text>
+      <text x="10" y="108" class="font-body" font-size="9.5" fill="#334155">• No contradicción entre</text>
+      <text x="10" y="122" class="font-body" font-size="9.5" fill="#334155">  sensores y analítica</text>
+      <text x="10" y="145" class="font-mono" font-size="9" fill="#4F46E5">Consistencia Lógica: 100%</text>
+      <text x="10" y="165" class="font-sub" font-size="8.5" fill="#4338CA">Estado: COHERENTE</text>
+    </g>
+  </g>
+
+  <!-- Flecha 3 a 4 -->
+  <line x1="845" y1="420" x2="860" y2="420" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#arrowLin)"/>
+
+  <!-- ==================== COLUMNA 4: PERSISTENCIA Y SEGURIDAD ==================== -->
+  <g transform="translate(860, 120)">
+    <rect x="0" y="0" width="255" height="740" rx="14" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 241 0 Q 255 0 255 14 L 255 42 L 0 42 Z" fill="#7C3AED"/>
+    <text x="127" y="26" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      4. PERSISTENCIA &amp; SEGURIDAD
+    </text>
+
+    <!-- Sub-card 4.1: PostgreSQL -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="225" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="115" height="16" rx="4" fill="#EDE9FE"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#6D28D9">BASE DE DATOS</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">PostgreSQL Relacional</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Tablas normalizadas 3NF:</text>
+      <text x="10" y="74" class="font-mono" font-size="8.5" fill="#7C3AED">• medicion_calidad_agua</text>
+      <text x="10" y="88" class="font-mono" font-size="8.5" fill="#7C3AED">• log_alertas_sivicap</text>
+    </g>
+
+    <line x1="127" y1="175" x2="127" y2="195" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 4.2: Hash Criptográfico -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="225" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="125" height="16" rx="4" fill="#EDE9FE"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#6D28D9">INTEGRIDAD HASH</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Firma SHA-256</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Checksum por cada tupla</text>
+      <text x="10" y="76" class="font-mono" font-size="8" fill="#7C3AED">hash = sha256(cloro+time)</text>
+      <text x="10" y="92" class="font-body" font-size="9.5" fill="#475569">Inmutabilidad garantizada.</text>
+      <text x="10" y="106" class="font-mono" font-size="8.5" fill="#6D28D9">[Anti-alteración de datos]</text>
+    </g>
+
+    <line x1="127" y1="335" x2="127" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 4.3: RBAC & Habeas Data -->
+    <g transform="translate(15, 365)">
+      <rect x="0" y="0" width="225" height="115" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+      <rect x="10" y="8" width="120" height="16" rx="4" fill="#EDE9FE"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#6D28D9">SEGURIDAD Y ROL</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#4C1D95">Seguridad DAMA</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#6D28D9">Control de acceso RBAC:</text>
+      <text x="10" y="78" class="font-mono" font-size="9" fill="#7C3AED">Operador • UPB • Salud</text>
+      <text x="10" y="96" class="font-body" font-size="9" fill="#475569">Cumplimiento Ley 1581 de 2012</text>
+    </g>
+
+    <!-- Tarjeta Inferior de Dimensión DAMA -->
+    <g transform="translate(15, 530)">
+      <rect x="0" y="0" width="225" height="185" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.5"/>
+      <rect x="10" y="10" width="145" height="18" rx="4" fill="#EDE9FE"/>
+      <text x="14" y="23" class="font-sub" font-size="8.5" fill="#6D28D9">DIMENSIÓN DAMA 4</text>
+      
+      <text x="10" y="52" class="font-title" font-size="12" fill="#4C1D95">Oportunidad (Timeliness)</text>
+      <text x="10" y="72" class="font-body" font-size="9.5" fill="#334155">• Latencia &lt; 15 min a nube</text>
+      <text x="10" y="90" class="font-body" font-size="9.5" fill="#334155">• Cifrado AES-256 en reposo</text>
+      <text x="10" y="108" class="font-body" font-size="9.5" fill="#334155">• Backups automáticos S3</text>
+      <text x="10" y="122" class="font-body" font-size="9.5" fill="#334155">  cada 6 horas</text>
+      <text x="10" y="145" class="font-mono" font-size="9" fill="#7C3AED">Latencia: &lt; 15 minutos</text>
+      <text x="10" y="165" class="font-sub" font-size="8.5" fill="#6D28D9">Estado: OPORTUNO</text>
+    </g>
+  </g>
+
+  <!-- Flecha 4 a 5 -->
+  <line x1="1115" y1="420" x2="1130" y2="420" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#arrowLin)"/>
+
+  <!-- ==================== COLUMNA 5: EXPLOTACIÓN Y TOMA DE DECISIONES ==================== -->
+  <g transform="translate(1130, 120)">
+    <rect x="0" y="0" width="260" height="740" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <path d="M 0 14 Q 0 0 14 0 L 246 0 Q 260 0 260 14 L 260 42 L 0 42 Z" fill="#059669"/>
+    <text x="130" y="26" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      5. EXPLOTACIÓN &amp; DECISIÓN
+    </text>
+
+    <!-- Sub-card 5.1: Dashboards Streamlit -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="230" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="125" height="16" rx="4" fill="#D1FAE5"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#065F46">DASHBOARDS WEB</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">HydroVidrial Analytics</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Métricas de Cloro vs. Norma</text>
+      <text x="10" y="74" class="font-body" font-size="9.5" fill="#475569">Series temporales y alertas</text>
+      <text x="10" y="94" class="font-mono" font-size="8.5" fill="#059669">[Streamlit Cloud UPB]</text>
+    </g>
+
+    <line x1="130" y1="175" x2="130" y2="195" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 5.2: Alertas a la Comunidad -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="230" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="10" y="8" width="135" height="16" rx="4" fill="#D1FAE5"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#065F46">DIFUSIÓN COMUNAL</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#0F172A">Boletín Semanal JAC</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#475569">Notificaciones SMS a 60 familias</text>
+      <text x="10" y="76" class="font-mono" font-size="8.5" fill="#047857">"Agua Apta para Consumo"</text>
+      <text x="10" y="92" class="font-body" font-size="9.5" fill="#475569">Confianza comunitaria</text>
+      <text x="10" y="106" class="font-mono" font-size="8.5" fill="#059669">[Ahorro familiar verificado]</text>
+    </g>
+
+    <line x1="130" y1="335" x2="130" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowLin)"/>
+
+    <!-- Sub-card 5.3: Reporte Oficial SIVICAP -->
+    <g transform="translate(15, 365)">
+      <rect x="0" y="0" width="230" height="115" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+      <rect x="10" y="8" width="130" height="16" rx="4" fill="#D1FAE5"/>
+      <text x="14" y="19" class="font-sub" font-size="8.5" fill="#065F46">VIGILANCIA OFICIAL</text>
+      <text x="10" y="44" class="font-title" font-size="11.5" fill="#064E3B">Reporte SIVICAP</text>
+      <text x="10" y="60" class="font-body" font-size="9.5" fill="#047857">Alcaldía de Montería.</text>
+      <text x="10" y="78" class="font-mono" font-size="10" fill="#059669">IRCA &lt; 5.0% (Sin Riesgo)</text>
+      <text x="10" y="96" class="font-body" font-size="9" fill="#475569">Certificación sanitaria rural</text>
+    </g>
+
+    <!-- Tarjeta Inferior de Dimensión DAMA -->
+    <g transform="translate(15, 530)">
+      <rect x="0" y="0" width="230" height="185" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <rect x="10" y="10" width="145" height="18" rx="4" fill="#D1FAE5"/>
+      <text x="14" y="23" class="font-sub" font-size="8.5" fill="#065F46">DIMENSIÓN DAMA 5</text>
+      
+      <text x="10" y="52" class="font-title" font-size="12" fill="#064E3B">Validez &amp; Trazabilidad</text>
+      <text x="10" y="72" class="font-body" font-size="9.5" fill="#334155">• Linaje 100% verificable</text>
+      <text x="10" y="90" class="font-body" font-size="9.5" fill="#334155">• Cada dato en pantalla</text>
+      <text x="10" y="108" class="font-body" font-size="9.5" fill="#334155">  proviene de una muestra física</text>
+      <text x="10" y="122" class="font-body" font-size="9.5" fill="#334155">  documentada con Hash</text>
+      <text x="10" y="145" class="font-mono" font-size="9" fill="#059669">Trazabilidad: 100% Auditada</text>
+      <text x="10" y="165" class="font-sub" font-size="8.5" fill="#065F46">Estado: VÁLIDO DAMA</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================
+       PIE TÉCNICO FORMAL DAMA-DMBOK
+       ======================================================================== -->
+  <g transform="translate(50, 880)">
+    <rect x="0" y="0" width="1340" height="110" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <rect x="30" y="15" width="280" height="24" rx="6" fill="#F8FAFC"/>
+    <text x="40" y="31" class="font-sub" font-size="10" fill="#475569">GOBERNANZA DE DATOS Y TRAZABILIDAD REGULATORIA</text>
+
+    <text x="30" y="60" class="font-title" font-size="12.5" fill="#0F172A">
+      • Cumplimiento DAMA-DMBOK 2.ª Edición: 5 dimensiones operativas auditadas (Exactitud, Completitud, Consistencia, Oportunidad y Validez).
+    </text>
+    <text x="30" y="80" class="font-body" font-size="11.5" fill="#475569">
+      • Seguridad Legal: Integridad de punta a punta respaldada con checksums SHA-256 en PostgreSQL, conforme a la Ley 1581 de 2012 de Habeas Data.
+    </text>
+    <text x="30" y="98" class="font-mono" font-size="9.5" fill="#6366F1">
+      [Evaluación de Calidad: Certificación A+ de Datos Hídricos para la Alcaldía de Montería y Universidad Pontificia Bolivariana]
+    </text>
+  </g>
+</svg>

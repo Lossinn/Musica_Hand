@@ -1,0 +1,12 @@
+{
+  "_nota": "Rellenar SOLO con las cifras del preprint manuscrito del equipo. Los valores null se muestran como pendientes. Los conocidos del corpus de trabajo salen de 04_Datos/bibliometria/resultados/informe_bibliometrico_corpus.md (226 archivos cargados; 37 copias idénticas; 189 documentos únicos) y NO son necesariamente las cifras del preprint.",
+  "bases_y_ecuacion": "Scopus; ecuaciones 1 y 2 de 07_Ecuaciones_booleanas/Scopus/ecuaciones_scopus.md (registro de ejecución sin completar)",
+  "identificados": null,
+  "duplicados_eliminados": null,
+  "cribados": null,
+  "excluidos_cribado": null,
+  "texto_completo_evaluados": null,
+  "excluidos_texto_completo": null,
+  "incluidos": null,
+  "corpus_de_trabajo_conocido": {"archivos_cargados": 226, "copias_identicas": 37, "documentos_unicos": 189}
+}

@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Árbol de Problemas y Objetivos (MML) - Clorificador El Vidrial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --his-yellow: #FFCC00;
+      --his-black: #141414;
+      --his-dark: #1F2937;
+      --his-gray-bg: #F8FAFC;
+      --his-card-bg: #FFFFFF;
+      --his-border: #E2E8F0;
+      --danger-red: #DC2626;
+      --danger-bg: #FEF2F2;
+      --danger-border: #FCA5A5;
+      --warn-orange: #EA580C;
+      --warn-bg: #FFF7ED;
+      --warn-border: #FDBA74;
+      --success-green: #16A34A;
+      --success-bg: #F0FDF4;
+      --success-border: #86EFAC;
+      --brand-blue: #0284C7;
+      --brand-bg: #F0F9FF;
+      --brand-border: #BAE6FD;
+      --purple-accent: #7C3AED;
+      --purple-bg: #F5F3FF;
+      --purple-border: #DDD6FE;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--his-gray-bg);
+      color: var(--his-dark);
+      line-height: 1.5;
+      padding-bottom: 60px;
+    }
+
+    /* Barra Superior de Navegación */
+    .top-bar {
+      background: var(--his-black);
+      color: #FFFFFF;
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--his-yellow);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-badge {
+      background: var(--his-yellow);
+      color: var(--his-black);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .top-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-nav {
+      background: #2D3748;
+      color: #FFFFFF;
+      border: 1px solid #4A5568;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background: #4A5568;
+      border-color: var(--his-yellow);
+      color: var(--his-yellow);
+    }
+
+    .btn-nav.primary {
+      background: var(--his-yellow);
+      color: var(--his-black);
+      border-color: var(--his-yellow);
+      font-weight: 700;
+    }
+
+    .btn-nav.primary:hover {
+      background: #E5B800;
+    }
+
+    /* Encabezado del Documento */
+    .doc-header {
+      max-width: 1300px;
+      margin: 28px auto 20px auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .academic-kicker {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .doc-main-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--his-black);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .doc-subtitle {
+      font-size: 14.5px;
+      color: #475569;
+      max-width: 900px;
+      margin: 0 auto 16px auto;
+    }
+
+    .team-badge-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 13px;
+      color: #334155;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .team-badge-row strong {
+      color: var(--his-black);
+    }
+
+    /* Conmutador de Vistas: Árbol de Problemas vs Árbol de Objetivos */
+    .view-switcher-container {
+      max-width: 1300px;
+      margin: 20px auto 28px auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .view-switcher {
+      background: #E2E8F0;
+      padding: 5px;
+      border-radius: 35px;
+      display: flex;
+      gap: 6px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .switch-btn {
+      padding: 9px 24px;
+      border-radius: 30px;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      color: #475569;
+      background: transparent;
+    }
+
+    .switch-btn.active.problems {
+      background: #DC2626;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+    }
+
+    .switch-btn.active.objectives {
+      background: #16A34A;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+    }
+
+    /* Contenedor del Diagrama del Árbol */
+    .tree-container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    /* Niveles Jerárquicos del Árbol */
+    .tree-tier {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .tier-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tier-cards-row {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    /* Conectores Visuales Verticales */
+    .connector-line {
+      width: 2px;
+      height: 24px;
+      background: #CBD5E1;
+      margin: 0 auto;
+    }
+
+    .connector-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 26px;
+      color: #94A3B8;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    /* Tarjetas de Nodos del Árbol */
+    .tree-card {
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 16px 18px;
+      border: 1.5px solid var(--his-border);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      flex: 1 1 340px;
+      max-width: 400px;
+      transition: all 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tree-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+    }
+
+    .tree-card.highlight-final {
+      background: var(--purple-bg);
+      border-color: var(--purple-border);
+      max-width: 680px;
+      border-top: 4px solid var(--purple-accent);
+    }
+
+    .tree-card.highlight-central {
+      background: #141414;
+      color: #FFFFFF;
+      border: 3px solid var(--his-yellow);
+      max-width: 760px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .card-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .card-type-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .tag-effect { background: #FEE2E2; color: #991B1B; }
+    .tag-indirect { background: #FEF3C7; color: #92400E; }
+    .tag-central { background: var(--his-yellow); color: var(--his-black); }
+    .tag-cause { background: #FFEDD5; color: #9A3412; }
+    .tag-root { background: #F3F4F6; color: #374151; }
+
+    .tag-end { background: #DCFCE7; color: #166534; }
+    .tag-purpose { background: var(--his-yellow); color: var(--his-black); }
+    .tag-component { background: #E0F2FE; color: #075985; }
+    .tag-activity { background: #F1F5F9; color: #334155; }
+
+    .card-headline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1E293B;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .highlight-central .card-headline {
+      color: var(--his-yellow);
+      font-size: 17px;
+    }
+
+    .card-description {
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .highlight-central .card-description {
+      color: #E2E8F0;
+      font-size: 13px;
+    }
+
+    .card-metric-pill {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0,0,0,0.08);
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .highlight-central .card-metric-pill {
+      border-top-color: rgba(255, 204, 0, 0.3);
+      color: #CBD5E1;
+    }
+
+    /* Tabla de Resumen Metodológico */
+    .summary-section {
+      max-width: 1300px;
+      margin: 40px auto 0 auto;
+      padding: 0 24px;
+    }
+
+    .summary-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+
+    .summary-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--his-black);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .metric-item {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 14px;
+      border-left: 4px solid var(--his-yellow);
+    }
+
+    .metric-item-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--his-black);
+    }
+
+    .metric-item-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748B;
+      margin-top: 2px;
+    }
+
+    /* Impresión limpia */
+    @media print {
+      .top-bar, .view-switcher-container {
+        display: none !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .tree-card {
+        box-shadow: none !important;
+        border: 1px solid #94A3B8 !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. BARRA SUPERIOR DE ACCIÓN
+       ==================================================================== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <span class="brand-badge">UPB MONTERÍA // SILOGE // HIS</span>
+      <span class="top-title">Árbol de Problemas y Objetivos (MML) — El Vidrial 2026</span>
+    </div>
+    <div class="top-actions">
+      <a href="graficos/diagramas/index.html" class="btn-nav" title="Ver todos los planos técnicos en graficos/diagramas/">
+        📐 Repositorio de Diagramas
+      </a>
+      <a href="poster_90x120_el_vidrial.html" class="btn-nav" title="Regresar al Póster Científico Oficial">
+        📊 Ver Póster 90x120 cm
+      </a>
+      <button class="btn-nav primary" onclick="window.print()" title="Imprimir o Guardar en PDF">
+        🖨️ Exportar en PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       2. CABECERA DESCRIPTIVA INSTITUCIONAL
+       ==================================================================== -->
+  <section class="doc-header">
+    <div class="academic-kicker">Gestión Tecnológica (Código: 8830 0064 0) • Segundo Corte (30%)</div>
+    <h1 class="doc-main-title">Estructura Analítica de Metodología de Marco Lógico (MML)</h1>
+    <p class="doc-subtitle">
+      Diagnóstico cuantitativo del sector hídrico rural en la vereda El Vidrial (Montería, Córdoba) y formulación de la intervención ciberfísica de la Empresa de Base Tecnológica (EBT).
+    </p>
+    <div class="team-badge-row">
+      <span><strong>Integrantes EBT:</strong> Roxana Muñoz (000525435) • Andrea Guzmán Gómez (000511622) • Camilo Esteban Alvarez (000503488)</span>
+      <span>|</span>
+      <span><strong>Docente Titular:</strong> M.Sc. Cristian Javier Cano Mogollón</span>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       3. CONMUTADOR DINÁMICO DE VISTAS (PROBLEMAS VS OBJETIVOS VS PLANO SVG)
+       ==================================================================== -->
+  <div class="view-switcher-container">
+    <div class="view-switcher">
+      <button class="switch-btn active problems" id="btnProblems" onclick="showTree('problems')">
+        ⚠️ Árbol de Problemas (Tarjetas)
+      </button>
+      <button class="switch-btn" id="btnObjectives" onclick="showTree('objectives')">
+        🎯 Árbol de Objetivos (Tarjetas)
+      </button>
+      <button class="switch-btn" id="btnBlueprint" onclick="showTree('blueprint')">
+        📐 Plano Técnico Vectorial (SVG)
+      </button>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       4.1 ÁRBOL DE PROBLEMAS (DIAGNÓSTICO AS-IS)
+       ==================================================================== -->
+  <main class="tree-container" id="treeProblems">
+
+    <!-- TIER 1: EFECTO FINAL / IMPACTO SOCIOECONÓMICO -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #F3E8FF; color: #6B21A8;">
+        ★ EFECTO FINAL / IMPACTO SOCIOECONÓMICO EN EL VIDRIAL
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card highlight-final">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-effect">Impacto Macro</span>
+            <span style="font-size: 11px; font-weight: 700; color: #7C3AED;">ODS 1, 3, 6</span>
+          </div>
+          <div class="card-headline">
+            Deterioro de la calidad de vida, perpetuación de la trampa de pobreza rural y sobrecostos socioeconómicos crónicos en las familias de El Vidrial.
+          </div>
+          <div class="card-description">
+            La carencia de agua segura menoscaba la productividad agropecuaria familiar, genera deserción y ausentismo escolar por infecciones entéricas, y condena a los hogares a destinar hasta el 12% de sus ingresos mensuales a la compra de agua en pimpinas y tratamientos farmacéuticos.
+          </div>
+          <div class="card-metric-pill">
+            📉 Pérdida económica estimada: > $44.500.000 COP anuales en la comunidad (60 familias piloto).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- TIER 2: EFECTOS INDIRECTOS -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #FEF3C7; color: #92400E;">
+        EFECTOS INDIRECTOS
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-indirect">Efecto Ind. 1</span>
+          </div>
+          <div class="card-headline">Pérdida de días laborales e ingresos por ausentismo</div>
+          <div class="card-description">
+            Padres de familia pierden jornales agrícolas (aprox. $45.000 COP/día) al verse obligados a cuidar infantes enfermos de gastroenteritis aguda.
+          </div>
+          <div class="card-metric-pill">⏱ Promedio 2.4 días perdidos/evento</div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-indirect">Efecto Ind. 2</span>
+          </div>
+          <div class="card-headline">Gasto recurrente familiar en agua embotellada y acarreo</div>
+          <div class="card-description">
+            Familias compran semanalmente pimpinas de 20 L a distribuidores que llegan en motocicleta desde Montería con un costo de $4.000 COP c/u.
+          </div>
+          <div class="card-metric-pill">💰 $35.000 - $40.000 COP/mes por hogar</div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-indirect">Efecto Ind. 3</span>
+          </div>
+          <div class="card-headline">Desconfianza comunitaria y erosión del capital social</div>
+          <div class="card-description">
+            Rechazo hacia los pozos comunales por olor fétido o sabor excesivo a cloro mal dosificado, desincentivando el mantenimiento del acueducto veredal.
+          </div>
+          <div class="card-metric-pill">👥 Descoordinación de la Junta JAC</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- TIER 3: EFECTOS DIRECTOS -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #FEE2E2; color: #991B1B;">
+        EFECTOS DIRECTOS
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-effect">Efecto Dir. 1</span>
+          </div>
+          <div class="card-headline">Elevada morbilidad por EDA y parasitismo en menores</div>
+          <div class="card-description">
+            Brotes sistemáticos de diarrea e infecciones intestinales asociadas al consumo de agua con presencia confirmada de <em>Escherichia coli</em> y coliformes.
+          </div>
+          <div class="card-metric-pill">🧪 IRCA veredal > 65% (Riesgo Alto)</div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-effect">Efecto Dir. 2</span>
+          </div>
+          <div class="card-headline">Riesgo toxicológico por formación de THMs</div>
+          <div class="card-description">
+            La adición de dosis masivas de cloro líquido reacciona con la materia orgánica disuelta generando trihalometanos, carcinógenos a largo plazo.
+          </div>
+          <div class="card-metric-pill">⚠️ Cloro residual > 2.0 mg/L ocasional</div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-effect">Efecto Dir. 3</span>
+          </div>
+          <div class="card-headline">Ineficiencia en el gasto de desinfectante químico</div>
+          <div class="card-description">
+            Desperdicio de hipoclorito de sodio por rápida evaporación y degradación ante la radiación solar y altas temperaturas en tanques abiertos (> 32°C).
+          </div>
+          <div class="card-metric-pill">📉 Pérdida del 60% del activo oxidante</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- TIER 4: PROBLEMA CENTRAL (CENTRO FOCAL DEL ÁRBOL) -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: var(--his-yellow); color: var(--his-black); font-weight: 900;">
+        🔴 PROBLEMA CENTRAL (MML)
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card highlight-central">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-central">FOCO DEL PROYECTO EBT</span>
+            <span style="font-size: 11px; font-weight: 700; color: var(--his-yellow);">MONTERÍA / CÓRDOBA 2026</span>
+          </div>
+          <div class="card-headline">
+            Vulnerabilidad sanitaria y deficiente acceso a agua químicamente desinfectada y microbiológicamente segura en la comunidad rural de El Vidrial.
+          </div>
+          <div class="card-description">
+            Ausencia de un mecanismo estandarizado, económicamente accesible y técnicamente confiable de desinfección continua en punto de abastecimiento, conllevando al consumo habitual de agua que incumple los estándares de la Resolución 2115 de 2007.
+          </div>
+          <div class="card-metric-pill">
+            📍 Población afectada: 140 familias (~680 habitantes) en la cuenca baja del Sinú.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- TIER 5: CAUSAS DIRECTAS -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #FFEDD5; color: #9A3412;">
+        CAUSAS DIRECTAS
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-cause">Causa Dir. 1</span>
+          </div>
+          <div class="card-headline">Inadecuada e inconstante dosificación del cloro</div>
+          <div class="card-description">
+            El desinfectante se vierte sin considerar variaciones de caudal hidrográfico ni la demanda química del agua de los pozos.
+          </div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-cause">Causa Dir. 2</span>
+          </div>
+          <div class="card-headline">Inaccesibilidad a sistemas industriales comerciales</div>
+          <div class="card-description">
+            Costos prohibitivos de bombas electromecánicas y plantas compactas comerciales (superiores a $40.000.000 COP).
+          </div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-cause">Causa Dir. 3</span>
+          </div>
+          <div class="card-headline">Ausencia de monitoreo y gobernanza de datos</div>
+          <div class="card-description">
+            Carencia de registros históricos de calidad, mediciones DPD y nula articulación con la Secretaría de Salud (SIVICAP).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- TIER 6: CAUSAS RAÍZ / ESTRUCTURALES -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #E2E8F0; color: #334155;">
+        CAUSAS RAÍZ ESTRUCTURALES
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-root">Causa Raíz 1.1</span>
+          </div>
+          <div class="card-headline">Operación empírica y manual</div>
+          <div class="card-description">
+            Operadores veredales carecen de capacitación técnica sobre tiempos de contacto ($C \cdot t$) y uso de reactivos DPD.
+          </div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-root">Causa Raíz 1.2</span>
+          </div>
+          <div class="card-headline">Variabilidad hidráulica de entrada</div>
+          <div class="card-description">
+            Fluctuaciones de caudal según temporada de lluvias/sequía sin mecanismos pasivos de autorregulación bypass.
+          </div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-root">Causa Raíz 2.1</span>
+          </div>
+          <div class="card-headline">Inestabilidad del fluido eléctrico</div>
+          <div class="card-description">
+            Frecuentes cortes de energía en la ruralidad que inhabilitan sistemas presurizados o dosificadores motorizados.
+          </div>
+        </div>
+
+        <div class="tree-card">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-root">Causa Raíz 3.1</span>
+          </div>
+          <div class="card-headline">Inexistencia de herramientas digitales</div>
+          <div class="card-description">
+            Falta de plataformas móviles offline-first adaptadas a comunidades rurales para el cálculo cinético y trazabilidad.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================================================================
+       4.2 ÁRBOL DE OBJETIVOS (MEDIOS Y FINES TO-BE)
+       ==================================================================== -->
+  <main class="tree-container" id="treeObjectives" style="display: none;">
+
+    <!-- FIN ÚLTIMO -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #DCFCE7; color: #166534;">
+        ★ FIN ÚLTIMO DE DESARROLLO SOSTENIBLE (AGENDA 2030)
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card highlight-final" style="background: #F0FDF4; border-top-color: #16A34A;">
+          <div class="card-meta-top">
+            <span class="card-type-tag tag-end">Fin Superior</span>
+            <span style="font-size: 11px; font-weight: 700; color: #16A34A;">ODS 6, ODS 3, ODS 9</span>
+          </div>
+          <div class="card-headline">
+            Mejoramiento sustancial de la calidad de vida, erradicación de sobrecostos hídricos y fortalecimiento del bienestar social en El Vidrial.
+          </div>
+          <div class="card-description">
+            Garantizar agua microbiológicamente potable de forma permanente, habilitando la recuperación económica familiar ($58.000 COP/mes por hogar) e incrementando la productividad laboral y la salud infantil.
+          </div>
+          <div class="card-metric-pill">
+            📈 Beneficio Neto Anual Comunitario: $41.540.000 COP con ROI de 361.2% y Payback de 3.32 meses.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- FINES INDIRECTOS -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #E0F2FE; color: #0369A1;">
+        FINES INDIRECTOS
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Fin Ind. 1</span></div>
+          <div class="card-headline">Aumento de la productividad laboral y escolar</div>
+          <div class="card-description">Disminución de incapacidades laborales y continuidad escolar al mitigar los brotes gastrointestinales en niños y adultos.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Fin Ind. 2</span></div>
+          <div class="card-headline">Liberación de renta familiar por ahorro en pimpinas</div>
+          <div class="card-description">Ahorro anual colectivo de $25.200.000 COP en compra de botellones y $10.800.000 COP en combustible para hervir agua.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Fin Ind. 3</span></div>
+          <div class="card-headline">Fortalecimiento del capital social comunitario</div>
+          <div class="card-description">Apropiación tecnológica de la JAC en el mantenimiento del clorificador y confianza plena en el acueducto comunitario.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- FINES DIRECTOS -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #F0FDF4; color: #15803D;">
+        FINES DIRECTOS
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-end">Fin Dir. 1</span></div>
+          <div class="card-headline">Reducción drástica de morbilidad por EDA (&gt; 80%)</div>
+          <div class="card-description">Eliminación completa de coliformes totales y <em>E. coli</em> ($0\text{ UFC}/100\text{ mL}$) cumpliendo la Resolución 2115 de 2007.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-end">Fin Dir. 2</span></div>
+          <div class="card-headline">Mitigación del riesgo de formación de THMs</div>
+          <div class="card-description">Concentración de cloro residual libre estrictamente estabilizada en el rango seguro de $0.3\text{ a }2.0\text{ mg/L}$.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-end">Fin Dir. 3</span></div>
+          <div class="card-headline">Eficiencia estequiométrica en el uso del cloro</div>
+          <div class="card-description">Disolución lenta y controlada de tabletas de tricloro al 90%, minimizando mermas y extendiendo la vida útil del desinfectante.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- PROPÓSITO / OBJETIVO GENERAL -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: var(--his-yellow); color: var(--his-black); font-weight: 900;">
+        🟢 PROPÓSITO CENTRAL (OBJETIVO GENERAL DE LA EBT)
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card highlight-central" style="border-color: #10B981;">
+          <div class="card-meta-top">
+            <span class="card-type-tag" style="background:#10B981; color:#fff;">PROPÓSITO CENTRAL</span>
+            <span style="font-size: 11px; font-weight: 700; color: #10B981;">INTERVENCIÓN CIBERFÍSICA EBT</span>
+          </div>
+          <div class="card-headline" style="color: #6EE7B7;">
+            Suministro continuo de agua químicamente desinfectada y de bajo costo en la vereda El Vidrial mediante un sistema ciberfísico por gravedad y gobernanza digital.
+          </div>
+          <div class="card-description">
+            Integrar un clorificador hidráulico pasivo de $159.991 COP en PVC con la plataforma digital <em>HydroVidrial Analytics</em> para dosificación óptima y monitoreo DPD.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- MEDIOS DE PRIMER NIVEL (COMPONENTES DEL PROYECTO) -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #E0F2FE; color: #0369A1;">
+        MEDIOS DE PRIMER NIVEL (COMPONENTES ENTREGABLES)
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Medio 1</span></div>
+          <div class="card-headline">Dosificación hidráulica proporcional y autorregulada</div>
+          <div class="card-description">Cámara vertical de cloración en 2" y bypass en 1" con válvulas de bola para ajuste preciso del caudal desviado ($Q_2$).</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Medio 2</span></div>
+          <div class="card-headline">Tecnología maker pasiva de ultra-bajo costo</div>
+          <div class="card-description">Construcción 100% en PVC comercial (BOM $159.991 COP) con accionamiento por gravedad, sin dependencia eléctrica.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-component">Medio 3</span></div>
+          <div class="card-headline">Gobernanza de datos y trazabilidad DAMA-DMBOK</div>
+          <div class="card-description">Plataforma web en Python/Streamlit para registro DPD, alertas sanitarias automáticas y articulación con SIVICAP.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-arrow">▲</div>
+
+    <!-- MEDIOS FUNDAMENTALES (ACTIVIDADES) -->
+    <div class="tree-tier">
+      <div class="tier-label" style="background: #F1F5F9; color: #334155;">
+        MEDIOS FUNDAMENTALES (ACTIVIDADES CLAVE)
+      </div>
+      <div class="tier-cards-row">
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-activity">Actividad 1.1</span></div>
+          <div class="card-headline">Capacitación y certificación comunitaria</div>
+          <div class="card-description">Talleres teórico-prácticos con la JAC sobre manipulación segura de pastillas y uso de comparadores colorimétricos DPD.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-activity">Actividad 1.2</span></div>
+          <div class="card-headline">Modelo cinético de decaimiento implementado</div>
+          <div class="card-description">Algoritmo matemático de Arrhenius y balance de masa ($dC/dt = -k_d \cdot C$) embebido en la aplicación web móvil.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-activity">Actividad 2.1</span></div>
+          <div class="card-headline">Fabricación y despliegue del piloto de 10 unidades</div>
+          <div class="card-description">Ensamble y calibración hidrostática de diez clorificadores en PVC en los puntos de almacenamiento comunal de El Vidrial.</div>
+        </div>
+        <div class="tree-card">
+          <div class="card-meta-top"><span class="card-type-tag tag-activity">Actividad 3.1</span></div>
+          <div class="card-headline">Despliegue cloud y protocolo RBAC</div>
+          <div class="card-description">Base de datos PostgreSQL en Supabase, autenticación JWT y auditoría de dimensiones de calidad (completitud $\ge 98\%$).</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================================================================
+       4.3 PLANO TÉCNICO VECTORIAL (SVG ALTA RESOLUCIÓN)
+       ==================================================================== -->
+  <!-- ====================================================================
+       4.3 PLANOS TÉCNICOS VECTORIALES (SVG ALTA RESOLUCIÓN)
+       ==================================================================== -->
+  <main class="tree-container" id="treeBlueprint" style="display: none; align-items: center;">
+    <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 12px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); width: 100%; max-width: 1300px; text-align: center;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #E2E8F0; padding-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <div style="text-align: left;">
+          <h2 style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; color: #0F172A;" id="blueprintHeading">
+            Plano Técnico Vectorial: Árbol de Problemas (Diagnóstico As-Is)
+          </h2>
+          <p style="font-size: 12.5px; color: #64748B;">Estilo Tech Clean Ejecutivo • Renderizado SVG vectorial nítido</p>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <button onclick="switchSvgBlueprint('problems')" id="btnSvgProb" style="padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; border: 1.5px solid #E11D48; background: #FFF1F2; color: #BE123C;">
+            🔴 Árbol de Problemas
+          </button>
+          <button onclick="switchSvgBlueprint('objectives')" id="btnSvgObj" style="padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; border: 1.5px solid #CBD5E1; background: #FFFFFF; color: #475569;">
+            🟢 Árbol de Objetivos
+          </button>
+          <a id="btnDownloadSvg" href="graficos/diagramas/01_arbol_de_problemas.svg" download="01_arbol_de_problemas.svg" class="btn-nav primary" style="font-size: 12px; padding: 7px 16px;">
+            ⬇ Descargar SVG
+          </a>
+        </div>
+      </div>
+      <img id="blueprintImg" src="graficos/diagramas/01_arbol_de_problemas.svg" alt="Plano Técnico Vectorial MML" style="width: 100%; max-width: 1240px; height: auto; display: block; margin: 0 auto; border: 1px solid #E2E8F0; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       5. CUADRO DE INDICADORES CUANTITATIVOS REGIONALES
+       ==================================================================== -->
+  <section class="summary-section">
+    <div class="summary-card">
+      <h3>📊 Indicadores Cuantitativos de Impacto — El Vidrial (Montería, 2026)</h3>
+      <p style="font-size: 13px; color: #64748B;">
+        Datos consolidados en el trabajo de campo de la EBT y confrontados con la línea base de la Secretaría de Salud Municipal y el laboratorio ambiental UPB.
+      </p>
+
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-item-num">85.7 %</div>
+          <div class="metric-item-label">Familias sin agua potable en El Vidrial (120 de 140)</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-item-num">&gt; 65 %</div>
+          <div class="metric-item-label">Índice IRCA en pozos artesanales (Riesgo Inviable)</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-item-num">$ 159.991 COP</div>
+          <div class="metric-item-label">Costo unitario de materiales del clorificador (BOM)</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-item-num">$ 44.500.000 COP</div>
+          <div class="metric-item-label">Beneficios económicos brutos anuales (60 familias piloto)</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-item-num">361.2 %</div>
+          <div class="metric-item-label">Retorno sobre la Inversión (ROI Año 1 - Criterio UPB &ge; 30%)</div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-item-num">3.32 Meses</div>
+          <div class="metric-item-label">Periodo de recuperación Payback (Criterio UPB &le; 12 meses)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SCRIPT DE INTERACTIVIDAD DEL CONMUTADOR
+       ==================================================================== -->
+  <script>
+    function showTree(mode) {
+      const treeProblems = document.getElementById('treeProblems');
+      const treeObjectives = document.getElementById('treeObjectives');
+      const treeBlueprint = document.getElementById('treeBlueprint');
+      const btnProblems = document.getElementById('btnProblems');
+      const btnObjectives = document.getElementById('btnObjectives');
+      const btnBlueprint = document.getElementById('btnBlueprint');
+
+      if (mode === 'problems') {
+        treeProblems.style.display = 'flex';
+        treeObjectives.style.display = 'none';
+        treeBlueprint.style.display = 'none';
+        btnProblems.className = 'switch-btn active problems';
+        btnObjectives.className = 'switch-btn';
+        btnBlueprint.className = 'switch-btn';
+      } else if (mode === 'objectives') {
+        treeProblems.style.display = 'none';
+        treeObjectives.style.display = 'flex';
+        treeBlueprint.style.display = 'none';
+        btnProblems.className = 'switch-btn';
+        btnObjectives.className = 'switch-btn active objectives';
+        btnBlueprint.className = 'switch-btn';
+      } else if (mode === 'blueprint') {
+        treeProblems.style.display = 'none';
+        treeObjectives.style.display = 'none';
+        treeBlueprint.style.display = 'flex';
+        btnProblems.className = 'switch-btn';
+        btnObjectives.className = 'switch-btn';
+        btnBlueprint.className = 'switch-btn active problems';
+      }
+    }
+
+    function switchSvgBlueprint(type) {
+      const img = document.getElementById('blueprintImg');
+      const heading = document.getElementById('blueprintHeading');
+      const downloadBtn = document.getElementById('btnDownloadSvg');
+      const btnProb = document.getElementById('btnSvgProb');
+      const btnObj = document.getElementById('btnSvgObj');
+
+      if (type === 'problems') {
+        img.src = 'graficos/diagramas/01_arbol_de_problemas.svg';
+        heading.innerText = 'Plano Técnico Vectorial: Árbol de Problemas (Diagnóstico As-Is)';
+        downloadBtn.href = 'graficos/diagramas/01_arbol_de_problemas.svg';
+        downloadBtn.download = '01_arbol_de_problemas.svg';
+        btnProb.style.background = '#FFF1F2';
+        btnProb.style.borderColor = '#E11D48';
+        btnProb.style.color = '#BE123C';
+        btnObj.style.background = '#FFFFFF';
+        btnObj.style.borderColor = '#CBD5E1';
+        btnObj.style.color = '#475569';
+      } else {
+        img.src = 'graficos/diagramas/02_arbol_de_objetivos.svg';
+        heading.innerText = 'Plano Técnico Vectorial: Árbol de Objetivos (Solución To-Be)';
+        downloadBtn.href = 'graficos/diagramas/02_arbol_de_objetivos.svg';
+        downloadBtn.download = '02_arbol_de_objetivos.svg';
+        btnObj.style.background = '#ECFDF5';
+        btnObj.style.borderColor = '#10B981';
+        btnObj.style.color = '#047857';
+        btnProb.style.background = '#FFFFFF';
+        btnProb.style.borderColor = '#CBD5E1';
+        btnProb.style.color = '#475569';
+      }
+    }
+  </script>
+
+</body>
+</html>

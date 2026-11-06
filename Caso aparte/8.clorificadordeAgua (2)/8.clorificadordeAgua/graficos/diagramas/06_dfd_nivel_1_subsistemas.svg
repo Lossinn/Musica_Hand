@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1020" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra suave -->
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="procShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0284C7" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Marcador de flecha para flujos de datos -->
+    <marker id="arrowDfd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#0284C7"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-title { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 800; }
+    .font-sub { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 700; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 400; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  </style>
+
+  <!-- Fondo Limpio y Suave -->
+  <rect width="1440" height="1020" fill="#F8FAFC"/>
+
+  <!-- ========================================================================
+       CABECERA TIPO NOTION / STRIPE
+       ======================================================================== -->
+  <g transform="translate(50, 25)">
+    <rect x="0" y="0" width="1340" height="80" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 14 Q 0 0 14 0 L 14 80 Q 0 80 0 66 Z" fill="#0284C7"/>
+
+    <text x="35" y="35" class="font-title" font-size="18" fill="#0F172A" letter-spacing="0.3">DIAGRAMA DE FLUJO DE DATOS (DFD) — NIVEL 1: DESCOMPOSICIÓN POR SUBSISTEMAS</text>
+    <text x="35" y="58" class="font-body" font-size="12" fill="#64748B">
+      Subprocesos Operacionales, Almacenes de Datos (Data Stores) y Balance 1:1 con Nivel 0 • <tspan class="font-sub" fill="#0F172A">HydroVidrial 2026</tspan>
+    </text>
+
+    <!-- Badge Autores & Estándar -->
+    <rect x="940" y="21" width="375" height="38" rx="8" fill="#F0F9FF"/>
+    <text x="955" y="44" class="font-body" font-size="11.5" fill="#0369A1">
+      <tspan class="font-sub" fill="#0284C7">Notación Gane &amp; Sarson</tspan> • EBT: Roxana • Andrea • Camilo
+    </text>
+  </g>
+
+  <!-- ========================================================================
+       ENTIDADES EXTERNAS (BORDES LATERALES)
+       ======================================================================== -->
+  <!-- EE-1: Operador Comunitario JAC (Izquierda Arriba) -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="160" height="90" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="12" y="10" width="110" height="18" rx="4" fill="#ECFDF5"/>
+    <text x="16" y="22" class="font-sub" font-size="8.5" fill="#047857">EE-1: OPERADOR JAC</text>
+    <text x="12" y="46" class="font-title" font-size="11.5" fill="#064E3B">Operador de Campo</text>
+    <text x="12" y="62" class="font-body" font-size="10" fill="#64748B">Lectura Aforo &amp; DPD</text>
+    <text x="12" y="76" class="font-mono" font-size="8.5" fill="#059669">[Vereda El Vidrial]</text>
+  </g>
+
+  <!-- EE-2: Familias Vidrial (Izquierda Abajo) -->
+  <g transform="translate(50, 710)">
+    <rect x="0" y="0" width="160" height="90" rx="10" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="12" y="10" width="115" height="18" rx="4" fill="#FFFBEB"/>
+    <text x="16" y="22" class="font-sub" font-size="8.5" fill="#B45309">EE-2: COMUNIDAD</text>
+    <text x="12" y="46" class="font-title" font-size="11.5" fill="#78350F">Familias Vidrial</text>
+    <text x="12" y="62" class="font-body" font-size="10" fill="#64748B">140 Hogares Rurales</text>
+    <text x="12" y="76" class="font-mono" font-size="8.5" fill="#D97706">[Receptores de Agua]</text>
+  </g>
+
+  <!-- EE-3: Ingeniería EBT / SILOGE (Derecha Arriba) -->
+  <g transform="translate(1230, 140)">
+    <rect x="0" y="0" width="160" height="90" rx="10" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="12" y="10" width="115" height="18" rx="4" fill="#EEF2FF"/>
+    <text x="16" y="22" class="font-sub" font-size="8.5" fill="#4338CA">EE-3: INGENIERÍA EBT</text>
+    <text x="12" y="46" class="font-title" font-size="11.5" fill="#312E81">Facultad Industrial</text>
+    <text x="12" y="62" class="font-body" font-size="10" fill="#64748B">UPB • Grupo SILOGE</text>
+    <text x="12" y="76" class="font-mono" font-size="8.5" fill="#4F46E5">[Supervisión &amp; ROI]</text>
+  </g>
+
+  <!-- EE-4: Secretaría de Salud (Derecha Abajo) -->
+  <g transform="translate(1230, 710)">
+    <rect x="0" y="0" width="160" height="90" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="12" y="10" width="125" height="18" rx="4" fill="#FFF1F2"/>
+    <text x="16" y="22" class="font-sub" font-size="8.5" fill="#9F1239">EE-4: SALUD MPAL.</text>
+    <text x="12" y="46" class="font-title" font-size="11.5" fill="#881337">Alcaldía Montería</text>
+    <text x="12" y="62" class="font-body" font-size="10" fill="#64748B">Sistema SIVICAP</text>
+    <text x="12" y="76" class="font-mono" font-size="8.5" fill="#E11D48">[Auditoría Res. 2115]</text>
+  </g>
+
+  <!-- ========================================================================
+       PROCESOS PRINCIPALES (1.0, 2.0, 3.0, 4.0) — CÍRCULOS MODERNOS
+       ======================================================================== -->
+  <!-- Proceso 1.0: Ingesta y Validación -->
+  <g transform="translate(290, 150)">
+    <circle cx="85" cy="85" r="75" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5" filter="url(#procShadow)"/>
+    <circle cx="85" cy="85" r="69" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    
+    <rect x="65" y="22" width="40" height="20" rx="10" fill="#0284C7"/>
+    <text x="85" y="36" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">1.0</text>
+    
+    <text x="85" y="68" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">INGESTA DE</text>
+    <text x="85" y="82" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">DATOS FÍSICOS</text>
+    <text x="85" y="102" class="font-body" font-size="9" fill="#475569" text-anchor="middle">Validación de rangos</text>
+    <text x="85" y="115" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Q &gt; 0, T &gt; 0</text>
+  </g>
+
+  <!-- Proceso 2.0: Motor Algorítmico Cinético -->
+  <g transform="translate(740, 150)">
+    <circle cx="85" cy="85" r="75" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5" filter="url(#procShadow)"/>
+    <circle cx="85" cy="85" r="69" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    
+    <rect x="65" y="22" width="40" height="20" rx="10" fill="#0284C7"/>
+    <text x="85" y="36" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">2.0</text>
+    
+    <text x="85" y="68" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">OPTIMIZACIÓN</text>
+    <text x="85" y="82" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">CINÉTICA</text>
+    <text x="85" y="102" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">dC/dt = -kd(T) • C</text>
+    <text x="85" y="115" class="font-body" font-size="9" fill="#475569" text-anchor="middle">Cálculo de Q2 y vueltas</text>
+  </g>
+
+  <!-- Proceso 3.0: Control Metrológico Res. 2115 -->
+  <g transform="translate(290, 520)">
+    <circle cx="85" cy="85" r="75" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5" filter="url(#procShadow)"/>
+    <circle cx="85" cy="85" r="69" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    
+    <rect x="65" y="22" width="40" height="20" rx="10" fill="#0284C7"/>
+    <text x="85" y="36" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">3.0</text>
+    
+    <text x="85" y="68" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">CONTROL DPD &amp;</text>
+    <text x="85" y="82" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">RES. 2115/2007</text>
+    <text x="85" y="102" class="font-body" font-size="9" fill="#475569" text-anchor="middle">0.3 a 2.0 mg/L</text>
+    <text x="85" y="115" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Validación Sanitaria</text>
+  </g>
+
+  <!-- Proceso 4.0: Gobernanza DAMA y Reportes -->
+  <g transform="translate(740, 520)">
+    <circle cx="85" cy="85" r="75" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5" filter="url(#procShadow)"/>
+    <circle cx="85" cy="85" r="69" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    
+    <rect x="65" y="22" width="40" height="20" rx="10" fill="#0284C7"/>
+    <text x="85" y="36" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">4.0</text>
+    
+    <text x="85" y="68" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">GOBERNANZA DAMA</text>
+    <text x="85" y="82" class="font-title" font-size="11" fill="#0C4A6E" text-anchor="middle">&amp; REPORTE SIVICAP</text>
+    <text x="85" y="102" class="font-body" font-size="9" fill="#475569" text-anchor="middle">Generación de Boletines</text>
+    <text x="85" y="115" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Auditoría Hash SHA-256</text>
+  </g>
+
+  <!-- ========================================================================
+       ALMACENES DE DATOS (DATA STORES: D1, D2, D3) — BARRAS PARALELAS ELEGANTES
+       ======================================================================== -->
+  <!-- D1: Mediciones de Campo (Centro Superior) -->
+  <g transform="translate(500, 185)">
+    <rect x="0" y="0" width="190" height="60" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 0 L 10 0 L 10 60 L 0 60 Z" fill="#0284C7"/>
+    <path d="M 180 0 L 190 0 L 190 60 L 180 60 Z" fill="#0284C7"/>
+    <text x="20" y="24" class="font-mono" font-size="10" fill="#0284C7">D1: HISTÓRICO CAMPO</text>
+    <text x="20" y="42" class="font-body" font-size="9.5" fill="#0F172A">Lecturas Q, Temp, DPD</text>
+    <text x="20" y="53" class="font-mono" font-size="8" fill="#64748B">[PostgreSQL Table: logs_med]</text>
+  </g>
+
+  <!-- D2: Parámetros Cinéticos Arrhenius (Centro Medio) -->
+  <g transform="translate(500, 360)">
+    <rect x="0" y="0" width="190" height="60" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 0 L 10 0 L 10 60 L 0 60 Z" fill="#10B981"/>
+    <path d="M 180 0 L 190 0 L 190 60 L 180 60 Z" fill="#10B981"/>
+    <text x="20" y="24" class="font-mono" font-size="10" fill="#047857">D2: MATRIZ CINÉTICA</text>
+    <text x="20" y="42" class="font-body" font-size="9.5" fill="#0F172A">Constantes k20, θ, Curvas Q2</text>
+    <text x="20" y="53" class="font-mono" font-size="8" fill="#64748B">[PostgreSQL Table: param_cal]</text>
+  </g>
+
+  <!-- D3: Trazabilidad y Auditoría SIVICAP (Centro Inferior) -->
+  <g transform="translate(500, 555)">
+    <rect x="0" y="0" width="190" height="60" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 0 L 10 0 L 10 60 L 0 60 Z" fill="#6366F1"/>
+    <path d="M 180 0 L 190 0 L 190 60 L 180 60 Z" fill="#6366F1"/>
+    <text x="20" y="24" class="font-mono" font-size="10" fill="#4338CA">D3: TRAZABILIDAD DAMA</text>
+    <text x="20" y="42" class="font-body" font-size="9.5" fill="#0F172A">Lotes Aprobados + Hash</text>
+    <text x="20" y="53" class="font-mono" font-size="8" fill="#64748B">[PostgreSQL Table: audit_log]</text>
+  </g>
+
+  <!-- ========================================================================
+       CONEXIONES Y FLUJOS DE DATOS CON RÓTULOS LEGIBLES
+       ======================================================================== -->
+  <!-- EE-1 a 1.0 -->
+  <line x1="210" y1="185" x2="285" y2="185" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+  <rect x="215" y="165" width="65" height="18" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+  <text x="247" y="177" class="font-mono" font-size="8" fill="#0369A1" text-anchor="middle">Q, T, DPD</text>
+
+  <!-- 1.0 a D1 -->
+  <line x1="440" y1="215" x2="495" y2="215" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+
+  <!-- D1 a 2.0 -->
+  <line x1="690" y1="215" x2="735" y2="215" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+
+  <!-- EE-3 a D2 (Parámetros desde Ingeniería) -->
+  <path d="M 1230 185 L 1050 185 L 1050 390 L 695 390" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+  <rect x="1060" y="270" width="130" height="22" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="1125" y="284" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Calibración kd, θ</text>
+
+  <!-- D2 a 2.0 -->
+  <path d="M 690 380 L 760 380 L 760 305" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+
+  <!-- 2.0 a EE-1 (Instrucción de ajuste de válvula bypass) -->
+  <path d="M 825 150 L 825 110 L 130 110 L 130 135" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+  <rect x="420" y="98" width="180" height="22" rx="5" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="510" y="113" class="font-sub" font-size="9" fill="#0369A1" text-anchor="middle">Instrucción: Vueltas Válvula Q2</text>
+
+  <!-- 1.0 a 3.0 (Datos de control DPD) -->
+  <line x1="375" y1="305" x2="375" y2="515" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+  <rect x="382" y="405" width="105" height="20" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+  <text x="434" y="418" class="font-mono" font-size="8" fill="#0369A1" text-anchor="middle">Muestra DPD</text>
+
+  <!-- 3.0 a D3 (Lote Aprobado) -->
+  <line x1="440" y1="585" x2="495" y2="585" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+
+  <!-- D3 a 4.0 -->
+  <line x1="690" y1="585" x2="735" y2="585" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowDfd)"/>
+
+  <!-- 3.0 a EE-2 (Liberación a red de agua segura) -->
+  <path d="M 375 675 L 375 755 L 215 755" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+  <rect x="230" y="738" width="130" height="20" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+  <text x="295" y="751" class="font-mono" font-size="8" fill="#0369A1" text-anchor="middle">Boletín Agua Segura</text>
+
+  <!-- 4.0 a EE-4 (Reporte SIVICAP oficial) -->
+  <path d="M 895 605 L 1050 605 L 1050 755 L 1225 755" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+  <rect x="1060" y="660" width="145" height="22" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="1132" y="674" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Reporte SIVICAP Res. 2115</text>
+
+  <!-- 4.0 a EE-3 (Telemetría y Dashboards) -->
+  <path d="M 895 540 L 980 540 L 980 185 L 1225 185" stroke="#0284C7" stroke-width="2" fill="none" marker-end="url(#arrowDfd)"/>
+  <rect x="990" y="340" width="140" height="22" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="1060" y="354" class="font-mono" font-size="8.5" fill="#0369A1" text-anchor="middle">Métricas DAMA &amp; ROI</text>
+
+  <!-- ========================================================================
+       TARJETA DE BALANCE Y GOBERNANZA DAMA-DMBOK
+       ======================================================================== -->
+  <g transform="translate(50, 835)">
+    <rect x="0" y="0" width="1340" height="150" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <rect x="30" y="16" width="300" height="24" rx="6" fill="#F0F9FF"/>
+    <text x="40" y="32" class="font-sub" font-size="10" fill="#0369A1">DESCOMPOSICIÓN FUNCIONAL &amp; REGLAS SILOGE</text>
+
+    <text x="30" y="62" class="font-title" font-size="12.5" fill="#0F172A">
+      • Subsistema 1.0 (Ingesta): Valida integridad en frontera &bull; Subsistema 2.0 (Cinética): Optimiza gasto de tricloro mediante Arrhenius
+    </text>
+    <text x="30" y="84" class="font-title" font-size="12.5" fill="#0F172A">
+      • Subsistema 3.0 (Metrología): Garantiza rango 0.3-2.0 mg/L &bull; Subsistema 4.0 (Gobernanza): Sincronización inmutable con PostgreSQL
+    </text>
+    <text x="30" y="106" class="font-body" font-size="11.5" fill="#475569">
+      Estructura de Almacenes: D1 registra series de tiempo, D2 encapsula modelos predictivos y D3 resguarda el linaje del dato exigido por DAMA-DMBOK.
+    </text>
+
+    <rect x="30" y="118" width="1280" height="20" rx="4" fill="#F8FAFC"/>
+    <text x="45" y="132" class="font-mono" font-size="9" fill="#0284C7">
+      [Balance Formal: Entradas EE-1, EE-3 = Salidas EE-1, EE-2, EE-3, EE-4 • Verificación de consistencia 100% con Nivel 0]
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 980" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra suave -->
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="procShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0284C7" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Marcadores de flecha limpios -->
+    <marker id="arrowTeal" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M 1.5 1.5 L 7.5 4.5 L 1.5 7.5 Z" fill="#4F46E5"/>
+    </marker>
+  </defs>
+
+  <style>
+    .font-title { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 800; }
+    .font-sub { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; font-weight: 700; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 400; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  </style>
+
+  <!-- Fondo Limpio y Suave -->
+  <rect width="1440" height="980" fill="#F8FAFC"/>
+
+  <!-- ========================================================================
+       CABECERA TIPO NOTION / STRIPE
+       ======================================================================== -->
+  <g transform="translate(50, 25)">
+    <rect x="0" y="0" width="1340" height="80" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    <path d="M 0 14 Q 0 0 14 0 L 14 80 Q 0 80 0 66 Z" fill="#0D9488"/>
+
+    <text x="35" y="35" class="font-title" font-size="18" fill="#0F172A" letter-spacing="0.3">DIAGRAMA DE FLUJO DE DATOS (DFD) — NIVEL 2: DETALLE DE PROCESOS CRÍTICOS</text>
+    <text x="35" y="58" class="font-body" font-size="12" fill="#64748B">
+      Descomposición Matemática del Motor Cinético (2.0) y Aseguramiento Metrológico DAMA (3.0) • <tspan class="font-sub" fill="#0F172A">HydroVidrial 2026</tspan>
+    </text>
+
+    <!-- Badge Autores & Estándar -->
+    <rect x="940" y="21" width="375" height="38" rx="8" fill="#F0FDFA"/>
+    <text x="955" y="44" class="font-body" font-size="11.5" fill="#0F766E">
+      <tspan class="font-sub" fill="#0D9488">Gane &amp; Sarson Detallado</tspan> • EBT: Roxana • Andrea • Camilo
+    </text>
+  </g>
+
+  <!-- ========================================================================
+       ZONA SUPERIOR: SUBSISTEMA 2.0 (MOTOR ALGORÍTMICO CINÉTICO)
+       ======================================================================== -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="1340" height="340" rx="14" fill="#FFFFFF" stroke="#99F6E4" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <!-- Banda de Cabecera -->
+    <rect x="25" y="16" width="360" height="26" rx="6" fill="#F0FDFA"/>
+    <text x="35" y="33" class="font-sub" font-size="10.5" fill="#0F766E">
+      SUBSISTEMA 2.0: MOTOR ALGORÍTMICO Y OPTIMIZACIÓN CINÉTICA
+    </text>
+
+    <!-- Subproceso 2.1: Cálculo de Tiempo de Retención -->
+    <g transform="translate(80, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#0D9488" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#0D9488"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">2.1</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">RETENCIÓN</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">HIDRÁULICA</text>
+      <text x="80" y="100" class="font-mono" font-size="9" fill="#0F766E" text-anchor="middle">t_ret = V / Q_total</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">Horas de Contacto</text>
+    </g>
+
+    <!-- Conector 2.1 a 2.2 -->
+    <line x1="230" y1="155" x2="470" y2="155" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowTeal)"/>
+    <rect x="290" y="140" width="120" height="22" rx="4" fill="#FFFFFF" stroke="#CCFBF1" stroke-width="1" filter="url(#softShadow)"/>
+    <text x="350" y="155" class="font-mono" font-size="9" fill="#0F766E" text-anchor="middle">t_ret (horas)</text>
+
+    <!-- Subproceso 2.2: Cinética Arrhenius -->
+    <g transform="translate(470, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#0D9488" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#0D9488"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">2.2</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">CINÉTICA</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">ARRHENIUS</text>
+      <text x="80" y="100" class="font-mono" font-size="8.5" fill="#0F766E" text-anchor="middle">kd(T) = k20•θ^(T-20)</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">Decaimiento 1.er Orden</text>
+    </g>
+
+    <!-- Conector 2.2 a 2.3 -->
+    <line x1="620" y1="155" x2="860" y2="155" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowTeal)"/>
+    <rect x="680" y="140" width="120" height="22" rx="4" fill="#FFFFFF" stroke="#CCFBF1" stroke-width="1" filter="url(#softShadow)"/>
+    <text x="740" y="155" class="font-mono" font-size="9" fill="#0F766E" text-anchor="middle">kd ajustado (h⁻¹)</text>
+
+    <!-- Subproceso 2.3: Optimización Numérica Bypass -->
+    <g transform="translate(860, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#0D9488" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#0D9488"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">2.3</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">OPTIMIZACIÓN</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#134E4A" text-anchor="middle">VÁLVULA Q2*</text>
+      <text x="80" y="100" class="font-mono" font-size="8.5" fill="#0F766E" text-anchor="middle">min (C(t) - C_meta)²</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">Vueltas Válvula 1"</text>
+    </g>
+
+    <!-- Almacén Local D2 (Matriz Cinética) -->
+    <g transform="translate(470, 245)">
+      <rect x="0" y="0" width="160" height="55" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <path d="M 0 0 L 8 0 L 8 55 L 0 55 Z" fill="#0D9488"/>
+      <path d="M 152 0 L 160 0 L 160 55 L 152 55 Z" fill="#0D9488"/>
+      <text x="16" y="22" class="font-mono" font-size="9" fill="#0D9488">D2: CINÉTICA CLORO</text>
+      <text x="16" y="38" class="font-body" font-size="8.5" fill="#475569">k20 = 0.045 h⁻¹, θ = 1.025</text>
+      <text x="16" y="48" class="font-mono" font-size="7.5" fill="#64748B">[Calibración UPB-Vidrial]</text>
+    </g>
+    <line x1="550" y1="245" x2="550" y2="225" stroke="#0D9488" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+
+    <!-- Tarjeta de Salida de Control -->
+    <g transform="translate(1060, 105)">
+      <rect x="0" y="0" width="240" height="100" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="15" y="10" width="130" height="18" rx="4" fill="#D1FAE5"/>
+      <text x="20" y="23" class="font-sub" font-size="8.5" fill="#065F46">VARIABLE DE CONTROL</text>
+      <text x="15" y="50" class="font-title" font-size="12" fill="#064E3B">Apertura Bypass Q2*</text>
+      <text x="15" y="68" class="font-body" font-size="9.5" fill="#047857">Fracción de caudal: 12% a 18%</text>
+      <text x="15" y="84" class="font-mono" font-size="9" fill="#059669">Resolución: 0.25 vueltas</text>
+    </g>
+    <line x1="1010" y1="155" x2="1055" y2="155" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- ========================================================================
+       ZONA INFERIOR: SUBSISTEMA 3.0 (METROLOGÍA DPD & GOBERNANZA DAMA)
+       ======================================================================== -->
+  <g transform="translate(50, 485)">
+    <rect x="0" y="0" width="1340" height="340" rx="14" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <!-- Banda de Cabecera -->
+    <rect x="25" y="16" width="380" height="26" rx="6" fill="#EEF2FF"/>
+    <text x="35" y="33" class="font-sub" font-size="10.5" fill="#4338CA">
+      SUBSISTEMA 3.0: METROLOGÍA DPD, VALIDACIÓN RES. 2115 Y GOBERNANZA DAMA
+    </text>
+
+    <!-- Subproceso 3.1: Captura Pydantic & Filtro de Calidad -->
+    <g transform="translate(80, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#EEF2FF" stroke="#E0E7FF" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#4F46E5"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">3.1</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">CAPTURA &amp;</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">PYDANTIC</text>
+      <text x="80" y="100" class="font-mono" font-size="8.5" fill="#4338CA" text-anchor="middle">Filtro de No-Nulos</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">Completitud &gt;= 98%</text>
+    </g>
+
+    <!-- Conector 3.1 a 3.2 -->
+    <line x1="230" y1="155" x2="470" y2="155" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrowIndigo)"/>
+    <rect x="290" y="140" width="120" height="22" rx="4" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1" filter="url(#softShadow)"/>
+    <text x="350" y="155" class="font-mono" font-size="9" fill="#4338CA" text-anchor="middle">Dato DPD Validado</text>
+
+    <!-- Subproceso 3.2: Confrontación con Resolución 2115 -->
+    <g transform="translate(470, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#EEF2FF" stroke="#E0E7FF" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#4F46E5"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">3.2</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">REGLAS RES.</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">2115 DE 2007</text>
+      <text x="80" y="100" class="font-mono" font-size="8.5" fill="#4338CA" text-anchor="middle">0.3 &lt;= Cl &lt;= 2.0 mg/L</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">Flag Conformidad</text>
+    </g>
+
+    <!-- Conector 3.2 a 3.3 -->
+    <line x1="620" y1="155" x2="860" y2="155" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrowIndigo)"/>
+    <rect x="680" y="140" width="120" height="22" rx="4" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1" filter="url(#softShadow)"/>
+    <text x="740" y="155" class="font-mono" font-size="9" fill="#4338CA" text-anchor="middle">Tupla Conformidad</text>
+
+    <!-- Subproceso 3.3: Hash Criptográfico y Escritura Segura -->
+    <g transform="translate(860, 75)">
+      <circle cx="80" cy="80" r="70" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2.5" filter="url(#procShadow)"/>
+      <circle cx="80" cy="80" r="64" fill="#EEF2FF" stroke="#E0E7FF" stroke-width="1"/>
+
+      <rect x="62" y="22" width="36" height="18" rx="9" fill="#4F46E5"/>
+      <text x="80" y="35" class="font-title" font-size="11" fill="#FFFFFF" text-anchor="middle">3.3</text>
+
+      <text x="80" y="65" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">PERSISTENCIA</text>
+      <text x="80" y="80" class="font-title" font-size="11" fill="#1E1B4B" text-anchor="middle">&amp; FIRMA HASH</text>
+      <text x="80" y="100" class="font-mono" font-size="8.5" fill="#4338CA" text-anchor="middle">SHA-256 Checksum</text>
+      <text x="80" y="115" class="font-body" font-size="8.5" fill="#475569" text-anchor="middle">PostgreSQL Inmutable</text>
+    </g>
+
+    <!-- Almacén Local D3 (Trazabilidad y Calidad) -->
+    <g transform="translate(860, 245)">
+      <rect x="0" y="0" width="160" height="55" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#softShadow)"/>
+      <path d="M 0 0 L 8 0 L 8 55 L 0 55 Z" fill="#4F46E5"/>
+      <path d="M 152 0 L 160 0 L 160 55 L 152 55 Z" fill="#4F46E5"/>
+      <text x="16" y="22" class="font-mono" font-size="9" fill="#4338CA">D3: HISTÓRICO CALIDAD</text>
+      <text x="16" y="38" class="font-body" font-size="8.5" fill="#475569">Tabla: dbt_log_cloro</text>
+      <text x="16" y="48" class="font-mono" font-size="7.5" fill="#64748B">[Hash SHA-256 auditado]</text>
+    </g>
+    <line x1="940" y1="225" x2="940" y2="245" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arrowIndigo)"/>
+
+    <!-- Tarjeta de Salida: Reporte SIVICAP -->
+    <g transform="translate(1060, 105)">
+      <rect x="0" y="0" width="240" height="100" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#softShadow)"/>
+      <rect x="15" y="10" width="140" height="18" rx="4" fill="#E0E7FF"/>
+      <text x="20" y="23" class="font-sub" font-size="8.5" fill="#3730A3">TRAZABILIDAD OFICIAL</text>
+      <text x="15" y="50" class="font-title" font-size="12" fill="#1E1B4B">Boletín SIVICAP / UPB</text>
+      <text x="15" y="68" class="font-body" font-size="9.5" fill="#4338CA">Reporte mensual de potabilidad</text>
+      <text x="15" y="84" class="font-mono" font-size="9" fill="#4F46E5">IRCA Histórico &lt; 5% garantizado</text>
+    </g>
+    <line x1="1010" y1="155" x2="1055" y2="155" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrowIndigo)"/>
+  </g>
+
+  <!-- ========================================================================
+       PIE TÉCNICO FORMAL
+       ======================================================================== -->
+  <g transform="translate(50, 845)">
+    <rect x="0" y="0" width="1340" height="110" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#softShadow)"/>
+    
+    <rect x="30" y="14" width="280" height="24" rx="6" fill="#F8FAFC"/>
+    <text x="40" y="30" class="font-sub" font-size="10" fill="#475569">EXCELENCIA DE INGENIERÍA METROLÓGICA Y DAMA</text>
+
+    <text x="30" y="58" class="font-title" font-size="12.5" fill="#0F172A">
+      • Respaldo Hidrodinámico: Cada ajuste de válvula $Q_2$ responde al balance de materia con decaimiento térmico de Arrhenius.
+    </text>
+    <text x="30" y="78" class="font-body" font-size="11.5" fill="#475569">
+      • Seguridad Sanitaria y Habeas Data: El pipeline criptográfico SHA-256 previene la manipulación de registros y blinda legalmente a la JAC.
+    </text>
+    <text x="30" y="96" class="font-mono" font-size="9.5" fill="#0D9488">
+      [Cumplimiento Normativo: Resolución 2115/2007 MAVDT • Estándar DAMA-DMBOK 2.ª Edición • Código UPB: 8830 0064 0]
+    </text>
+  </g>
+</svg>

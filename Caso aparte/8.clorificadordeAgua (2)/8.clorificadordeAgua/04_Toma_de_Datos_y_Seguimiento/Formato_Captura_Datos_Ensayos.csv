@@ -1,0 +1,11 @@
+id_ensayo,dia_ensayo,fecha,replica,posicion_v_bp_pct,posicion_v_in_pct,posicion_v_out_pct,num_pastillas,volumen_colectado_L,tiempo_aforo_s,caudal_L_s,temperatura_C,pH,turbidez_NTU,cloro_residual_mgL,estado_cloracion,observaciones
+1,1,2026-09-21,1,20,0,0,0,1.00,4.50,0.222,28.5,7.2,0.50,0.00,Sin_Cloro,Prueba_hidraulica_base
+2,1,2026-09-21,2,40,0,0,0,1.00,2.80,0.357,28.5,7.2,0.50,0.00,Sin_Cloro,Prueba_hidraulica_base
+3,1,2026-09-21,3,60,0,0,0,1.00,2.10,0.476,28.5,7.2,0.50,0.00,Sin_Cloro,Prueba_hidraulica_base
+4,1,2026-09-21,1,80,0,0,0,1.00,1.65,0.606,28.5,7.2,0.50,0.00,Sin_Cloro,Prueba_hidraulica_base
+5,1,2026-09-21,1,100,0,0,0,1.00,1.35,0.741,28.5,7.2,0.50,0.00,Sin_Cloro,Prueba_hidraulica_base
+6,5,2026-09-25,1,50,50,50,1,1.00,2.15,0.465,28.0,7.1,0.60,0.38,Adecuada,Ensayo_piloto_1_pastilla
+7,7,2026-09-29,1,25,50,50,1,1.00,2.60,0.385,28.2,7.3,0.55,0.48,Adecuada,DOE_Corrida_1
+8,7,2026-09-29,1,75,50,50,1,1.00,1.70,0.588,28.2,7.3,0.55,0.26,Adecuada,DOE_Corrida_3
+9,7,2026-09-29,1,25,50,50,2,1.00,2.55,0.392,28.3,7.2,0.55,0.72,Sobreclorada,DOE_Corrida_5
+10,7,2026-09-29,1,75,50,50,2,1.00,1.68,0.595,28.3,7.2,0.55,0.41,Adecuada,DOE_Corrida_7

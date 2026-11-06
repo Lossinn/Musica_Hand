@@ -1,0 +1,76 @@
+{
+ "palabras_articulo": 4384,
+ "segmentos": 4377,
+ "fuentes": {
+  "documento_tecnico.md": {
+   "pct_segmentos_coincidentes": 0.75,
+   "tramos_top": [
+    {
+     "palabras": 17,
+     "texto": "provienen de la literatura y del ajuste sobre los datos disponibles no de un estudio con ninos"
+    },
+    {
+     "palabras": 13,
+     "texto": "escala entre 0 8 y 1 25 giro independiente por mano de 18"
+    },
+    {
+     "palabras": 11,
+     "texto": "aprendizaje por refuerzo el motor adaptativo es un conjunto de reglas"
+    },
+    {
+     "palabras": 10,
+     "texto": "la distancia de la muneca al nudillo del dedo medio"
+    },
+    {
+     "palabras": 10,
+     "texto": "validar las constantes con los datos que la aplicacion ya"
+    },
+    {
+     "palabras": 9,
+     "texto": "al menos 0 45 s desde la confirmacion anterior"
+    }
+   ]
+  },
+  "motor_analitico_y_estado_avance.md": {
+   "pct_segmentos_coincidentes": 0.0,
+   "tramos_top": []
+  },
+  "borrador_cap6.md": {
+   "pct_segmentos_coincidentes": 0.0,
+   "tramos_top": []
+  },
+  "documento_2do_corte (html)": {
+   "pct_segmentos_coincidentes": 0.37,
+   "tramos_top": [
+    {
+     "palabras": 17,
+     "texto": "2026 es de 535 052 habitantes de los cuales 80 254 tienen entre 3 y 12 anos"
+    },
+    {
+     "palabras": 9,
+     "texto": "y ruido gaussiano proporcional al tamano de la mano"
+    },
+    {
+     "palabras": 8,
+     "texto": "python 3 12 10 numpy 1 26 4"
+    },
+    {
+     "palabras": 8,
+     "texto": "opencv 4 11 0 mediapipe 0 10 21"
+    },
+    {
+     "palabras": 8,
+     "texto": "es la distancia de la muneca al nudillo"
+    },
+    {
+     "palabras": 8,
+     "texto": "escala entre 0 8 y 1 25 giro"
+    }
+   ]
+  },
+  "README_03_Codigo.md": {
+   "pct_segmentos_coincidentes": 0.0,
+   "tramos_top": []
+  }
+ }
+}
