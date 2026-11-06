@@ -78,6 +78,8 @@
 
 [Normal] La cifra de precisión merece una explicación aparte. Un 94,2 % solo tiene sentido con un protocolo: qué señas, de cuántas personas, con qué perturbaciones y cuántas pruebas. Ese protocolo no está en la documentación revisada. Con el protocolo propio, el reconocimiento fue de 100 % sin ruido y de 86,0 % con ruido de 0,09. No son cifras contradictorias, porque miden cosas distintas, y por eso no se declara que la primera sea falsa, sino que no puede reproducirse ni compararse.
 
+[Figura Título] Figura 1. (a) Tasa de notas falsas medida con 30 semillas (media y rango) frente al 8 % reportado. (b) Latencia reportada y medida.
+
 [Heading 2] Discrepancias entre documentación y código
 
 [Tabla Título] Tabla 3. Discrepancias halladas entre la documentación y el código

@@ -69,6 +69,7 @@ T(f"La tasa de notas falsas se reproduce con una precisión notable: {f(FPG['pct
 T("La cifra de precisión merece una explicación aparte. Un 94,2 % solo tiene sentido con un protocolo: qué señas, de cuántas personas, con qué perturbaciones y cuántas pruebas. Ese protocolo no está en la documentación revisada. Con el "
   f"protocolo propio, el reconocimiento fue de {f(A[0]['nuevo']['pct'], 0)} % sin ruido y de {f(A[3]['nuevo']['pct'])} % con ruido de 0,09. No son cifras contradictorias, porque miden cosas distintas, y por eso no se declara que la primera sea falsa, "
   "sino que no puede reproducirse ni compararse.")
+figura(["reportado_medido.png"], 12.0, "Figura 1. (a) Tasa de notas falsas medida con 30 semillas (media y rango) frente al 8 % reportado. (b) Latencia reportada y medida.")
 H2("Discrepancias entre documentación y código")
 tabla("Tabla 3. Discrepancias halladas entre la documentación y el código",
       ["Elemento", "Documentación", "Código o medición", "Decisión"],

@@ -67,6 +67,7 @@ tabla("Tabla 2. Ventana de acierto según el tempo (ms), con tolerancia no limit
 T("Hasta unos 100 bpm la ventana depende solo del intervalo entre notas, y a partir de ahí actúa el piso de 480 ms: a 120 bpm, el 85 % del intervalo es de 425 ms y la ventana se mantiene en 480 ms, con 276 ms antes y 204 ms después de la línea. "
   "La asimetría hace que el niño tenga más margen para adelantarse que para retrasarse, lo que compensa el tiempo que tarda el reconocimiento en confirmar. En el factor de tempo más rápido del módulo (1,15), "
   "esto importa más que en el más lento (0,72).")
+figura(["ventana_tempo.png"], 11.0, "Figura 1. Reparto de la ventana de acierto antes y después de la línea de la nota, según el tempo.")
 H2("Costo del reconocimiento en el tiempo de respuesta")
 T(f"El descriptor y el clasificador tardaron {f(LT['media_ms'], 2)} ms por fotograma en promedio, con percentil 95 de {f(LT['p95_ms'], 2)} ms y máximo de {f(LT['max_ms'], 2)} ms en {LT['reps']} repeticiones, en un solo equipo. Esa cifra es una fracción "
   "pequeña de la ventana mínima de 480 ms, pero no incluye la captura de la cámara, el rastreo de MediaPipe ni el dibujo en pantalla, que no se midieron. Por eso la latencia de extremo a extremo sigue siendo una incógnita.")
