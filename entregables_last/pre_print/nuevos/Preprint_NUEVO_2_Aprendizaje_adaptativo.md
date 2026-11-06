@@ -1,7 +1,7 @@
 # PREPRINT NUEVO 2 — Enfoque: aprendizaje adaptativo (dominio, repaso espaciado y selección de sesión)
 
 **Estructura de referencia:** Guía 2 (tipo Guerra): encabezado, resumen, introducción con cuatro párrafos rotulados, métodos, resultados, discusión, conclusiones y referencias. Extensión: unas 650 palabras, cerca de 3 páginas manuscritas. Voz en primera persona prudente.
-**Integrante:** [por asignar]
+**Integrante:** Juliana Esther Carrascal Hernández
 
 ---
 
@@ -9,7 +9,7 @@
 
 **Qué practicar después: estimación del dominio y selección de sesiones en Hand Sing Kids**
 
-[Nombre del integrante]. Universidad Pontificia Bolivariana, seccional Montería, Ingeniería Industrial. Gestión Tecnológica, tercer corte. 6 de noviembre de 2026.
+Juliana Esther Carrascal Hernández. Universidad Pontificia Bolivariana, seccional Montería, Ingeniería Industrial. Gestión Tecnológica, tercer corte. 6 de noviembre de 2026.
 
 **Resumen.** Hand Sing Kids enseña las ocho notas de Do3 a Do4 con señas de las manos. Este trabajo describe la parte que decide qué practica el niño después de cada intento. El sistema estima el dominio de cada nota con un modelo de cuatro componentes (precisión, consistencia, velocidad y retención), programa los repasos con un esquema de repetición espaciada y elige la sesión resolviendo un problema de programación entera mixta. Las pruebas del repositorio pasaron y el problema de ejemplo se resolvió en 40 ms con el óptimo exacto. No hay datos de niños, así que lo que se afirma sobre el aprendizaje es una hipótesis. Falta una prueba en el aula.
 

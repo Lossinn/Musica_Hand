@@ -1,13 +1,15 @@
 # PREPRINT NUEVO 1 — Enfoque: visión computacional (reconocer solo la seña intencional)
 
 **Estructura de referencia:** Guía 1 (tipo Antolin Vitola): introducción en 3 párrafos, metodología en 4, resultados en 3 y un párrafo de cierre. Extensión: unas 400 palabras, cerca de 2 páginas manuscritas.
-**Integrante:** [por asignar]
+**Integrante:** Isaías José Petro Rodríguez
 
 ---
 
 ## ESCRITO FINAL (para copiar a mano)
 
 **Reconocer solo la seña que el niño quiere hacer: descriptor invariante de manos para enseñar las notas musicales**
+
+Isaías José Petro Rodríguez. Universidad Pontificia Bolivariana, seccional Montería, Ingeniería Industrial. Gestión Tecnológica, tercer corte. 6 de noviembre de 2026.
 
 **Introducción**
 

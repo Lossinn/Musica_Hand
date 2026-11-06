@@ -1,13 +1,15 @@
 # PREPRINT NUEVO 3 — Enfoque: ingeniería de software, accesibilidad y camino hacia la validación en aula
 
 **Estructura de referencia:** el preprint de Andrés Negrete: texto corrido en párrafos, sin secciones rotuladas, con título propio. Aquí se agrega una referencia al final. Extensión: unas 450 palabras, cerca de 2 páginas manuscritas.
-**Integrante:** [por asignar]
+**Integrante:** Alejandro Pemberty Vergara
 
 ---
 
 ## ESCRITO FINAL (para copiar a mano)
 
 **Hand Sing Kids en el aula de Montería: una herramienta que corre en un computador común y qué falta para probarla con niños**
+
+Alejandro Pemberty Vergara. Universidad Pontificia Bolivariana, seccional Montería, Ingeniería Industrial. Gestión Tecnológica, tercer corte. 6 de noviembre de 2026.
 
 Hand Sing Kids es una aplicación de escritorio que enseña a los niños las ocho notas musicales de Do3 a Do4 con señas de las dos manos. Una cámara capta las manos, el sistema reconoce la seña y responde con sonido, y después decide qué actividad sigue según lo que el niño ya domina. Lo que me interesa destacar es que todo esto funciona en un computador con cámara y guarda sus datos en una base local, sin depender de una conexión a internet. Por eso creo que es una candidata realista para probarse en aulas de Montería y Córdoba, donde no siempre hay buena conectividad.
 
