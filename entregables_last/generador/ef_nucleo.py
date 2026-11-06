@@ -21,7 +21,7 @@ AQUI = Path(__file__).resolve().parent
 BASE = AQUI.parent
 FIG = BASE / "articulo" / "fig"
 M_NS = "http://schemas.openxmlformats.org/officeDocument/2006/math"
-AZUL = RGBColor(0x1F, 0x38, 0x64)
+AZUL = RGBColor(0x14, 0x37, 0x5A)
 FUENTE = "Times New Roman"
 
 # ---------------------------------------------------------------- referencias (autor-año)
@@ -33,7 +33,7 @@ CLAVES = {
     "tang": "10.1007/s10791-026-10022-2", "wang": "10.1007/s44163-026-00832-0", "ramoneda": "10.1016/j.eswa.2026.132088",
     "apay": "10.31681/jetol.1243501", "barroso": "10.6018/red.602301", "leon": "10.17811/rifie.20620",
     "cepeda": "10.1037/0033-2909.132.3.354", "corbett": "10.1007/BF01099821", "wilson85": "10.1038/s41467-019-12552-4",
-    "wilsonci": "10.1080/01621459.1927.10502953", "wozniak": "10.55782/ane-1994-1003",
+    "wilsonci": "10.1080/01621459.1927.10502953", "wozniak": "10.55782/ane-1994-1003", "prisma": "10.1136/bmj.n71",
 }
 DANE = ("DANE (2026). Proyecciones de población municipal 2020–2035, actualización post COVID-19 (Montería, 2026). Bogotá, Colombia. "
         "Disponible en https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx (consultado el 5 de noviembre de 2026).")
@@ -153,17 +153,18 @@ class Escrito:
         self.n_sec = 0; self.n_sub = 0; self.n_tab = 0; self.n_fig = 0; self.n_eq = 0
         self.citadas: list[str] = []
         self._config()
+        self._guionado()
 
     # ---- configuración de página, estilos, encabezado y pie
     def _config(self):
         d = self.d
         st = d.styles["Normal"]; st.font.name = FUENTE; st.font.size = Pt(10)
         st.element.rPr.rFonts.set(qn("w:eastAsia"), FUENTE)
-        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = 1.12
+        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = Pt(12)
         s = d.sections[0]
         s.page_width = Cm(21.59); s.page_height = Cm(27.94)
-        s.left_margin = s.right_margin = Cm(1.9); s.top_margin = Cm(2.4); s.bottom_margin = Cm(2.2)
-        s.header_distance = Cm(1.1); s.footer_distance = Cm(1.1)
+        s.left_margin = s.right_margin = Cm(2.0); s.top_margin = Cm(2.0); s.bottom_margin = Cm(2.0)
+        s.header_distance = Cm(0.9); s.footer_distance = Cm(0.9)
         # encabezado: texto izquierda y derecha con línea inferior
         h = s.header; h.is_linked_to_previous = False
         p = h.paragraphs[0]; p.text = ""; p.style = d.styles["Normal"]
@@ -172,7 +173,7 @@ class Escrito:
         r = p.add_run("Gestión Tecnológica"); _fuente(r, 9)
         r = p.add_run("\tUPB - Montería"); _fuente(r, 9)
         pPr = p._p.get_or_add_pPr(); b = OxmlElement("w:pBdr"); bt = OxmlElement("w:bottom")
-        for k, v in (("val", "single"), ("sz", "4"), ("space", "3"), ("color", "000000")):
+        for k, v in (("val", "single"), ("sz", "3"), ("space", "3"), ("color", "000000")):
             bt.set(qn(f"w:{k}"), v)
         b.append(bt); pPr.append(b)
         # pie: número de página centrado
@@ -184,6 +185,13 @@ class Escrito:
                 e = OxmlElement("w:fldChar"); e.set(qn("w:fldCharType"), tipo); r._r.append(e)
             else:
                 e = OxmlElement("w:instrText"); e.set(qn("xml:space"), "preserve"); e.text = txt; r._r.append(e)
+
+    def _guionado(self):
+        ajustes = self.d.settings.element
+        h = OxmlElement("w:autoHyphenation"); h.set(qn("w:val"), "true"); ajustes.append(h)
+        z = OxmlElement("w:hyphenationZone"); z.set(qn("w:val"), "283"); ajustes.append(z)
+        rpr = self.d.styles["Normal"].element.get_or_add_rPr()
+        lg = OxmlElement("w:lang"); lg.set(qn("w:val"), "es-ES"); lg.set(qn("w:eastAsia"), "es-ES"); rpr.append(lg)
 
     # ---- columnas
     def _cols(self, sec, n, espacio_cm=0.76):
@@ -235,23 +243,26 @@ class Escrito:
     def titulo_bloque(self, titulo, autores, docente_lineas, resumen, kw_es, abstract, kw_en):
         d = self.d
         self.meta = dict(titulo=titulo, resumen=resumen, kw=kw_es, abstract=abstract, kwe=kw_en)
-        p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_before = Pt(10); p.paragraph_format.space_after = Pt(10)
-        p.paragraph_format.line_spacing = 1.0
-        self._texto(p, titulo, 17, True, None, AZUL)
+        titulos = titulo if isinstance(titulo, (list, tuple)) else [titulo]
+        for k, tt in enumerate(titulos):
+            p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before = Pt(8 if k == 0 else 4); p.paragraph_format.space_after = Pt(6)
+            p.paragraph_format.line_spacing = Pt(21 if k == 0 else 16)
+            self._texto(p, tt, 17 if k == 0 else 13, True, None, AZUL)
         for fila in autores:
             p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            self._texto(p, fila, 11)
-        d.add_paragraph().paragraph_format.space_after = Pt(2)
+            p.paragraph_format.line_spacing = Pt(15)
+            self._texto(p, fila, 12)
+        d.add_paragraph().paragraph_format.space_after = Pt(0)
         for l in docente_lineas:
             p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             self._texto(p, l, 10)
-        self._regla(d.add_paragraph(), 14, 6)
+        self._regla(d.add_paragraph(), 12, 6)
         for rot, txt in (("Resumen.", resumen), ("Palabras clave:", kw_es), ("Abstract.", abstract), ("Keywords:", kw_en)):
             p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-            p.paragraph_format.space_after = Pt(5)
-            r = p.add_run(rot + " "); _fuente(r, 9.5, True)
-            self._texto(p, txt, 9.5)
+            p.paragraph_format.space_after = Pt(4)
+            r = p.add_run(rot + " "); _fuente(r, 10, True)
+            self._texto(p, txt, 10)
         self._regla(d.add_paragraph(), 2, 8)
         self.dos_columnas()
 
@@ -259,7 +270,7 @@ class Escrito:
         p.paragraph_format.space_before = Pt(antes); p.paragraph_format.space_after = Pt(despues)
         p.paragraph_format.line_spacing = Pt(2)
         b = OxmlElement("w:pBdr"); bt = OxmlElement("w:bottom")
-        for k, v in (("val", "single"), ("sz", "6"), ("space", "1"), ("color", "000000")):
+        for k, v in (("val", "single"), ("sz", "3"), ("space", "1"), ("color", "000000")):
             bt.set(qn(f"w:{k}"), v)
         b.append(bt); p._p.get_or_add_pPr().append(b)
 
@@ -270,7 +281,7 @@ class Escrito:
             self.nuevas[f"sec:{clave}"] = str(self.n_sec)
         p = self.d.add_paragraph(); pf = p.paragraph_format
         pf.space_before = Pt(10); pf.space_after = Pt(4); pf.keep_with_next = True
-        self._texto(p, f"{self.n_sec}. {titulo}", 12.5, True)
+        self._texto(p, f"{self.n_sec}. {titulo}", 12, True)
 
     def sub(self, titulo, clave=None):
         self.n_sub += 1
@@ -278,17 +289,17 @@ class Escrito:
             self.nuevas[f"sec:{clave}"] = f"{self.n_sec}.{self.n_sub}"
         p = self.d.add_paragraph(); pf = p.paragraph_format
         pf.space_before = Pt(7); pf.space_after = Pt(3); pf.keep_with_next = True
-        self._texto(p, f"{self.n_sec}.{self.n_sub} {titulo}", 10.5, True)
+        self._texto(p, f"{self.n_sec}.{self.n_sub} {titulo}", 10, True)
 
     def sec_sin_numero(self, titulo):
         p = self.d.add_paragraph(); pf = p.paragraph_format
         pf.space_before = Pt(12); pf.space_after = Pt(4); pf.keep_with_next = True
-        self._texto(p, titulo, 12.5, True)
+        self._texto(p, titulo, 12, True)
 
     def P(self, texto, sangria=True, keep=False):
         p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         if sangria:
-            p.paragraph_format.first_line_indent = Cm(0.5)
+            p.paragraph_format.first_line_indent = Cm(0.45)
         p.paragraph_format.widow_control = True
         if keep:
             p.paragraph_format.keep_with_next = True
@@ -330,7 +341,7 @@ class Escrito:
         tblPr.append(b)
 
     # ---- tablas estilo booktabs
-    def tabla(self, clave, caption, cab, filas, anchos, size=8.5, alinear=None):
+    def tabla(self, clave, caption, cab, filas, anchos, size=9, alinear=None):
         self.n_tab += 1
         self.nuevas[f"tab:{clave}"] = f"Cuadro {self.n_tab}"
         p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -364,7 +375,7 @@ class Escrito:
             for c in row.cells:
                 for pp in c.paragraphs:
                     pp.paragraph_format.space_before = Pt(1); pp.paragraph_format.space_after = Pt(1); pp.paragraph_format.line_spacing = 1.0
-        self._borde_celdas(t.rows[0], "top", 8); self._borde_celdas(t.rows[0], "bottom", 4); self._borde_celdas(t.rows[-1], "bottom", 8)
+        self._borde_celdas(t.rows[0], "top", 6); self._borde_celdas(t.rows[0], "bottom", 4); self._borde_celdas(t.rows[-1], "bottom", 6)
         for row in t.rows[:-1]:
             for c in row.cells:
                 for pp in c.paragraphs:
@@ -387,9 +398,17 @@ class Escrito:
         self.nuevas[f"fig:{clave}"] = f"Figura {self.n_fig}"
         if ancha:
             self.una_columna()
-        p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_before = Pt(6); p.paragraph_format.keep_with_next = True
-        p.add_run().add_picture(str(FIG / archivo), width=Cm(ancho_cm))
+        if isinstance(archivo, (list, tuple)) and len(archivo) > 1:
+            t = self.d.add_table(rows=1, cols=len(archivo)); t.alignment = WD_TABLE_ALIGNMENT.CENTER
+            for i, a_ in enumerate(archivo):
+                pc = t.rows[0].cells[i].paragraphs[0]; pc.alignment = WD_ALIGN_PARAGRAPH.CENTER; pc.paragraph_format.keep_with_next = True
+                pc.add_run().add_picture(str(FIG / a_), width=Cm(ancho_cm))
+        else:
+            if isinstance(archivo, (list, tuple)):
+                archivo = archivo[0]
+            p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before = Pt(6); p.paragraph_format.keep_with_next = True
+            p.add_run().add_picture(str(FIG / archivo), width=Cm(ancho_cm))
         c = self.d.add_paragraph(); c.alignment = WD_ALIGN_PARAGRAPH.CENTER
         c.paragraph_format.space_before = Pt(3); c.paragraph_format.space_after = Pt(8)
         r = c.add_run(f"Figura {self.n_fig}: "); _fuente(r, 9, True)
@@ -403,8 +422,8 @@ class Escrito:
         claves = sorted(set(self.citadas), key=_orden_alfa)
         for c in claves:
             p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-            pf = p.paragraph_format; pf.left_indent = Cm(0.5); pf.first_line_indent = Cm(-0.5); pf.space_after = Pt(4)
-            self._texto(p, ref_larga(c), 9)
+            pf = p.paragraph_format; pf.left_indent = Cm(0.35); pf.first_line_indent = Cm(-0.35); pf.space_after = Pt(7)
+            self._texto(p, ref_larga(c), 10)
         for e in extras:
             p = self.d.add_paragraph(); pf = p.paragraph_format; pf.left_indent = Cm(0.5); pf.first_line_indent = Cm(-0.5); pf.space_after = Pt(4)
             self._texto(p, e, 9)
