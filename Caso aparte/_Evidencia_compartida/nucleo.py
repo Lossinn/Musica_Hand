@@ -325,37 +325,60 @@ def encabezado(primero: str, titulo_es: str, titulo_en: str, res_es: str, res_en
     return autores
 
 
-def declaraciones(extra_datos: str = ""):
+VARS = {
+    0: dict(
+        cred="Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): la primera autora concibió el planteamiento del balance de masa, "
+             "ejecutó la simulación y redactó el borrador; los demás autores aportaron en la curación de datos, la verificación de la bibliografía y la revisión; Cristian Javier "
+             "Cano-Mogollón supervisó el trabajo y revisó el manuscrito.",
+        fin="El presupuesto del proyecto prevé que el semillero SILOGE cubra los insumos de laboratorio (160.000 COP). [Por confirmar por el equipo.]",
+        ia="Un asistente de inteligencia artificial (Claude, de Anthropic) apoyó la ejecución de los análisis, la verificación de referencias y la redacción de borradores. "
+           "Los autores revisaron el contenido y responden por el texto y por los resultados.",
+        en="Author Contributions: the first author conceived the mass-balance approach, ran the simulation and drafted the manuscript; the other authors contributed to data "
+           "curation, literature verification and review; C. J. Cano-Mogollón supervised and reviewed. Funding: laboratory supplies are budgeted by the SILOGE seed group. "
+           "No conflicts of interest. Informed consent and ethics approval: not applicable. Data and code: shared evidence folder of the project."),
+    1: dict(
+        cred="Contribución de los autores (CRediT, por confirmar antes del envío): el primer autor diseñó el análisis de sensibilidad y el plan factorial y programó los cálculos; "
+             "los otros autores participaron en la investigación bibliográfica y en la revisión crítica; Cristian Javier Cano-Mogollón dirigió el trabajo y editó el manuscrito.",
+        fin="No se recibió financiación específica para este análisis; los insumos de laboratorio del proyecto figuran en el presupuesto del semillero SILOGE. [Por confirmar.]",
+        ia="Se empleó el asistente Claude (Anthropic) como apoyo en programación, verificación de metadatos de las referencias y redacción preliminar. El equipo comprobó "
+           "las salidas y asume la autoría del contenido.",
+        en="Author Contributions: the first author designed the sensitivity analysis and the factorial plan and wrote the code; the other authors took part in the literature "
+           "search and critical review; C. J. Cano-Mogollón directed the work and edited the manuscript. Funding: no specific funding. No conflicts of interest. "
+           "Ethics and consent: not applicable. Data and code: available in the project's shared folder."),
+    2: dict(
+        cred="Contribución de los autores (CRediT, a confirmar por el equipo): la primera autora estructuró el análisis de costos y de viabilidad y redactó el manuscrito; los demás "
+             "autores colaboraron en la búsqueda de literatura y en la validación de los datos del proyecto; Cristian Javier Cano-Mogollón realizó la dirección y la edición final.",
+        fin="Los costos de laboratorio previstos corren por cuenta del semillero SILOGE, según el presupuesto del equipo; no hubo otra fuente. [A confirmar por el equipo.]",
+        ia="Una herramienta de inteligencia artificial (Claude, de Anthropic) se utilizó para calcular y documentar los resultados, comprobar referencias y preparar borradores. "
+           "Los autores revisaron todo el contenido y son responsables de él.",
+        en="Author Contributions: the first author structured the cost and feasibility analysis and wrote the manuscript; the other authors helped with the literature search and with "
+           "validating project data; C. J. Cano-Mogollón provided direction and final editing. Funding: SILOGE seed group (laboratory supplies). No conflicts of interest. "
+           "Ethics and consent: not applicable. Data and code: project's shared folder."),
+}
+
+
+def declaraciones(extra_datos: str = "", v: int = 0):
+    d = VARS[v]
     sin_num(par("Contribución de los autores", "Heading 2"))
-    T("Contribución de los autores (taxonomía CRediT; por confirmar por el equipo antes del envío): los estudiantes autores participaron en "
-      "conceptualización, metodología, investigación, análisis formal y redacción del borrador original; Cristian Javier Cano-Mogollón "
-      "realizó la supervisión y la revisión y edición del manuscrito. Los autores leyeron y aprobaron la versión final.")
+    T(d["cred"])
     sin_num(par("Declaraciones finales", "Heading 2"))
-    H3("Financiación")
-    T("Según el presupuesto del proyecto, los insumos de laboratorio previstos (160.000 COP) están a cargo del semillero SILOGE de la UPB. "
-      "[Por confirmar por el equipo.]")
+    H3("Financiación"); T(d["fin"])
     H3("Conflicto de intereses")
-    T("Los autores declaran que no existen conflictos de intereses relacionados con la presente publicación. [Por confirmar por el equipo.]")
-    H3("Consentimiento informado")
-    T("No aplica. No se recolectaron datos de personas; el estudio es un análisis de diseño, modelación y simulación.")
-    H3("Declaración de la Junta de Revisión Institucional")
-    T("No aplica, dado que no hubo participantes humanos. La encuesta comunitaria prevista en el proyecto requerirá consentimiento informado.")
+    T(["Los autores declaran que no existen conflictos de intereses. [Por confirmar por el equipo.]",
+       "No hay conflictos de intereses que declarar. [Por confirmar.]",
+       "Ninguno de los autores tiene conflictos de intereses relacionados con este trabajo. [A confirmar.]"][v])
+    H3("Consentimiento informado y ética")
+    T(["No aplica: el estudio no incluyó personas. La encuesta comunitaria prevista requerirá consentimiento informado.",
+       "No aplica, porque no hubo participantes; una prueba con la comunidad pasará antes por revisión ética.",
+       "No aplica. No se recogieron datos de hogares; la encuesta futura requerirá consentimiento informado y revisión ética."][v])
     H3("Disponibilidad de datos, código y materiales de investigación")
-    T("Los scripts de simulación, la búsqueda bibliográfica, la verificación de referencias y las salidas numéricas están en la carpeta "
-      "de evidencia compartida del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, "
-      "prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. " + extra_datos)
+    T(["Los scripts de simulación, la búsqueda bibliográfica y las salidas numéricas están en la carpeta de evidencia del proyecto (estudio_clorificador.py, complemento.py, busqueda_prisma.py, resultados_estudio.json, prisma_cifras.json, verificacion_referencias.csv). El repositorio público está por definir. ",
+       "El código de la simulación y del análisis, la hoja de aleatorización y los registros de la búsqueda se guardaron junto con el proyecto; la publicación en un repositorio abierto está pendiente. ",
+       "Los cálculos, la búsqueda y los resultados numéricos se conservan en la carpeta del proyecto, con scripts que los reproducen; se publicarán en un repositorio abierto más adelante. "][v] + extra_datos)
     H3("Uso de herramientas de inteligencia artificial")
-    T("Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para ejecutar y documentar los análisis, verificar las "
-      "referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.")
-    par("Author Contributions", "Subtitulos")
-    T("CRediT roles (to be confirmed by the team before submission): the student authors contributed to conceptualization, methodology, "
-      "investigation, formal analysis and writing of the original draft; C. J. Cano-Mogollón contributed supervision and review and editing.")
-    par("Funding and Acknowledgments", "Subtitulos"); T("Laboratory supplies are budgeted by the SILOGE research seed group. [To be confirmed by the team.]")
-    par("Conflicts of Interest", "Subtitulos"); T("The authors declare that there is no conflict of interests. [To be confirmed by the team.]")
-    par("Informed Consent Statement", "Subtitulos"); T("Not applicable.")
-    par("Institutional Review Board Statement", "Subtitulos"); T("Not applicable.")
-    par("Data, Code, and Research Materials Availability", "Subtitulos")
-    T("Simulation scripts, search logs, reference verification and numerical outputs are in the shared evidence folder of the project.")
+    T(d["ia"])
+    par("Declarations (English)", "Subtitulos")
+    T(d["en"])
 
 
 def cierre(autores, titulo_es: str, titulo_corto: str, salida: Path, esperadas: int = 23):

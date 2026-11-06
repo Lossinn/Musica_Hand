@@ -132,6 +132,6 @@ T(f"En la simulación, la fracción derivada y la demanda de cloro explican casi
 H1("Recomendaciones")
 T("(1) Ejecutar el factorial 2³ con la hoja de aleatorización y estimar la desviación entre réplicas con las primeras corridas. (2) Medir la fracción derivada por aforo volumétrico en cada posición de válvula. "
   "(3) Probar un dispositivo de fijación de la posición de las válvulas. (4) Medir la demanda del agua antes de cada serie. (5) Confirmar la procedencia de los diez registros de septiembre.")
-declaraciones("La hoja de aleatorización de las 24 corridas está en DOE_hoja_aleatorizacion.csv.")
+declaraciones("La hoja de aleatorización de las 24 corridas está en DOE_hoja_aleatorizacion.csv.", v=1)
 cierre(autores, TITULO_ES, "Sensibilidad y robustez de un clorificador pasivo de PVC", Path(sys.argv[1]))
 Path(sys.argv[1]).with_suffix(".txt").write_text("\n\n".join(f"[{e}] {t}" for e, t in LOG), encoding="utf-8")

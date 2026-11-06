@@ -153,6 +153,6 @@ T("Con los supuestos actuales, el clorificador de PVC no alcanza el rango objeti
 H1("Recomendaciones")
 T("(1) Medir la demanda de cloro de cada fuente antes de calibrar. (2) Determinar la tasa de disolución de la pastilla con el protocolo de aforo y DPD ya redactado. (3) Evaluar un pretratamiento de turbidez. "
   "(4) Reconsiderar el rango objetivo frente al 0,3–2,0 mg/L de la norma. (5) Recalibrar el modelo con los datos del diseño factorial 2³ antes de cualquier prueba en la vereda.")
-declaraciones()
+declaraciones(v=0)
 cierre(autores, TITULO_ES, "Balance de masa y demanda de cloro en un clorificador pasivo de PVC", Path(sys.argv[1]))
 Path(sys.argv[1]).with_suffix(".txt").write_text("\n\n".join(f"[{e}] {t}" for e, t in LOG), encoding="utf-8")

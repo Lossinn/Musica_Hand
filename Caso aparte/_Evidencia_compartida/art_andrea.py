@@ -132,6 +132,6 @@ T(f"El clorificador de PVC cuesta 159.991 COP en materiales y su cloro teórico 
 H1("Recomendaciones")
 T("(1) Medir en campo el consumo real de pastillas y confirmar su precio y masa. (2) Presupuestar capacitación y visitas técnicas del piloto. (3) Reemplazar el beneficio supuesto por una encuesta de gasto en agua y salud. "
   "(4) Evaluar el modelo de unidad comunal. (5) Ejecutar la validación técnica antes de cualquier cálculo de retorno a escala.")
-declaraciones("Los cálculos económicos están en complemento.py y resultados_complemento.json.")
+declaraciones("Los cálculos económicos están en complemento.py y resultados_complemento.json.", v=2)
 cierre(autores, TITULO_ES, "Costo, consumo de cloro y operación de un clorificador pasivo de PVC", Path(sys.argv[1]))
 Path(sys.argv[1]).with_suffix(".txt").write_text("\n\n".join(f"[{e}] {t}" for e, t in LOG), encoding="utf-8")
