@@ -339,6 +339,10 @@ class Escrito:
         t = self.d.add_table(rows=1, cols=len(cab)); t.alignment = WD_TABLE_ALIGNMENT.CENTER; t.autofit = False
         t.allow_autofit = False
         self._sin_bordes(t)
+        mar = OxmlElement("w:tblCellMar")
+        for lado in ("left", "right"):
+            x = OxmlElement(f"w:{lado}"); x.set(qn("w:w"), "60"); x.set(qn("w:type"), "dxa"); mar.append(x)
+        t._tbl.tblPr.append(mar)
         tot = sum(anchos); anchos = [a * 8.5 / tot for a in anchos]
         for i, c in enumerate(cab):
             cel = t.rows[0].cells[i]; cel.width = Cm(anchos[i])
