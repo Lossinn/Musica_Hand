@@ -47,7 +47,9 @@ FUENTES = {
     "documento_tecnico.md": RAIZ / "06_Documentos_por_capitulo/Capitulo_6/anexos/documento_tecnico.md",
     "documento_2do_corte (html)": RAIZ / "entregable_2do_corte/_fuentes/documento.html",
     "motor_analitico_y_estado_avance.md": RAIZ / "06_Documentos_por_capitulo/Capitulo_6/anexos/motor_analitico_y_estado_avance.md",
-    "articulo_anterior_Pemberty.docx": RAIZ / "entregables_last/articulo/Articulo_Maquetado_EquipoNN_Pemberty.docx",
+    "articulo_anterior_Pemberty.docx": RAIZ / "entregables_last/_versiones_anteriores/articulo/Articulo_Maquetado_EquipoNN_Pemberty.docx",
+    "capitulo6_borrador.md": RAIZ / "06_Documentos_por_capitulo/Capitulo_6/borrador.md",
+    "README.md": RAIZ / "README.md",
 }
 for nombre, ruta in FUENTES.items():
     if not ruta.exists():
