@@ -29,17 +29,17 @@
 
 [Título art] Sensitivity and robustness of a passive PVC bypass chlorinator: Monte Carlo simulation and a 2³ factorial design for its experimental validation
 
-[Nombre autores] Camilo Esteban Alvarez-Durán^{1}^{*}, Roxana Elena Muñoz-Rodiño^{2}, Andrea Guzmán-Gómez^{3}, Cristian Javier Cano-Mogollón^{4}
+[Nombre autores] Camilo Esteban Alvarez-Durán^1^*, Roxana Elena Muñoz-Rodiño^2, Andrea Guzmán-Gómez^3, Cristian Javier Cano-Mogollón^4
 
-^{1} Autor 1: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
+^1 Autor 1: Camilo Esteban Alvarez-Durán - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: camilo.alvarezd@upb.edu.co
 
-^{2} Autor 2: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
+^2 Autor 2: Roxana Elena Muñoz-Rodiño - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: roxana.munoz@upb.edu.co
 
-^{3} Autor 3: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
+^3 Autor 3: Andrea Guzmán-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andrea.guzmang@upb.edu.co
 
-^{4} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+^4 Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
 
-^{*} Autor de correspondencia: Camilo Esteban Alvarez-Durán (camilo.alvarezd@upb.edu.co).
+^* Autor de correspondencia: Camilo Esteban Alvarez-Durán (camilo.alvarezd@upb.edu.co).
 
 **Resumen:
 
@@ -61,13 +61,13 @@ passive chlorination; sensitivity analysis; Monte Carlo simulation; design of ex
 
 ## Más importante que la media es la estabilidad
 
-Un clorificador pasivo no tiene sensor ni lazo de control. Una vez calibrado, entrega la dosis que le permiten su hidráulica y su pastilla, y esa dosis cambia con el caudal, con la temperatura, con el desgaste del producto y con la posición de las válvulas. Por eso su desempeño no se resume en un promedio: lo que decide si el agua queda protegida es la proporción del tiempo en que el cloro residual libre permanece dentro de un rango estrecho. La Resolución 2115 de 2007 fija ese rango en 0,3 a 2,0 mg/L {c:res2115}, y la guía de la Organización Mundial de la Salud recomienda un residual que proteja frente a la recontaminación {c:oms}.
+Un clorificador pasivo no tiene sensor ni lazo de control. Una vez calibrado, entrega la dosis que le permiten su hidráulica y su pastilla, y esa dosis cambia con el caudal, con la temperatura, con el desgaste del producto y con la posición de las válvulas. Por eso su desempeño no se resume en un promedio: lo que decide si el agua queda protegida es la proporción del tiempo en que el cloro residual libre permanece dentro de un rango estrecho. La Resolución 2115 de 2007 fija ese rango en 0,3 a 2,0 mg/L [1], y la guía de la Organización Mundial de la Salud recomienda un residual que proteja frente a la recontaminación [2].
 
-Los estudios de campo muestran que la variabilidad es el problema real. Un clorador local de bajo costo instalado en Guatemala redujo la contaminación fecal, pero solo 24 % de las muestras de grifo alcanzó 0,2 mg/L {c:guatemala}. En Ghana, 685 mediciones en dos redes mostraron grandes fluctuaciones del cloro, en especial con el método pasivo, que el pH, la temperatura, la conductividad y la turbidez no explicaron del todo {c:ghana}. En Honduras, los problemas técnicos explicaron 26 % de los lapsos sin cloro, y los errores ocasionales y habituales de las juntas de agua, 24 y 15 % {c:honduras}. En ensayos de laboratorio con un dosificador comercial en línea, la presión no modificó el cloro residual, pero la posición del dispositivo sí {c:aquatabs}, y un sistema doméstico con clorador de piscina modificado tuvo desviaciones estándar de 0,5 a 0,8 mg/L {c:usvi}. Esa desviación es del tamaño de la ventana objetivo completa.
+Los estudios de campo muestran que la variabilidad es el problema real. Un clorador local de bajo costo instalado en Guatemala redujo la contaminación fecal, pero solo 24 % de las muestras de grifo alcanzó 0,2 mg/L [3]. En Ghana, 685 mediciones en dos redes mostraron grandes fluctuaciones del cloro, en especial con el método pasivo, que el pH, la temperatura, la conductividad y la turbidez no explicaron del todo [4]. En Honduras, los problemas técnicos explicaron 26 % de los lapsos sin cloro, y los errores ocasionales y habituales de las juntas de agua, 24 y 15 % [5]. En ensayos de laboratorio con un dosificador comercial en línea, la presión no modificó el cloro residual, pero la posición del dispositivo sí [6], y un sistema doméstico con clorador de piscina modificado tuvo desviaciones estándar de 0,5 a 0,8 mg/L [7]. Esa desviación es del tamaño de la ventana objetivo completa.
 
 ## Lo que ya se sabe y lo que falta
 
-La búsqueda bibliográfica reproducible (sección 2.6, Figura 1) dejó 13 estudios sobre cloración pasiva o en línea en contextos de bajos recursos. Los ensayos y evaluaciones de campo informan cuánto baja la contaminación microbiológica {c:nepal,odisha,etiopia,pickering}, y los trabajos económicos, si hay demanda de pago por el servicio {c:dhaka,venturi}. El mercado potencial de estos dispositivos es enorme {c:mercado}, y la evidencia agregada indica que clorar reduce la diarrea infantil {c:arnold,clasen}, en un contexto de carga de enfermedad aún alta {c:wolf,amrose}. En los resúmenes revisados no se encontró una descomposición de cuánta variabilidad del cloro viene de cada fuente. Esa descomposición es la que permite decidir qué controlar. Algunos trabajos comparan dispositivos entre sí {c:uganda}; falta hacerlo con un diseño propio antes de construirlo en serie.
+La búsqueda bibliográfica reproducible (sección 2.6, Figura 1) dejó 13 estudios sobre cloración pasiva o en línea en contextos de bajos recursos. Los ensayos y evaluaciones de campo informan cuánto baja la contaminación microbiológica [8]–[11], y los trabajos económicos, si hay demanda de pago por el servicio [12], [13]. El mercado potencial de estos dispositivos es enorme [14], y la evidencia agregada indica que clorar reduce la diarrea infantil [15], [16], en un contexto de carga de enfermedad aún alta [17], [18]. En los resúmenes revisados no se encontró una descomposición de cuánta variabilidad del cloro viene de cada fuente. Esa descomposición es la que permite decidir qué controlar. Algunos trabajos comparan dispositivos entre sí [19]; falta hacerlo con un diseño propio antes de construirlo en serie.
 
 *Figura 1. Flujo de la búsqueda bibliográfica (PRISMA 2020), OpenAlex, 6 de noviembre de 2026.
 
@@ -79,25 +79,25 @@ El objetivo es doble: (i) identificar, con simulación, qué variables controlan
 
 ## Dispositivo y variables controlables
 
-El clorificador usa tubería de PVC de 1 y 2 pulgadas. Una Tee divide el flujo; un ramal de derivación con válvula de bola lleva la fracción $1-\alpha$ y el otro pasa por una cámara de 2 pulgadas de 0,50 m con pastillas de tricloro al 90 % y válvulas de entrada y salida (Figura 2). Tres válvulas fijan la fracción $\alpha$ de caudal que pasa por la cámara. El caudal de diseño es de 0,2 a 2,5 L/s con carga de 1,5 a 5,0 m. Las variables que el operador puede mover son la apertura de las válvulas y la carga de pastillas; el resto (caudal, temperatura, pH, turbidez, demanda) las impone la fuente.
+El clorificador usa tubería de PVC de 1 y 2 pulgadas. Una Tee divide el flujo; un ramal de derivación con válvula de bola lleva la fracción 1-alpha y el otro pasa por una cámara de 2 pulgadas de 0,50 m con pastillas de tricloro al 90 % y válvulas de entrada y salida (Figura 2). Tres válvulas fijan la fracción alpha de caudal que pasa por la cámara. El caudal de diseño es de 0,2 a 2,5 L/s con carga de 1,5 a 5,0 m. Las variables que el operador puede mover son la apertura de las válvulas y la carga de pastillas; el resto (caudal, temperatura, pH, turbidez, demanda) las impone la fuente.
 
 *Figura 2. Clorificador pasivo con derivación; las tres válvulas (V_bp, V_in, V_out) controlan la fracción α.
 
 ## Modelo y simulación
 
-El residual libre se calcula con el balance de masa del proyecto, donde $C_c$ es el cloro de cámara, $\alpha$ la fracción derivada, $D$ la demanda, $k$ el decaimiento, $t$ el tiempo de contacto y los $f$ factores de temperatura, pH, turbidez y caudal; la cinética del decaimiento depende de esas condiciones {c:powell}:
+El residual libre se calcula con el balance de masa del proyecto, donde C_c es el cloro de cámara, alpha la fracción derivada, D la demanda, k el decaimiento, t el tiempo de contacto y los f factores de temperatura, pH, turbidez y caudal; la cinética del decaimiento depende de esas condiciones [20]:
 
 Se simularon 1.000 escenarios con la semilla 42 y las distribuciones del cuaderno del proyecto, que son supuestos y no mediciones: caudal normal (1,0; 0,25) L/s, tiempo de contacto normal (20; 4) min, cloro de cámara normal (1,2; 0,3) mg/L, demanda normal (0,65; 0,18) mg/L, fracción beta(2,5; 5,5), decaimiento normal (0,035; 0,010) por minuto, temperatura normal (28; 3) °C, pH normal (7,2; 0,4) y turbidez gamma(2,2; 0,6) NTU. La reproducción coincidió con el archivo original (diferencia máxima 0,0).
 
 ## Análisis de sensibilidad y de variabilidad
 
-La sensibilidad se midió con la correlación de rangos de Spearman entre cada variable de entrada y el cloro neto $\alpha C_c-D$, antes de recortar a cero, porque el residual recortado es continuo solo en una parte de los escenarios. Para separar la media de la variabilidad se buscó, en el mapa de cumplimiento (escala de dosis de 0,5 a 6 y demanda media de 0,05 a 1,0 mg/L, con 20.000 escenarios por celda), el punto con mayor cumplimiento y se repitió el cálculo con la fracción derivada fija en su media. Las proporciones llevan intervalos de Wilson {c:wilson}.
+La sensibilidad se midió con la correlación de rangos de Spearman entre cada variable de entrada y el cloro neto alpha C_c-D, antes de recortar a cero, porque el residual recortado es continuo solo en una parte de los escenarios. Para separar la media de la variabilidad se buscó, en el mapa de cumplimiento (escala de dosis de 0,5 a 6 y demanda media de 0,05 a 1,0 mg/L, con 20.000 escenarios por celda), el punto con mayor cumplimiento y se repitió el cálculo con la fracción derivada fija en su media. Las proporciones llevan intervalos de Wilson [21].
 
 ## Diseño experimental propuesto
 
-El plan del proyecto es un factorial completo $2^3$ con tres réplicas, 24 corridas, y tres factores: caudal $A$ (0,5 y 1,5 L/s), apertura de la válvula de derivación $B$ (25 y 75 %) y carga de pastillas $C$ (una o dos). La respuesta es el cloro residual libre por DPD. Las 24 corridas se aleatorizaron con semilla 2026 (hoja de ejecución adjunta). El modelo de análisis de varianza es:
+El plan del proyecto es un factorial completo 2^3 con tres réplicas, 24 corridas, y tres factores: caudal A (0,5 y 1,5 L/s), apertura de la válvula de derivación B (25 y 75 %) y carga de pastillas C (una o dos). La respuesta es el cloro residual libre por DPD. Las 24 corridas se aleatorizaron con semilla 2026 (hoja de ejecución adjunta). El modelo de análisis de varianza es:
 
-Los supuestos se revisarían con Shapiro–Wilk y Levene. La potencia para un efecto principal con $N=24$ y 16 grados de libertad del error se obtuvo de la distribución F no central con parámetro $\lambda=Nf^{2}$, donde $f$ es el tamaño de efecto de Cohen; la diferencia mínima detectable entre niveles es:
+Los supuestos se revisarían con Shapiro–Wilk y Levene. La potencia para un efecto principal con N=24 y 16 grados de libertad del error se obtuvo de la distribución F no central con parámetro lambda=Nf^2, donde f es el tamaño de efecto de Cohen; la diferencia mínima detectable entre niveles es:
 
 ## Auditoría de los registros existentes
 
@@ -105,7 +105,7 @@ El repositorio contiene un formato de captura con diez registros de septiembre d
 
 ## Búsqueda bibliográfica
 
-La búsqueda en OpenAlex del 6 de noviembre de 2026 (ecuación en prisma_cifras.json) consideró artículos de 2020 a 2026 con DOI. El cribado exigió que el título tratara de cloración; la elegibilidad se evaluó sobre título y resumen. El flujo sigue PRISMA 2020 {c:prisma}. La lectura de texto completo queda pendiente.
+La búsqueda en OpenAlex del 6 de noviembre de 2026 (ecuación en prisma_cifras.json) consideró artículos de 2020 a 2026 con DOI. El cribado exigió que el título tratara de cloración; la elegibilidad se evaluó sobre título y resumen. El flujo sigue PRISMA 2020 [22]. La lectura de texto completo queda pendiente.
 
 # Resultados
 
@@ -127,7 +127,7 @@ En el cuaderno original, 99,0 % de los escenarios quedó por debajo de 0,2 mg/L 
 
 ## Potencia del diseño 2³
 
-Con 24 corridas y 16 grados de libertad del error, la potencia de 80 % se alcanza con un tamaño de efecto $f=0{,}61$. Eso corresponde a las diferencias mínimas detectables de la Tabla 2, según la desviación entre réplicas.
+Con 24 corridas y 16 grados de libertad del error, la potencia de 80 % se alcanza con un tamaño de efecto f=0,61. Eso corresponde a las diferencias mínimas detectables de la Tabla 2, según la desviación entre réplicas.
 
 *Tabla 2. Diferencia mínima detectable entre niveles de un factor, con potencia de 80 % y α = 0,05
 
@@ -139,9 +139,9 @@ Los diez registros cumplieron la verificación interna: el caudal recalculado co
 
 # Discusión
 
-Dos hallazgos orientan el trabajo experimental. El primero es que la fracción derivada, la única variable que el operador controla de forma directa, es también la que más pesa y la que más varía en el modelo. Fijarla con precisión, por ejemplo con válvulas con tope y marca de posición o con un orificio calibrado en lugar de una válvula de bola, rinde más que afinar la dosis media. Es coherente con lo observado en laboratorio: la posición del dispositivo importó más que la presión {c:aquatabs}. El segundo es que la variabilidad se paga en cumplimiento: 26 puntos porcentuales en el mejor punto del mapa.
+Dos hallazgos orientan el trabajo experimental. El primero es que la fracción derivada, la única variable que el operador controla de forma directa, es también la que más pesa y la que más varía en el modelo. Fijarla con precisión, por ejemplo con válvulas con tope y marca de posición o con un orificio calibrado en lugar de una válvula de bola, rinde más que afinar la dosis media. Es coherente con lo observado en laboratorio: la posición del dispositivo importó más que la presión [6]. El segundo es que la variabilidad se paga en cumplimiento: 26 puntos porcentuales en el mejor punto del mapa.
 
-La comparación con estudios de campo debe leerse con cautela. Una desviación estándar de 0,5 a 0,8 mg/L en un clorador modificado {c:usvi} es mayor que la ventana de 0,3 mg/L del diseño, y en Ghana, aunque el método pasivo terminó con 100 % de las mediciones en el rango de 0,2 a 2,0 mg/L tras cinco meses, hubo grandes fluctuaciones intermedias {c:ghana}. La norma colombiana admite un rango más ancho (0,3–2,0 mg/L) que el objetivo del proyecto; con ese rango, la tolerancia a la variabilidad sería mucho mayor y el diseño tendría margen. Además, en los dispositivos que se desempeñan bien, el soporte técnico recurrente parece importar tanto como el aparato {c:honduras,odisha}, y en el uso doméstico de dosificadores el conocimiento del procedimiento correcto se asoció con tener cloro residual {c:kmu}.
+La comparación con estudios de campo debe leerse con cautela. Una desviación estándar de 0,5 a 0,8 mg/L en un clorador modificado [7] es mayor que la ventana de 0,3 mg/L del diseño, y en Ghana, aunque el método pasivo terminó con 100 % de las mediciones en el rango de 0,2 a 2,0 mg/L tras cinco meses, hubo grandes fluctuaciones intermedias [4]. La norma colombiana admite un rango más ancho (0,3–2,0 mg/L) que el objetivo del proyecto; con ese rango, la tolerancia a la variabilidad sería mucho mayor y el diseño tendría margen. Además, en los dispositivos que se desempeñan bien, el soporte técnico recurrente parece importar tanto como el aparato [5], [9], y en el uso doméstico de dosificadores el conocimiento del procedimiento correcto se asoció con tener cloro residual [23].
 
 Limitaciones. Las distribuciones son supuestos; los factores de temperatura, pH, turbidez y caudal no están ajustados a datos; la correlación de Spearman mide asociación monótona y no efectos de interacción; y la desviación entre réplicas de 0,10 mg/L del análisis de potencia es una hipótesis hasta que se mida. La hoja de aleatorización y el diseño 2³ ya están listos; lo que falta es ejecutarlos.
 
