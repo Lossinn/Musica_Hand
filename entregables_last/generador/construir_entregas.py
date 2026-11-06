@@ -69,7 +69,7 @@ def caja(doc, titulo, parrafos):
         if sub:
             q = c.add_paragraph(); rr = q.add_run(sub); rr.bold = True
         if txt:
-            q = c.add_paragraph(); runs_md(q, txt); q.paragraph_format.space_after = Pt(4); q.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            q = c.add_paragraph(); runs_md(q, txt); q.paragraph_format.space_after = Pt(4); q.alignment = WD_ALIGN_PARAGRAPH.LEFT
     doc.add_paragraph()
 
 

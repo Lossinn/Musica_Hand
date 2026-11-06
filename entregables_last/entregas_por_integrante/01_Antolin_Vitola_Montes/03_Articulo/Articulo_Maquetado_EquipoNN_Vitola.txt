@@ -1,0 +1,183 @@
+[Título art] Las manos como instrumento: una herramienta digital de bajo requerimiento para enseñar las notas musicales a niños en Montería y Córdoba
+
+[Título art] Hands as an instrument: a low-requirement digital tool to teach musical notes to children in Montería and Córdoba
+
+[Nombre autores] Antolin De Jesús Vitola-Montes^1}^*}, Isaías José Petro-Rodríguez^2}, Andrés Julián Negrete-Pacheco^3}, Juliana Esther Carrascal-Hernández^4}, Angel Quintana-Jiménez^5}, Alejandro Pemberty-Vergara^6}, Juan Diego Guerra-Gómez^7}, Cristian Javier Cano-Mogollón^8}
+
+[Normal] ^1} Autor 1: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+
+[Normal] ^2} Autor 2: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+
+[Normal] ^3} Autor 3: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+
+[Normal] ^4} Autor 4: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+
+[Normal] ^5} Autor 5: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+
+[Normal] ^6} Autor 6: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+
+[Normal] ^7} Autor 7: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+
+[Normal] ^*} Autor de correspondencia: Antolin De Jesús Vitola-Montes (antolin.vitola@upb.edu.co).
+
+[Subtitulos] Resumen:
+
+[Normal] Enseñar música exige instrumentos, espacios y docentes que no siempre están disponibles. Hand Sing Kids propone usar las manos, como lo hacía la fonomimia del siglo XIX, y una cámara que reconoce ocho señas para las notas de Do3 a Do4, de modo que el niño reciba una respuesta inmediata sin necesidad de un instrumento. Este trabajo presenta la propuesta desde su pertinencia pedagógica y su viabilidad técnica en Montería y Córdoba, donde el DANE proyecta para 2026 una población de 535.052 habitantes, 80.254 de ellos entre 3 y 12 años. La aplicación corre en un computador con cámara, guarda sus datos en una base local y no necesita conexión a internet. En laboratorio, con una calibración de una persona y perturbaciones simuladas, reconoció 480 de 480 señas sin ruido y evitó notas falsas en la mayoría de 640 posturas que no son seña (8,0 % de errores frente a 100 % del método inicial). No hubo pruebas con niños. Se formulan tres hipótesis de impacto y un plan para validarlas; el nivel de madurez es TRL 4.
+
+[Subtitulos] Palabras clave:
+
+[Normal] educación musical infantil; fonomimia; acceso a instrumentos; aprendizaje con gestos; tecnología accesible; Montería; Córdoba
+
+[Subtitulos] Abstract:
+
+[Normal] Teaching music requires instruments, spaces and teachers that are not always available. Hand Sing Kids proposes using the hands, as nineteenth-century hand-sign solfège did, and a camera that recognizes eight signs for the notes from C3 to C4, so that the child receives immediate feedback without an instrument. This paper presents the proposal from its pedagogical relevance and technical feasibility in Montería and Córdoba, where DANE projects a 2026 population of 535,052, of whom 80,254 are between 3 and 12 years old. The application runs on a computer with a camera, stores its data locally and needs no internet connection. In the laboratory, with a single-person calibration and simulated perturbations, it recognized 480 of 480 signs without noise and avoided false notes in most of 640 non-sign postures (8,0 % errors against 100 % for the initial method). No tests with children were done. Three impact hypotheses and a validation plan are stated; the readiness level is TRL 4.
+
+[Subtitulos] Keywords:
+
+[Normal] children's music education; hand-sign solfège; access to instruments; gesture-based learning; accessible technology; Montería; Córdoba
+
+[Heading 1] Introducción
+
+[Heading 2] Una idea antigua, una oportunidad nueva
+
+[Normal] Desde mediados del siglo XIX, John Curwen popularizó en el Reino Unido un sistema de señas manuales para las notas de la escala, que más tarde se difundió en la enseñanza musical infantil. La idea es simple: cada nota tiene una posición de la mano, y el niño la ve, la hace y la canta. Su fortaleza pedagógica es que no necesita ningún instrumento, solo un cuerpo y alguien que corrija. Su debilidad es esa misma: sin un docente atento, la seña se hace de cualquier manera y nadie le dice al niño si acertó.
+
+[Normal] Hoy una cámara y un modelo de seguimiento de manos pueden cumplir el papel de quien corrige. La atención a la tecnología digital en la educación musical infantil es creciente, y las revisiones sobre inteligencia artificial en la primera infancia la describen como un campo en expansión [1], con trabajos sobre aplicaciones móviles y realidad aumentada en música [2]–[4]. En Colombia y en Córdoba, un primer obstáculo es práctico: pocos centros educativos tienen instrumentos suficientes, y una herramienta que dependa de internet o de equipos costosos tendría el mismo problema.
+
+[Normal] En Montería, las proyecciones municipales del DANE para 2026 indican 535.052 habitantes, de los cuales 80.254 tienen entre 3 y 12 años [5]. No se aporta aquí una estadística local sobre la educación musical: no la hay en las fuentes revisadas. La justificación del proyecto es de diseño. Hand Sing Kids se ejecuta en un computador con cámara, guarda sus datos en una base local y no necesita conexión, lo que lo hace una candidata razonable para probarse en aulas de la región. Que realmente ayude a aprender es una hipótesis que este trabajo no puede confirmar.
+
+[Heading 2] Qué ofrece la propuesta frente a la enseñanza tradicional
+
+[Tabla Título] Tabla 1. Lo que aporta una herramienta basada en gestos frente a la enseñanza tradicional con señas
+
+[Tabla Título] Fuente: elaboración propia a partir del diseño del sistema; la columna final son hipótesis, no resultados.
+
+[Heading 2] Objetivo
+
+[Normal] Presentar Hand Sing Kids desde su pertinencia pedagógica y su viabilidad técnica en laboratorio, y formular las hipótesis y el plan de validación que permitirían probar su utilidad con niños en Montería y Córdoba.
+
+[Heading 1] Métodos
+
+[Heading 2] Diseño del sistema
+
+[Normal] Cada nota de Do3 a Do4 se asocia a una seña de las dos manos. La cámara capta las manos y MediaPipe Hands entrega 21 puntos por mano [6]; un descriptor invariante al tamaño, la posición y el giro convierte esos puntos en un vector de 120 componentes, y un clasificador decide si hay una seña y cuál es. Después, un modelo de dominio estima qué sabe el niño de cada nota y un optimizador arma la siguiente sesión (Figura 1). Todo se guarda en una base SQLite local. El método de reconocimiento se detalla en otro trabajo del equipo; aquí interesa su comportamiento medido.
+
+[Figura Título] Figura 1. Arquitectura funcional de Hand Sing Kids.
+
+[Heading 2] Evaluación técnica
+
+[Normal] La evaluación fue de laboratorio. Se usó una calibración de las ocho señas de una persona, guardada como coordenadas sin imágenes, y perturbaciones simuladas de tamaño, giro y ruido. Se midió el reconocimiento de 480 señas válidas por nivel de ruido y las notas disparadas por error en 640 posturas que no son seña, con intervalos de Wilson al 95 % [7]. No se hicieron pruebas con niños.
+
+[Heading 1] Resultados
+
+[Heading 2] Lo que se midió
+
+[Tabla Título] Tabla 2. Evidencia técnica disponible, que no equivale a evidencia pedagógica
+
+[Tabla Título] Fuente: analisis/resultados_vision.json y salida de las pruebas del repositorio.
+
+[Normal] La Tabla 2 separa con claridad lo que se sabe de lo que no. El sistema funciona en laboratorio como se describe; si ayuda a aprender música es una pregunta abierta, porque ningún niño lo ha usado en una prueba formal.
+
+[Heading 2] Madurez tecnológica e impacto esperado
+
+[Normal] Se propone **TRL 4**, validación de componentes en entorno de laboratorio. La evidencia a favor es que los componentes funcionan integrados en una aplicación ejecutable, con ocho baterías de prueba sin fallos y mediciones reproducibles con intervalos de confianza. La evidencia en contra de un nivel superior es que ningún componente se validó en el entorno de uso (aula, niños, iluminación y cámaras reales) ni con usuarios. El paso a TRL 5 exige un piloto con niños en aula; el protocolo está diseñado y no se ha ejecutado. El equipo debe confirmar el nivel final.
+
+[Normal] El impacto esperado en Montería y Córdoba se formula como tres hipótesis a validar: (H1) niños de 3 a 12 años aprenden a reproducir las ocho señas con calibración individual en una sesión corta; (H2) en aula, la tasa de notas disparadas por error con niños es comparable a la de laboratorio o menor al aumentar la ventana; y (H3) la aplicación funciona sin conexión a internet en computadores con cámara. Solo H3 es una propiedad de diseño (los datos se guardan en una base SQLite local); las otras dos requieren datos de campo.
+
+[Heading 1] Discusión
+
+[Normal] **Un docente que no se cansa, no un reemplazo.** La propuesta no sustituye a un maestro de música: replica una función concreta, la de decirle al niño si la seña salió bien, y la ofrece en cualquier momento. Esto es coherente con la idea de que estas herramientas complementan la enseñanza tradicional y no la reemplazan, siempre que tengan objetivos pedagógicos claros. La evidencia internacional muestra el interés por estas tecnologías, pero todavía no hay estudios sobre este tipo de entrada, una seña por nota, en aulas de la región.
+
+[Normal] **El requisito más barato es el más importante.** Que no haga falta internet ni un instrumento es una decisión de diseño que se puede verificar, y es la que hace plausible llevar la herramienta a una escuela con recursos limitados. En cambio, otros requisitos todavía no se han medido: cuánta luz necesita la cámara, qué tan rápido responde de principio a fin y si un docente sin formación técnica puede calibrar la aplicación para cada niño. Son las primeras preguntas de un piloto.
+
+[Normal] **Qué haría falta para saber si funciona.** El plan mínimo es comparar, con grupos de niños de instituciones de Montería, el desempeño de quienes usan la herramienta con el de quienes aprenden con el método tradicional, midiendo antes y después el reconocimiento de las notas, y recoger la opinión del docente. Como se trabaja con menores, ese plan requiere aprobación ética, consentimiento de los acudientes y una revisión de la normativa colombiana sobre datos personales. Mientras eso no ocurra, los resultados de este trabajo son técnicos.
+
+[Normal] Los componentes de reconocimiento, estabilización, dominio y selección de sesión se apoyan en trabajos sobre aprendizaje personalizado, retroalimentación con IA, afecto y práctica distribuida [8]–[21].
+
+[Heading 1] Conclusiones
+
+[Normal] Hand Sing Kids lleva una idea pedagógica antigua, enseñar las notas con las manos, a una herramienta que corre en un computador con cámara y sin internet. En laboratorio reconoce las señas de su calibración y evita casi todas las notas falsas. Su utilidad para el aprendizaje en Montería y Córdoba no está demostrada y depende de un piloto con niños, con docentes y con las autorizaciones éticas correspondientes.
+
+[Heading 1] Recomendaciones
+
+[Normal] (1) Diseñar el piloto comparativo con una institución y un docente aliados. (2) Medir la latencia de extremo a extremo y las condiciones de iluminación necesarias. (3) Probar si un docente puede calibrar la herramienta sin apoyo técnico. (4) Obtener la aprobación ética y el consentimiento informado antes de cualquier recolección de datos de menores.
+
+[Heading 2] Contribución de los autores
+
+[Normal] Contribución de los autores (CRediT, por confirmar): el primer autor formuló la justificación pedagógica y las hipótesis de impacto y redactó el borrador; los demás autores aportaron el desarrollo del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó el manuscrito.
+
+[Heading 2] Declaraciones finales
+
+[Heading 3] Financiación
+
+[Normal] No se recibió financiación externa para este trabajo. [Por confirmar.]
+
+[Heading 3] Conflicto de intereses
+
+[Normal] Los autores declaran no tener conflictos de intereses. [Por confirmar.]
+
+[Heading 3] Consentimiento informado
+
+[Normal] No aplica; no se recolectaron datos de niños. La prueba piloto requerirá consentimiento informado de los acudientes.
+
+[Heading 3] Declaración de la Junta de Revisión Institucional
+
+[Normal] No aplica para esta evaluación técnica de laboratorio; el piloto con menores requerirá aprobación de un comité de ética.
+
+[Heading 3] Disponibilidad de datos, código y materiales de investigación
+
+[Normal] El código, la calibración de referencia (solo coordenadas, sin imágenes), las pruebas y los scripts de evaluación están en el repositorio del proyecto; las salidas numéricas están en la carpeta de análisis de la entrega.
+
+[Heading 3] Uso de herramientas de inteligencia artificial
+
+[Normal] Se utilizó el asistente Claude (Anthropic) como apoyo en el análisis del código, la ejecución de las mediciones, la verificación de referencias y la redacción de borradores; los autores revisaron y asumen el contenido.
+
+[Subtitulos] Declarations (English)
+
+[Normal] Author Contributions: the first author formulated the pedagogical rationale and the impact hypotheses and drafted the manuscript; the other authors contributed software development, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this laboratory evaluation; a pilot with minors will require both. Data and code: project repository.
+
+[Heading 1] References
+
+[Normal] [1] H. Yi, T. Liu, and G. Lan, “The key artificial intelligence technologies in early childhood education: a review,” Artificial Intelligence Review, vol. 57, no. 1, art. 12, 2024, doi: 10.1007/s10462-023-10637-7.
+
+[Normal] [2] K. Apaydinli, “Content analysis of music education studies related to augmented reality technology,” Journal of Educational Technology and Online Learning, vol. 6, no. 2, pp. 447-481, 2023, doi: 10.31681/jetol.1243501.
+
+[Normal] [3] J. Barroso-Osuna, A. León-Garrido, C. Llorente-Cejudo, and J. Ruiz-Palmero, “El impacto de las apps móviles y la carga del trabajo en la Educación Musical universitaria: un estudio experimental,” Revista de Educación a Distancia (RED), vol. 24, no. 80, 2024, doi: 10.6018/red.602301.
+
+[Normal] [4] A. León-Garrido, J. M. Barroso-Osuna, and M. C. Llorente-Cejudo, “Diseño y validación de un instrumento de evaluación para apps móviles musicales a través del juicio de expertos,” Aula Abierta, vol. 53, no. 2, pp. 169-179, 2024, doi: 10.17811/rifie.20620.
+
+[Normal] [5] DANE, “Proyecciones de población municipal 2020–2035, actualización post COVID-19 (Montería, 2026),” Bogotá, Colombia. [Online]. Available: https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx. Accessed: Nov. 5, 2026.
+
+[Normal] [6] F. Zhang et al., “MediaPipe Hands: On-device Real-time Hand Tracking,” arXiv:2006.10214, 2020, doi: 10.48550/arXiv.2006.10214.
+
+[Normal] [7] E. B. Wilson, “Probable Inference, the Law of Succession, and Statistical Inference,” Journal of the American Statistical Association, vol. 22, no. 158, pp. 209-212, 1927, doi: 10.1080/01621459.1927.10502953.
+
+[Normal] [8] N. Li and Z. Hong, “Deep Reinforcement Learning for Personalised Music Learning Pathways,” Annals of Data Science, vol. 13, no. 4, pp. 1013-1032, 2026, doi: 10.1007/s40745-026-00689-1.
+
+[Normal] [9] J. Li, “A reinforcement learning-based adaptive evaluation framework for personalized music education,” PeerJ Computer Science, vol. 12, art. e3464, 2026, doi: 10.7717/peerj-cs.3464.
+
+[Normal] [10] J. Li, “Deep learning-based personalized learning path planning and optimization model for music education,” Discover Artificial Intelligence, vol. 6, no. 1, art. 434, 2026, doi: 10.1007/s44163-026-01115-4.
+
+[Normal] [11] X. Deng, Y. Zhou, X. Guan, and Y. Wang, “An adaptive emotion aware music education system using machine learning for personalized emotional wellbeing enhancement,” Scientific Reports, vol. 16, no. 1, art. 25833, 2026, doi: 10.1038/s41598-026-53749-0.
+
+[Normal] [12] X. Shi, “An affective computing framework for preschool music education using MoE architecture and neural radiance fields,” Discover Artificial Intelligence, vol. 6, no. 1, art. 812, 2026, doi: 10.1007/s44163-026-01858-0.
+
+[Normal] [13] X. Deng, “AI-Based Feedback Systems in Piano Education: Effects on Technical Accuracy and Learner Autonomy,” Música Hodie, vol. 26, 2026, doi: 10.5216/mh.v26.85176.
+
+[Normal] [14] T. Chuluunsaikhan and S. H. Park, “Piano keyboard detection algorithm using deep learning,” Multimedia Tools and Applications, vol. 85, no. 5, art. 508, 2026, doi: 10.1007/s11042-026-21667-y.
+
+[Normal] [15] X. Tang, “The application of deep reinforcement learning in music teaching interaction,” Discover Computing, vol. 29, no. 1, art. 131, 2026, doi: 10.1007/s10791-026-10022-2.
+
+[Normal] [16] Z. Wang, “Music teaching evaluation using multimodal deep reinforcement learning,” Discover Artificial Intelligence, vol. 6, no. 1, art. 151, 2026, doi: 10.1007/s44163-026-00832-0.
+
+[Normal] [17] P. Ramoneda, M. Suzuki, A. Maezawa, and X. Serra, “Difficulty-aware score generation for piano sight-reading,” Expert Systems with Applications, vol. 321, art. 132088, 2026, doi: 10.1016/j.eswa.2026.132088.
+
+[Normal] [18] N. J. Cepeda, H. Pashler, E. Vul, J. T. Wixted, and D. Rohrer, “Distributed practice in verbal recall tasks: A review and quantitative synthesis.,” Psychological Bulletin, vol. 132, no. 3, pp. 354-380, 2006, doi: 10.1037/0033-2909.132.3.354.
+
+[Normal] [19] A. T. Corbett and J. R. Anderson, “Knowledge tracing: Modeling the acquisition of procedural knowledge,” User Modelling and User-Adapted Interaction, vol. 4, no. 4, pp. 253-278, 1995, doi: 10.1007/BF01099821.
+
+[Normal] [20] R. C. Wilson, A. Shenhav, M. Straccia, and J. D. Cohen, “The Eighty Five Percent Rule for optimal learning,” Nature Communications, vol. 10, no. 1, art. 4646, 2019, doi: 10.1038/s41467-019-12552-4.
+
+[Normal] [21] P. Woźniak and E. Gorzelańczyk, “Optimization of repetition spacing in the practice of learning,” Acta Neurobiologiae Experimentalis, vol. 54, no. 1, pp. 59-62, 1994, doi: 10.55782/ane-1994-1003.
