@@ -75,7 +75,9 @@ T("**Amenazas a la validez.** La calibración es de una sola persona y de ocho s
   "errores de detección, desenfoque ni iluminación; las posturas negativas se construyeron por interpolación y combinación y la tasa real depende de cómo se mueven los niños; y el método inicial se evaluó con "
   "la misma calibración. Por eso los resultados describen el comportamiento del reconocedor en laboratorio y no su rendimiento en el aula.")
 resto("Los demás componentes del sistema, como el seguimiento del dominio, el repaso espaciado y la selección de actividades, se tratan en otros trabajos del equipo y en la literatura sobre aprendizaje adaptativo")
-bloque("trl")
+H2("Madurez tecnológica")
+T("El reconocedor está en TRL 4: sus componentes funcionan integrados y se validaron en laboratorio con mediciones repetibles, pero ninguno se probó en el entorno de uso, con niños, cámaras y luz reales. El paso a TRL 5 exige un piloto en aula, "
+  "cuyo protocolo está diseñado y no se ha ejecutado; el nivel final debe confirmarlo el equipo.")
 
 H1("Conclusiones")
 T(f"Un descriptor invariante de 120 componentes con decisión por distancia, confianza y margen redujo las notas disparadas por error de 100 % a {f(FP['pct'])} % en 640 posturas que no son seña, "

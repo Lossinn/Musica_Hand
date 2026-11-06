@@ -86,7 +86,9 @@ bloque("disc_comp")
 T("**Una regla para reportar.** A partir de lo anterior se propone que toda cifra de desempeño que aparezca en un resumen, una presentación o un artículo indique tres cosas: el script o el procedimiento que la produce, el tamaño de la muestra y "
   "su intervalo de confianza. Con esa regla, una frase como «precisión superior al 94,2 %» no pasaría a un resumen sin su protocolo. La regla es sencilla y se puede aplicar en un proyecto de clase.")
 resto("Para los componentes de aprendizaje personalizado y estimación del dominio del sistema, véanse los trabajos sobre seguimiento del conocimiento y práctica distribuida")
-bloque("trl")
+H2("Madurez tecnológica")
+T("Con estas verificaciones, el nivel de madurez que mejor se sostiene es TRL 4: componentes validados en laboratorio, mediciones repetibles y ningún componente probado en el entorno de uso. Las cifras que no se pudieron medir, como los fotogramas por segundo, "
+  "deben medirse con la cámara real antes de hablar de TRL 5, que además exige un piloto con niños.")
 
 H1("Conclusiones")
 T("De cinco cifras reportadas, una se reprodujo (8 % de notas falsas), una resultó del mismo orden (38 ms), una no coincide pero se midió en otro equipo (latencia), una no pudo compararse por falta de protocolo (94,2 %) y una no se midió "
