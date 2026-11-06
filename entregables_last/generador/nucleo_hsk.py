@@ -297,10 +297,10 @@ DANE_REF = ("DANE, “Proyecciones de población municipal 2020–2035, actualiz
             "Municipal/DCD-area-sexo-edad-proypoblacion-Mun-2020-2035-ActPostCOVID-19.xlsx. Accessed: Nov. 5, 2026.")
 
 
-def encabezado(primero: str, titulo_es: str, titulo_en: str, res_es: str, res_en: str, kw_es: str, kw_en: str):
+def encabezado(primero: str, titulo_es: str, titulo_en: str, res_es: str, res_en: str, kw_es: str, kw_en: str, corresp_clave: str | None = None):
     orden = [primero] + [k for k in EQUIPO if k != primero]
     autores = [EQUIPO[k] for k in orden]
-    corresp = autores[0][0]
+    corresp = EQUIPO[corresp_clave][0] if corresp_clave else autores[0][0]
     par(titulo_es, "Título art"); par(titulo_en, "Título art")
     doc.add_paragraph(style="Normal")
     nombres = ", ".join(f"{n}^{{{i + 1}}}" + ("^{*}" if n == corresp else "") for i, (n, _, _) in enumerate(autores))
@@ -328,7 +328,7 @@ def encabezado(primero: str, titulo_es: str, titulo_en: str, res_es: str, res_en
     for i, (n, mail, _) in enumerate(autores, 1):
         par("^{" + str(i) + "} " + plantillas[v].format(i=i, n=n, m=mail), "Normal", size=8)
     par("^{" + str(len(autores) + 1) + "} " + docentes[v].format(d=DOCENTE[0], c=DOCENTE[1]), "Normal", size=8)
-    par(f"^{{*}} Autor de correspondencia: {corresp} ({autores[0][1]}).", "Normal", size=8)
+    par(f"^{{*}} Autor de correspondencia: {corresp} ({dict((x[0], x[1]) for x in autores)[corresp]}).", "Normal", size=8)
     doc.add_paragraph(style="Normal")
     par("Resumen:", "Subtitulos"); par(res_es, "Normal", WD_ALIGN_PARAGRAPH.JUSTIFY)
     par("Palabras clave:", "Subtitulos"); par(kw_es, "Normal")
