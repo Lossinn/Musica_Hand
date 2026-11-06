@@ -41,7 +41,7 @@ T("El Vidrial es una vereda rural de Montería, Córdoba, cuyos hogares, según 
   "construyó un diseño de PVC por gravedad con derivación y cámara de pastillas, cuyos materiales cuestan 159.991 COP. La pregunta de este trabajo no es solo cuánto cuesta, sino qué hace falta, además de "
   "ese precio, para que el dispositivo sirva.")
 H2("Evidencia sobre costos, demanda y sostenibilidad")
-T("La búsqueda bibliográfica reproducible (sección 2.5, Figura 1) retuvo " + str(pr["incluidos_busqueda"]) + " estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos. Los datos "
+T("La búsqueda bibliográfica reproducible (sección 2.4, Figura 1) retuvo " + str(pr["incluidos_busqueda"]) + " estudios sobre cloración pasiva, en línea o con dosificadores en contextos de bajos recursos. Los datos "
   "económicos y de adopción son menos abundantes que los técnicos, pero consistentes. En sistemas por gravedad de Nepal, el cloro costó entre 0,06 y 0,09 USD por metro cúbico tratado, un valor similar al del "
   "monitoreo {c:nepal}. En Dhaka, 196 propietarios de viviendas de alquiler mostraron una demanda efectiva por cloración en línea comparable a la de otros productos, pero menor en las viviendas de ingresos bajos, "
   "lo que sugiere que llegar a los más pobres exigiría reducir costos, subsidiar o ambos {c:dhaka}. En Kisumu, Kenia, 27 % de los kioscos de agua a los que se ofreció un dosificador Venturi se comprometió con un "
@@ -105,7 +105,7 @@ T(f"Un kilogramo de pastillas alcanza para {m(R['alcance_1kg_TCCA90_m3']['dosis_
 H2("Tiempo de recuperación")
 T(f"Con los supuestos del proyecto, una unidad usada por un solo hogar tiene un beneficio mensual bruto de 25.000 COP y se recupera en {f(C['payback_meses_1hogar_bruto'], 1)} meses; descontando el costo operativo de 15.000 COP, el tiempo sube a "
   f"{f(C['payback_meses_1hogar_neto'], 1)} meses y el valor presente neto a 12 meses es de {m(C['vpn_12m_neto_de_opex_1hogar'])} COP, es decir, negativo. Compartida por dos hogares, la recuperación baja a {f(pb['2'], 1)} meses; por tres, a {f(pb['3'], 1)}; y por diez, a {f(pb['10'], 1)} (Figura 3). "
-  f"Sin restar el costo operativo, el valor presente neto a 12 meses es de {m(C['vpn_12m_solo_beneficio'])} COP; el documento del proyecto reporta 96.800 COP y no fue posible reproducir esa cifra con los datos "
+  f"Sin restar el costo operativo, el valor presente neto a 12 meses es de {m(C['vpn_12m_solo_beneficio'])} COP; el documento del proyecto reporta 96.800 COP con una tasa rotulada como anual y no fue posible reproducir esa cifra con los datos "
   "disponibles, por lo que aquí se usa el cálculo propio.")
 figura(["payback.png"], 8.0, "Figura 3. Tiempo de recuperación simple según el número de hogares que comparten una unidad (beneficio supuesto de 25.000 COP/mes por hogar).")
 H2("Costo bajo frente a desempeño técnico")
