@@ -234,6 +234,7 @@ class Escrito:
     # ---- bloque de título (una columna)
     def titulo_bloque(self, titulo, autores, docente_lineas, resumen, kw_es, abstract, kw_en):
         d = self.d
+        self.meta = dict(titulo=titulo, resumen=resumen, kw=kw_es, abstract=abstract, kwe=kw_en)
         p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_before = Pt(10); p.paragraph_format.space_after = Pt(10)
         p.paragraph_format.line_spacing = 1.0

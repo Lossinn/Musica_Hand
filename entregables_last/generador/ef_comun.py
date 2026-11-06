@@ -39,4 +39,5 @@ def correr(contenido):
     ruta = Path(sys.argv[1])
     ruta.parent.mkdir(parents=True, exist_ok=True)
     e = construir(contenido, ruta)
+    ruta.with_suffix(".json").write_text(json.dumps(e.meta, ensure_ascii=False), encoding="utf-8")
     print("guardado", ruta.name, "| cuadros", e.n_tab, "| figuras", e.n_fig, "| ecuaciones", e.n_eq, "| refs", len(set(e.citadas)))
