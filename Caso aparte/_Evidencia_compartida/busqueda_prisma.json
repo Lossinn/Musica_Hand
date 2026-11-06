@@ -1,0 +1,1611 @@
+{
+ "fecha": "2026-11-06",
+ "ecuacion": "(\"chlorination\" OR \"chlorinator\" OR \"chlorine dosing\" OR \"chlorine dispenser\" OR \"chlorine tablet\") AND (\"rural\" OR \"low-cost\" OR \"community\" OR \"point-of-use\") AND (\"passive\" OR \"gravity\" OR \"in-line\" OR \"bypass\" OR \"residual\" OR \"decay\")",
+ "fuente": "OpenAlex API",
+ "identificados_ventana_2020_2026": 28277,
+ "identificados_sin_filtro_tiempo": 61197,
+ "tras_filtros_tipo_idioma": 19594,
+ "con_doi": 19142,
+ "candidatos": [
+  {
+   "doi": "10.1371/journal.pwat.0000255",
+   "titulo": "Assessment of a local and low-cost passive in-line chlorination device in rural Guatemala",
+   "anio": 2024,
+   "revista": "PLOS Water",
+   "citas": 2,
+   "autores": "Jael M. Locher; Dorian Tosi Robinson; Eunice N. Canú"
+  },
+  {
+   "doi": "10.2166/washdev.2024.407",
+   "titulo": "Assessing factors affecting the use of chlorine dispensers for household water treatment in rural Kenya, Malawi, and Uganda",
+   "anio": 2024,
+   "revista": "Journal of Water Sanitation and Hygiene for Development",
+   "citas": 2,
+   "autores": "Illah Evance; Ferdnand Ongeta; Sharon Chebet"
+  },
+  {
+   "doi": "10.1089/ees.2020.0245",
+   "titulo": "A Hybrid Centralized-Point-of-Use Drinking Water Treatment System in a Rural Community in Chiapas, Mexico",
+   "anio": 2020,
+   "revista": "Environmental Engineering Science",
+   "citas": 6,
+   "autores": "Simón Mostafa; Mónica N. Camacho-Galván; Héctor E. Castelán-Martínez"
+  },
+  {
+   "doi": "10.1016/j.jenvman.2021.112223",
+   "titulo": "Sustainable water resources through harvesting rainwater and the effectiveness of a low-cost water treatment",
+   "anio": 2021,
+   "revista": "Journal of Environmental Management",
+   "citas": 98,
+   "autores": "Samia Richards; Lakshminarayana Rao; Stephanie Connelly"
+  },
+  {
+   "doi": "10.3362/1756-3488.20-00014",
+   "titulo": "Assessment of low-cost, non-electrically powered chlorination devices for gravity-driven membrane water kiosks in eastern Uganda",
+   "anio": 2021,
+   "revista": "Waterlines",
+   "citas": 15,
+   "autores": "Lukas Dössegger Lukas Dössegger; Alan Tournefier; Laura Germann"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2021.133218",
+   "titulo": "Impact of pipe material and chlorination on the biofilm structure and microbial communities",
+   "anio": 2021,
+   "revista": "Chemosphere",
+   "citas": 50,
+   "autores": "Xinyue Zhang; Tao Lin; Fuchun Jiang"
+  },
+  {
+   "doi": "10.3390/w15152816",
+   "titulo": "A Review on Chlorination of Harvested Rainwater",
+   "anio": 2023,
+   "revista": "Water",
+   "citas": 11,
+   "autores": "Sajeeve Latif; M. A. Alim; Ataur Rahman"
+  },
+  {
+   "doi": "10.53550/eec.2022.v28i02s.009",
+   "titulo": "Solar Cell as Energy Chlorinator for Disinfection of Flowing Water",
+   "anio": 2022,
+   "revista": "Ecology Environment and Conservation",
+   "citas": 0,
+   "autores": "Beny Suyanto; Denok Indraswati; Tuhu Pinardi"
+  },
+  {
+   "doi": "10.2166/wpt.2024.177",
+   "titulo": "Overview of the low-cost technologies for household water treatment in developing countries",
+   "anio": 2024,
+   "revista": "Water Practice & Technology",
+   "citas": 11,
+   "autores": "Ombeni John Mdee; Amina Lwasa; Nasra Sadiki"
+  },
+  {
+   "doi": "10.1016/j.jece.2023.110015",
+   "titulo": "Life cycle assessment comparison of point-of-use water treatment technologies: Solar water disinfection (SODIS), boiling water, and chlorination",
+   "anio": 2023,
+   "revista": "Journal of environmental chemical engineering",
+   "citas": 25,
+   "autores": "Sarita S. Nair; Ramesh Marasini; Lyndon Buck"
+  },
+  {
+   "doi": "10.9734/ajee/2025/v24i11819",
+   "titulo": "Effectiveness and Optimization of Chlorine Tablets for Total Coliform Removal in Hospital Wastewater Effluent",
+   "anio": 2025,
+   "revista": "Asian Journal of Environment & Ecology",
+   "citas": 0,
+   "autores": "Agung Hariyadi; Slamet Isworo"
+  },
+  {
+   "doi": "10.2166/ws.2026.214",
+   "titulo": "Improving drinking water disinfection in a rural community-managed aqueduct of Costa Rica",
+   "anio": 2026,
+   "revista": "Water Science & Technology Water Supply",
+   "citas": 0,
+   "autores": "Edwin Salas-González; Rolando Sánchez‐Gutiérrez; Alicia Fonseca-Sánchez"
+  },
+  {
+   "doi": "10.1021/acs.est.2c03133",
+   "titulo": "Evaluation of System-Level, Passive Chlorination in Gravity-Fed Piped Water Systems in Rural Nepal",
+   "anio": 2022,
+   "revista": "Environmental Science & Technology",
+   "citas": 11,
+   "autores": "Yoshika S. Crider; Sanjeena Sainju; Rubika Shrestha"
+  },
+  {
+   "doi": "10.1021/acsestwater.3c00425",
+   "titulo": "Performance of Community Water Board-Managed Passive In-Line Chlorinators Supported by a Circuit Rider Program in Rural Honduras",
+   "anio": 2023,
+   "revista": "ACS ES&T Water",
+   "citas": 3,
+   "autores": "Megan Lindmark; Wesley Meier; Diana Calix"
+  },
+  {
+   "doi": "10.1021/acssensors.6c02932",
+   "titulo": "Leveraging In Situ Chlorination for Resolving Subcellular Chlorinative Stress",
+   "anio": 2026,
+   "revista": "ACS Sensors",
+   "citas": 1,
+   "autores": "Fung Kit Tang; Lawrence Tucker; Maheshwara Reddy Nadiveedhi"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2020.137595",
+   "titulo": "Disinfection for decentralized wastewater reuse in rural areas through wetlands and solar driven onsite chlorination",
+   "anio": 2020,
+   "revista": "The Science of The Total Environment",
+   "citas": 39,
+   "autores": "Philipp Otter; Stefan Hertel; Jubin Ansari"
+  },
+  {
+   "doi": "10.1021/acs.est.1c01308",
+   "titulo": "Effective Demand for In-Line Chlorination Bundled with Rental Housing in Dhaka, Bangladesh",
+   "anio": 2021,
+   "revista": "Environmental Science & Technology",
+   "citas": 9,
+   "autores": "Daniel Wilkins Smith; Sonia Sultana; Yoshika S. Crider"
+  },
+  {
+   "doi": "10.1016/j.marpolbul.2022.113443",
+   "titulo": "Resilience of a microphytobenthos community from the Severn Estuary, UK, to chlorination: A mesocosm approach",
+   "anio": 2022,
+   "revista": "Marine Pollution Bulletin",
+   "citas": 1,
+   "autores": "Marta Vannoni; Véronique Créach; David Ryder"
+  },
+  {
+   "doi": "10.1016/j.watres.2020.116047",
+   "titulo": "Formation of algal-derived nitrogenous disinfection by-products during chlorination and chloramination",
+   "anio": 2020,
+   "revista": "Water Research",
+   "citas": 65,
+   "autores": "X. Li; N.R.H. Rao; Kathryn L. Linge"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2024.143634",
+   "titulo": "Evaluating the impact of residual low chlorine concentration on phytoplankton communities by flow cytometry",
+   "anio": 2024,
+   "revista": "Chemosphere",
+   "citas": 3,
+   "autores": "Marta Vannoni; Alastair Grant; Dave Sheahan"
+  },
+  {
+   "doi": "10.1016/j.jwpe.2021.102542",
+   "titulo": "Disinfection methods for domestic rainwater harvesting systems: A scoping review",
+   "anio": 2022,
+   "revista": "Journal of Water Process Engineering",
+   "citas": 42,
+   "autores": "Sajeeve Latif; M. A. Alim; Ataur Rahman"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2020.143598",
+   "titulo": "Effect of chlorination and pressure flushing of drippers fed by reclaimed wastewater on biofouling",
+   "anio": 2020,
+   "revista": "The Science of The Total Environment",
+   "citas": 28,
+   "autores": "Kévin Lequette; Nassim Aït-Mouheb; Nicolas Adam"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2020.125940",
+   "titulo": "The formation of disinfection by-products from the chlorination and chloramination of amides",
+   "anio": 2020,
+   "revista": "Chemosphere",
+   "citas": 30,
+   "autores": "Chrysoula Sfynia; Tom Bond; Rakesh Kanda"
+  },
+  {
+   "doi": "10.1016/j.envres.2025.121611",
+   "titulo": "A comprehensive investigation of bacterial communities in sediment and bulk water in a chlorinated drinking water distribution system",
+   "anio": 2025,
+   "revista": "Environmental Research",
+   "citas": 5,
+   "autores": "Dong Hu; Xiang Li; Kang An"
+  },
+  {
+   "doi": "10.1016/j.jwpe.2021.102203",
+   "titulo": "Household water purification system comprising cartridge filtration, UVC disinfection and chlorination to treat turbid raw water",
+   "anio": 2021,
+   "revista": "Journal of Water Process Engineering",
+   "citas": 29,
+   "autores": "Paulo Marcos Faria Maciel; Natália de Melo Nasser Fava; Antônio Wagner Lamon"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2020.140833",
+   "titulo": "THMs, HAAs and NAs production from culturable microorganisms in pipeline network by ozonation, chlorination, chloramination and joint disinfection strategies",
+   "anio": 2020,
+   "revista": "The Science of The Total Environment",
+   "citas": 44,
+   "autores": "Xiaochao Duan; Xiaobin Liao; Jianfei Chen"
+  },
+  {
+   "doi": "10.3390/life11010068",
+   "titulo": "Effect of Chlorination on Microbiological Quality of Effluent of a Full-Scale Wastewater Treatment Plant",
+   "anio": 2021,
+   "revista": "Life",
+   "citas": 41,
+   "autores": "Ioanna Zerva; Nikolaos Remmas; Ifigenia Kagalou"
+  },
+  {
+   "doi": "10.1111/1758-2229.13216",
+   "titulo": "Effects of chlorination on the survival of sewage bacteria in seawater microcosms",
+   "anio": 2023,
+   "revista": "Environmental Microbiology Reports",
+   "citas": 4,
+   "autores": "Mandy Lok Yi Tang; Stanley C. K. Lau"
+  },
+  {
+   "doi": "10.1371/journal.pwat.0000440",
+   "titulo": "In-line chlorination for drinking water in rural Odisha, India: A randomized controlled implementation trial",
+   "anio": 2026,
+   "revista": "PLOS Water",
+   "citas": 1,
+   "autores": "Jeremy Lowe; Vaishnavi Prathap; Akito Kamei"
+  },
+  {
+   "doi": "10.1038/s41545-020-00091-1",
+   "titulo": "Design, performance, and demand for a novel in-line chlorine doser to increase safe water access",
+   "anio": 2021,
+   "revista": "npj Clean Water",
+   "citas": 11,
+   "autores": "Julie E. Powers; Cynthia McMurry; Sarah Gannon"
+  },
+  {
+   "doi": "10.1016/j.watres.2020.115743",
+   "titulo": "Characterization of organic matter by HRMS in surface waters: Effects of chlorination on molecular fingerprints and correlation with DBP formation potential",
+   "anio": 2020,
+   "revista": "Water Research",
+   "citas": 77,
+   "autores": "Josep Sanchís; Adrián Jaén-Gil; Pablo Gago-Ferrero"
+  },
+  {
+   "doi": "10.1021/acsestwater.1c00428",
+   "titulo": "Free-Living Amoeba and Associated Pathogenic Bacteria in Well-Chlorinated Drinking Water Storage Tanks",
+   "anio": 2022,
+   "revista": "ACS ES&T Water",
+   "citas": 20,
+   "autores": "Natalia Malinowski; S. Domingos; Jason T. Wylie"
+  },
+  {
+   "doi": "10.1039/d4su00188e",
+   "titulo": "Recent developments and sustainability in monitoring chlorine residuals for water quality control: a critical review",
+   "anio": 2024,
+   "revista": "RSC Sustainability",
+   "citas": 26,
+   "autores": "Yohanz Khor; Abdul Aziz Abdul Raman; Su Sin Chong"
+  },
+  {
+   "doi": "10.1007/s11356-022-23755-6",
+   "titulo": "Removal of pathogens from greywater using green roofs combined with chlorination",
+   "anio": 2022,
+   "revista": "Environmental Science and Pollution Research",
+   "citas": 15,
+   "autores": "Ioanna Petousi; Vasiliki S. Thomaidi; Nicolas E. Kalogerakis"
+  },
+  {
+   "doi": "10.1021/acs.estlett.0c00259",
+   "titulo": "Exotic Electrophiles in Chlorinated and Chloraminated Water: When Conventional Kinetic Models and Reaction Pathways Fall Short",
+   "anio": 2020,
+   "revista": "Environmental Science & Technology Letters",
+   "citas": 60,
+   "autores": "Michael R. Rose; Stephanie S. Lau; Carsten Prasse"
+  },
+  {
+   "doi": "10.3390/chemosensors9060137",
+   "titulo": "Fluorination vs. Chlorination: Effect on the Sensor Response of Tetrasubstituted Zinc Phthalocyanine Films to Ammonia",
+   "anio": 2021,
+   "revista": "Chemosensors",
+   "citas": 33,
+   "autores": "Dmitry Bonegardt; Darya Klyamer; A. S. Sukhikh"
+  },
+  {
+   "doi": "10.1089/ees.2020.0270",
+   "titulo": "Enhancing Access to Safe Drinking Water in Remote Fijian Communities: Modeling and Implementing a Pilot Rain-Rank Disinfection Program",
+   "anio": 2021,
+   "revista": "Environmental Engineering Science",
+   "citas": 8,
+   "autores": "Harry Byrne; Sophie Cassar; John Humphrey"
+  },
+  {
+   "doi": "10.15255/kui.2025.032",
+   "titulo": "DriniChlor: Towards a Data-driven and Adaptive Chlorination Process in Drinking Water Treatment Systems",
+   "anio": 2026,
+   "revista": "Kemija u industriji",
+   "citas": 0,
+   "autores": "Valdrin M. Beluli"
+  },
+  {
+   "doi": "10.3390/su18083964",
+   "titulo": "A Three-Step System (Biochar and Sand Filtration with Chlorination) for Handwashing Wastewater Treatment and Possible Water Reuse in Rural Schools",
+   "anio": 2026,
+   "revista": "Sustainability",
+   "citas": 0,
+   "autores": "J. I. Bautista Quispe; Luiza C. Campos; Ondřej Mašek"
+  },
+  {
+   "doi": "10.1016/j.jenvman.2020.111319",
+   "titulo": "Chlorination effects on DNA based characterization of water microbiomes and implications for the interpretation of data from disinfected systems",
+   "anio": 2020,
+   "revista": "Journal of Environmental Management",
+   "citas": 28,
+   "autores": "Kishor Acharya; Franella Francos Halla; Said Maneno Massawa"
+  },
+  {
+   "doi": "10.47339/ephj.2022.208",
+   "titulo": "Assessing private well user’s attitudes towards chlorination of drinking water",
+   "anio": 2022,
+   "revista": "BCIT Environmental Public Health Journal",
+   "citas": 0,
+   "autores": "Tobias Doniec; Environmental Health BCIT School of Health Sciences; Dale Chen"
+  },
+  {
+   "doi": "10.3311/ppch.22041",
+   "titulo": "Byproduct Formation of Chlorination and Chlorine Dioxide Oxidation in Drinking Water Treatment",
+   "anio": 2023,
+   "revista": "Periodica Polytechnica Chemical Engineering",
+   "citas": 11,
+   "autores": "Souha Neguez; Dóra Laky"
+  },
+  {
+   "doi": "10.61426/sjbcm.v9i2.2273",
+   "titulo": "EFFECT OF MONITORING AND EVALUATION PLANNING ON SUCCESS OF RURAL WATER CHLORINATION PROJECTS, A CASE OF CHLORINE DISPENSERS PROJECT IN WESTERN; KENYA",
+   "anio": 2022,
+   "revista": "Strategic Journal of Business & Change Management",
+   "citas": 0,
+   "autores": "SAMSON ANDUNGA WAKOLI; JOHN MURUNGA KADIMA; DR. JULIUS MIROGA"
+  },
+  {
+   "doi": "10.1371/journal.pntd.0008665",
+   "titulo": "Chlorination of Schistosoma mansoni cercariae",
+   "anio": 2020,
+   "revista": "PLoS neglected tropical diseases",
+   "citas": 15,
+   "autores": "Laura Braun; Yasinta Daniel Sylivester; Meseret Dessalegne"
+  },
+  {
+   "doi": "10.1016/j.desal.2024.117875",
+   "titulo": "Electrochemical process of chlorination and energy generation as viable alternatives for SWRO brine valorization",
+   "anio": 2024,
+   "revista": "Desalination",
+   "citas": 17,
+   "autores": "Mariko A. Carneiro; Esther de Kroon; Bárbara Vital"
+  },
+  {
+   "doi": "10.1021/acsomega.6c06133",
+   "titulo": "Formation of Toxic Products During the Chlorination of Aspartic Acid",
+   "anio": 2026,
+   "revista": "ACS Omega",
+   "citas": 0,
+   "autores": "Dávid Angyal; Fruzsina Simon; István Fábián"
+  },
+  {
+   "doi": "10.3390/w17233405",
+   "titulo": "Booster Chlorination in Palestinian Schools: Field Investigation of Chlorination Dynamics in Central Hebron Directorate",
+   "anio": 2025,
+   "revista": "Water",
+   "citas": 0,
+   "autores": "Safa Sultan; Mohannad Nassar; Hassan Sawalha"
+  },
+  {
+   "doi": "10.1021/acs.est.3c03591",
+   "titulo": "Cytotoxicity Comparison between Drinking Water Treated by Chlorination with Postchloramination versus Granular Activated Carbon (GAC) with Postchlorination",
+   "anio": 2023,
+   "revista": "Environmental Science & Technology",
+   "citas": 45,
+   "autores": "Stephanie S. Lau; Yinmei Feng; April Z. Gu"
+  },
+  {
+   "doi": "10.1039/d3lf00064h",
+   "titulo": "Optically active defects in carbon nanotubes via chlorination: computational insights",
+   "anio": 2023,
+   "revista": "RSC Applied Interfaces",
+   "citas": 9,
+   "autores": "Braden M. Weight; Brendan J. Gifford; Grace Tiffany"
+  },
+  {
+   "doi": "10.31035/cg2022088",
+   "titulo": "Lithium extraction from hard rock lithium ores (spodumene, lepidolite, zinnwaldite, petalite): Technology, resources, environment and cost",
+   "anio": 2022,
+   "revista": "China Geology",
+   "citas": 220,
+   "autores": "Gao Tian-ming; Na Fan; Wu Chen"
+  },
+  {
+   "doi": "10.2166/ws.2022.440",
+   "titulo": "Investigation of cellular structure and metabolic activity of Microcystis cells treated by chlorination",
+   "anio": 2022,
+   "revista": "Water Science & Technology Water Supply",
+   "citas": 3,
+   "autores": "Weijun Song; Donghua Qiu; Yu Xie"
+  },
+  {
+   "doi": "10.3389/frwa.2021.750802",
+   "titulo": "Assessing Microbial Water Quality, Users' Perceptions and System Functionality Following a Combined Water Safety Intervention in Rural Nepal",
+   "anio": 2022,
+   "revista": "Frontiers in Water",
+   "citas": 12,
+   "autores": "Carola Bänziger; Ariane Schertenleib; Bal Mukunda Kunwar"
+  },
+  {
+   "doi": "10.1039/d0tc03095c",
+   "titulo": "Effect of main and side chain chlorination on the photovoltaic properties of benzodithiophene- alt -benzotriazole polymers",
+   "anio": 2020,
+   "revista": "Journal of Materials Chemistry C",
+   "citas": 16,
+   "autores": "Haijun Bin; Indunil Chathurangani Angunawela; Ruijie Ma"
+  },
+  {
+   "doi": "10.24214/jecet.a.9.3.41628",
+   "titulo": "Effects of E2 on enzyme activity of Chlorella vulgaris before and after chlorination",
+   "anio": 2020,
+   "revista": "Journal of Environmental Science Computer Science and Engineering & Technology",
+   "citas": 0,
+   "autores": ""
+  },
+  {
+   "doi": "10.2355/isijinternational.isijint-2025-342",
+   "titulo": "Recovery of Phosphorus from Steelmaking Slag by Combination of Chlorination, Steam Modification and Carbon Reduction",
+   "anio": 2026,
+   "revista": "ISIJ International",
+   "citas": 0,
+   "autores": "Jiaqian Liu; Yuuki Mochizuki; Naoto Tsubouchi"
+  },
+  {
+   "doi": "10.1021/acs.estlett.2c00781",
+   "titulo": "Estimating the Global Target Market for Passive Chlorination",
+   "anio": 2022,
+   "revista": "Environmental Science & Technology Letters",
+   "citas": 6,
+   "autores": "Katya Cherukumilli; Robert Bain; Yiru Chen"
+  },
+  {
+   "doi": "10.3390/app11031076",
+   "titulo": "Amoxicillin in Water: Insights into Relative Reactivity, Byproduct Formation, and Toxicological Interactions during Chlorination",
+   "anio": 2021,
+   "revista": "Applied Sciences",
+   "citas": 12,
+   "autores": "Antonietta Siciliano; Marco Guida; Giovanni Libralato"
+  },
+  {
+   "doi": "10.1039/d5ra00198f",
+   "titulo": "Efficient α-selective chlorination of phenylacetic acid and its para -substituted analogues",
+   "anio": 2025,
+   "revista": "RSC Advances",
+   "citas": 4,
+   "autores": "Camillo Morano; Alessandro Giraudo; Gabriella Roda"
+  },
+  {
+   "doi": "10.1039/d5ew00709g",
+   "titulo": "Iodinated disinfection byproduct formation from iohexol in sunlit and chlorinated urban wastewaters",
+   "anio": 2025,
+   "revista": "Environmental Science Water Research & Technology",
+   "citas": 3,
+   "autores": "Reagan Patton Witt; Marcelo I. Guzmán"
+  },
+  {
+   "doi": "10.58578/ajstea.v3i3.5449",
+   "titulo": "Training in Water Chlorination to Prevent Diarrheal Diseases in Rural Communities of Mexico",
+   "anio": 2025,
+   "revista": "Asian Journal of Science Technology Engineering and Art",
+   "citas": 0,
+   "autores": "Armando Pacheco Hernández; Carisma Monserrat Meyer Vargas"
+  },
+  {
+   "doi": "10.1016/j.dyepig.2020.108577",
+   "titulo": "The effect of halogenation on PBDTT-TQxT based non-fullerene polymer solar cells – Chlorination vs fluorination",
+   "anio": 2020,
+   "revista": "Dyes and Pigments",
+   "citas": 15,
+   "autores": "Ruben Lenaerts; Dries Devisscher; Geert Pirotte"
+  },
+  {
+   "doi": "10.24323/akademik-gida.1422793",
+   "titulo": "Effects of Humic Acid and Bromide on Trihalomethane Formation during Water Disinfection with Chlorine",
+   "anio": 2023,
+   "revista": "Akademik Gıda",
+   "citas": 0,
+   "autores": "Y. Sedat Velioğlu; Rukiye AKDOĞAN; Zehra Baloğlu"
+  },
+  {
+   "doi": "10.2166/ws.2024.094",
+   "titulo": "Secondary risks induced by polyethylene microplastics during the disinfection processes of chlorination, UV irradiation, and ozone treatment",
+   "anio": 2024,
+   "revista": "Water Science & Technology Water Supply",
+   "citas": 3,
+   "autores": "Yizhuo Zhang; Shiyu Fu; Qinrui Lu"
+  },
+  {
+   "doi": "10.3390/w14091435",
+   "titulo": "Monitoring Bacterial Community Dynamics in a Drinking Water Treatment Plant: An Integrative Approach Using Metabarcoding and Microbial Indicators in Large Water Volumes",
+   "anio": 2022,
+   "revista": "Water",
+   "citas": 27,
+   "autores": "Anna Pinar-Méndez; Owen Simon Wangensteen; Kim Præbel"
+  },
+  {
+   "doi": "10.62345/jads.2024.13.2.92",
+   "titulo": "Clean Drinking Water Issues in Rural Community of District Mardan (Pakistan)",
+   "anio": 2024,
+   "revista": "Journal of Asian Development Studies",
+   "citas": 0,
+   "autores": "Adnan Khan; Malik Muhammad Shafi; Shah Fahad"
+  },
+  {
+   "doi": "10.1128/aem.00686-25",
+   "titulo": "Impact of flushing procedures on drinking water biostability and invasion susceptibility in distribution systems",
+   "anio": 2025,
+   "revista": "Applied and Environmental Microbiology",
+   "citas": 10,
+   "autores": "Fien Waegenaar; Thomas Pluym; Elise Vermeulen"
+  },
+  {
+   "doi": "10.35208/ert.1267181",
+   "titulo": "Occurrence of bromide and bromate in chlorinated indoor swimming pools, and associated health risks",
+   "anio": 2023,
+   "revista": "Environmental Research and Technology",
+   "citas": 0,
+   "autores": "Yetkin Dumanoğlu; Mesut Genişoğlu; Sait C. Sofuoǧlu"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2020.127743",
+   "titulo": "Effect of chlorination on anti-acetylcholinesterase activity of organophosphorus insecticide solutions and contributions of the parent insecticides and their oxons to the activity",
+   "anio": 2020,
+   "revista": "Chemosphere",
+   "citas": 15,
+   "autores": "Taku Matsushita; Yuki Fujita; Kei Omori"
+  },
+  {
+   "doi": "10.1021/acs.est.5c12121",
+   "titulo": "Identification of Factors Influencing Variability in Disinfection Byproducts and Their Toxicity in Chlorinated and Chloraminated Drinking Water Distribution Systems across the United States",
+   "anio": 2025,
+   "revista": "Environmental Science & Technology",
+   "citas": 10,
+   "autores": "Samantha DiLoreto; Huanqi He; Jin‐Hao Yang"
+  },
+  {
+   "doi": "10.3390/w14233893",
+   "titulo": "Response of Algal–Bacterial Regrowth Characteristics to the Hypochlorite in Landscape Ponds Replenished with Reclaimed Water",
+   "anio": 2022,
+   "revista": "Water",
+   "citas": 8,
+   "autores": "Meng Li; Jiaheng Liu; Chao Zhang"
+  },
+  {
+   "doi": "10.2166/washdev.2025.340",
+   "titulo": "Using propensity score matching to evaluate the impact of household water treatment on childhood diarrhea: evidence from water-stressed rural settings",
+   "anio": 2025,
+   "revista": "Journal of Water Sanitation and Hygiene for Development",
+   "citas": 0,
+   "autores": "Haileyesus Girma; Mesfin Gebrehiwot; Bart Defloor"
+  },
+  {
+   "doi": "10.1007/s40710-025-00779-x",
+   "titulo": "Removal of Antibiotic Resistant Bacteria and Genes by Conventional and Nature-Based Municipal Wastewater Treatment Systems",
+   "anio": 2025,
+   "revista": "Environmental Processes",
+   "citas": 16,
+   "autores": "Maria Kalli; Dimitriοs Kontogiannatos; Angeliki Maria Koi"
+  },
+  {
+   "doi": "10.4265/jmc.28.1_27",
+   "titulo": "Changes in bacterial diversity and community structure in drinking water distribution system revealed by high throughput sequencing",
+   "anio": 2023,
+   "revista": "Journal of Microorganism Control",
+   "citas": 2,
+   "autores": "Yoshihiko Koizumi; Tomoaki Ichijo; Kimiko Uchii"
+  },
+  {
+   "doi": "10.3390/insects16121213",
+   "titulo": "Chlorination Is Ineffective at Eliminating Insects from Wastewater: A Case Study Using Ceratitis capitata",
+   "anio": 2025,
+   "revista": "Insects",
+   "citas": 0,
+   "autores": "Flora Kafunda; Arnaud Blanchet; Gaylord A. Desurmont"
+  },
+  {
+   "doi": "10.3389/frwa.2024.1392800",
+   "titulo": "Performance of traditional household drinking water treatment methods used in rural Amazon",
+   "anio": 2024,
+   "revista": "Frontiers in Water",
+   "citas": 5,
+   "autores": "Maria Cecília Rosinski Lima Gomes; Leonardo Capeleto de Andrade; Milena Pinho Barbosa"
+  },
+  {
+   "doi": "10.3390/su151511801",
+   "titulo": "Sustainable Use of Treated Municipal Wastewater after Chlorination: Short-Term Effects on Crops and Soils",
+   "anio": 2023,
+   "revista": "Sustainability",
+   "citas": 3,
+   "autores": "Demetrio Antonio Zema; Bruno Gianmarco Carrà; Agostino Sorgonà"
+  },
+  {
+   "doi": "10.3390/app14188153",
+   "titulo": "Innovative Approaches for Minimizing Disinfection Byproducts (DBPs) in Water Treatment: Challenges and Trends",
+   "anio": 2024,
+   "revista": "Applied Sciences",
+   "citas": 52,
+   "autores": "Spyridon K. Golfinopoulos; Anastasia D. Nikolaou; Dimitrios Ε. Alexakis"
+  },
+  {
+   "doi": "10.1039/d2ew00198e",
+   "titulo": "Degradation of sulfapyridine antibiotics by chlorination in a pilot-scale water distribution system: kinetics, THMs, and DFT studies",
+   "anio": 2022,
+   "revista": "Environmental Science Water Research & Technology",
+   "citas": 8,
+   "autores": "Jie Ji; Changjie Shi; Xu Jian Luo"
+  },
+  {
+   "doi": "10.1007/s13201-023-01922-5",
+   "titulo": "Evaluation of chlorination efficiency on improving microbiological and physicochemical parameters in water samples available in Sheble Berenta district Amhara region, Ethiopia",
+   "anio": 2023,
+   "revista": "Applied Water Science",
+   "citas": 14,
+   "autores": "Getahun Temesgen; Alemu Lelago; Etagegnehu Assefa"
+  },
+  {
+   "doi": "10.4038/engineer.v56i2.7529",
+   "titulo": "Removal of Manganese and Iron from Groundwater by using Chlorination and Rapid Sand Filtration: A Case Study",
+   "anio": 2023,
+   "revista": "Engineer Journal of the Institution of Engineers Sri Lanka",
+   "citas": 3,
+   "autores": "M. E. Sutharsan; S. P. S. Meegahakumbura; Nadeeka Sajeewani Miguntanna"
+  },
+  {
+   "doi": "10.1080/09603123.2024.2312545",
+   "titulo": "The contribution of decentralized water systems on water quality in Maniema province, DRC",
+   "anio": 2024,
+   "revista": "International Journal of Environmental Health Research",
+   "citas": 1,
+   "autores": "Renata Campos Nogueira; Marc-Antoine Menneguerre; Mami Daba Fam Thior"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2025.180919",
+   "titulo": "Insights into the transformation of alloxydim during chlorination process; by-product identification, DFT calculations and ecotoxicological assessment",
+   "anio": 2025,
+   "revista": "The Science of The Total Environment",
+   "citas": 0,
+   "autores": "María Cobos-Escudero; Álvaro Cervantes-Díaz; Juan Carlos Nieto-Carmona"
+  },
+  {
+   "doi": "10.3390/w14091384",
+   "titulo": "A Review on Machine Learning, Artificial Intelligence, and Smart Technology in Water Treatment and Monitoring",
+   "anio": 2022,
+   "revista": "Water",
+   "citas": 388,
+   "autores": "Matthew Lowe; Ruwen Qin; Xinwei Mao"
+  },
+  {
+   "doi": "10.1155/2021/4972770",
+   "titulo": "Carbon Nanotubes (CNTs) from Synthesis to Functionalized (CNTs) Using Conventional and New Chemical Approaches",
+   "anio": 2021,
+   "revista": "Journal of Nanomaterials",
+   "citas": 170,
+   "autores": "Lakhdar Sidi Salah; Nassira Ouslimani; Dalila Bousba"
+  },
+  {
+   "doi": "10.3390/w13020214",
+   "titulo": "Impact of Suspended Solids and Organic Matter on Chlorine and UV Disinfection Efficiency of Greywater",
+   "anio": 2021,
+   "revista": "Water",
+   "citas": 33,
+   "autores": "Eran Friedler; Diana Lila Ferrando Chavez; Yuval Alfiya"
+  },
+  {
+   "doi": "10.1016/j.wroa.2022.100164",
+   "titulo": "Sensor setpoints that ensure compliance with microbial water quality targets for membrane bioreactor and chlorination treatment in on-site water reuse systems",
+   "anio": 2022,
+   "revista": "Water Research X",
+   "citas": 12,
+   "autores": "Eva Reynaert; Flavia Gretener; Timothy Ryan Julian"
+  },
+  {
+   "doi": "10.1016/j.jenvman.2026.128569",
+   "titulo": "Ecotoxicological assessment of wastewater treated by the novel solar chlor-photo-Fenton process for sustainable crop irrigation",
+   "anio": 2026,
+   "revista": "Journal of Environmental Management",
+   "citas": 1,
+   "autores": "Solaima Belachqer-El Attar; P. Taborelli; P. Soriano-Molina"
+  },
+  {
+   "doi": "10.3390/w12051506",
+   "titulo": "Towards a Predictive Model for Initial Chlorine Dose in Humanitarian Emergencies",
+   "anio": 2020,
+   "revista": "Water",
+   "citas": 12,
+   "autores": "Hongjian Wu; Caetano C. Dorea"
+  },
+  {
+   "doi": "10.1016/j.watres.2020.115854",
+   "titulo": "Effectiveness of water chlorination programs along the emergency-transition-post-emergency continuum: Evaluations of bucket, in-line, and piped water chlorination programs in Cox’s Bazar",
+   "anio": 2020,
+   "revista": "Water Research",
+   "citas": 22,
+   "autores": "Mustafa Sikder; Gabrielle M. String; Yarmina Kamal"
+  },
+  {
+   "doi": "10.3389/fmats.2022.886471",
+   "titulo": "Nitrogen inclusion in carbon nanotubes initiated by boron doping and chlorination: Their use as electrocatalysts for oxygen reduction reaction",
+   "anio": 2022,
+   "revista": "Frontiers in Materials",
+   "citas": 3,
+   "autores": "Winny Kgabo Maboya; Manoko  Stephanie Maubane-Nkadimeng; Abongile Nwabisa Jijana"
+  },
+  {
+   "doi": "10.1051/epjpv/2022012",
+   "titulo": "Fluorination and chlorination effects on the charge transport properties of the IDIC non-fullerene acceptor: an ab-initio investigation",
+   "anio": 2022,
+   "revista": "EPJ Photovoltaics",
+   "citas": 4,
+   "autores": "Maria Andrea; Konstantinos Kordos; Elefterios Lidorikis"
+  },
+  {
+   "doi": "10.4236/jmmce.2021.92011",
+   "titulo": "Affordable Water Filtration Technology for Disinfection By-Product Control for Small Rural Communities by Using Carbon Extracted from Local Fly Ash",
+   "anio": 2021,
+   "revista": "Journal of Minerals and Materials Characterization and Engineering",
+   "citas": 0,
+   "autores": "He Zhang; Tahir Husain"
+  },
+  {
+   "doi": "10.47470/0016-9900-2021-100-2-99-110",
+   "titulo": "Assessment of carcinogenic risk from exposure to chlororganic compounds of water of systems of centralized water supply",
+   "anio": 2021,
+   "revista": "Hygiene and Sanitation",
+   "citas": 6,
+   "autores": "Boris I. Marchenko; Журавлев Петр Васильевич; Nina K. Plugotarenko"
+  },
+  {
+   "doi": "10.2166/wpt.2026.500",
+   "titulo": "Implementation of a low-cost alternating tank chlorination system for improving drinking water safety in remote highland communities of northern Thailand",
+   "anio": 2026,
+   "revista": "Water Practice & Technology",
+   "citas": 0,
+   "autores": "Supawit Amornyout; Paramaporn Muangpat; Nattapong Polpong"
+  },
+  {
+   "doi": "10.65206/pajes.59027",
+   "titulo": "Impact of water disinfection processes on polycyclic aromatic hydrocarbons (PAHs): Comparison of ozonation, chlorination, and combined treatment",
+   "anio": 2026,
+   "revista": "Pamukkale University Journal of Engineering Sciences",
+   "citas": 0,
+   "autores": "Zehra Baloğlu; Bahar Demircan; Y. Sedat Velioğlu"
+  },
+  {
+   "doi": "10.2166/wst.2026.193",
+   "titulo": "Temporal and spatial dynamics of drinking water quality in Injibara Town, Ethiopia",
+   "anio": 2026,
+   "revista": "Water Science & Technology",
+   "citas": 0,
+   "autores": "Selamawit Sewunet Engidayehu; Demelash Debebe Abadefar; Bekele G. Ararso"
+  },
+  {
+   "doi": "10.1061/(asce)ee.1943-7870.0002063",
+   "titulo": "Design and Evaluation of a Household Chlorination System for Treating Cistern Water in the US Virgin Islands",
+   "anio": 2022,
+   "revista": "Journal of Environmental Engineering",
+   "citas": 5,
+   "autores": "Lee E. Voth‐Gaeddert; Mandy Lemley; Kela Brathwaite"
+  },
+  {
+   "doi": "10.3390/app13106243",
+   "titulo": "Non-Thermal Plasma Review: Assessment and Improvement of Feasibility as a Retrofitted Technology in Tertiary Wastewater Purification",
+   "anio": 2023,
+   "revista": "Applied Sciences",
+   "citas": 27,
+   "autores": "Kaamil-Inaam Naicker; Paul Kaweesa; Michael O. Daramola"
+  },
+  {
+   "doi": "10.1016/j.watres.2022.118615",
+   "titulo": "Design and operational considerations in response to Legionella occurrence in Las Vegas Valley groundwater",
+   "anio": 2022,
+   "revista": "Water Research",
+   "citas": 16,
+   "autores": "Ariel J. Atkinson; Christina M. Morrison; Wilbur Frehner"
+  },
+  {
+   "doi": "10.1016/j.heliyon.2022.e11625",
+   "titulo": "Ultraviolet – Chlorine combined treatment efficiency to eliminate Naegleria fowleri in artificial surf lagoons",
+   "anio": 2022,
+   "revista": "Heliyon",
+   "citas": 12,
+   "autores": "Iñigo Arberas-Jiménez; Inés Sifaoui; María Reyes-Batllé"
+  },
+  {
+   "doi": "10.1016/j.jece.2024.113247",
+   "titulo": "Efficient Nimesulide degradation via chlorination and sun-simulated radiation: Kinetic insights, reactive species formation, and application to real wastewater",
+   "anio": 2024,
+   "revista": "Journal of environmental chemical engineering",
+   "citas": 7,
+   "autores": "Antonio Medici; Mohamed Sarakha; Giovanni Di Fabio"
+  },
+  {
+   "doi": "10.1039/d1ew00824b",
+   "titulo": "Simultaneous prediction of trihalomethanes, haloacetic acids, haloacetonitriles and haloacetamides using simulated distribution system tests",
+   "anio": 2022,
+   "revista": "Environmental Science Water Research & Technology",
+   "citas": 17,
+   "autores": "Chrysoula Sfynia; Tom Bond; Rakesh Kanda"
+  },
+  {
+   "doi": "10.1016/j.ibiod.2020.105032",
+   "titulo": "Bacterial community including opportunistic pathogens dynamics in a chlorine tablet-dosed chloraminated service reservoir and reticulation pipes",
+   "anio": 2020,
+   "revista": "International Biodeterioration & Biodegradation",
+   "citas": 14,
+   "autores": "K.C. Bal Krishna; Arumugam Sathasivan; Peter T Cox"
+  },
+  {
+   "doi": "10.1016/j.susmat.2020.e00159",
+   "titulo": "Carbon dots derived from human hair for ppb level chloroform sensing in water",
+   "anio": 2020,
+   "revista": "Sustainable materials and technologies",
+   "citas": 45,
+   "autores": "Amandeep Singh; Ehsan Eftekhari; James M. Scott"
+  },
+  {
+   "doi": "10.3390/w16020314",
+   "titulo": "Artificial Intelligence Technologies Revolutionizing Wastewater Treatment: Current Trends and Future Prospective",
+   "anio": 2024,
+   "revista": "Water",
+   "citas": 180,
+   "autores": "Ahmed E. Alprol; Abdallah Tageldein Mansour; Marwa Ezz El-Din Ibrahim"
+  },
+  {
+   "doi": "10.3390/environments12040108",
+   "titulo": "Characterization of Per- and/or Polyfluoroalkyl Substances (PFASs) in Reclaimed Water in Three Arizona Communities",
+   "anio": 2025,
+   "revista": "Environments",
+   "citas": 2,
+   "autores": "Kalealani M. Gurfield; Madeline G. Molzahn; Jack Welchert"
+  },
+  {
+   "doi": "10.1002/adma.75611",
+   "titulo": "Sulfur Locking and Chlorination Synergistically Enable Efficient Charge Transport and Low Nonradiative Energy Loss in Organic Solar Cells",
+   "anio": 2026,
+   "revista": "Advanced Materials",
+   "citas": 0,
+   "autores": "Jinjin Wang; Tian Han; Jiehao Fu"
+  },
+  {
+   "doi": "10.1016/j.ijheh.2025.114643",
+   "titulo": "Appraisal of the composition, structure, diversity, and functioning of bacterial and fungal communities in drinking water systems: A case study in the developing world",
+   "anio": 2025,
+   "revista": "International Journal of Hygiene and Environmental Health",
+   "citas": 1,
+   "autores": "Siphelele Nduli; Memory Tekere; Kedibone Masenya"
+  },
+  {
+   "doi": "10.22190/fumb230525009m",
+   "titulo": "AMMONIUM, NITRATE AND NITRITE CONCENTRATIONS IN DRINKING WATER OF THE SOUTH BAČKA DISTRICT OF VOJVODINA",
+   "anio": 2024,
+   "revista": "Facta Universitatis Series Medicine and Biology",
+   "citas": 3,
+   "autores": "Ivana Matijašević; Sanja Bijelović; Stanka Bobić"
+  },
+  {
+   "doi": "10.1186/s42269-023-01088-9",
+   "titulo": "Severity of waterborne diseases in developing countries and the effectiveness of ceramic filters for improving water quality",
+   "anio": 2023,
+   "revista": "Bulletin of the National Research Centre/Bulletin of the National Research Center",
+   "citas": 167,
+   "autores": "Godfrey Michael Shayo; Elianaso Elimbinzi; Godlisten Namwel Shao"
+  },
+  {
+   "doi": "10.1007/s11356-021-18299-0",
+   "titulo": "Modeling the formation of trihalomethanes in rural and semi-urban drinking water distribution networks of Costa Rica",
+   "anio": 2022,
+   "revista": "Environmental Science and Pollution Research",
+   "citas": 12,
+   "autores": "Daniel Enrique Kelly-Coto; Alejandra Gamboa-Jiménez; Diana Mora-Campos"
+  },
+  {
+   "doi": "10.3390/molecules29225451",
+   "titulo": "The Efficient and Environmentally Friendly Chlorination of Arene, Alcohol, Halobenzene, and Peroxide Catalyzed by Fe–Ba Binary Oxides Using Hydrochloric Acid as Chlorine Source and Aqueous H2O2 as Oxidant",
+   "anio": 2024,
+   "revista": "Molecules",
+   "citas": 1,
+   "autores": "Sidra Chaudhary; Qin Pan; Yong Wu"
+  },
+  {
+   "doi": "10.3390/toxics11080699",
+   "titulo": "Modeling the Chlorine Series from the Treatment Plant of Drinking Water in Constanta, Romania",
+   "anio": 2023,
+   "revista": "Toxics",
+   "citas": 1,
+   "autores": "Alina Bărbulescu; Lucica Barbeș"
+  },
+  {
+   "doi": "10.3390/agriculture12060777",
+   "titulo": "Elimination of Clogging of a Biogas Slurry Drip Irrigation System Using the Optimal Acid and Chlorine Addition Mode",
+   "anio": 2022,
+   "revista": "Agriculture",
+   "citas": 16,
+   "autores": "Xuefeng Qiu; Jiandong Wang; Haitao Wang"
+  },
+  {
+   "doi": "10.1039/d2re00191h",
+   "titulo": "Influence of pH on the kinetics of hydrolysis reactions: the case of epichlorohydrin and glycidol",
+   "anio": 2022,
+   "revista": "Reaction Chemistry & Engineering",
+   "citas": 19,
+   "autores": "Flavio Tollini; Alice Occhetta; Francesca Broglia"
+  },
+  {
+   "doi": "10.3390/ijerph22020170",
+   "titulo": "Formative Research for Adapting the Cholera-Hospital-Based-Intervention-for-7-Days (CHoBI7) Water Treatment and Hygiene Mobile Health Program for Scalable Delivery in Rural Bangladesh",
+   "anio": 2025,
+   "revista": "International Journal of Environmental Research and Public Health",
+   "citas": 1,
+   "autores": "Fatema Zohura; Tahmina Parvin; Kelly Endres"
+  },
+  {
+   "doi": "10.1007/s10661-025-13866-1",
+   "titulo": "Seasonal Variations in Potable Water Quality of Bahawalpur City: A Comprehensive Assessment of Major Ions, Organic Matter, and Disinfection Byproducts",
+   "anio": 2025,
+   "revista": "Environmental Monitoring and Assessment",
+   "citas": 1,
+   "autores": "Sundas Kali; Mazhar Iqbal Zafar; Abida Farooqi"
+  },
+  {
+   "doi": "10.28991/hef-2020-01-01-02",
+   "titulo": "Households Drinking Water Sources and Treatment Methods Options in a Regional Irrigation Scheme",
+   "anio": 2020,
+   "revista": "Journal of Human Earth and Future",
+   "citas": 46,
+   "autores": "Emmy C. Kerich"
+  },
+  {
+   "doi": "10.11648/j.bio.20251304.11",
+   "titulo": "Effect of Chlorination and Aloe Gel on Chemical Attributes of Tomato (Solanum lycopersicum L.) Fruits Stored in Horticulture Laboratory of Haramaya University, Ethiopia",
+   "anio": 2025,
+   "revista": "American Journal of Bioscience and Bioengineering",
+   "citas": 0,
+   "autores": "Girma Gutema; Tewodros Bezu; Fikreyohannes Gedamu"
+  },
+  {
+   "doi": "10.3390/tropicalmed11050111",
+   "titulo": "Effectiveness and Sustainability of Water Chlorination in Public Healthcare Services in Guatemala",
+   "anio": 2026,
+   "revista": "Tropical Medicine and Infectious Disease",
+   "citas": 0,
+   "autores": "Paulina Garzaro; Carmen Castillo; Natalie Fahsen"
+  },
+  {
+   "doi": "10.1016/j.wroa.2024.100215",
+   "titulo": "Ensuring microbial water quality for on-site water reuse: Importance of online sensors for reliable operation",
+   "anio": 2024,
+   "revista": "Water Research X",
+   "citas": 13,
+   "autores": "Eva Reynaert; Deepthi Nagappa; Jürg A. Sigrist"
+  },
+  {
+   "doi": "10.3390/su13095066",
+   "titulo": "Wastewater Treatment Costs: A Research Overview through Bibliometric Analysis",
+   "anio": 2021,
+   "revista": "Sustainability",
+   "citas": 41,
+   "autores": "L Valero; Encarnación Moral Pajares; Isabel María Román Sánchez"
+  },
+  {
+   "doi": "10.1016/j.matdes.2021.109682",
+   "titulo": "Development of low cost carbon fibers based on chlorinated polyvinyl chloride(CPVC) for automotive applications",
+   "anio": 2021,
+   "revista": "Materials & Design",
+   "citas": 23,
+   "autores": "Jiyeon Kim; Jaewoong Lee; Chaehyun Jo"
+  },
+  {
+   "doi": "10.9734/jpri/2023/v35i317462",
+   "titulo": "Emerging Drinking Water Borne Diseases: A Review on Types, Sources and Health Precaution",
+   "anio": 2023,
+   "revista": "Journal of Pharmaceutical Research International",
+   "citas": 22,
+   "autores": "Abdulmutalib Alabeed Allaq; Hadi Hamdi Mahdi; Esam Bashir Yahya"
+  },
+  {
+   "doi": "10.1016/j.jhazmat.2023.133364",
+   "titulo": "Residual effects of chlorinated organic pollutants on microbial community and natural redox processes in coastal wetlands",
+   "anio": 2023,
+   "revista": "Journal of Hazardous Materials",
+   "citas": 11,
+   "autores": "Meng Liu; Xin Su; Jing Yuan"
+  },
+  {
+   "doi": "10.1007/s12221-021-0448-5",
+   "titulo": "Development of PET Fabrics Containing N-halamine Compounds with Durable Antibacterial Property",
+   "anio": 2021,
+   "revista": "Fibers and Polymers",
+   "citas": 20,
+   "autores": "Fang Ding; Shumin Zhang; Xuehong Ren"
+  },
+  {
+   "doi": "10.1039/d2ew00803c",
+   "titulo": "The formation of furan-like disinfection byproducts from phenolic precursors",
+   "anio": 2022,
+   "revista": "Environmental Science Water Research & Technology",
+   "citas": 9,
+   "autores": "Marine Diana; María José Farré; Josep Sanchís"
+  },
+  {
+   "doi": "10.3390/app15126668",
+   "titulo": "Operation of a Novel, Gravity-Powered, Small-Scale, Surface Water Treatment Plant and Performance Comparison with a Conventional Mechanized Treatment Plant",
+   "anio": 2025,
+   "revista": "Applied Sciences",
+   "citas": 0,
+   "autores": "Marcin Sawczuk; Przemysław Kowal; Ruth E. Richardson"
+  },
+  {
+   "doi": "10.3390/app10134455",
+   "titulo": "Application of Computational Fluid Dynamics in Chlorine-Dynamics Modeling of In-Situ Chlorination Systems for Cooling Systems",
+   "anio": 2020,
+   "revista": "Applied Sciences",
+   "citas": 5,
+   "autores": "Jongchan Yi; Jonghun Lee; Mohd Amiruddin Fikri"
+  },
+  {
+   "doi": "10.1155/2021/4136379",
+   "titulo": "A Rainwater Harvesting and Treatment System for Domestic Use and Human Consumption in Native Communities in Amazonas (NW Peru): Technical and Economic Validation",
+   "anio": 2021,
+   "revista": "Scientifica",
+   "citas": 15,
+   "autores": "Eli Morales Rojas; Edwin Adolfo Díaz Ortiz; Cesar Augusto Medina Tafur"
+  },
+  {
+   "doi": "10.69940/sld.20260801",
+   "titulo": "Análisis de la calidad del agua en la comunidad indígena Mby’a Guaraní de Tarumandymi, Luque, Paraguay",
+   "anio": 2026,
+   "revista": "UNIDA salud.",
+   "citas": 0,
+   "autores": "Blanca Saturnina Gavilán Servín; Juan Ireneo Barreto Ascona; Hugo Alessandro Ciciolli Almada"
+  },
+  {
+   "doi": "10.1016/j.wroa.2020.100087",
+   "titulo": "Disruptions in loading and aeration impact effluent chlorine demand during biological greywater recycling",
+   "anio": 2021,
+   "revista": "Water Research X",
+   "citas": 5,
+   "autores": "Christopher Ziemba; Pragnya Sharma; Theresa Ahrens"
+  },
+  {
+   "doi": "10.53730/ijhs.v6ns6.12885",
+   "titulo": "Investigation of community based hepatitis a outbreak in a district in Northern Kerala",
+   "anio": 2022,
+   "revista": "International Journal of Health Sciences",
+   "citas": 0,
+   "autores": "S. Ishaque; E. B. Binoy; A. P. Nizar"
+  },
+  {
+   "doi": "10.59298/rijep/2025/412329",
+   "titulo": "Water Purification Technologies: Innovations and Challenges",
+   "anio": 2025,
+   "revista": "RESEARCH INVENTION JOURNAL OF ENGINEERING AND PHYSICAL SCIENCES",
+   "citas": 11,
+   "autores": "Nambi Katu K."
+  },
+  {
+   "doi": "10.1021/acs.est.0c07869",
+   "titulo": "Microbial Contamination of Drinking Water Supplied by Private Wells after Hurricane Harvey",
+   "anio": 2021,
+   "revista": "Environmental Science & Technology",
+   "citas": 50,
+   "autores": "Kelsey J. Pieper; Charles Nathan Jones; William J. Rhoads"
+  },
+  {
+   "doi": "10.35552/anujr.a.38.1.2149",
+   "titulo": "Conceptual Feasibility of a Portable Containerized and Decentralized Wastewater Treatment System for Rural Regions: A Case Study in Palestine",
+   "anio": 2023,
+   "revista": "An-Najah University Journal for Research - A (Natural Sciences)",
+   "citas": 3,
+   "autores": "M. A. A. Sallam; Amal Yaseen; Leena Refai"
+  },
+  {
+   "doi": "10.36106/paripex/7002707",
+   "titulo": "EVALUATION OF LOW-COST HOUSEHOLD WATER PURIFICATION TECHNIQUES FOR RURAL RAJASTHAN",
+   "anio": 2026,
+   "revista": "PARIPEX-INDIAN JOURNAL OF RESEARCH",
+   "citas": 0,
+   "autores": "Jyoti; Swati Ojha"
+  },
+  {
+   "doi": "10.1177/00961442241277170",
+   "titulo": "Water and Waste: A History Reluctant Policymaking in U.S. Cities",
+   "anio": 2024,
+   "revista": "Journal of Urban History",
+   "citas": 1,
+   "autores": "Brian Beach"
+  },
+  {
+   "doi": "10.1371/journal.pwat.0000295",
+   "titulo": "Comparison of passive and manual chlorination in small piped water networks in rural Ghana: Technical performance, ease-of-use, and cost",
+   "anio": 2024,
+   "revista": "PLOS Water",
+   "citas": 5,
+   "autores": "Caroline Delaire; Katherine Marshall; Michal Usowicz"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2023.138212",
+   "titulo": "Occurrence and fate of an emerging drug pollutant and its by-products during conventional and advanced wastewater treatment: Case study of furosemide",
+   "anio": 2023,
+   "revista": "Chemosphere",
+   "citas": 19,
+   "autores": "Sandre Fidji; Nina Huynh; Émilie Caupos"
+  },
+  {
+   "doi": "10.3390/w14203223",
+   "titulo": "Strategies for Controlling Filamentous Bulking in Activated Sludge Wastewater Treatment Plants: The Old and the New",
+   "anio": 2022,
+   "revista": "Water",
+   "citas": 56,
+   "autores": "Thandokazi Sam; Marilize Le Roes‐Hill; Nisreen Hoosain"
+  },
+  {
+   "doi": "10.3390/environments7050036",
+   "titulo": "Life Cycle Assessment of Community-Based Sewer Mining: Integrated Heat Recovery and Fit-For-Purpose Water Reuse",
+   "anio": 2020,
+   "revista": "Environments",
+   "citas": 12,
+   "autores": "Ludwig Paul B. Cabling; Yumi Kobayashi; Evan Davies"
+  },
+  {
+   "doi": "10.3390/infrastructures7070088",
+   "titulo": "A Sustainable Decision Support System for Drinking Water Systems: Resiliency Improvement against Cyanide Contamination",
+   "anio": 2022,
+   "revista": "Infrastructures",
+   "citas": 34,
+   "autores": "Mohammad Gheibi; Mohammad Eftekhari; Mehran Akrami"
+  },
+  {
+   "doi": "10.12912/27197050/184377",
+   "titulo": "Mitigating the Drinking Water Crisis in Developing Regions: A Comprehensive Evaluation of Disinfection Technologies",
+   "anio": 2024,
+   "revista": "Ecological Engineering & Environmental Technology",
+   "citas": 1,
+   "autores": "S Sudarno; Mochamad Agung Wibowo; Pertiwi Andarini"
+  },
+  {
+   "doi": "10.22201/iingen.0718378xe.2026.19.1.89092",
+   "titulo": "Diseño e instalación de un sistema para el tratamiento y reutilización de aguas residuales mediante humedal artificial en una población de Los Altos de Jalisco, México",
+   "anio": 2026,
+   "revista": "Revista AIDIS de Ingeniería y Ciencias Ambientales Investigación desarrollo y práctica",
+   "citas": 0,
+   "autores": "Aldo Antonio Castañeda Villanueva"
+  },
+  {
+   "doi": "10.1155/2021/6669754",
+   "titulo": "Bacteriological and Physicochemical Quality of Drinking Water in Adis Kidame Town, Northwest Ethiopia",
+   "anio": 2021,
+   "revista": "International Journal of Microbiology",
+   "citas": 16,
+   "autores": "Baye Sitotaw; Mulu Geremew"
+  },
+  {
+   "doi": "10.3389/fmicb.2021.647602",
+   "titulo": "Human Fecal Pollution Monitoring and Microbial Risk Assessment for Water Reuse Potential in a Coastal Industrial–Residential Mixed-Use Watershed",
+   "anio": 2021,
+   "revista": "Frontiers in Microbiology",
+   "citas": 31,
+   "autores": "Akechai Kongprajug; Thammanitchpol Denpetkul; Natcha Chyerochana"
+  },
+  {
+   "doi": "10.2166/wh.2022.064",
+   "titulo": "Novel water treatment system in a low-resource community",
+   "anio": 2022,
+   "revista": "Journal of Water and Health",
+   "citas": 3,
+   "autores": "Renata Campos Nogueira; Matteo Nigro; Justin Veuthey"
+  },
+  {
+   "doi": "10.33545/30789109.2025.v2.i1.a.12",
+   "titulo": "Role of community nurses in promoting safe water storage practices in flood-prone villages",
+   "anio": 2025,
+   "revista": "Journal of Hygiene and Community Health Nursing",
+   "citas": 0,
+   "autores": "Farhana Nasreen; Md. Arifullah Hasan; Samira Khatun"
+  },
+  {
+   "doi": "10.1007/s00267-020-01375-5",
+   "titulo": "Infectious Waste Management Strategy during COVID-19 Pandemic in Africa: an Integrated Decision-Making Framework for Selecting Sustainable Technologies",
+   "anio": 2020,
+   "revista": "Environmental Management",
+   "citas": 75,
+   "autores": "Amine Belhadi; Sachin Kamble; Syed Abdul Rehman Khan"
+  },
+  {
+   "doi": "10.3390/w13121673",
+   "titulo": "Evaluation of Microbial Contamination of Groundwater under Different Topographic Conditions and Household Water Treatment Systems in Special Region of Yogyakarta Province, Indonesia",
+   "anio": 2021,
+   "revista": "Water",
+   "citas": 30,
+   "autores": "Indrastuti; Shinobu Kazama; Satoshi Takizawa"
+  },
+  {
+   "doi": "10.1016/j.chemosphere.2022.135087",
+   "titulo": "Non targeted screening of nitrogen containing disinfection by-products in formation potential tests of river water and subsequent monitoring in tap water samples",
+   "anio": 2022,
+   "revista": "Chemosphere",
+   "citas": 21,
+   "autores": "Josep Sanchís; Paula E. Redondo‐Hasselerharm; Cristina M. Villanueva"
+  },
+  {
+   "doi": "10.1016/j.jwpe.2022.103228",
+   "titulo": "Development and economic viability analysis of photovoltaic (PV) energy powered decentralized ultrafiltration of rainwater for potable use",
+   "anio": 2022,
+   "revista": "Journal of Water Process Engineering",
+   "citas": 13,
+   "autores": "SUéLEN REGINA COMINETTI BAú; Matheus Bevegnu; Guilherme Otávio Moraes Giubel"
+  },
+  {
+   "doi": "10.1016/j.sajce.2022.05.003",
+   "titulo": "Assessment of drinking water treatment and disinfection by-products",
+   "anio": 2022,
+   "revista": "South African Journal of Chemical Engineering",
+   "citas": 8,
+   "autores": "Dessalegn Geleta Ebsa; Wakjira Takala Dibaba"
+  },
+  {
+   "doi": "10.2166/wst.2023.086",
+   "titulo": "Effects of graphitic carbon nitride in the formation of disinfection byproducts",
+   "anio": 2023,
+   "revista": "Water Science & Technology",
+   "citas": 2,
+   "autores": "Linjie Ni; Jiaqi Hu; Jie Mao"
+  },
+  {
+   "doi": "10.1007/s13201-020-1178-3",
+   "titulo": "Water quality analysis of Urun-Islampur City, Maharashtra, India",
+   "anio": 2020,
+   "revista": "Applied Water Science",
+   "citas": 26,
+   "autores": "Shrikant Rajendra Kate; Shridhar Kumbhar; Prajkta Jamale"
+  },
+  {
+   "doi": "10.1016/j.jgar.2022.07.008",
+   "titulo": "Concentration and reduction efficiency of vancomycin-resistant heterotrophic bacteria and vanA and vanB genes in wastewater treatment unit processes",
+   "anio": 2022,
+   "revista": "Journal of Global Antimicrobial Resistance",
+   "citas": 7,
+   "autores": "Takashi Furukawa; Tohru Mekata; Mohan Amarasiri"
+  },
+  {
+   "doi": "10.1007/s13762-026-07517-2",
+   "titulo": "Disinfection in municipal wastewater reclamation for industrial applications: a review",
+   "anio": 2026,
+   "revista": "International Journal of Environmental Science and Technology",
+   "citas": 0,
+   "autores": "Alicja Knap-Bałdyga; M. Żubrowska-Sudoł"
+  },
+  {
+   "doi": "10.1016/j.psep.2021.06.024",
+   "titulo": "Evaluation of removal of illicit drugs, pharmaceuticals and caffeine in a wastewater reclamation plant and related health risk for non-potable applications",
+   "anio": 2021,
+   "revista": "Process Safety and Environmental Protection",
+   "citas": 28,
+   "autores": "Camilla Di Marcantonio; Agostina Chiavola; Silvia Paderi"
+  },
+  {
+   "doi": "10.2166/wrd.2023.120",
+   "titulo": "Effectiveness and health risk assessment of drinking water from different sources treated by local household water treatment methods in Bamenda, Cameroon",
+   "anio": 2023,
+   "revista": "Water Reuse",
+   "citas": 5,
+   "autores": "Nkwatoh Therese Ncheuveu; Benard Mingo Yakum; Paul Oto Beseka Itor"
+  },
+  {
+   "doi": "10.1155/2022/9075917",
+   "titulo": "Fractional Derivative and Optimal Control Analysis of Cholera Epidemic Model",
+   "anio": 2022,
+   "revista": "Journal of Mathematics",
+   "citas": 6,
+   "autores": "Kumama Regassa Cheneke; Purnachandra Rao Koya; Geremew Kenassa Edessa"
+  },
+  {
+   "doi": "10.1021/acs.est.1c02121",
+   "titulo": "Mapping the Terrain for Pathogen Persistence and Proliferation in Non-potable Reuse Distribution Systems: Interactive Effects of Biofiltration, Disinfection, and Water Age",
+   "anio": 2021,
+   "revista": "Environmental Science & Technology",
+   "citas": 9,
+   "autores": "Sudeshna Ghosh; Ni Joyce Zhu; Erin Milligan"
+  },
+  {
+   "doi": "10.1016/j.jece.2026.121383",
+   "titulo": "Community characteristics and risks of disinfection residual bacteria (DRB) during intermittent chlorination of stored rainwater",
+   "anio": 2026,
+   "revista": "Journal of environmental chemical engineering",
+   "citas": 0,
+   "autores": "Zhiwen Chen; Xiaobin Liao; Binxiong Hu"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2024.172112",
+   "titulo": "Building size and disinfectant type influence the detection and concentration of Mycobacterium spp. in hot water plumbing",
+   "anio": 2024,
+   "revista": "The Science of The Total Environment",
+   "citas": 5,
+   "autores": "Maura J. Donohue; Jatin H. Mistry"
+  },
+  {
+   "doi": "10.3390/w13213035",
+   "titulo": "Degradation of Chloramphenicol Using UV-LED Based Advanced Oxidation Processes: Kinetics, Mechanisms, and Enhanced Formation of Disinfection By-Products",
+   "anio": 2021,
+   "revista": "Water",
+   "citas": 22,
+   "autores": "Xinlu Qu; Haowei Wu; Tian‐Yang Zhang"
+  },
+  {
+   "doi": "10.1038/s41598-025-25826-3",
+   "titulo": "Enhanced trace detection of haloacetic acids in water using on-line isotachophoresis–capillary zone electrophoresis coupled with liquid–liquid extraction",
+   "anio": 2025,
+   "revista": "Scientific Reports",
+   "citas": 1,
+   "autores": "Massoud Kaykhaii; Marián Masár"
+  },
+  {
+   "doi": "10.1016/j.ejsobi.2026.103852",
+   "titulo": "Contrasting effects of treated wastewater irrigation and Trichoderma inoculation on tomato soil microbiomes",
+   "anio": 2026,
+   "revista": "European Journal of Soil Biology",
+   "citas": 0,
+   "autores": "Raffaella Sabatino; Andrea Di Cesare; Monica Brienza"
+  },
+  {
+   "doi": "10.1016/j.polymer.2024.127350",
+   "titulo": "Characterization of Polyamide Thin Films by Atomic Force Microscopy",
+   "anio": 2024,
+   "revista": "Polymer",
+   "citas": 6,
+   "autores": "Olivia M. McIntee; Nurshaun Sreedhar; Brian C. Welch"
+  },
+  {
+   "doi": "10.3390/org6040052",
+   "titulo": "Anion Transfer Reactions from Chiral Hypervalent Iodine Macrocycles",
+   "anio": 2025,
+   "revista": "Organics",
+   "citas": 0,
+   "autores": "Mina Dumre Pandey; Tahir Awais; Krishna Pandey"
+  },
+  {
+   "doi": "10.1016/j.jece.2026.123321",
+   "titulo": "Microbially derived fluorescent organic matter as a dominant contributor to light attenuation in high-transparency water systems",
+   "anio": 2026,
+   "revista": "Journal of environmental chemical engineering",
+   "citas": 0,
+   "autores": "Zedong Lu; Yuhao Xie; Xing Li"
+  },
+  {
+   "doi": "10.4236/ojmetal.2021.111001",
+   "titulo": "Iron in Water: Study of Iron Removal Kinetics in Chemically Reconstituted Waters: Application to Groundwater of South Pout (PS2 Site)",
+   "anio": 2021,
+   "revista": "Open Journal of Metal",
+   "citas": 3,
+   "autores": "Mamadou Faye; Sambe Falilou Mbacké; Diop El Hadji Moussa"
+  },
+  {
+   "doi": "10.1016/j.envpol.2021.118298",
+   "titulo": "Spatial trends of chlorinated paraffins and dechloranes in air and soil in a tropical urban, suburban, and rural environment",
+   "anio": 2021,
+   "revista": "Environmental Pollution",
+   "citas": 35,
+   "autores": "Maja Nipen; Rolf D. Vogt; Pernilla Bohlin‐Nizzetto"
+  },
+  {
+   "doi": "10.1016/j.scitotenv.2022.157789",
+   "titulo": "Culture and Molecular Methods as Complementary Tools for Water Quality Management",
+   "anio": 2022,
+   "revista": "The Science of The Total Environment",
+   "citas": 5,
+   "autores": "Anna Pinar-Méndez; Belén Galofré; Anicet R. Blanch"
+  },
+  {
+   "doi": "10.1186/s42269-022-00754-8",
+   "titulo": "The effect of sedimentation by chemical coagulants and the rapid sand filters on algal removal at drinking water treatment plants in Egypt",
+   "anio": 2022,
+   "revista": "Bulletin of the National Research Centre/Bulletin of the National Research Center",
+   "citas": 5,
+   "autores": "Adel Hussein Abouzied; Hanan A. S. Hassan"
+  },
+  {
+   "doi": "10.25105/urbanenvirotech.v9i2.24290",
+   "titulo": "Integration of Chromophoric Dissolved Organic Matter Quantification into Water Safety Plans at Urban Conventional Treatment Plants",
+   "anio": 2026,
+   "revista": "INDONESIAN JOURNAL OF URBAN AND ENVIRONMENTAL TECHNOLOGY",
+   "citas": 0,
+   "autores": "Mohamad Rangga Sururi; Mila Dirgawati; Khairunnisa Dwita Lestari"
+  },
+  {
+   "doi": "10.1007/s11356-024-32960-4",
+   "titulo": "Impact of climate change on formation of nitrogenous disinfection by-products. Part II: water blooming and enrichment by humic substances",
+   "anio": 2024,
+   "revista": "Environmental Science and Pollution Research",
+   "citas": 7,
+   "autores": "Argyri Kozari; Spyros Gkelis; Dimitra Voutsa"
+  },
+  {
+   "doi": "10.1016/j.ese.2021.100111",
+   "titulo": "Fabrication of AQ2S/GR composite photosensitizer for the simulated solar light-driven degradation of sulfapyridine",
+   "anio": 2021,
+   "revista": "Environmental Science and Ecotechnology",
+   "citas": 13,
+   "autores": "Shuangyang Zhao; Cheng-Xin Chen; Jie Ding"
+  },
+  {
+   "doi": "10.13074/jent.2026.03.2612061",
+   "titulo": "Recovery of Groundwater Contaminated by Tannery Effluents Using Nanomaterials",
+   "anio": 2026,
+   "revista": "Journal of Environmental Nanotechnology",
+   "citas": 1,
+   "autores": "S Swetha; A K Ramya; K S Berlin Jijo"
+  },
+  {
+   "doi": "10.1016/j.jwpe.2025.107247",
+   "titulo": "Development of rainwater harvesting system using sponge-filled channel and gravity driven ceramic membrane with pre chlorination",
+   "anio": 2025,
+   "revista": "Journal of Water Process Engineering",
+   "citas": 5,
+   "autores": "Toru Miwa; Takahiro Watari; Shoichi Tokunaga"
+  },
+  {
+   "doi": "10.1002/adma.202517293",
+   "titulo": "Holistic Recovery of Spent Lithium‐Ion Batteries by Flash Joule Heating",
+   "anio": 2025,
+   "revista": "Advanced Materials",
+   "citas": 11,
+   "autores": "Shichen Xu; Justin Sharp; Qiming Liu"
+  },
+  {
+   "doi": "10.3391/mbi.2020.11.3.04",
+   "titulo": "Detection and possible elimination of the first recorded population of the zebra mussel (Dreissena polymorpha) in Portugal from a reservoir",
+   "anio": 2020,
+   "revista": "Management of Biological Invasions",
+   "citas": 6,
+   "autores": "David Catita; Mafalda Gama; Rita Azedo"
+  },
+  {
+   "doi": "10.1590/s1413-415220230065",
+   "titulo": "Occurrence of Cryptosporidium oocysts and Giardia cysts in public water supplies in Vitória, ES, Brazil",
+   "anio": 2024,
+   "revista": "Engenharia Sanitaria e Ambiental",
+   "citas": 4,
+   "autores": "Regina de Pinho Keller; R. D. dos Santos; Marcus Andrade Covre"
+  },
+  {
+   "doi": "10.3390/jox14020033",
+   "titulo": "Screening Disinfection Byproducts in Arid-Coastal Wastewater: A Workflow Using GC×GC-TOFMS, Passive Sampling, and NMF Deconvolution Algorithm",
+   "anio": 2024,
+   "revista": "Journal of Xenobiotics",
+   "citas": 4,
+   "autores": "Muhammad Usman Siddiqui; Muhammad Sibtain; Farrukh Ahmad"
+  },
+  {
+   "doi": "10.31590/ejosat.1062252",
+   "titulo": "Removal of Dissolved Organic Matter in Drinking Water Using Active Microorganisms (EM)",
+   "anio": 2022,
+   "revista": "European Journal of Science and Technology",
+   "citas": 1,
+   "autores": "Zehra Gülten Yalçın; Mustafa Dağ; Ercan Aydoğmuş"
+  },
+  {
+   "doi": "10.31814/stce.huce2024-18(2)-01",
+   "titulo": "Assessment of trihalomethanes formation during the treatment of surface water in coastal areas",
+   "anio": 2024,
+   "revista": "Tạp chí Khoa học Công nghệ Xây dựng (KHCNXD) - ĐHXDHN",
+   "citas": 2,
+   "autores": "Pham Thanh Dat; Tran Thi Hien Hoa; Nguyễn Việt Anh"
+  },
+  {
+   "doi": "10.5764/tcf.2020.32.2.111",
+   "titulo": "Preparation and Characterization of Lignin/Chlorinated Polyvinyl Chloride Blended Fibers for Low-cost Carbon Fiber",
+   "anio": 2020,
+   "revista": "Textile Coloration and Finishing",
+   "citas": 1,
+   "autores": "Chaehyun Jo; Sang Oh Lee; Dakyung Kang"
+  },
+  {
+   "doi": "10.4236/oalib.1106003",
+   "titulo": "Removing Antibiotic-Resistant Bacteria (ARB) Carrying Genes (ARGs): Challenges and Future Trends",
+   "anio": 2020,
+   "revista": "OALib",
+   "citas": 45,
+   "autores": "Djamel Ghernaout; Noureddine Ali Elboughdiri"
+  },
+  {
+   "doi": "10.1371/journal.pwat.0000547",
+   "titulo": "Satisfaction and willingness-to-pay for water services in rural northern Ghana: Do we need intermediary steps toward safely managed services?",
+   "anio": 2026,
+   "revista": "PLOS Water",
+   "citas": 2,
+   "autores": "John T. Trimmer; Joyce Kisiangani; Bessy Ewoenam Odame-Boafo"
+  },
+  {
+   "doi": "10.1111/gwmr.12409",
+   "titulo": "High‐Resolution Characterization of a Chlorinated Solvent Impacted Aquifer Using a Passive Profiler",
+   "anio": 2020,
+   "revista": "Groundwater Monitoring & Remediation",
+   "citas": 4,
+   "autores": "Haley A. Schneider; William Andrew Jackson; Paul B. Hatzinger"
+  },
+  {
+   "doi": "10.2166/wh.2024.090",
+   "titulo": "Metagenomic evaluation of bacteria in drinking water using full-length 16S rRNA amplicons",
+   "anio": 2024,
+   "revista": "Journal of Water and Health",
+   "citas": 4,
+   "autores": "William Taylor; Megan Louise Devane; Kathryn Russell"
+  },
+  {
+   "doi": "10.2166/wrd.2025.086",
+   "titulo": "Formation of disinfection by-products due to the leaching of dissolved organic matter from artificial grass and tyre",
+   "anio": 2025,
+   "revista": "Water Reuse",
+   "citas": 0,
+   "autores": "Liting Luo; Quan Zhang; An Liu"
+  },
+  {
+   "doi": "10.25258/ijddt.16.37s.47",
+   "titulo": "A Disinfection System for Portable Shredder Machine",
+   "anio": 2026,
+   "revista": "International Journal of Drug Delivery Technology",
+   "citas": 0,
+   "autores": "R. Thabathi"
+  },
+  {
+   "doi": "10.3390/w12092536",
+   "titulo": "Real-Time Estimation of Disinfection By-Products through Differential UV Absorbance",
+   "anio": 2020,
+   "revista": "Water",
+   "citas": 5,
+   "autores": "Stéphanie Guilherme; Caetano C. Dorea"
+  },
+  {
+   "doi": "10.4236/oalib.1106162",
+   "titulo": "Controlling Disinfection By-Products Formation in Rainwater: Technologies and Trends",
+   "anio": 2020,
+   "revista": "OALib",
+   "citas": 29,
+   "autores": "Djamel Ghernaout; Noureddine Ali Elboughdiri"
+  },
+  {
+   "doi": "10.56519/jfq76v66",
+   "titulo": "OZONIZACIÓN Y CLORACIÓN EN EL TRATAMIENTO DE AGUA POTABLE: UNA REVISIÓN BIBLIOGRÁFICA COMPARATIVA SOBRE EFICIENCIA, FORMACIÓN DE SUBPRODUCTOS Y CUMPLIMIENTO NORMATIVO",
+   "anio": 2026,
+   "revista": "Revista Científica Multidisciplinaria InvestiGo",
+   "citas": 0,
+   "autores": "Lizbeth Fernanda Prieto Bravo; Luis Fernando Sánchez Rezavala; Valery Nohemie Argudo Bajaña"
+  },
+  {
+   "doi": "10.11648/j.fem.20210701.12",
+   "titulo": "Occurrence of Chlorine Resistant Bacteria in Drinking Water Filtration Plants of Rawalpindi City, Pakistan",
+   "anio": 2021,
+   "revista": "Frontiers in Environmental Microbiology",
+   "citas": 1,
+   "autores": "Mehrin Nishad Khan; Aneela Taj; Rashida Bano"
+  },
+  {
+   "doi": "10.52783/cana.v32.5085",
+   "titulo": "Identification of Contaminants Present in Rainwater Collected from Ground Pit and its Removal",
+   "anio": 2025,
+   "revista": "Communications on Applied Nonlinear Analysis",
+   "citas": 0,
+   "autores": "Punjab Singh"
+  },
+  {
+   "doi": "10.2166/washdev.2020.158",
+   "titulo": "Comparative life cycle assessment of four commonly used point-of-use water treatment technologies",
+   "anio": 2020,
+   "revista": "Journal of Water Sanitation and Hygiene for Development",
+   "citas": 10,
+   "autores": "Tara Walsh; Jonathan Mellor"
+  },
+  {
+   "doi": "10.15666/aeer/2005_38333851",
+   "titulo": "CARBONACEOUS DISINFECTION BY-PRODUCTS IN LOW SUVA WATERS: OCCURRENCE, FORMATION POTENTIAL, AND HEALTH RISK ASSESSMENT",
+   "anio": 2022,
+   "revista": "Applied Ecology and Environmental Research",
+   "citas": 4,
+   "autores": "Cihan Özgür; Sehnaz Sule Kaplan Bekaroglu"
+  },
+  {
+   "doi": "10.1021/acs.jpca.5c06048",
+   "titulo": "Heterogeneous Reactions of N 2 O 5 with Nitrate- and Chloride-Containing Solutions: Isotopic Evidence for the Nitration of N 2 O 5",
+   "anio": 2025,
+   "revista": "The Journal of Physical Chemistry A",
+   "citas": 1,
+   "autores": "Thomas F. Derrah; Pascale S. J. Lakey; Steven J. Kregel"
+  }
+ ]
+}
