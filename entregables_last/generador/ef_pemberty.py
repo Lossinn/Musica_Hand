@@ -45,10 +45,10 @@ def contenido(e):
     e.tabla("trl", "Evidencia por nivel de madurez tecnológica.", ["TRL", "Criterio", "Evidencia", "Estado"],
             [["1–2", "Concepto y aplicación formulados", "Documentos del proyecto", "Cumplido"], ["3", "Prueba de concepto analítica", "Modelos y fórmulas implementados", "Cumplido"],
              ["4", "Validación de componentes en laboratorio", "8 baterías sin fallos; mediciones repetibles", "Cumplido"], ["5", "Validación en entorno relevante", "Piloto con niños en aula", "Pendiente"], ["6", "Prototipo en entorno relevante", "Uso por docentes y niños", "Pendiente"]],
-            [0.9, 3.0, 3.2, 1.4], size=8)
+            [1.0, 2.7, 3.0, 1.8], size=8)
     e.P("Se propone TRL 4. La evidencia a favor es que los componentes funcionan integrados en una aplicación ejecutable y que sus mediciones son repetibles. En contra de un nivel superior, ningún componente se validó en el entorno de uso, con niños, cámaras y luz reales.")
     e.sub("Condiciones previas al piloto")
-    e.figura("flujo", "flujo_condiciones.png", "Condiciones previas al piloto, en orden. Verde: cumplido; naranja: pendiente.", 7.6)
+    e.figura("flujo", "flujo_condiciones.png", "Condiciones previas al piloto, en orden. Verde: cumplida; naranja: pendientes.", 7.6)
 
     e.sec("Descripción de datos y análisis de resultados")
     e.sub("Pruebas y mediciones")
@@ -69,7 +69,7 @@ def contenido(e):
     e.sub("Protocolo del piloto")
     e.tabla("fases", "Fases propuestas para el piloto.", ["Fase", "Contenido", "Responsable"],
             [["1", "Aprobación ética y autorización de la institución", "Comité y equipo"], ["2", "Consentimiento de acudientes y asentimiento de los niños", "Equipo e institución"], ["3", "Medición de latencia e iluminación con el equipo del aula", "Equipo"],
-             ["4", "Medición inicial, sesiones con la herramienta y medición final; grupo con método tradicional", "Docente titular"], ["5", "Registro de notas falsas y señas repetidas con niños; opinión del docente", "Equipo y docente"]], [0.9, 5.3, 2.3], size=8)
+             ["4", "Medición inicial, sesiones con la herramienta y medición final; grupo con método tradicional", "Docente titular"], ["5", "Registro de notas falsas y señas repetidas con niños; opinión del docente", "Equipo y docente"]], [1.1, 5.0, 2.4], size=8)
     e.P("Con ese diseño se podría pasar de TRL 4 a TRL 5 y solo entonces hablar de efecto sobre el aprendizaje.")
 
     e.sub("Trazabilidad de las cifras")

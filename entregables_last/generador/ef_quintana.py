@@ -54,8 +54,9 @@ def contenido(e):
     e.P("Con la ganancia $g_i=\\eta_i\\sum_{s\\in S_i}(1-\\mu_s)/\\sqrt{|S_i|}$ y la fatiga $f_i=(d_i/D)(0{,}5+\\mathrm{dif}_i)$, el problema es:")
     e.eq("obj", r"\max\ \sum_{i\in A}\big(\alpha_1g_i+\alpha_2r_i+\alpha_3m_i-\alpha_4f_i\big)\,x_i")
     e.sub("Restricciones")
-    e.eq("res", r"\begin{aligned}\sum_i d_ix_i&\le T_{\max}\\ \sum_i x_i&=K\\ x_i&\le a_i\\ \sum_{i\in G}x_i&\ge1\\ \sum_i\mathrm{dif}_ix_i&\le0{,}72K\\ \sum_{i:\,s\in S_i}x_i&\le2\quad\forall s\in S\\ \sum_{i\in V}x_i&\ge1\end{aligned}")
-    e.P("Las restricciones fijan el tiempo total, el tamaño de la sesión, los prerrequisitos, al menos una actividad lúdica, una dificultad media acotada, un máximo de dos actividades por habilidad y la inclusión de un repaso vencido si existe. El problema se resuelve con el solucionador CBC mediante PuLP y, "
+    e.B([r"Tiempo total: $\sum_i d_i x_i\le T_{\max}$.", r"Tamaño de la sesión: $\sum_i x_i=K$.", r"Prerrequisitos: $x_i\le a_i$ para toda actividad $i$.", r"Una actividad lúdica como mínimo: $\sum_{i\in G}x_i\ge 1$.",
+         r"Dificultad media acotada: $\sum_i \mathrm{dif}_i x_i\le 0{,}72\,K$.", r"A lo sumo dos actividades por habilidad: $\sum_{i:\,s\in S_i}x_i\le 2$ para toda $s\in S$.", r"Un repaso vencido: $\sum_{i\in V}x_i\ge 1$."])
+    e.P("Las restricciones anteriores fijan el tiempo total, el tamaño de la sesión, los prerrequisitos, una actividad lúdica como mínimo, una dificultad media acotada, un máximo de dos actividades por habilidad y la inclusión de un repaso vencido si existe. El problema se resuelve con el solucionador CBC mediante PuLP y, "
         "si este no está disponible, por enumeración exhaustiva mientras $\\binom{|A|}{K}\\le 4\\times10^{5}$, lo que entrega el óptimo exacto.")
 
     e.sec("Descripción de datos y análisis de resultados")
@@ -67,7 +68,7 @@ def contenido(e):
         "Se resolvió por enumeración exhaustiva de las $\\binom{12}{4}=495$ combinaciones; de ellas, 180 son factibles. Es una instancia de juguete que permite ver el comportamiento del modelo, no una predicción sobre la aplicación real.")
     cat = D["catalogo"]
     e.tabla("cat", "Instancia ilustrativa: actividades candidatas.", ["N.º", "Actividad", "min", "Dif.", "Habilidades"],
-            [[str(a["i"]), a["nombre"], str(a["d"]), f(a["dif"], 2), ", ".join(a["hab"])] for a in cat], [0.8, 3.2, 0.8, 0.9, 3.6], size=8)
+            [[str(a["i"]), a["nombre"], str(a["d"]), f(a["dif"], 2), ", ".join(a["hab"])] for a in cat], [0.9, 3.0, 0.9, 1.0, 2.7], size=8)
     b = ESC["Base"]
     e.P(f"La sesión óptima del caso base está formada por las actividades {', '.join(str(i) for i in b['sesion'])} ({'; '.join(b['nombres'])}), dura {b['minutos']} minutos y tiene un valor objetivo de {f(b['obj'], 4)}. Incluye las dos habilidades con repaso vencido y una actividad lúdica, y no toca más de dos veces ninguna habilidad.")
     e.sub("Análisis de sensibilidad")
@@ -79,7 +80,7 @@ def contenido(e):
             filas.append([n, "Infactible", "—", "—"])
         else:
             filas.append([n, f(r["obj"], 3), ",".join(str(i) for i in r["sesion"]), str(r["factibles"])])
-    e.tabla("sens", "Sensibilidad de la sesión óptima en la instancia ilustrativa.", ["Escenario", "Objetivo", "Sesión", "Factibles"], filas, [3.9, 1.5, 1.8, 1.3], alinear=["l", "r", "l", "r"], size=8)
+    e.tabla("sens", "Sensibilidad de la sesión óptima en la instancia ilustrativa.", ["Escenario", "Objetivo", "Sesión", "Factibles"], filas, [3.3, 1.4, 1.7, 1.6], alinear=["l", "r", "l", "r"], size=8)
     e.P("Tres hallazgos se desprenden del análisis. En primer lugar, la sesión es estable ante los pesos del repaso y de la fatiga: al duplicarlos cambia el valor del objetivo, pero no las actividades elegidas. Solo al duplicar el peso de la ganancia la sesión pasa a {3, 6, 9, 11}, que tiene más actividades de dificultad media y alta. "
         "En segundo lugar, las restricciones de tiempo pueden hacer el problema infactible: con 16 minutos no existe una sesión de cuatro actividades que cumpla todas las reglas, porque la combinación factible más corta dura 17 minutos. Un sistema real debería detectar esa situación y relajar una restricción, por ejemplo reducir $K$. "
         "En tercer lugar, algunas restricciones no ligan: la exigencia de una actividad lúdica no cambió la solución, porque la óptima ya la incluía, y bajar la dificultad media máxima a 0,50 solo redujo el número de combinaciones factibles de 180 a 81. Con un niño más avanzado, la sesión cambia una actividad.")

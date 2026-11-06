@@ -51,7 +51,8 @@ def contenido(e):
     e.P("Sean $p_0,\\dots,p_{20}$ los 21 puntos de una mano, con $p_0$ en la muñeca. La escala de referencia es la distancia de la muñeca al nudillo del dedo medio:")
     e.eq("sigma", r"\sigma=\lVert p_9-p_0\rVert")
     e.P("La curvatura de cada dedo, con cadena de articulaciones $(a,b,c,d)$, es una razón entre longitudes y por eso no cambia con la escala, la traslación ni la rotación:")
-    e.eq("kappa", r"\kappa=\operatorname{clip}\!\left(\frac{\dfrac{\lVert p_d-p_a\rVert}{\lVert p_b-p_a\rVert+\lVert p_c-p_b\rVert+\lVert p_d-p_c\rVert}-0{,}35}{0{,}65},\,0,\,1\right)")
+    e.eq("ratio", r"\rho_f=\frac{\lVert p_d-p_a\rVert}{\lVert p_b-p_a\rVert+\lVert p_c-p_b\rVert+\lVert p_d-p_c\rVert}")
+    e.eq("kappa", r"\kappa=\operatorname{clip}\!\left(\frac{\rho_f-0{,}35}{0{,}65},\,0,\,1\right)")
     e.P("La apertura entre dedos contiguos usa los vectores unitarios $u_i$ del nudillo a la yema, y la distancia del pulgar a cada yema se normaliza con $\\sigma$:")
     e.eq("alpha", r"\alpha_i=\frac{1}{\pi}\arccos\langle u_i,u_{i+1}\rangle")
     e.eq("tau", r"\tau_j=\frac{1}{3}\operatorname{clip}\!\left(\frac{\lVert p_{t_j}-p_4\rVert}{\sigma},\,0,\,3\right)")
@@ -84,7 +85,7 @@ def contenido(e):
     for a in A:
         n, v = a["nuevo"], a["v1"]
         filas.append([f(a["ruido"], 2), f"{f(n['pct'])} ({f(n['ic95_lo'])}–{f(n['ic95_hi'])})", f"{f(v['pct'])} ({f(v['ic95_lo'])}–{f(v['ic95_hi'])})"])
-    e.tabla("acierto", "Señas válidas reconocidas (%), con IC de Wilson al 95 %, sobre 480 señas por nivel de ruido.", ["Ruido σ", "Descriptor propuesto", "Método inicial"], filas, [1.3, 3.6, 3.6], alinear=["l", "r", "r"])
+    e.tabla("acierto", "Señas válidas reconocidas (%), con IC de Wilson al 95 %, sobre 480 señas por nivel de ruido.", ["Ruido σ", "Descriptor propuesto", "Método inicial"], filas, [1.9, 3.3, 3.3], alinear=["l", "r", "r"])
     e.P(f"Hasta un ruido de 0,03 el descriptor propuesto reconoce todas las señas; con 0,06 llega a {f(A[2]['nuevo']['pct'])} % y con 0,09 a {f(A[3]['nuevo']['pct'])} % (IC 95 %: {f(A[3]['nuevo']['ic95_lo'])} a {f(A[3]['nuevo']['ic95_hi'])} %). "
         "El método inicial acierta siempre, y esa cifra no debe leerse como una ventaja: responde a toda postura con la nota más parecida, de modo que no puede equivocarse por omisión. El cuadro siguiente muestra el costo de ese comportamiento.")
     e.sub("Posturas que no son seña")
@@ -100,8 +101,9 @@ def contenido(e):
     e.sub("Separabilidad de las señas y latencia")
     e.P(f"Con la calibración real, {MX['pares_sobre_0_65']} de los {MX['pares_ordenados']} pares ordenados de notas distintas ({MX['pares_unicos_sobre_0_65']} pares no ordenados de 28) superan una similitud coseno de 0,65, el umbral del método inicial; el par "
         f"más parecido es {MX['max_cos'][0]}–{MX['max_cos'][1]}, con {f(MX['max_cos'][2], 3)}. Con el descriptor propuesto, la distancia entre notas distintas va de {f(MX['dist_min_entre_notas'], 3)} a {f(MX['dist_max_entre_notas'], 3)}, lo que ajusta la temperatura a $T={f(MX['temperatura'], 3)}$ según la ecuación {{eq:temp}}. "
-        "En el método inicial, dos nubes de puntos con forma de mano siempre se parecen, y por eso un umbral fijo de similitud no separa notas; el descriptor traslada la comparación a magnitudes que sí cambian de una seña a otra ({fig:matriz}).")
-    e.figura("matriz", "matriz_similitud.png", "Matrices 8 × 8 de las señas calibradas: (a) similitud coseno del método inicial; (b) distancia por bloques del descriptor propuesto.", 16.0, ancha=True)
+        "En el método inicial, dos nubes de puntos con forma de mano siempre se parecen, y por eso un umbral fijo de similitud no separa notas; el descriptor traslada la comparación a magnitudes que sí cambian de una seña a otra ({fig:matriz} y {fig:matriz2}).")
+    e.figura("matriz", "matriz_cos.png", "(a) Similitud coseno entre las ocho señas calibradas, método inicial.", 7.8)
+    e.figura("matriz2", "matriz_dist.png", "(b) Distancia por bloques entre las ocho señas calibradas, descriptor propuesto.", 7.8)
     e.P(f"El descriptor y el clasificador tardaron {f(LT['media_ms'], 2)} ms por fotograma en promedio (percentil 95: {f(LT['p95_ms'], 2)} ms; máximo: {f(LT['max_ms'], 2)} ms; {LT['reps']} repeticiones, un solo equipo). La cifra excluye captura, rastreo y dibujo en pantalla.")
     e.sub("Sensibilidad de los umbrales de aceptación", "sens")
     e.P("Para saber qué parte de la regla de aceptación controla el compromiso entre acertar y abstenerse, se repitió el protocolo anterior con los mismos datos y semillas variando un umbral por vez, mientras los otros dos permanecían en su valor por defecto. "

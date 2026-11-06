@@ -55,7 +55,7 @@ def contenido(e):
     e.tabla("rm", "Cifras reportadas frente a cifras medidas.", ["Cifra", "Reportado", "Medido", "Estado"],
             [["Notas falsas, 640 posturas", "8 %", f"{f(FPG['pct'])} % (51 de 640)", "Reproducida"], ["Latencia descriptor y clasificador", "2,3 ms", f"{f(LT['media_ms'], 2)} ms", "No coincide; otro equipo"],
              ["Tiempo para asignar actividades", "38 ms", "40 ms (una sesión)", "Mismo orden"], ["Precisión en ocho gestos", "> 94,2 %", f"{f(A[0]['nuevo']['pct'], 0)} % a {f(A[3]['nuevo']['pct'])} % según el ruido", "No comparable"], ["Fotogramas por segundo", "30", "No medido", "No medida"]],
-            [2.7, 1.3, 2.6, 1.9], size=8)
+            [2.5, 1.5, 2.5, 2.0], size=8)
     e.P(f"La tasa de notas falsas se reproduce con precisión: {f(FPG['pct'])} % frente al 8 % reportado, y no depende de una semilla favorable, porque con 30 semillas distintas la media fue de {f(RB['media'])} % y el rango, de {f(RB['min'])} a {f(RB['max'])} % ({{fig:rm}}). "
         f"La latencia medida, de {f(LT['media_ms'], 2)} ms, es menor que la reportada, pero no puede decirse que la contradiga: el documento previo midió en otro equipo y no consta que con el mismo alcance. Ninguna de las dos incluye la captura de la cámara. El tiempo de 40 ms del optimizador es del mismo orden que el reportado, aunque proviene de una sola sesión.")
     e.figura("rm", "reportado_medido.png", "(a) Tasa de notas falsas medida con 30 semillas (media y rango) frente al 8 % reportado. (b) Latencia reportada y medida.", 8.3)

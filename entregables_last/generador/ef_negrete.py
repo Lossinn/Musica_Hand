@@ -56,8 +56,8 @@ def contenido(e):
     e.P("El ancho total es $2h_i$, con piso $W_{\\min}$ en el código de 480 ms; antes de la línea hay $1{,}15\\,h_i$ y después $0{,}85\\,h_i$, lo que da un 57,5 % del ancho antes y un 42,5 % después.")
     e.sub("Puntaje y combo")
     e.P("El puntaje por nota es de 100, 70 o 50 puntos según el error temporal (perfecto, bien o vale) y se multiplica por un factor de combo con tope:")
-    e.eq("combo", r"\text{puntos}_i=b_i\cdot\min\!\left(1+0{,}5\left\lfloor \frac{c}{10}\right\rfloor,\ 4\right),\qquad b_i\in\{100,70,50\}")
-    e.P("donde $c$ es el número de aciertos seguidos. El factor llega al tope ×4 con 60 aciertos consecutivos.")
+    e.eq("combo", r"\text{puntos}_i=b_i\cdot\min\!\left(1+0{,}5\left\lfloor \frac{c}{10}\right\rfloor,\ 4\right)")
+    e.P("donde $b_i$ toma los valores 100, 70 o 50 y $c$ es el número de aciertos seguidos. El factor llega al tope ×4 con 60 aciertos consecutivos.")
     e.tabla("param", "Parámetros del motor temporal.", ["Parámetro", "Valor", "Origen"],
             [["Periodo refractario", "0,45 s", "Código"], ["Suelta", "6 fotogramas", "Código (doc.: 2)"], ["Ventana de votación", "1 fotograma", "Por defecto"],
              ["Piso de la ventana $W_{\\min}$", "480 ms", "Código (doc.: 380)"], ["Fracción de $g$ en la ventana", "0,85", "Código"], ["Reparto antes/después", "1,15 y 0,85", "Código"],
