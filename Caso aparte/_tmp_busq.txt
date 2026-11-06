@@ -1,0 +1,8 @@
+{'fecha': '2026-11-06', 'ecuacion': '(chlorination OR chlorinator OR chlorine OR chlorinators) AND (passive OR "in-line" OR inline OR dispenser OR "tablet" OR "gravity-fed" OR "gravity-driven") AND (rural OR community OR household OR "low-cost" OR "point-of-collection" OR "point-of-use")', 'fuente': 'OpenAlex API', 'identificados_total_sin_filtros': 328, 'identificados_ventana': 164, 'tras_filtros_tipo_idioma_doi': 123, 'cribados_titulo_con_chlorin': 38} 7
+1 2024 | Assessment of a local and low-cost passive in-line chlorination device in rural Guatemala | PLOS Water | 10.1371/journal.pwat.0000255
+2 2022 | Evaluation of System-Level, Passive Chlorination in Gravity-Fed Piped Water Systems in Rural Nepal | Environmental Science & Tech | 10.1021/acs.est.2c03133
+3 2023 | Performance of Community Water Board-Managed Passive In-Line Chlorinators Supported by a Circuit Rider Program in Rural  | ACS ES&T Water | 10.1021/acsestwater.3c00425
+4 2026 | In-line chlorination for drinking water in rural Odisha, India: A randomized controlled implementation trial | PLOS Water | 10.1371/journal.pwat.0000440
+5 2020 | Effectiveness of water chlorination programs along the emergency-transition-post-emergency continuum: Evaluations of buc | Water Research | 10.1016/j.watres.2020.115854
+6 2026 | Water quality at the point of consumption and child health after installing in-line chlorination with electrolysis in Et | PLOS Water | 10.1371/journal.pwat.0000575
+7 2026 | Effectiveness and Sustainability of Water Chlorination in Public Healthcare Services in Guatemala | Tropical Medicine and Infect | 10.3390/tropicalmed11050111
