@@ -169,7 +169,7 @@ def main():
         import pymupdf
         nart = len(pymupdf.open(str(docx_path.with_suffix(".pdf"))))
         art_txt = docx_path.with_suffix(".txt").read_text(encoding="utf-8")
-        docx_path.with_suffix(".txt").rename(carpeta / "05_Evidencia" / f"texto_articulo_{prim}.txt")
+        shutil.move(str(docx_path.with_suffix(".txt")), str(carpeta / "05_Evidencia" / f"texto_articulo_{prim}.txt"))
         art_txt_ = (carpeta / "05_Evidencia" / f"texto_articulo_{prim}.txt").read_text(encoding="utf-8")
         # título
         titulo = next(x for x in art_txt_.split("\n\n") if x.startswith("[Título art]"))[len("[Título art] "):]
