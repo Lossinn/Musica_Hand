@@ -1,0 +1,334 @@
+{
+ "catalogo": [
+  {
+   "i": 1,
+   "nombre": "Imitar DO–RE",
+   "d": 4,
+   "dif": 0.25,
+   "hab": [
+    "DO",
+    "RE"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 2,
+   "nombre": "Eco de notas",
+   "d": 5,
+   "dif": 0.35,
+   "hab": [
+    "RE",
+    "MI"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 3,
+   "nombre": "Escalera ascendente",
+   "d": 6,
+   "dif": 0.45,
+   "hab": [
+    "DO",
+    "RE",
+    "MI",
+    "FA"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 4,
+   "nombre": "La nota escondida",
+   "d": 5,
+   "dif": 0.4,
+   "hab": [
+    "MI",
+    "FA"
+   ],
+   "tipo": "lúdica"
+  },
+  {
+   "i": 5,
+   "nombre": "Canción corta A",
+   "d": 7,
+   "dif": 0.55,
+   "hab": [
+    "MI",
+    "FA",
+    "SOL"
+   ],
+   "tipo": "lúdica"
+  },
+  {
+   "i": 6,
+   "nombre": "Mini-reto FA–SOL",
+   "d": 4,
+   "dif": 0.5,
+   "hab": [
+    "FA",
+    "SOL"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 7,
+   "nombre": "Pares de notas",
+   "d": 5,
+   "dif": 0.6,
+   "hab": [
+    "SOL",
+    "LA"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 8,
+   "nombre": "Canción corta B",
+   "d": 8,
+   "dif": 0.7,
+   "hab": [
+    "SOL",
+    "LA",
+    "SI"
+   ],
+   "tipo": "lúdica"
+  },
+  {
+   "i": 9,
+   "nombre": "Memoria de señas",
+   "d": 5,
+   "dif": 0.45,
+   "hab": [
+    "DO",
+    "MI",
+    "SOL"
+   ],
+   "tipo": "lúdica"
+  },
+  {
+   "i": 10,
+   "nombre": "Subir hasta SI",
+   "d": 6,
+   "dif": 0.8,
+   "hab": [
+    "LA",
+    "SI"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 11,
+   "nombre": "Cierre en DO agudo",
+   "d": 4,
+   "dif": 0.65,
+   "hab": [
+    "SI",
+    "DO4"
+   ],
+   "tipo": "guiada"
+  },
+  {
+   "i": 12,
+   "nombre": "Repaso DO–RE–MI",
+   "d": 5,
+   "dif": 0.3,
+   "hab": [
+    "DO",
+    "RE",
+    "MI"
+   ],
+   "tipo": "guiada"
+  }
+ ],
+ "mu": {
+  "DO": 0.9,
+  "RE": 0.8,
+  "MI": 0.55,
+  "FA": 0.35,
+  "SOL": 0.3,
+  "LA": 0.2,
+  "SI": 0.1,
+  "DO4": 0.05
+ },
+ "escenarios": {
+  "Base": {
+   "obj": 2.656245352244459,
+   "sesion": [
+    1,
+    2,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 180,
+   "cambia": []
+  },
+  "Peso del repaso ×2": {
+   "obj": 3.9162453522444594,
+   "sesion": [
+    1,
+    2,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 180,
+   "cambia": []
+  },
+  "Peso de la fatiga ×2": {
+   "obj": 2.362912018911126,
+   "sesion": [
+    1,
+    2,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 180,
+   "cambia": []
+  },
+  "Peso de la ganancia ×2": {
+   "obj": 3.960965979759855,
+   "sesion": [
+    3,
+    6,
+    9,
+    11
+   ],
+   "nombres": [
+    "Escalera ascendente",
+    "Mini-reto FA–SOL",
+    "Memoria de señas",
+    "Cierre en DO agudo"
+   ],
+   "minutos": 19,
+   "factibles": 180,
+   "cambia": [
+    1,
+    2,
+    3,
+    11
+   ]
+  },
+  "Tiempo máximo 16 min": {
+   "factible": 0
+  },
+  "Tiempo máximo 14 min": {
+   "factible": 0
+  },
+  "Dificultad media máxima 0,50": {
+   "obj": 2.656245352244459,
+   "sesion": [
+    1,
+    2,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 81,
+   "cambia": []
+  },
+  "Sesión de K = 3": {
+   "obj": 2.5313750041856107,
+   "sesion": [
+    1,
+    2,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Memoria de señas"
+   ],
+   "minutos": 14,
+   "factibles": 104,
+   "cambia": [
+    6
+   ]
+  },
+  "Sesión de K = 5": {
+   "obj": 2.7473584116958407,
+   "sesion": [
+    1,
+    2,
+    6,
+    9,
+    11
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas",
+    "Cierre en DO agudo"
+   ],
+   "minutos": 22,
+   "factibles": 122,
+   "cambia": [
+    11
+   ]
+  },
+  "Sin exigir actividad lúdica": {
+   "obj": 2.656245352244459,
+   "sesion": [
+    1,
+    2,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "Eco de notas",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 232,
+   "cambia": []
+  },
+  "Niño más avanzado (+0,2)": {
+   "obj": 2.4693603459635356,
+   "sesion": [
+    1,
+    4,
+    6,
+    9
+   ],
+   "nombres": [
+    "Imitar DO–RE",
+    "La nota escondida",
+    "Mini-reto FA–SOL",
+    "Memoria de señas"
+   ],
+   "minutos": 18,
+   "factibles": 180,
+   "cambia": [
+    2,
+    4
+   ]
+  }
+ }
+}
