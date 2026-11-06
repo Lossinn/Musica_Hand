@@ -11,7 +11,7 @@ import docx
 import pypandoc
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT, WD_BREAK
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT, WD_BREAK, WD_LINE_SPACING
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor, Emu
@@ -160,7 +160,7 @@ class Escrito:
         d = self.d
         st = d.styles["Normal"]; st.font.name = FUENTE; st.font.size = Pt(10)
         st.element.rPr.rFonts.set(qn("w:eastAsia"), FUENTE)
-        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = Pt(12)
+        pf = st.paragraph_format; pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = Pt(12); pf.line_spacing_rule = WD_LINE_SPACING.AT_LEAST
         s = d.sections[0]
         s.page_width = Cm(21.59); s.page_height = Cm(27.94)
         s.left_margin = s.right_margin = Cm(2.0); s.top_margin = Cm(2.0); s.bottom_margin = Cm(2.0)
@@ -339,6 +339,7 @@ class Escrito:
         r = c1.paragraphs[0].add_run(f"({self.n_eq})"); _fuente(r, 10)
         for c in (c0, c1):
             c.paragraphs[0].paragraph_format.space_before = Pt(2); c.paragraphs[0].paragraph_format.space_after = Pt(2)
+            c.paragraphs[0].paragraph_format.line_spacing = 1.0
         t.rows[0].cells[0].vertical_alignment = 1
         self._sin_bordes(t)
         sp = self.d.add_paragraph(); sp.paragraph_format.line_spacing = Pt(3)

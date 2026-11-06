@@ -85,7 +85,6 @@ def contenido(e):
     autores = ["Antolin De Jesús Vitola-Montes, Isaías José Petro-Rodríguez", "Andrés Julián Negrete-Pacheco, Juliana Esther Carrascal-Hernández",
                "Angel Quintana-Jiménez, Alejandro Pemberty-Vergara", "Juan Diego Guerra-Gómez, Cristian Javier Cano-Mogollón"]
     afil = ["Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia · Asignatura Gestión Tecnológica",
-            "Estudiantes: antolin.vitola@upb.edu.co · isaias.petro@upb.edu.co · andresj.negretep@upb.edu.co · juliana.carrascal@upb.edu.co · angel.quintana@upb.edu.co · alejandro.pemberty@upb.edu.co · juan.guerra@upb.edu.co",
             "Cristian Javier Cano-Mogollón: Docente Titular, Facultad de Ingeniería Industrial; Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE); Hub Industrial Solution (HIS) · cristian.cano@upb.edu.co"]
     e.titulo_bloque(titulos, autores, afil, ns["RES_ES"], ns["KW_ES"], ns["RES_EN"], ns["KW_EN"])
     exec(CODIGO_CUERPO, ns)
