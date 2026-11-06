@@ -84,14 +84,6 @@ T("Hand Sing Kids lleva una idea pedagógica antigua, enseñar las notas con las
 H1("Recomendaciones")
 T("(1) Diseñar el piloto comparativo con una institución y un docente aliados. (2) Medir la latencia de extremo a extremo y las condiciones de iluminación necesarias. (3) Probar si un docente puede calibrar la herramienta sin apoyo técnico. "
   "(4) Obtener la aprobación ética y el consentimiento informado antes de cualquier recolección de datos de menores.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): el primer autor formuló la justificación pedagógica y las hipótesis de impacto y redactó el borrador; los demás autores aportaron el desarrollo del software, "
-         "las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó el manuscrito.",
-    fin="No se recibió financiación externa para este trabajo. [Por confirmar.]",
-    conf="Los autores declaran no tener conflictos de intereses. [Por confirmar.]",
-    cons="No aplica; no se recolectaron datos de niños. La prueba piloto requerirá consentimiento informado de los acudientes.",
-    irb="No aplica para esta evaluación técnica de laboratorio; el piloto con menores requerirá aprobación de un comité de ética.",
-    datos="El código, la calibración de referencia (solo coordenadas, sin imágenes), las pruebas y los scripts de evaluación están en el repositorio del proyecto; las salidas numéricas están en la carpeta de análisis de la entrega.",
-    ia="Se utilizó el asistente Claude (Anthropic) como apoyo en el análisis del código, la ejecución de las mediciones, la verificación de referencias y la redacción de borradores; los autores revisaron y asumen el contenido.",
-    en="Author Contributions: the first author formulated the pedagogical rationale and the impact hypotheses and drafted the manuscript; the other authors contributed software development, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this laboratory evaluation; a pilot with minors will require both. Data and code: project repository."))
+from decl_personas import DECL
+declaraciones(DECL["vitola"])
 cierre(autores, TITULO_ES, "Las manos como instrumento: Hand Sing Kids en Montería y Córdoba", Path(sys.argv[1]))

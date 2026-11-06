@@ -4,21 +4,21 @@
 
 [Nombre autores] Isaías José Petro-Rodríguez^1}^*}, Antolin De Jesús Vitola-Montes^2}, Andrés Julián Negrete-Pacheco^3}, Juliana Esther Carrascal-Hernández^4}, Angel Quintana-Jiménez^5}, Alejandro Pemberty-Vergara^6}, Juan Diego Guerra-Gómez^7}, Cristian Javier Cano-Mogollón^8}
 
-[Normal] ^1} Autor 1: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+[Normal] ^1} Isaías José Petro-Rodríguez. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: isaias.petro@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+[Normal] ^2} Antolin De Jesús Vitola-Montes. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: antolin.vitola@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^3} Autor 3: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+[Normal] ^3} Andrés Julián Negrete-Pacheco. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: andresj.negretep@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^4} Autor 4: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+[Normal] ^4} Juliana Esther Carrascal-Hernández. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: juliana.carrascal@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^5} Autor 5: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+[Normal] ^5} Angel Quintana-Jiménez. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: angel.quintana@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^6} Autor 6: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+[Normal] ^6} Alejandro Pemberty-Vergara. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: alejandro.pemberty@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^7} Autor 7: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+[Normal] ^7} Juan Diego Guerra-Gómez. Universidad Pontificia Bolivariana, Seccional Montería (Córdoba, Colombia). Correo: juan.guerra@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón, Docente Titular de la Facultad de Ingeniería Industrial; SILOGE (Grupo de Investigación en Simulación, Logística y Gestión de Operaciones) y HIS (Hub Industrial Solution), UPB Seccional Montería, Colombia. cristian.cano@upb.edu.co. ORCID: pendiente.
 
 [Normal] ^*} Autor de correspondencia: Isaías José Petro-Rodríguez (isaias.petro@upb.edu.co).
 
@@ -142,37 +142,37 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (CRediT, por confirmar por el equipo): el primer autor planteó la evaluación del reconocedor, ejecutó las mediciones y redactó el borrador; los demás autores participaron en el desarrollo del software, la revisión bibliográfica y la revisión del texto; Cristian Javier Cano-Mogollón supervisó y revisó el manuscrito.
+[Normal] Contribuciones (CRediT; por confirmar). I. J. Petro-Rodríguez diseñó la evaluación del reconocedor, ejecutó las mediciones y redactó el borrador. Los demás autores aportaron código, bibliografía y revisión; C. J. Cano-Mogollón supervisó y corrigió el manuscrito.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] Esta investigación no recibió financiación externa. [Por confirmar por el equipo.]
+[Normal] Sin fondos externos. [Por confirmar por el equipo.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores declaran que no existen conflictos de intereses relacionados con esta publicación. [Por confirmar.]
+[Normal] Los autores no reportan conflictos de intereses. [Por confirmar.]
 
 [Heading 3] Consentimiento informado
 
-[Normal] No aplica. La calibración de referencia contiene solo coordenadas de puntos de la mano de una persona, sin imágenes, y no se recolectaron datos de niños.
+[Normal] No corresponde: la calibración guarda solo coordenadas de la mano de una persona, sin imágenes, y no se recogieron datos de niños.
 
 [Heading 3] Declaración de la Junta de Revisión Institucional
 
-[Normal] No aplica, porque el estudio es una evaluación técnica de laboratorio. Una prueba con niños requerirá aprobación ética y consentimiento de los acudientes.
+[Normal] No corresponde a un estudio técnico de laboratorio; cualquier prueba con niños necesitará aprobación ética y permiso de los acudientes.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] El código, la calibración de referencia, las pruebas y los scripts de evaluación están en el repositorio del proyecto. Las salidas de las mediciones (resultados_vision.json) y la verificación de referencias están en la carpeta de análisis de la entrega.
+[Normal] Repositorio del proyecto (código, calibración, pruebas) y carpeta de análisis (resultados_vision.json y verificación de referencias).
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se usó un asistente de inteligencia artificial (Claude, de Anthropic) para apoyar el análisis del código, la ejecución de las mediciones, la verificación de referencias y la redacción de borradores. Los autores revisaron el contenido y responden por él.
+[Normal] Se empleó Claude (Anthropic) para analizar el código, correr las mediciones, verificar referencias y proponer borradores; los autores los revisaron y asumen la responsabilidad.
 
 [Subtitulos] Declarations (English)
 
-[Normal] Author Contributions: the first author designed the recognizer evaluation, ran the measurements and drafted the manuscript; the other authors contributed software development, literature review and text review; C. J. Cano-Mogollón supervised and reviewed. Funding: none external. No conflicts of interest. Informed consent and IRB: not applicable (laboratory evaluation). Data and code: project repository and analysis folder.
+[Normal] Contributions: the first author designed the recognizer evaluation, ran the measurements and drafted the paper; the others provided code, literature and review; C. J. Cano-Mogollón supervised. No funding. No conflicts. Not applicable: consent and ethics (laboratory study with no participants).
 
 [Heading 1] References
 

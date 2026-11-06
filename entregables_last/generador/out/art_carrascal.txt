@@ -4,21 +4,21 @@
 
 [Nombre autores] Juliana Esther Carrascal-Hernández^1}^*}, Antolin De Jesús Vitola-Montes^2}, Isaías José Petro-Rodríguez^3}, Andrés Julián Negrete-Pacheco^4}, Angel Quintana-Jiménez^5}, Alejandro Pemberty-Vergara^6}, Juan Diego Guerra-Gómez^7}, Cristian Javier Cano-Mogollón^8}
 
-[Normal] ^1} Autor 1: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+[Normal] ^1} Juliana Esther Carrascal-Hernández (autor 1), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico juliana.carrascal@upb.edu.co; ORCID pendiente.
 
-[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+[Normal] ^2} Antolin De Jesús Vitola-Montes (autor 2), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico antolin.vitola@upb.edu.co; ORCID pendiente.
 
-[Normal] ^3} Autor 3: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+[Normal] ^3} Isaías José Petro-Rodríguez (autor 3), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico isaias.petro@upb.edu.co; ORCID pendiente.
 
-[Normal] ^4} Autor 4: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+[Normal] ^4} Andrés Julián Negrete-Pacheco (autor 4), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico andresj.negretep@upb.edu.co; ORCID pendiente.
 
-[Normal] ^5} Autor 5: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+[Normal] ^5} Angel Quintana-Jiménez (autor 5), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico angel.quintana@upb.edu.co; ORCID pendiente.
 
-[Normal] ^6} Autor 6: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+[Normal] ^6} Alejandro Pemberty-Vergara (autor 6), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico alejandro.pemberty@upb.edu.co; ORCID pendiente.
 
-[Normal] ^7} Autor 7: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+[Normal] ^7} Juan Diego Guerra-Gómez (autor 7), Universidad Pontificia Bolivariana, Seccional Montería, Colombia; correo electrónico juan.guerra@upb.edu.co; ORCID pendiente.
 
-[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Docente Titular, Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería, Colombia, y miembro del Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE) y del Hub Industrial Solution (HIS). Correo: cristian.cano@upb.edu.co. ORCID: pendiente.
 
 [Normal] ^*} Autor de correspondencia: Juliana Esther Carrascal-Hernández (juliana.carrascal@upb.edu.co).
 
@@ -110,37 +110,37 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (CRediT, por confirmar): la primera autora analizó y formalizó el modelo de aprendizaje, revisó las pruebas y redactó el borrador; los demás autores participaron en el desarrollo del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.
+[Normal] Contribuciones (CRediT; por confirmar). J. E. Carrascal-Hernández analizó y formalizó el modelo de aprendizaje, revisó las pruebas y escribió el borrador. Los otros autores se ocuparon del software, las mediciones y la revisión, y C. J. Cano-Mogollón supervisó.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] No hubo financiación externa para este trabajo. [Por confirmar por el equipo.]
+[Normal] El trabajo no tuvo financiación externa. [Por confirmar.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores no declaran conflictos de intereses. [Por confirmar.]
+[Normal] Los autores declaran ausencia de conflictos de intereses. [Por confirmar.]
 
 [Heading 3] Consentimiento informado
 
-[Normal] No aplica; el estudio no incluyó datos de personas.
+[Normal] No aplica; el análisis no usó datos de personas.
 
 [Heading 3] Declaración de la Junta de Revisión Institucional
 
-[Normal] No aplica en este análisis técnico; el piloto con niños se someterá a un comité de ética y a consentimiento informado.
+[Normal] No aplica en este análisis técnico; el piloto con niños irá a un comité de ética con consentimiento informado.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] El código del modelo de dominio, del repaso y del predictor y sus pruebas están en el repositorio del proyecto. Las salidas de las pruebas y la verificación de referencias están en la carpeta de análisis de la entrega.
+[Normal] El código del dominio, el repaso y el predictor, con sus pruebas, está en el repositorio del proyecto; las salidas y la verificación de referencias, en la carpeta de análisis.
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Un asistente de inteligencia artificial (Claude, de Anthropic) apoyó la lectura del código, la ejecución de las pruebas, la verificación de las referencias y la redacción de borradores. Las autoras y los autores revisaron el contenido y responden por él.
+[Normal] Claude (Anthropic) apoyó la lectura del código, la ejecución de las pruebas, la verificación bibliográfica y los borradores. Las autoras y los autores revisaron todo el contenido.
 
 [Subtitulos] Declarations (English)
 
-[Normal] Author Contributions: the first author analysed and formalized the learning model, reviewed the tests and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this technical analysis. Data and code: project repository.
+[Normal] Contributions: the first author analysed and formalized the learning model, reviewed the tests and wrote the draft; the other authors handled software, measurements and review; C. J. Cano-Mogollón supervised. No external funding or conflicts. Consent and ethics: not applicable to this technical analysis.
 
 [Heading 1] References
 

@@ -4,21 +4,21 @@
 
 [Nombre autores] Alejandro Pemberty-Vergara^1}^*}, Antolin De Jesús Vitola-Montes^2}, Isaías José Petro-Rodríguez^3}, Andrés Julián Negrete-Pacheco^4}, Juliana Esther Carrascal-Hernández^5}, Angel Quintana-Jiménez^6}, Juan Diego Guerra-Gómez^7}, Cristian Javier Cano-Mogollón^8}
 
-[Normal] ^1} Autor 1: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+[Normal] ^1} 1. Alejandro Pemberty-Vergara, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: alejandro.pemberty@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+[Normal] ^2} 2. Antolin De Jesús Vitola-Montes, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: antolin.vitola@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^3} Autor 3: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+[Normal] ^3} 3. Isaías José Petro-Rodríguez, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: isaias.petro@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^4} Autor 4: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+[Normal] ^4} 4. Andrés Julián Negrete-Pacheco, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: andresj.negretep@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^5} Autor 5: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+[Normal] ^5} 5. Juliana Esther Carrascal-Hernández, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: juliana.carrascal@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^6} Autor 6: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+[Normal] ^6} 6. Angel Quintana-Jiménez, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: angel.quintana@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^7} Autor 7: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+[Normal] ^7} 7. Juan Diego Guerra-Gómez, Universidad Pontificia Bolivariana (Seccional Montería, Colombia). Contacto: juan.guerra@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón, UPB Seccional Montería, Colombia. Docente Titular de la Facultad de Ingeniería Industrial; Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE); Hub Industrial Solution (HIS). Correo electrónico: cristian.cano@upb.edu.co. ORCID: pendiente.
 
 [Normal] ^*} Autor de correspondencia: Alejandro Pemberty-Vergara (alejandro.pemberty@upb.edu.co).
 
@@ -100,37 +100,37 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (CRediT, por confirmar): el primer autor revisó la ingeniería del repositorio, ejecutó las pruebas y las mediciones, y redactó el borrador; los demás autores participaron en la conceptualización, el desarrollo del software y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.
+[Normal] Contribuciones (CRediT; por confirmar). A. Pemberty-Vergara revisó la ingeniería del repositorio, ejecutó pruebas y mediciones y escribió el borrador. Los otros autores aportaron en la conceptualización, el software y la revisión; C. J. Cano-Mogollón supervisó.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] Esta investigación no recibió financiación externa. [Por confirmar por el equipo.]
+[Normal] Esta investigación no tuvo financiación externa. [Por confirmar por el equipo.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores declaran que no existen conflictos de intereses. [Por confirmar.]
+[Normal] Los autores no tienen conflictos de intereses. [Por confirmar.]
 
 [Heading 3] Consentimiento informado
 
-[Normal] No aplica en este estudio; la calibración de referencia contiene solo coordenadas de puntos de la mano de una persona. El piloto con menores requerirá consentimiento informado de los acudientes.
+[Normal] No aplica aquí: la calibración de referencia contiene solo coordenadas de la mano de una persona. El piloto con menores pedirá el consentimiento de los acudientes.
 
 [Heading 3] Declaración de la Junta de Revisión Institucional
 
-[Normal] No aplica a esta evaluación técnica; el piloto requerirá aprobación de un comité de ética institucional.
+[Normal] No aplica a esta evaluación técnica; el piloto necesitará el aval de un comité de ética institucional.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] El código, las pruebas, los scripts de medición, los resultados estructurados y la verificación de referencias están en el repositorio del proyecto y en la carpeta de análisis de la entrega. El repositorio público está por definir.
+[Normal] Código, pruebas, scripts, resultados estructurados y verificación de referencias: repositorio del proyecto y carpeta de análisis de la entrega. El repositorio público está por definir.
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para revisar el código, ejecutar las pruebas y mediciones, verificar las referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.
+[Normal] Un asistente de inteligencia artificial (Claude, Anthropic) se empleó para revisar el código, correr pruebas y mediciones, verificar referencias y esbozar texto. Los autores revisaron el contenido y asumen su responsabilidad.
 
 [Subtitulos] Declarations (English)
 
-[Normal] Author Contributions: the first author reviewed the repository engineering, ran the tests and measurements and drafted the manuscript; the other authors contributed conceptualization, software and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this technical study; the pilot will require both. Data and code: project repository and analysis folder.
+[Normal] Contributions: the first author reviewed the repository engineering, ran tests and measurements and wrote the draft; the others contributed conceptualization, software and review; C. J. Cano-Mogollón supervised. No funding or conflicts. Consent and ethics: not applicable here; the pilot will require both.
 
 [Heading 1] References
 

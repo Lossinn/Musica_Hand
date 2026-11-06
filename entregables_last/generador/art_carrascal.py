@@ -82,14 +82,6 @@ T("Hand Sing Kids estima el dominio de cada nota con cuatro componentes, program
 H1("Recomendaciones")
 T("(1) Registrar los intentos en un piloto y reajustar las constantes con ellos. (2) Comparar una secuencia adaptada con una fija en retención a una semana. (3) Mostrar al docente qué modelo decide y por qué. "
   "(4) Medir el sobreajuste del predictor con datos nuevos y no con los de entrenamiento.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): la primera autora analizó y formalizó el modelo de aprendizaje, revisó las pruebas y redactó el borrador; los demás autores participaron en el desarrollo "
-         "del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.",
-    fin="No hubo financiación externa para este trabajo. [Por confirmar por el equipo.]",
-    conf="Los autores no declaran conflictos de intereses. [Por confirmar.]",
-    cons="No aplica; el estudio no incluyó datos de personas.",
-    irb="No aplica en este análisis técnico; el piloto con niños se someterá a un comité de ética y a consentimiento informado.",
-    datos="El código del modelo de dominio, del repaso y del predictor y sus pruebas están en el repositorio del proyecto. Las salidas de las pruebas y la verificación de referencias están en la carpeta de análisis de la entrega.",
-    ia="Un asistente de inteligencia artificial (Claude, de Anthropic) apoyó la lectura del código, la ejecución de las pruebas, la verificación de las referencias y la redacción de borradores. Las autoras y los autores revisaron el contenido y responden por él.",
-    en="Author Contributions: the first author analysed and formalized the learning model, reviewed the tests and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this technical analysis. Data and code: project repository."))
+from decl_personas import DECL
+declaraciones(DECL["carrascal"])
 cierre(autores, TITULO_ES, "Del intento al dominio: aprendizaje adaptativo en Hand Sing Kids", Path(sys.argv[1]))

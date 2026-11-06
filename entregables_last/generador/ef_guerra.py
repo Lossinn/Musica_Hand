@@ -33,7 +33,7 @@ def contenido(e):
             [["30 fotogramas por segundo", "Documento previo", "¿Se puede medir sin cámara?"], ["Precisión > 94,2 % en ocho gestos", "Documento previo", "¿Qué protocolo y cuántas pruebas la produjeron?"], ["38 ms para asignar actividades", "Documento previo", "¿Cuánto tarda el optimizador?"],
              ["8 % de notas falsas", "Documentación técnica", "¿Se reproduce y es estable?"], ["2,3 ms por fotograma", "Documento previo", "¿Coincide en este equipo?"]], [3.1, 2.2, 3.2], size=8)
     e.sub("Supuestos y alcance")
-    e.B(["Las mediciones se hicieron en **un solo equipo** con Windows 11, Python 3.12.10, NumPy 1.26.4, OpenCV 4.11.0 y MediaPipe 0.10.21; no se registraron las características del procesador.",
+    e.B(["Todo se midió en **un equipo** con Windows 11 y Python 3.12.10 (NumPy 1.26.4, OpenCV 4.11.0, MediaPipe 0.10.21), sin registro de su procesador.",
          "La calibración es de **una persona** y las perturbaciones son simuladas.",
          "Una cifra «no reproducible» no es una cifra falsa: significa que falta el protocolo para repetirla.",
          "No se midió nada que requiera la cámara en funcionamiento ni la pantalla.",
@@ -75,7 +75,7 @@ def contenido(e):
     e.P("En todos los casos se adoptó el valor del código o de la medición, y las diferencias quedan registradas.")
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("Aplicando la regla propuesta, cada cifra remite a su origen en el cuadro siguiente.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['8 % de notas falsas y 30 semillas', 'resultados_vision.json'], ['Latencia', 'resultados_vision.json'], ['40 ms del optimizador', 'salida_pruebas.txt'], ['Dependencia del umbral de confianza', 'sensibilidad_umbrales.json'], ['Cifras reportadas', 'Documentación y documentos previos del proyecto'], ['Discrepancias', 'Revisión del código y la documentación']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

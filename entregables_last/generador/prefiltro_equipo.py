@@ -16,7 +16,7 @@ def norm(t):
 def texto(ruta):
     out = []
     for p in docx.Document(str(ruta)).paragraphs:
-        if p.text.strip().startswith("References"):
+        if p.text.strip().startswith(("References", "Referencias")):
             break
         out.append(p.text)
     return "\n".join(out)
@@ -35,7 +35,8 @@ def tramo(marc):
 
 
 carpeta = Path(sys.argv[1])
-arts = {p.stem.replace("art_", ""): sh(norm(texto(p)))[1] for p in sorted(carpeta.glob("art_*.docx"))}
+patron = sys.argv[3] if len(sys.argv) > 3 else "art_*.docx"
+arts = {p.stem.split("_", 1)[1]: sh(norm(texto(p)))[1] for p in sorted(carpeta.glob(patron))}
 res = {"palabras": {k: len(v) + K - 1 for k, v in arts.items()}, "entre_articulos": {}, "contra_fuentes": {}}
 for a in arts:
     for b in arts:

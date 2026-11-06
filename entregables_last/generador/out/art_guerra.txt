@@ -4,21 +4,21 @@
 
 [Nombre autores] Juan Diego Guerra-Gómez^1}^*}, Antolin De Jesús Vitola-Montes^2}, Isaías José Petro-Rodríguez^3}, Andrés Julián Negrete-Pacheco^4}, Juliana Esther Carrascal-Hernández^5}, Angel Quintana-Jiménez^6}, Alejandro Pemberty-Vergara^7}, Cristian Javier Cano-Mogollón^8}
 
-[Normal] ^1} Autor 1: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+[Normal] ^1} Autor 1: Juan Diego Guerra-Gómez. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. juan.guerra@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. antolin.vitola@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^3} Autor 3: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+[Normal] ^3} Autor 3: Isaías José Petro-Rodríguez. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. isaias.petro@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^4} Autor 4: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+[Normal] ^4} Autor 4: Andrés Julián Negrete-Pacheco. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. andresj.negretep@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^5} Autor 5: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+[Normal] ^5} Autor 5: Juliana Esther Carrascal-Hernández. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. juliana.carrascal@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^6} Autor 6: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+[Normal] ^6} Autor 6: Angel Quintana-Jiménez. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. angel.quintana@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^7} Autor 7: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+[Normal] ^7} Autor 7: Alejandro Pemberty-Vergara. Filiación: Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. alejandro.pemberty@upb.edu.co. ORCID: pendiente.
 
-[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Hub Industrial Solution (HIS); Grupo de Investigación SILOGE (Simulación, Logística y Gestión de Operaciones); Docente Titular, Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería, Colombia. Contacto: cristian.cano@upb.edu.co. ORCID: pendiente.
 
 [Normal] ^*} Autor de correspondencia: Juan Diego Guerra-Gómez (juan.guerra@upb.edu.co).
 
@@ -114,7 +114,7 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (CRediT, por confirmar): el primer autor contrastó las cifras reportadas con las mediciones, registró las discrepancias y redactó el borrador; los demás autores participaron en el desarrollo del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.
+[Normal] Contribuciones (CRediT; por confirmar). J. D. Guerra-Gómez contrastó las cifras reportadas con las medidas, registró las discrepancias y escribió el borrador. Los demás autores colaboraron en el software, las mediciones y la revisión; C. J. Cano-Mogollón supervisó.
 
 [Heading 2] Declaraciones finales
 
@@ -124,7 +124,7 @@
 
 [Heading 3] Conflicto de intereses
 
-[Normal] Los autores declaran que no tienen conflictos de intereses. [Por confirmar.]
+[Normal] Los autores declaran que no existen conflictos de intereses. [Por confirmar.]
 
 [Heading 3] Consentimiento informado
 
@@ -136,15 +136,15 @@
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] Los scripts de medición, el archivo de resultados (resultados_vision.json), la salida de las pruebas y la lista de discrepancias están en la carpeta de análisis de la entrega y en el repositorio del proyecto.
+[Normal] Scripts de medición, archivo de resultados, salida de las pruebas y lista de discrepancias: carpeta de análisis de la entrega y repositorio del proyecto.
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se usó el asistente Claude (Anthropic) para ejecutar las mediciones, contrastar documentación y código, verificar referencias y redactar borradores. Los autores revisaron todo el contenido y responden por él.
+[Normal] Se utilizó Claude (Anthropic) para ejecutar mediciones, contrastar documentación y código, verificar referencias y escribir borradores. Los autores lo revisaron todo y responden por ello.
 
 [Subtitulos] Declarations (English)
 
-[Normal] Author Contributions: the first author contrasted reported figures with measurements, recorded the discrepancies and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable. Data and code: analysis folder and project repository.
+[Normal] Contributions: the first author contrasted reported and measured figures, recorded discrepancies and wrote the draft; the others contributed software, measurements and review; C. J. Cano-Mogollón supervised. No funding or conflicts. Consent and ethics: not applicable.
 
 [Heading 1] References
 

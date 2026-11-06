@@ -91,14 +91,6 @@ T("Hand Sing Kids resuelve el problema del tiempo con tres piezas: un estabiliza
 H1("Recomendaciones")
 T("(1) Medir la latencia de extremo a extremo con la cámara real. (2) Registrar, en un piloto, las notas duplicadas y las señas repetidas. (3) Ajustar el piso de la ventana y el puntaje con observaciones de niños y docentes. "
   "(4) Mantener la prueba del parpadeo breve en la batería del estabilizador.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): el primer autor analizó los mecanismos temporales, calculó la ventana de acierto y redactó el borrador; los demás autores aportaron el desarrollo del software, "
-         "las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.",
-    fin="Sin financiación externa. [Por confirmar por el equipo.]",
-    conf="No hay conflictos de intereses que declarar. [Por confirmar.]",
-    cons="No aplica: no se recolectaron datos de niños en este estudio.",
-    irb="No aplica a esta evaluación técnica; las pruebas de aula con menores necesitarán aprobación ética y consentimiento de acudientes.",
-    datos="El código, las pruebas del estabilizador y de canciones y los scripts de medición están en el repositorio del proyecto; los cálculos de la Tabla 2 se pueden reproducir con la ecuación de la ventana y los valores del código.",
-    ia="Se empleó un asistente de IA (Claude, de Anthropic) para revisar el código, ejecutar las mediciones, verificar referencias y redactar borradores. Los autores revisaron y responden por el texto.",
-    en="Author Contributions: the first author analysed the temporal mechanisms, computed the hit window and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable. Data and code: project repository."))
+from decl_personas import DECL
+declaraciones(DECL["negrete"])
 cierre(autores, TITULO_ES, "Cuándo debe sonar la nota: tiempo y retroalimentación en Hand Sing Kids", Path(sys.argv[1]))

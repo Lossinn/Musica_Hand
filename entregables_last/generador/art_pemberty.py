@@ -74,14 +74,6 @@ T("Hand Sing Kids tiene un estado de ingeniería verificable: ocho baterías de 
 H1("Recomendaciones")
 T("(1) Gestionar la aprobación ética y la autorización de una institución aliada. (2) Redactar la política de datos de menores con asesoría jurídica. (3) Medir la latencia de extremo a extremo y la iluminación en el aula. "
   "(4) Probar la instalación en un equipo limpio y en la plataforma macOS documentada. (5) Diseñar el piloto con grupo de comparación.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): el primer autor revisó la ingeniería del repositorio, ejecutó las pruebas y las mediciones, y redactó el borrador; los demás autores participaron en la conceptualización, "
-         "el desarrollo del software y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.",
-    fin="Esta investigación no recibió financiación externa. [Por confirmar por el equipo.]",
-    conf="Los autores declaran que no existen conflictos de intereses. [Por confirmar.]",
-    cons="No aplica en este estudio; la calibración de referencia contiene solo coordenadas de puntos de la mano de una persona. El piloto con menores requerirá consentimiento informado de los acudientes.",
-    irb="No aplica a esta evaluación técnica; el piloto requerirá aprobación de un comité de ética institucional.",
-    datos="El código, las pruebas, los scripts de medición, los resultados estructurados y la verificación de referencias están en el repositorio del proyecto y en la carpeta de análisis de la entrega. El repositorio público está por definir.",
-    ia="Se utilizó un asistente de inteligencia artificial (Claude, de Anthropic) para revisar el código, ejecutar las pruebas y mediciones, verificar las referencias y redactar borradores. Los autores revisaron el contenido y asumen la responsabilidad del texto y de los resultados.",
-    en="Author Contributions: the first author reviewed the repository engineering, ran the tests and measurements and drafted the manuscript; the other authors contributed conceptualization, software and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable to this technical study; the pilot will require both. Data and code: project repository and analysis folder."))
+from decl_personas import DECL
+declaraciones(DECL["pemberty"])
 cierre(autores, TITULO_ES, "De un prototipo a un aula: ingeniería reproducible de Hand Sing Kids", Path(sys.argv[1]))

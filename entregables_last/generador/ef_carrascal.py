@@ -110,7 +110,7 @@ def contenido(e):
              ["H3: los repasos programados coinciden con lo que el niño olvida", "Fechas de práctica y fallos posteriores"]], [4.8, 3.7])
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("Se indica a continuación de dónde sale cada cifra, sea un archivo del repositorio o un cálculo con las ecuaciones del modelo.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Constantes del dominio y del repaso', 'Código del repositorio (módulos de dominio y repaso)'], ['78 % del predictor', 'Prueba unitaria del predictor (salida_pruebas.txt)'], ['Dominio según $R$ y $S$', 'Cálculo con la ecuación del dominio (este documento)'], ['Umbrales de retención y días', 'Cálculo con supuestos explícitos (este documento)'], ['Baterías de dominio y predictor', 'salida_pruebas.txt']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

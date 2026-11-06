@@ -1,0 +1,189 @@
+{
+ "palabras": {
+  "carrascal": 1857,
+  "guerra": 1669,
+  "negrete": 2125,
+  "pemberty": 1577,
+  "petro": 2599,
+  "quintana": 1846,
+  "vitola": 1611
+ },
+ "entre_articulos": {
+  "carrascal vs guerra": {
+   "pct": 2.59,
+   "tramo_max": 24
+  },
+  "carrascal vs negrete": {
+   "pct": 2.22,
+   "tramo_max": 31
+  },
+  "carrascal vs pemberty": {
+   "pct": 2.27,
+   "tramo_max": 27
+  },
+  "carrascal vs petro": {
+   "pct": 1.89,
+   "tramo_max": 32
+  },
+  "carrascal vs quintana": {
+   "pct": 2.59,
+   "tramo_max": 29
+  },
+  "carrascal vs vitola": {
+   "pct": 2.0,
+   "tramo_max": 31
+  },
+  "guerra vs negrete": {
+   "pct": 1.93,
+   "tramo_max": 24
+  },
+  "guerra vs pemberty": {
+   "pct": 3.79,
+   "tramo_max": 24
+  },
+  "guerra vs petro": {
+   "pct": 3.01,
+   "tramo_max": 24
+  },
+  "guerra vs quintana": {
+   "pct": 2.05,
+   "tramo_max": 24
+  },
+  "guerra vs vitola": {
+   "pct": 1.62,
+   "tramo_max": 24
+  },
+  "negrete vs pemberty": {
+   "pct": 2.6,
+   "tramo_max": 27
+  },
+  "negrete vs petro": {
+   "pct": 3.45,
+   "tramo_max": 33
+  },
+  "negrete vs quintana": {
+   "pct": 1.51,
+   "tramo_max": 29
+  },
+  "negrete vs vitola": {
+   "pct": 1.61,
+   "tramo_max": 33
+  },
+  "pemberty vs petro": {
+   "pct": 4.71,
+   "tramo_max": 28
+  },
+  "pemberty vs quintana": {
+   "pct": 2.99,
+   "tramo_max": 27
+  },
+  "pemberty vs vitola": {
+   "pct": 2.99,
+   "tramo_max": 27
+  },
+  "petro vs quintana": {
+   "pct": 1.16,
+   "tramo_max": 29
+  },
+  "petro vs vitola": {
+   "pct": 1.39,
+   "tramo_max": 35
+  },
+  "quintana vs vitola": {
+   "pct": 1.52,
+   "tramo_max": 29
+  }
+ },
+ "contra_fuentes": {
+  "documento_tecnico.md": {
+   "carrascal": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "guerra": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "negrete": {
+    "pct": 0.05,
+    "tramo_max": 8
+   },
+   "pemberty": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "petro": {
+    "pct": 0.39,
+    "tramo_max": 13
+   },
+   "quintana": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "vitola": {
+    "pct": 0.0,
+    "tramo_max": 0
+   }
+  },
+  "documento_2do_corte (html)": {
+   "carrascal": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "guerra": {
+    "pct": 0.12,
+    "tramo_max": 8
+   },
+   "negrete": {
+    "pct": 0.14,
+    "tramo_max": 10
+   },
+   "pemberty": {
+    "pct": 0.25,
+    "tramo_max": 8
+   },
+   "petro": {
+    "pct": 0.27,
+    "tramo_max": 10
+   },
+   "quintana": {
+    "pct": 0.16,
+    "tramo_max": 10
+   },
+   "vitola": {
+    "pct": 0.25,
+    "tramo_max": 11
+   }
+  },
+  "motor_analitico_y_estado_avance.md": {
+   "carrascal": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "guerra": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "negrete": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "pemberty": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "petro": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "quintana": {
+    "pct": 0.0,
+    "tramo_max": 0
+   },
+   "vitola": {
+    "pct": 0.0,
+    "tramo_max": 0
+   }
+  }
+ }
+}

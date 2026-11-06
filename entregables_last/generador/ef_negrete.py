@@ -97,7 +97,7 @@ def contenido(e):
         "Por eso la batería del estabilizador incluye ahora una prueba del parpadeo breve de la mano.")
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("El origen de cada cifra se resume a continuación: o es un archivo de resultados o es un cálculo con las ecuaciones del código.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Ventana de acierto por tempo', 'Cálculo con la ecuación del código (este documento)'], ['Sensibilidad del piso', 'Cálculo con la ecuación del código (este documento)'], ['Latencia', 'resultados_vision.json'], ['Notas falsas', 'resultados_vision.json'], ['Constantes del motor temporal', 'Código del repositorio (estabilizador y canciones)'], ['Piso de 380 ms', 'Documentación técnica del proyecto']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

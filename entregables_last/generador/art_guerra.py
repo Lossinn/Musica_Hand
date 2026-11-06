@@ -96,14 +96,6 @@ T("De cinco cifras reportadas, una se reprodujo (8 % de notas falsas), una resul
 H1("Recomendaciones")
 T("(1) Documentar el protocolo de cualquier cifra de precisión, con su muestra. (2) Medir los fotogramas por segundo con la cámara real. (3) Repetir la medición de latencia en el equipo de aula. (4) Aplicar la regla de reporte "
   "(script, muestra, intervalo) en las presentaciones del proyecto. (5) Mantener actualizada la lista de discrepancias.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): el primer autor contrastó las cifras reportadas con las mediciones, registró las discrepancias y redactó el borrador; los demás autores participaron en el "
-         "desarrollo del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.",
-    fin="No se recibió financiación externa. [Por confirmar por el equipo.]",
-    conf="Los autores declaran que no tienen conflictos de intereses. [Por confirmar.]",
-    cons="No aplica: no se recolectaron datos de personas.",
-    irb="No aplica a esta verificación técnica; las pruebas con niños requerirán aprobación ética y consentimiento de acudientes.",
-    datos="Los scripts de medición, el archivo de resultados (resultados_vision.json), la salida de las pruebas y la lista de discrepancias están en la carpeta de análisis de la entrega y en el repositorio del proyecto.",
-    ia="Se usó el asistente Claude (Anthropic) para ejecutar las mediciones, contrastar documentación y código, verificar referencias y redactar borradores. Los autores revisaron todo el contenido y responden por él.",
-    en="Author Contributions: the first author contrasted reported figures with measurements, recorded the discrepancies and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable. Data and code: analysis folder and project repository."))
+from decl_personas import DECL
+declaraciones(DECL["guerra"])
 cierre(autores, TITULO_ES, "Lo reportado y lo medido en Hand Sing Kids", Path(sys.argv[1]))

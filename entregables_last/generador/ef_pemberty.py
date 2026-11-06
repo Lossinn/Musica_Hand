@@ -31,7 +31,7 @@ def contenido(e):
     e.sub("Población de referencia")
     e.P("Según las proyecciones municipales del DANE, la población de Montería en 2026 es de 535.052 habitantes, y 80.254 tienen entre 3 y 12 años {cite:dane}. No se aporta una estadística local de educación musical; la razón para llevar la herramienta a un aula de la región es de diseño: funciona sin internet, en un computador con cámara.")
     e.sub("Supuestos y alcance")
-    e.B(["Las mediciones se hicieron en **un solo equipo** con Windows 11, Python 3.12.10, NumPy 1.26.4, OpenCV 4.11.0, MediaPipe 0.10.21, PySide6 6.11.2 y PuLP 2.9.0; **no** se evaluó macOS ni otras versiones de Python.",
+    e.B(["El entorno fue **un solo equipo** con Windows 11 y estas versiones: Python 3.12.10, NumPy 1.26.4, OpenCV 4.11.0, MediaPipe 0.10.21, PySide6 6.11.2 y PuLP 2.9.0. **No** se evaluó macOS ni otras versiones de Python.",
          "La calibración de referencia es de **una persona** y las perturbaciones son simuladas.",
          "La lista de condiciones previas al piloto es **una propuesta del equipo**, no un protocolo aprobado.",
          "La normativa sobre datos personales se menciona como marco y **no** sustituye la asesoría jurídica.",
@@ -73,7 +73,7 @@ def contenido(e):
     e.P("Con ese diseño se podría pasar de TRL 4 a TRL 5 y solo entonces hablar de efecto sobre el aprendizaje.")
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("La trazabilidad de las cifras se resume así: cada una remite a un script, un archivo o un cálculo.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['62 módulos y 10.581 líneas', 'Medición del repositorio, 5 de noviembre de 2026'], ['Ocho baterías sin fallos', 'salida_pruebas.txt'], ['Mediciones del reconocedor', 'resultados_vision.json'], ['Versiones del entorno', 'Registro de la evaluación'], ['Referencias', 'verificacion_referencias.csv']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

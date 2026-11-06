@@ -78,7 +78,7 @@ def contenido(e):
         "y nivel, es decir, 480 señas por nivel. Segunda, las notas disparadas por error ante 640 posturas que no son seña: 320 transiciones a medio camino entre una nota y otra tres posiciones más adelante, y 320 combinaciones de la mano izquierda de una "
         "seña con la derecha de otra. Las proporciones llevan intervalos de Wilson al 95 % {cite:wilsonci}. La estabilidad de la tasa de falsos positivos se midió con 30 semillas distintas.")
     e.sub("Configuración experimental")
-    e.P("Las mediciones se hicieron en un solo equipo con Windows 11, Python 3.12.10, NumPy 1.26.4, OpenCV 4.11.0 y MediaPipe 0.10.21. No se registraron las características del procesador ni de la memoria. El código y los scripts están en el repositorio "
+    e.P("El entorno fue un único equipo con Windows 11, Python 3.12.10, NumPy 1.26.4, OpenCV 4.11.0 y MediaPipe 0.10.21; no quedó registrado el procesador ni la memoria. El código y los scripts están en el repositorio "
         "y las cifras se leen de un archivo de resultados generado por un script con semillas fijas.")
     e.sub("Señas válidas")
     filas = []
@@ -120,7 +120,7 @@ def contenido(e):
         "cuesta unos segundos, mientras que una nota falsa interrumpe la actividad y puede enseñar un sonido equivocado.")
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("Cada cifra puede rastrearse hasta el archivo y el script que la generan, según el cuadro siguiente.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Aciertos por nivel de ruido', 'resultados_vision.json (evidencia_vision.py, semilla 11)'], ['Notas falsas y desglose', 'resultados_vision.json (semilla 23)'], ['Estabilidad con 30 semillas', 'resultados_vision.json'], ['Separabilidad y latencia', 'resultados_vision.json; matriz_similitud'], ['Sensibilidad de umbrales', 'sensibilidad_umbrales.json (sensibilidad_umbrales.py)'], ['Pruebas del repositorio', 'salida_pruebas.txt']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

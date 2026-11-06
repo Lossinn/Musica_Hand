@@ -88,7 +88,7 @@ def contenido(e):
     e.P("La enumeración exacta garantiza que ninguna otra combinación factible tiene mayor valor del objetivo. No garantiza que esa sesión sea la mejor para aprender: el objetivo es un modelo de lo que el equipo cree que importa, con pesos elegidos por diseño. Solo un piloto con niños puede decir si las sesiones óptimas producen mejor aprendizaje que las elegidas por un docente.")
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("El cuadro siguiente indica el archivo, el script o el cálculo del que sale cada cifra.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['40 ms y valor 2,9524', 'Prueba del optimizador (salida_pruebas.txt)'], ['Pesos y restricciones', 'Código del repositorio (optimizador)'], ['Instancia ilustrativa y escenarios', 'quintana_demo.json (quintana_demo.py)'], ['Curvas $p_i$ y $\\eta_i$', 'Cálculo con las ecuaciones del modelo (este documento)'], ['Umbral de enumeración $4\\times10^{5}$', 'Código del repositorio']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

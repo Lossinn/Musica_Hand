@@ -88,7 +88,7 @@ def contenido(e):
              ["Adopción por el docente", "Probar si el docente puede calibrar sin apoyo técnico"], ["Datos de menores", "Aprobación ética; consentimiento; datos mínimos"]], [3.6, 4.9], size=8.5)
 
     e.sub("Trazabilidad de las cifras")
-    e.P("Cada cifra de este trabajo puede rastrearse hasta el script, el archivo o el cálculo que la produce, como se resume en el cuadro siguiente.")
+    e.P("Para que quien lea pueda comprobar los números, el cuadro siguiente remite cada cifra a su fuente.")
     e.tabla("traza", "Origen de las cifras principales.", ["Cifra", "Origen"], [['Evidencia técnica', 'resultados_vision.json; salida_pruebas.txt'], ['Población de Montería', 'DANE, proyecciones municipales 2020–2035'], ['Tamaño de muestra', 'Fórmula normal para dos grupos (este documento)'], ['Latencia parcial', 'resultados_vision.json'], ['Referencias', 'verificacion_referencias.csv (Crossref y DataCite)']], [3.4, 5.1], size=8)
 
     e.sec("Conclusiones")

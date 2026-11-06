@@ -83,14 +83,6 @@ T("La selección de la sesión se formula como un problema de programación ente
 H1("Recomendaciones")
 T("(1) Hacer un análisis de sensibilidad a los pesos con un barrido de casos. (2) Probar el tiempo de solución con catálogos mayores y en un equipo de aula. (3) Comparar en un piloto sesiones óptimas con sesiones elegidas por un docente. "
   "(4) Mostrar al docente la explicación de cada actividad elegida.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar): el primer autor formuló y verificó el problema de optimización y redactó el borrador; los demás autores participaron en el desarrollo del software, "
-         "las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.",
-    fin="No se recibió financiación externa. [Por confirmar.]",
-    conf="Los autores no tienen conflictos de intereses que declarar. [Por confirmar.]",
-    cons="No aplica: no hubo participantes humanos.",
-    irb="No aplica a esta verificación técnica; el piloto con niños requerirá aprobación ética y consentimiento de acudientes.",
-    datos="El código del optimizador, sus pruebas y la sesión de ejemplo están en el repositorio del proyecto; la salida de las pruebas y la verificación de referencias están en la carpeta de análisis de la entrega.",
-    ia="Se usó un asistente de inteligencia artificial (Claude, de Anthropic) para leer el código, ejecutar las pruebas, verificar referencias y redactar borradores; los autores revisaron el contenido y responden por él.",
-    en="Author Contributions: the first author formulated and verified the optimization problem and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable. Data and code: project repository."))
+from decl_personas import DECL
+declaraciones(DECL["quintana"])
 cierre(autores, TITULO_ES, "Elegir la sesión óptima: programación entera mixta en Hand Sing Kids", Path(sys.argv[1]))

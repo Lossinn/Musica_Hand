@@ -1,97 +1,97 @@
 {
  "palabras": {
-  "carrascal": 2162,
-  "guerra": 2394,
-  "negrete": 2351,
-  "pemberty": 2135,
-  "petro": 3054,
-  "quintana": 2107,
-  "vitola": 2165
+  "carrascal": 2118,
+  "guerra": 2349,
+  "negrete": 2282,
+  "pemberty": 2061,
+  "petro": 2946,
+  "quintana": 2067,
+  "vitola": 2143
  },
  "entre_articulos": {
   "carrascal vs guerra": {
-   "pct": 12.39,
-   "tramo_max": 76
+   "pct": 3.27,
+   "tramo_max": 20
   },
   "carrascal vs negrete": {
-   "pct": 11.65,
-   "tramo_max": 121
+   "pct": 1.89,
+   "tramo_max": 15
   },
   "carrascal vs pemberty": {
-   "pct": 11.23,
-   "tramo_max": 77
+   "pct": 2.56,
+   "tramo_max": 18
   },
   "carrascal vs petro": {
-   "pct": 10.9,
-   "tramo_max": 121
+   "pct": 2.42,
+   "tramo_max": 20
   },
   "carrascal vs quintana": {
-   "pct": 14.01,
-   "tramo_max": 99
+   "pct": 3.13,
+   "tramo_max": 18
   },
   "carrascal vs vitola": {
-   "pct": 10.49,
-   "tramo_max": 121
+   "pct": 1.37,
+   "tramo_max": 15
   },
   "guerra vs negrete": {
-   "pct": 10.31,
-   "tramo_max": 54
+   "pct": 3.16,
+   "tramo_max": 18
   },
   "guerra vs pemberty": {
-   "pct": 11.73,
-   "tramo_max": 121
+   "pct": 3.93,
+   "tramo_max": 20
   },
   "guerra vs petro": {
-   "pct": 9.26,
-   "tramo_max": 54
+   "pct": 2.73,
+   "tramo_max": 20
   },
   "guerra vs quintana": {
-   "pct": 11.9,
-   "tramo_max": 99
+   "pct": 3.33,
+   "tramo_max": 18
   },
   "guerra vs vitola": {
-   "pct": 8.63,
-   "tramo_max": 54
+   "pct": 1.49,
+   "tramo_max": 20
   },
   "negrete vs pemberty": {
-   "pct": 10.32,
-   "tramo_max": 77
+   "pct": 2.24,
+   "tramo_max": 17
   },
   "negrete vs petro": {
-   "pct": 10.11,
-   "tramo_max": 144
+   "pct": 2.33,
+   "tramo_max": 19
   },
   "negrete vs quintana": {
-   "pct": 10.84,
-   "tramo_max": 99
+   "pct": 2.29,
+   "tramo_max": 20
   },
   "negrete vs vitola": {
-   "pct": 10.32,
-   "tramo_max": 144
+   "pct": 1.45,
+   "tramo_max": 21
   },
   "pemberty vs petro": {
-   "pct": 10.81,
-   "tramo_max": 77
+   "pct": 3.41,
+   "tramo_max": 18
   },
   "pemberty vs quintana": {
-   "pct": 12.41,
-   "tramo_max": 99
+   "pct": 3.16,
+   "tramo_max": 18
   },
   "pemberty vs vitola": {
-   "pct": 9.45,
-   "tramo_max": 77
+   "pct": 2.63,
+   "tramo_max": 19
   },
   "petro vs quintana": {
-   "pct": 7.52,
-   "tramo_max": 99
+   "pct": 1.36,
+   "tramo_max": 18
   },
   "petro vs vitola": {
-   "pct": 8.96,
-   "tramo_max": 167
+   "pct": 2.52,
+   "tramo_max": 23
   },
   "quintana vs vitola": {
-   "pct": 10.29,
-   "tramo_max": 99
+   "pct": 1.31,
+   "tramo_max": 12
   }
  },
  "contra_fuentes": {
@@ -101,7 +101,7 @@
     "tramo_max": 0
    },
    "guerra": {
-    "pct": 0.59,
+    "pct": 0.6,
     "tramo_max": 17
    },
    "negrete": {
@@ -113,7 +113,7 @@
     "tramo_max": 0
    },
    "petro": {
-    "pct": 0.43,
+    "pct": 0.44,
     "tramo_max": 13
    },
    "quintana": {
@@ -127,23 +127,23 @@
   },
   "documento_2do_corte (html)": {
    "carrascal": {
-    "pct": 0.0,
-    "tramo_max": 0
+    "pct": 0.09,
+    "tramo_max": 9
    },
    "guerra": {
-    "pct": 0.0,
-    "tramo_max": 0
+    "pct": 0.09,
+    "tramo_max": 9
    },
    "negrete": {
-    "pct": 0.0,
-    "tramo_max": 0
+    "pct": 0.09,
+    "tramo_max": 9
    },
    "pemberty": {
     "pct": 0.19,
     "tramo_max": 9
    },
    "petro": {
-    "pct": 0.13,
+    "pct": 0.14,
     "tramo_max": 9
    },
    "quintana": {
@@ -151,7 +151,7 @@
     "tramo_max": 10
    },
    "vitola": {
-    "pct": 0.32,
+    "pct": 0.33,
     "tramo_max": 14
    }
   },
@@ -183,36 +183,6 @@
    "vitola": {
     "pct": 0.0,
     "tramo_max": 0
-   }
-  },
-  "articulo_anterior_Pemberty.docx": {
-   "carrascal": {
-    "pct": 14.43,
-    "tramo_max": 111
-   },
-   "guerra": {
-    "pct": 24.38,
-    "tramo_max": 442
-   },
-   "negrete": {
-    "pct": 10.67,
-    "tramo_max": 116
-   },
-   "pemberty": {
-    "pct": 20.68,
-    "tramo_max": 127
-   },
-   "petro": {
-    "pct": 43.45,
-    "tramo_max": 480
-   },
-   "quintana": {
-    "pct": 14.62,
-    "tramo_max": 89
-   },
-   "vitola": {
-    "pct": 15.2,
-    "tramo_max": 194
    }
   }
  }

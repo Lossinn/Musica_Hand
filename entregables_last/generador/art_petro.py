@@ -86,14 +86,6 @@ T(f"Un descriptor invariante de 120 componentes con decisión por distancia, con
 H1("Recomendaciones")
 T("(1) Calibrar y medir con varios niños y en el aula, con iluminación y cámaras reales. (2) Incorporar la velocidad de la mano a la decisión y medir si reduce los falsos positivos de las transiciones. "
   "(3) Registrar las notas falsas durante un piloto en lugar de simularlas. (4) Medir la latencia de extremo a extremo, incluida la cámara.")
-declaraciones(dict(
-    cred="Contribución de los autores (CRediT, por confirmar por el equipo): el primer autor planteó la evaluación del reconocedor, ejecutó las mediciones y redactó el borrador; los demás autores participaron en el desarrollo del "
-         "software, la revisión bibliográfica y la revisión del texto; Cristian Javier Cano-Mogollón supervisó y revisó el manuscrito.",
-    fin="Esta investigación no recibió financiación externa. [Por confirmar por el equipo.]",
-    conf="Los autores declaran que no existen conflictos de intereses relacionados con esta publicación. [Por confirmar.]",
-    cons="No aplica. La calibración de referencia contiene solo coordenadas de puntos de la mano de una persona, sin imágenes, y no se recolectaron datos de niños.",
-    irb="No aplica, porque el estudio es una evaluación técnica de laboratorio. Una prueba con niños requerirá aprobación ética y consentimiento de los acudientes.",
-    datos="El código, la calibración de referencia, las pruebas y los scripts de evaluación están en el repositorio del proyecto. Las salidas de las mediciones (resultados_vision.json) y la verificación de referencias están en la carpeta de análisis de la entrega.",
-    ia="Se usó un asistente de inteligencia artificial (Claude, de Anthropic) para apoyar el análisis del código, la ejecución de las mediciones, la verificación de referencias y la redacción de borradores. Los autores revisaron el contenido y responden por él.",
-    en="Author Contributions: the first author designed the recognizer evaluation, ran the measurements and drafted the manuscript; the other authors contributed software development, literature review and text review; C. J. Cano-Mogollón supervised and reviewed. Funding: none external. No conflicts of interest. Informed consent and IRB: not applicable (laboratory evaluation). Data and code: project repository and analysis folder."))
+from decl_personas import DECL
+declaraciones(DECL["petro"])
 cierre(autores, TITULO_ES, "Qué mano es una seña: reconocimiento en Hand Sing Kids", Path(sys.argv[1]))

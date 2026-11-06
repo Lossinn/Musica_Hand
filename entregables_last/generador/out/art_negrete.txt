@@ -4,21 +4,21 @@
 
 [Nombre autores] Andrés Julián Negrete-Pacheco^1}^*}, Antolin De Jesús Vitola-Montes^2}, Isaías José Petro-Rodríguez^3}, Juliana Esther Carrascal-Hernández^4}, Angel Quintana-Jiménez^5}, Alejandro Pemberty-Vergara^6}, Juan Diego Guerra-Gómez^7}, Cristian Javier Cano-Mogollón^8}
 
-[Normal] ^1} Autor 1: Andrés Julián Negrete-Pacheco - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: andresj.negretep@upb.edu.co
+[Normal] ^1} Autor 1 — Andrés Julián Negrete-Pacheco — andresj.negretep@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^2} Autor 2: Antolin De Jesús Vitola-Montes - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: antolin.vitola@upb.edu.co
+[Normal] ^2} Autor 2 — Antolin De Jesús Vitola-Montes — antolin.vitola@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^3} Autor 3: Isaías José Petro-Rodríguez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: isaias.petro@upb.edu.co
+[Normal] ^3} Autor 3 — Isaías José Petro-Rodríguez — isaias.petro@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^4} Autor 4: Juliana Esther Carrascal-Hernández - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juliana.carrascal@upb.edu.co
+[Normal] ^4} Autor 4 — Juliana Esther Carrascal-Hernández — juliana.carrascal@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^5} Autor 5: Angel Quintana-Jiménez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: angel.quintana@upb.edu.co
+[Normal] ^5} Autor 5 — Angel Quintana-Jiménez — angel.quintana@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^6} Autor 6: Alejandro Pemberty-Vergara - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: alejandro.pemberty@upb.edu.co
+[Normal] ^6} Autor 6 — Alejandro Pemberty-Vergara — alejandro.pemberty@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^7} Autor 7: Juan Diego Guerra-Gómez - Universidad Pontificia Bolivariana, Seccional Montería, Córdoba, Colombia. ORCID: pendiente. Correo electrónico: juan.guerra@upb.edu.co
+[Normal] ^7} Autor 7 — Juan Diego Guerra-Gómez — juan.guerra@upb.edu.co — UPB Seccional Montería, Córdoba, Colombia — ORCID: pendiente
 
-[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón. Filiación: Docente Titular, Facultad de Ingeniería Industrial. Grupo de Investigación en Simulación, Logística y Gestión de Operaciones (SILOGE), Hub Industrial Solution (HIS), Universidad Pontificia Bolivariana, Seccional Montería, Colombia. ORCID: pendiente. Correo electrónico: cristian.cano@upb.edu.co
+[Normal] ^8} Co-Autor / Co-Investigador: M.Sc. Cristian Javier Cano Mogollón (cristian.cano@upb.edu.co; ORCID pendiente). Filiación: Hub Industrial Solution (HIS) y grupo SILOGE, Facultad de Ingeniería Industrial, Universidad Pontificia Bolivariana, Seccional Montería, Colombia; Docente Titular.
 
 [Normal] ^*} Autor de correspondencia: Andrés Julián Negrete-Pacheco (andresj.negretep@upb.edu.co).
 
@@ -116,37 +116,37 @@
 
 [Heading 2] Contribución de los autores
 
-[Normal] Contribución de los autores (CRediT, por confirmar): el primer autor analizó los mecanismos temporales, calculó la ventana de acierto y redactó el borrador; los demás autores aportaron el desarrollo del software, las mediciones y la revisión; Cristian Javier Cano-Mogollón supervisó y revisó.
+[Normal] Contribuciones (CRediT; por confirmar). A. J. Negrete-Pacheco estudió los mecanismos temporales, calculó la ventana de acierto y escribió el borrador. Los demás autores contribuyeron con software, mediciones y revisión, y C. J. Cano-Mogollón supervisó.
 
 [Heading 2] Declaraciones finales
 
 [Heading 3] Financiación
 
-[Normal] Sin financiación externa. [Por confirmar por el equipo.]
+[Normal] No se recibió financiación. [Por confirmar.]
 
 [Heading 3] Conflicto de intereses
 
-[Normal] No hay conflictos de intereses que declarar. [Por confirmar.]
+[Normal] Ningún conflicto de intereses. [Por confirmar.]
 
 [Heading 3] Consentimiento informado
 
-[Normal] No aplica: no se recolectaron datos de niños en este estudio.
+[Normal] No aplica: no se tomaron datos de niños.
 
 [Heading 3] Declaración de la Junta de Revisión Institucional
 
-[Normal] No aplica a esta evaluación técnica; las pruebas de aula con menores necesitarán aprobación ética y consentimiento de acudientes.
+[Normal] No aplica a este análisis técnico. Las pruebas de aula con menores requerirán aprobación ética y consentimiento de acudientes.
 
 [Heading 3] Disponibilidad de datos, código y materiales de investigación
 
-[Normal] El código, las pruebas del estabilizador y de canciones y los scripts de medición están en el repositorio del proyecto; los cálculos de la Tabla 2 se pueden reproducir con la ecuación de la ventana y los valores del código.
+[Normal] Las pruebas del estabilizador y de canciones y los scripts de medición están en el repositorio; el cálculo del cuadro de ventanas se reproduce con la ecuación de la ventana y las constantes del código.
 
 [Heading 3] Uso de herramientas de inteligencia artificial
 
-[Normal] Se empleó un asistente de IA (Claude, de Anthropic) para revisar el código, ejecutar las mediciones, verificar referencias y redactar borradores. Los autores revisaron y responden por el texto.
+[Normal] Un asistente de IA (Claude, de Anthropic) se usó para revisar el código, medir, verificar fuentes y escribir borradores. Los autores comprobaron todo y responden por el texto.
 
 [Subtitulos] Declarations (English)
 
-[Normal] Author Contributions: the first author analysed the temporal mechanisms, computed the hit window and drafted the manuscript; the other authors contributed software, measurements and review; C. J. Cano-Mogollón supervised. No external funding. No conflicts of interest. Consent and IRB: not applicable. Data and code: project repository.
+[Normal] Contributions: the first author analysed the timing mechanisms, computed the hit window and wrote the draft; the others contributed software, measurements and review; C. J. Cano-Mogollón supervised. No funding, no conflicts. Consent and ethics: not applicable.
 
 [Heading 1] References
 
