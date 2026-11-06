@@ -46,7 +46,7 @@ def contenido(e):
     e.sub("Protocolo propio")
     e.P("Se usó una calibración de ocho señas de una persona, con perturbaciones simuladas de tamaño, giro y ruido. Se midió el reconocimiento de 480 señas válidas por nivel de ruido, las notas disparadas por error ante 640 posturas que no son seña (320 transiciones y 320 combinaciones de manos), la estabilidad de esa tasa con 30 semillas distintas, "
         "la latencia del descriptor y el clasificador con 2.000 repeticiones y una sesión de ejemplo del optimizador. Las proporciones llevan intervalos de Wilson al 95 %:")
-    e.eq("wilson", r"\hat p\ \text{(Wilson)}=\frac{\hat p+\dfrac{z^2}{2n}\pm z\sqrt{\dfrac{\hat p(1-\hat p)}{n}+\dfrac{z^2}{4n^2}}}{1+\dfrac{z^2}{n}}")
+    e.eq("wilson", r"\mathrm{IC}_{95\,\%}=\frac{\hat p+\dfrac{z^2}{2n}\pm z\sqrt{\dfrac{\hat p(1-\hat p)}{n}+\dfrac{z^2}{4n^2}}}{1+\dfrac{z^2}{n}}")
     e.sub("Regla de reporte")
     e.P("Se propone que toda cifra de desempeño que aparezca en un resumen, una presentación o un artículo indique cuatro cosas: el script o procedimiento que la produce, el tamaño de la muestra, su intervalo de confianza y los parámetros de los que depende.")
 

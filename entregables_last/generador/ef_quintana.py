@@ -48,12 +48,13 @@ def contenido(e):
              ["$g_i,\\ r_i,\\ m_i,\\ f_i$", "Ganancia, urgencia de repaso, motivación y fatiga."], ["$\\alpha_1,\\dots,\\alpha_4$", "Pesos del objetivo: 1,00; 0,70; 0,35; 0,55."], ["$x_i\\in\\{0,1\\}$", "Vale 1 si la actividad $i$ entra en la sesión."]], [2.8, 5.7])
     e.sub("Función objetivo")
     e.P("La probabilidad de éxito de una actividad se estima con una logística sobre la holgura entre el dominio medio $\\bar\\mu_i$ y la dificultad, y el factor $\\eta_i$ concentra el valor en una probabilidad de éxito $p^{*}=0{,}75$ ({fig:fun}):")
-    e.eq("p", r"p_i=\frac{1}{1+e^{-k(\bar\mu_i-\mathrm{dif}_i)}},\quad k=6;\qquad \eta_i=\exp\!\left(-\frac{(p_i-p^{*})^2}{2\sigma_p^2}\right),\quad \sigma_p=0{,}18")
+    e.eq("p", r"p_i=\frac{1}{1+e^{-k(\bar\mu_i-\mathrm{dif}_i)}},\qquad k=6")
+    e.eq("eta", r"\eta_i=\exp\!\left(-\frac{(p_i-p^{*})^2}{2\sigma_p^2}\right),\qquad \sigma_p=0{,}18")
     e.figura("fun", "sesion_funciones.png", "Éxito esperado $p_i$ y factor $\\eta_i$ según la holgura entre dominio medio y dificultad (curvas calculadas con las ecuaciones del modelo).", 8.2)
     e.P("Con la ganancia $g_i=\\eta_i\\sum_{s\\in S_i}(1-\\mu_s)/\\sqrt{|S_i|}$ y la fatiga $f_i=(d_i/D)(0{,}5+\\mathrm{dif}_i)$, el problema es:")
     e.eq("obj", r"\max\ \sum_{i\in A}\big(\alpha_1g_i+\alpha_2r_i+\alpha_3m_i-\alpha_4f_i\big)\,x_i")
     e.sub("Restricciones")
-    e.eq("res", r"\begin{aligned}&\sum_i d_ix_i\le T_{\max},\qquad \sum_i x_i=K,\qquad x_i\le a_i,\qquad \sum_{i\in G}x_i\ge1,\\ &\sum_i\mathrm{dif}_ix_i\le0{,}72K,\qquad \sum_{i:\,s\in S_i}x_i\le2\ \ \forall s\in S,\qquad \sum_{i\in V}x_i\ge1\end{aligned}")
+    e.eq("res", r"\begin{aligned}\sum_i d_ix_i&\le T_{\max}\\ \sum_i x_i&=K\\ x_i&\le a_i\\ \sum_{i\in G}x_i&\ge1\\ \sum_i\mathrm{dif}_ix_i&\le0{,}72K\\ \sum_{i:\,s\in S_i}x_i&\le2\quad\forall s\in S\\ \sum_{i\in V}x_i&\ge1\end{aligned}")
     e.P("Las restricciones fijan el tiempo total, el tamaño de la sesión, los prerrequisitos, al menos una actividad lúdica, una dificultad media acotada, un máximo de dos actividades por habilidad y la inclusión de un repaso vencido si existe. El problema se resuelve con el solucionador CBC mediante PuLP y, "
         "si este no está disponible, por enumeración exhaustiva mientras $\\binom{|A|}{K}\\le 4\\times10^{5}$, lo que entrega el óptimo exacto.")
 

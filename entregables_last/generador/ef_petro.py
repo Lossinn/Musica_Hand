@@ -53,7 +53,8 @@ def contenido(e):
     e.P("La curvatura de cada dedo, con cadena de articulaciones $(a,b,c,d)$, es una razón entre longitudes y por eso no cambia con la escala, la traslación ni la rotación:")
     e.eq("kappa", r"\kappa=\operatorname{clip}\!\left(\frac{\dfrac{\lVert p_d-p_a\rVert}{\lVert p_b-p_a\rVert+\lVert p_c-p_b\rVert+\lVert p_d-p_c\rVert}-0{,}35}{0{,}65},\,0,\,1\right)")
     e.P("La apertura entre dedos contiguos usa los vectores unitarios $u_i$ del nudillo a la yema, y la distancia del pulgar a cada yema se normaliza con $\\sigma$:")
-    e.eq("alpha", r"\alpha_i=\frac{1}{\pi}\arccos\langle u_i,u_{i+1}\rangle,\qquad \tau_j=\frac{1}{3}\operatorname{clip}\!\left(\frac{\lVert p_{t_j}-p_4\rVert}{\sigma},\,0,\,3\right)")
+    e.eq("alpha", r"\alpha_i=\frac{1}{\pi}\arccos\langle u_i,u_{i+1}\rangle")
+    e.eq("tau", r"\tau_j=\frac{1}{3}\operatorname{clip}\!\left(\frac{\lVert p_{t_j}-p_4\rVert}{\sigma},\,0,\,3\right)")
     e.P("A estas magnitudes se suman la normal del plano de la palma, la dirección de la mano en la imagen y la forma normalizada, con 20 puntos trasladados, escalados por $\\sigma$ y girados para que la mano apunte hacia arriba (40 valores). "
         "Cada mano queda en 58 valores y, con cuatro magnitudes de geometría entre las dos manos, el descriptor completo tiene $2\\times 58+4=120$ componentes. La distancia entre dos descriptores se calcula por bloques $g$ con pesos $w_g$ "
         "(curvatura 3,0; forma 2,6; pulgar 2,0; dirección 2,0; entre manos 1,6; normal 1,4; apertura 1,2), de modo que los 40 valores de la forma no dominen a los 5 de la curvatura:")
@@ -61,7 +62,8 @@ def contenido(e):
     e.sub("Clasificación con confianza y margen")
     e.P("Cada nota $c$ conserva hasta tres muestras $S_c$ de la calibración. La distancia de una postura $x$ a la nota es la menor de sus muestras, y la confianza reparte probabilidad entre las notas con una temperatura $T$ "
         "ajustada a la separación real entre las señas:")
-    e.eq("dc", r"d_c=\min_{s\in S_c}d(x,s),\qquad P(c\mid x)=\frac{\exp\!\big(-(d_c-d_{\min})/T\big)}{\sum_k\exp\!\big(-(d_k-d_{\min})/T\big)}")
+    e.eq("dc", r"d_c=\min_{s\in S_c}d(x,s)")
+    e.eq("softmax", r"P(c\mid x)=\frac{\exp\!\big(-(d_c-d_{\min})/T\big)}{\sum_k\exp\!\big(-(d_k-d_{\min})/T\big)}")
     e.eq("temp", r"T=\operatorname{clip}\!\left(\tfrac{1}{2}\min_{a\neq b}d(a,b),\,0{,}05,\,0{,}20\right)")
     e.P("La nota se acepta solo si se cumplen las tres condiciones de la ecuación {eq:acepta}. La tercera, el margen, hace que el sistema se abstenga cuando dos señas empatan:")
     e.eq("acepta", r"\begin{aligned}d_{\text{best}}&\le 0{,}95\\ P_{\text{best}}&\ge 0{,}55\\ P_{\text{best}}-P_{\text{second}}&\ge 0{,}08\end{aligned}")
