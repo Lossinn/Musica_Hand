@@ -1,5 +1,6 @@
 """Escrito final — Isaías Petro: visión computacional (reconocer solo la seña intencional)."""
 from ef_comun import *
+import json
 
 
 def contenido(e):
@@ -63,7 +64,7 @@ def contenido(e):
     e.eq("dc", r"d_c=\min_{s\in S_c}d(x,s),\qquad P(c\mid x)=\frac{\exp\!\big(-(d_c-d_{\min})/T\big)}{\sum_k\exp\!\big(-(d_k-d_{\min})/T\big)}")
     e.eq("temp", r"T=\operatorname{clip}\!\left(\tfrac{1}{2}\min_{a\neq b}d(a,b),\,0{,}05,\,0{,}20\right)")
     e.P("La nota se acepta solo si se cumplen las tres condiciones de la ecuación {eq:acepta}. La tercera, el margen, hace que el sistema se abstenga cuando dos señas empatan:")
-    e.eq("acepta", r"d_{\text{best}}\le 0{,}95,\qquad P_{\text{best}}\ge 0{,}55,\qquad P_{\text{best}}-P_{\text{second}}\ge 0{,}08")
+    e.eq("acepta", r"\begin{aligned}d_{\text{best}}&\le 0{,}95\\ P_{\text{best}}&\ge 0{,}55\\ P_{\text{best}}-P_{\text{second}}&\ge 0{,}08\end{aligned}")
     e.sub("Estabilización temporal")
     e.P("Después de aceptada, la nota pasa por un estabilizador: se confirma si pasaron al menos 0,45 s desde la nota anterior (periodo refractario) y, cuando repite la última nota, solo si el niño la soltó antes. "
         "La suelta se declara cuando seis fotogramas consecutivos dan una lectura distinta. Con la configuración por defecto la ventana es de un fotograma, por lo que la nota suena en cuanto se reconoce.")
@@ -100,13 +101,23 @@ def contenido(e):
         "En el método inicial, dos nubes de puntos con forma de mano siempre se parecen, y por eso un umbral fijo de similitud no separa notas; el descriptor traslada la comparación a magnitudes que sí cambian de una seña a otra ({fig:matriz}).")
     e.figura("matriz", "matriz_similitud.png", "Matrices 8 × 8 de las señas calibradas: (a) similitud coseno del método inicial; (b) distancia por bloques del descriptor propuesto.", 16.0, ancha=True)
     e.P(f"El descriptor y el clasificador tardaron {f(LT['media_ms'], 2)} ms por fotograma en promedio (percentil 95: {f(LT['p95_ms'], 2)} ms; máximo: {f(LT['max_ms'], 2)} ms; {LT['reps']} repeticiones, un solo equipo). La cifra excluye captura, rastreo y dibujo en pantalla.")
+    e.sub("Sensibilidad de los umbrales de aceptación", "sens")
+    e.P("Para saber qué parte de la regla de aceptación controla el compromiso entre acertar y abstenerse, se repitió el protocolo anterior con los mismos datos y semillas variando un umbral por vez, mientras los otros dos permanecían en su valor por defecto. "
+        "El caso base reproduce exactamente los resultados anteriores (86,0 % de reconocimiento con ruido 0,09 y 51 notas falsas de 640).")
+    S = json.loads((BASE / "analisis" / "sensibilidad_umbrales.json").read_text(encoding="utf-8"))
+    filas = [[f(r["valor"], 2), f(r["ac_006"]), f(r["ac_009"]), f(r["fp"])] for r in S["confidence_threshold"]]
+    e.tabla("sensu", "Efecto del umbral de confianza (valor por defecto: 0,55) sobre el reconocimiento con ruido y sobre las notas falsas (%).", ["Confianza mínima", "Ruido 0,06", "Ruido 0,09", "Notas falsas"], filas, [2.2, 2.0, 2.0, 2.2], alinear=["l", "r", "r", "r"])
+    e.P("El umbral de confianza es la perilla que mueve el compromiso ({fig:umbral}). Con 0,35 se reconocen todas las señas con ruido hasta 0,09, pero el 55,0 % de las posturas negativas dispara una nota; con 0,75 casi no hay notas falsas (0,0 %), "
+        "pero solo se reconoce el 43,5 % de las señas válidas con ruido alto. El valor por defecto queda en una zona intermedia: tolera ruido moderado y limita las notas falsas a 8,0 %. En cambio, variar el umbral de distancia entre 0,65 y 1,25, o el de margen entre 0,00 y 0,16, "
+        "no cambió ningún resultado con este protocolo. Para el margen hay una explicación aritmética: si la confianza de la mejor nota es al menos 0,55, la de la segunda es a lo sumo 0,45 y el margen es al menos $2\\cdot 0{,}55-1=0{,}10$, de modo que la condición de 0,08 nunca es la que decide mientras la confianza mínima sea de 0,55 o más.")
+    e.figura("umbral", "umbral_confianza.png", "Compromiso entre reconocimiento con ruido 0,09 y notas falsas al variar el umbral de confianza (círculo: valor por defecto).", 8.2)
     e.sub("Costo de rechazar lo dudoso")
     e.P("El descriptor propuesto cuesta sensibilidad cuando el ruido es alto: de 100 % a 86,0 % entre ruido 0 y 0,09. El método inicial no pierde nada porque no rechaza nada. En un juego infantil el intercambio favorece al primero: pedir que se repita una seña "
         "cuesta unos segundos, mientras que una nota falsa interrumpe la actividad y puede enseñar un sonido equivocado.")
 
     e.sec("Conclusiones")
     e.P(f"Un descriptor invariante de 120 componentes con decisión por distancia, confianza y margen redujo las notas disparadas por error de 100 % a {f(FPG['pct'])} % en 640 posturas que no son seña, con una pérdida de sensibilidad visible solo con ruido alto. "
-        "El error que queda se concentra en las transiciones, y de ahí sale el siguiente paso concreto: incorporar la velocidad de la mano, que hoy no interviene en la decisión, como señal de que una postura en movimiento rápido difícilmente es una seña deliberada.")
+        "El error que queda se concentra en las transiciones, y de ahí salen dos pasos concretos: ajustar el umbral de confianza, la única perilla de la regla de aceptación que mueve el compromiso entre acertar y abstenerse, e incorporar la velocidad de la mano, que hoy no interviene en la decisión, como señal de que una postura en movimiento rápido difícilmente es una seña deliberada.")
     e.P("Los resultados describen el comportamiento del reconocedor en laboratorio, no en un aula. Como líneas de trabajo se identifican cuatro: calibrar y medir con varias personas y con niños; incluir errores reales de detección, desenfoque e iluminación; "
         "registrar las notas falsas durante un piloto en lugar de simularlas; y medir la latencia de extremo a extremo. El nivel de madurez del reconocedor es TRL 4.")
     e.referencias()
